@@ -1,5 +1,7 @@
 // countries-states-cities kütüphanesini kullanarak adres yardımcı fonksiyonları
 
+import { Country, State, City } from 'country-state-city';
+
 // Type tanımları
 type Country = {
   id: number;
@@ -53,14 +55,12 @@ type City = {
 // Tüm ülkeleri getir
 export const getAllCountries = (): { code: string; name: string; phoneCode: string; flag: string }[] => {
   try {
-    // countries-states-cities kütüphanesini dinamik olarak import ediyoruz
-    // çünkü bu kütüphane CommonJS modülü olarak dağıtılıyor
-    const csc = require('countries-states-cities');
-    return csc.Country.getAllCountries().map((country: any) => ({
-      code: country.iso2,
+    const countries = Country.getAllCountries() || [];
+    return countries.map((country) => ({
+      code: country.isoCode,
       name: country.name,
-      phoneCode: country.phone_code,
-      flag: country.emoji
+      phoneCode: country.phonecode,
+      flag: country.flag || ''
     }));
   } catch (error) {
     console.error('Ülkeler yüklenirken hata:', error);
@@ -71,8 +71,7 @@ export const getAllCountries = (): { code: string; name: string; phoneCode: stri
 // Ülke koduna göre ülke bilgisini getir
 export const getCountryByCode = (countryCode: string): any => {
   try {
-    const csc = require('countries-states-cities');
-    return csc.Country.getCountryByCode(countryCode);
+    return Country.getCountryByCode(countryCode);
   } catch (error) {
     console.error(`Ülke bilgisi alınırken hata (${countryCode}):`, error);
     return null;
@@ -82,11 +81,11 @@ export const getCountryByCode = (countryCode: string): any => {
 // Ülke koduna göre eyaletleri/bölgeleri getir
 export const getStatesByCountry = (countryCode: string): { code: string; name: string; countryCode: string }[] => {
   try {
-    const csc = require('countries-states-cities');
-    return csc.State.getStatesOfCountry(countryCode).map((state: any) => ({
-      code: state.state_code,
+    const states = State.getStatesOfCountry(countryCode) || [];
+    return states.map((state) => ({
+      code: state.isoCode,
       name: state.name,
-      countryCode: state.country_code
+      countryCode: state.countryCode
     }));
   } catch (error) {
     console.error(`Eyaletler yüklenirken hata (${countryCode}):`, error);
@@ -97,13 +96,13 @@ export const getStatesByCountry = (countryCode: string): { code: string; name: s
 // Ülke ve eyalet koduna göre şehirleri getir
 export const getCitiesByState = (countryCode: string, stateCode: string): { name: string; stateCode: string; countryCode: string; latitude: string; longitude: string }[] => {
   try {
-    const csc = require('countries-states-cities');
-    return csc.City.getCitiesOfState(countryCode, stateCode).map((city: any) => ({
+    const cities = City.getCitiesOfState(countryCode, stateCode) || [];
+    return cities.map((city) => ({
       name: city.name,
-      stateCode: city.state_code,
-      countryCode: city.country_code,
-      latitude: city.latitude,
-      longitude: city.longitude
+      stateCode: city.stateCode,
+      countryCode: city.countryCode,
+      latitude: city.latitude || '',
+      longitude: city.longitude || ''
     }));
   } catch (error) {
     console.error(`Şehirler yüklenirken hata (${countryCode}, ${stateCode}):`, error);
@@ -114,13 +113,13 @@ export const getCitiesByState = (countryCode: string, stateCode: string): { name
 // Ülke koduna göre tüm şehirleri getir (eyalet olmadan)
 export const getCitiesByCountry = (countryCode: string): { name: string; stateCode: string; countryCode: string; latitude: string; longitude: string }[] => {
   try {
-    const csc = require('countries-states-cities');
-    return csc.City.getCitiesOfCountry(countryCode).map((city: any) => ({
+    const cities = City.getCitiesOfCountry(countryCode) || [];
+    return cities.map((city) => ({
       name: city.name,
-      stateCode: city.state_code || '',
-      countryCode: city.country_code,
-      latitude: city.latitude,
-      longitude: city.longitude
+      stateCode: city.stateCode || '',
+      countryCode: city.countryCode,
+      latitude: city.latitude || '',
+      longitude: city.longitude || ''
     }));
   } catch (error) {
     console.error(`Şehirler yüklenirken hata (${countryCode}):`, error);
