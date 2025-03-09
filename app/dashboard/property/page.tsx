@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent prerender errors with useSession
 export const dynamic = 'force-dynamic';
 
-import { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { 
@@ -12,9 +12,14 @@ import {
   ArrowUpIcon, 
   ArrowDownIcon, 
   HeartIcon,
-  AdjustmentsHorizontalIcon
+  AdjustmentsHorizontalIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon
 } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
+
+// Sayfa başına gösterilecek öğe sayısı
+const ITEMS_PER_PAGE = 9;
 
 interface Property {
   _id: string;
@@ -44,13 +49,241 @@ interface Property {
   createdAt: string;
 }
 
-function LoadingSpinner() {
+// LoadingSpinner bileşenini React.memo ile sarmalayarak gereksiz render'ları önlüyoruz
+const LoadingSpinner = React.memo(() => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-700"></div>
     </div>
   );
-}
+});
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+// Pagination bileşeni
+const Pagination = React.memo(({ 
+  currentPage, 
+  totalPages, 
+  onPageChange 
+}: { 
+  currentPage: number; 
+  totalPages: number; 
+  onPageChange: (page: number) => void 
+}) => {
+  // Sayfa numaralarını oluştur
+  const pageNumbers = useMemo(() => {
+    const pages = [];
+    const maxVisiblePages = 5;
+    
+    if (totalPages <= maxVisiblePages) {
+      // Toplam sayfa sayısı az ise tüm sayfaları göster
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Çok sayfa varsa, mevcut sayfanın etrafındakileri göster
+      let startPage = Math.max(1, currentPage - 2);
+      let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+      
+      // Başlangıç sayfasını ayarla
+      if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+      }
+      
+      // İlk sayfa
+      if (startPage > 1) {
+        pages.push(1);
+        if (startPage > 2) {
+          pages.push('...');
+        }
+      }
+      
+      // Orta sayfalar
+      for (let i = startPage; i <= endPage; i++) {
+        pages.push(i);
+      }
+      
+      // Son sayfa
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          pages.push('...');
+        }
+        pages.push(totalPages);
+      }
+    }
+    
+    return pages;
+  }, [currentPage, totalPages]);
+  
+  if (totalPages <= 1) return null;
+  
+  return (
+    <div className="flex justify-center items-center mt-8 space-x-2">
+      <button
+        onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+        disabled={currentPage === 1}
+        className="p-2 rounded-md border border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <ChevronLeftIcon className="w-5 h-5" />
+      </button>
+      
+      {pageNumbers.map((page, index) => (
+        <button
+          key={index}
+          onClick={() => typeof page === 'number' ? onPageChange(page) : null}
+          disabled={page === '...'}
+          className={`px-3 py-1 rounded-md ${
+            page === currentPage 
+              ? 'bg-blue-600 text-white' 
+              : 'border border-gray-300 hover:bg-gray-50'
+          } ${page === '...' ? 'cursor-default' : ''}`}
+        >
+          {page}
+        </button>
+      ))}
+      
+      <button
+        onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+        disabled={currentPage === totalPages}
+        className="p-2 rounded-md border border-gray-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <ChevronRightIcon className="w-5 h-5" />
+      </button>
+    </div>
+  );
+});
+Pagination.displayName = 'Pagination';
+
+// PropertyCard bileşeni
+const PropertyCard = React.memo(({ 
+  property, 
+  onToggleFavorite 
+}: { 
+  property: Property; 
+  onToggleFavorite: (id: string) => void 
+}) => {
+  return (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+      <div className="relative h-48 bg-gray-200">
+        {property.images && property.images.length > 0 ? (
+          <img 
+            src={property.images[0]}
+            alt={property.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="flex items-center justify-center h-full text-gray-400">
+            Resim Yok
+          </div>
+        )}
+        <button 
+          onClick={() => onToggleFavorite(property._id)}
+          className="absolute top-2 right-2 p-1 rounded-full bg-white shadow-md hover:bg-gray-100"
+        >
+          {property.isFavorite ? (
+            <HeartIconSolid className="w-5 h-5 text-red-500" />
+          ) : (
+            <HeartIcon className="w-5 h-5 text-gray-500" />
+          )}
+        </button>
+        <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black to-transparent">
+          <span className={`inline-block px-2 py-1 text-xs font-medium text-white rounded ${
+            property.status === 'active' ? 'bg-green-600' :
+            property.status === 'sold' ? 'bg-red-600' :
+            'bg-yellow-600'
+          }`}>
+            {property.status === 'active' ? 'Aktif' : 
+             property.status === 'sold' ? 'Satılmış' : 'Kiralık'}
+          </span>
+        </div>
+      </div>
+      
+      <div className="p-4">
+        <Link href={`/dashboard/property/${property._id}`}>
+          <h2 className="text-lg font-semibold text-gray-800 hover:text-blue-600">{property.title}</h2>
+        </Link>
+        <p className="text-gray-600 text-sm mt-1 truncate">{property.location.district}, {property.location.city}</p>
+        
+        <div className="flex justify-between items-end mt-3">
+          <div>
+            <p className="text-lg font-bold text-gray-900">{property.price.toLocaleString('tr-TR')} {property.currency}</p>
+            {property.financials.currentValue !== property.price && (
+              <p className="text-sm text-green-600">
+                Güncel: {property.financials.currentValue.toLocaleString('tr-TR')} TL
+              </p>
+            )}
+          </div>
+          <div className="text-sm text-gray-500">
+            {property.features.size} m²
+            {property.features.rooms && `, ${property.features.rooms} oda`}
+          </div>
+        </div>
+        
+        <div className="mt-4 flex justify-between items-center pt-3 border-t border-gray-100">
+          <span className="text-xs text-gray-500">
+            {new Date(property.createdAt).toLocaleDateString('tr-TR')}
+          </span>
+          <div className="space-x-2">
+            <Link
+              href={`/dashboard/property/${property._id}`}
+              className="px-3 py-1 text-sm text-blue-600 hover:text-blue-800"
+            >
+              Detaylar
+            </Link>
+            <Link
+              href={`/dashboard/property/${property._id}/edit`}
+              className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
+            >
+              Düzenle
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+PropertyCard.displayName = 'PropertyCard';
+
+// PropertySkeleton bileşeni
+const PropertySkeleton = React.memo(() => {
+  return (
+    <div className="bg-white rounded-lg shadow-md overflow-hidden animate-pulse">
+      <div className="h-48 bg-gray-200"></div>
+      <div className="p-4">
+        <div className="h-6 bg-gray-200 rounded w-3/4 mb-3"></div>
+        <div className="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+        
+        <div className="flex justify-between items-end mt-3">
+          <div>
+            <div className="h-6 bg-gray-200 rounded w-24 mb-1"></div>
+            <div className="h-4 bg-gray-200 rounded w-20"></div>
+          </div>
+          <div className="h-4 bg-gray-200 rounded w-16"></div>
+        </div>
+        
+        <div className="mt-4 pt-3 border-t border-gray-100 flex justify-between">
+          <div className="h-4 bg-gray-200 rounded w-20"></div>
+          <div className="flex space-x-2">
+            <div className="h-6 bg-gray-200 rounded w-16"></div>
+            <div className="h-6 bg-gray-200 rounded w-16"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+PropertySkeleton.displayName = 'PropertySkeleton';
+
+// LoadingSkeletons bileşeni
+const LoadingSkeletons = React.memo(() => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {Array(6).fill(0).map((_, index) => (
+        <PropertySkeleton key={index} />
+      ))}
+    </div>
+  );
+});
+LoadingSkeletons.displayName = 'LoadingSkeletons';
 
 function PropertyContent() {
   const { data: session, status } = useSession();
@@ -69,6 +302,7 @@ function PropertyContent() {
     city: '',
   });
   const [showFilters, setShowFilters] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   
   // Gayrimenkulleri yükle
   useEffect(() => {
@@ -168,20 +402,22 @@ function PropertyContent() {
     });
     
     setFilteredProperties(result);
+    // Filtreleme veya sıralama değiştiğinde ilk sayfaya dön
+    setCurrentPage(1);
   }, [properties, searchTerm, sortBy, sortOrder, filters]);
   
   // Sıralama değiştirme
-  const handleSortChange = (field: string) => {
+  const handleSortChange = useCallback((field: string) => {
     if (sortBy === field) {
       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
     } else {
       setSortBy(field);
       setSortOrder('asc');
     }
-  };
+  }, [sortBy, sortOrder]);
   
   // Favori değiştirme
-  const handleToggleFavorite = async (propertyId: string) => {
+  const handleToggleFavorite = useCallback(async (propertyId: string) => {
     try {
       const response = await fetch(`/api/property/${propertyId}/favorite`, {
         method: 'PUT',
@@ -201,10 +437,10 @@ function PropertyContent() {
     } catch (err) {
       console.error('Favori güncelleme hatası:', err);
     }
-  };
+  }, []);
   
   // Filtre temizleme
-  const clearFilters = () => {
+  const clearFilters = useCallback(() => {
     setFilters({
       propertyType: '',
       status: '',
@@ -213,14 +449,52 @@ function PropertyContent() {
       city: '',
     });
     setSearchTerm('');
-  };
+  }, []);
+  
+  // Sayfa değiştirme
+  const handlePageChange = useCallback((page: number) => {
+    setCurrentPage(page);
+    // Sayfa değiştiğinde sayfanın üstüne kaydır
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   
   // Benzersiz şehirler listesi
-  const cities = Array.from(new Set(properties.map(p => p.location.city))).sort();
+  const cities = useMemo(() => {
+    return Array.from(new Set(properties.map(p => p.location.city))).sort();
+  }, [properties]);
+  
+  // Toplam sayfa sayısı
+  const totalPages = useMemo(() => {
+    return Math.ceil(filteredProperties.length / ITEMS_PER_PAGE);
+  }, [filteredProperties.length]);
+  
+  // Mevcut sayfada gösterilecek gayrimenkuller
+  const currentProperties = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredProperties.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredProperties, currentPage]);
   
   // Yükleniyor durumu
-  if (status === 'loading' || isLoading) {
-    return <LoadingSpinner />;
+  if (status === 'loading') {
+    return <LoadingSkeletons />;
+  }
+  
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex justify-between items-center mb-6">
+          <div className="h-8 bg-gray-200 rounded w-48 animate-pulse"></div>
+          <div className="h-10 bg-gray-200 rounded w-40 animate-pulse"></div>
+        </div>
+        
+        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+          <div className="h-10 bg-gray-200 rounded w-full mb-4 animate-pulse"></div>
+          <div className="h-10 bg-gray-200 rounded w-full animate-pulse"></div>
+        </div>
+        
+        <LoadingSkeletons />
+      </div>
+    );
   }
 
   // Oturum açılmamış durumu
@@ -298,43 +572,34 @@ function PropertyContent() {
               <option value="price-desc">Fiyat (Çoktan Aza)</option>
               <option value="size-asc">Alan (Azdan Çoğa)</option>
               <option value="size-desc">Alan (Çoktan Aza)</option>
-              <option value="title-asc">İsim (A-Z)</option>
-              <option value="title-desc">İsim (Z-A)</option>
             </select>
           </div>
         </div>
         
         {showFilters && (
-          <div className="mt-4 p-4 border border-gray-200 rounded-lg">
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <label htmlFor="propertyType" className="block text-sm font-medium text-gray-700 mb-1">
-                  Gayrimenkul Tipi
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Emlak Tipi</label>
                 <select
-                  id="propertyType"
                   value={filters.propertyType}
                   onChange={(e) => setFilters({...filters, propertyType: e.target.value})}
-                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Tümü</option>
                   <option value="apartment">Daire</option>
-                  <option value="house">Ev</option>
+                  <option value="house">Müstakil Ev</option>
                   <option value="land">Arsa</option>
                   <option value="commercial">Ticari</option>
-                  <option value="other">Diğer</option>
                 </select>
               </div>
               
               <div>
-                <label htmlFor="status" className="block text-sm font-medium text-gray-700 mb-1">
-                  Durum
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Durum</label>
                 <select
-                  id="status"
                   value={filters.status}
                   onChange={(e) => setFilters({...filters, status: e.target.value})}
-                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Tümü</option>
                   <option value="active">Aktif</option>
@@ -344,60 +609,49 @@ function PropertyContent() {
               </div>
               
               <div>
-                <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
-                  Şehir
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Şehir</label>
                 <select
-                  id="city"
                   value={filters.city}
                   onChange={(e) => setFilters({...filters, city: e.target.value})}
-                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Tümü</option>
-                  {cities.map((city, index) => (
-                    <option key={index} value={city}>{city}</option>
+                  {cities.map((city) => (
+                    <option key={city} value={city}>{city}</option>
                   ))}
                 </select>
               </div>
               
               <div>
-                <label htmlFor="priceMin" className="block text-sm font-medium text-gray-700 mb-1">
-                  Min. Fiyat
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Min. Fiyat</label>
                 <input
                   type="number"
-                  id="priceMin"
                   value={filters.priceMin}
                   onChange={(e) => setFilters({...filters, priceMin: e.target.value})}
-                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  placeholder="0"
-                  min="0"
+                  placeholder="Min. Fiyat"
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               
               <div>
-                <label htmlFor="priceMax" className="block text-sm font-medium text-gray-700 mb-1">
-                  Max. Fiyat
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Max. Fiyat</label>
                 <input
                   type="number"
-                  id="priceMax"
                   value={filters.priceMax}
                   onChange={(e) => setFilters({...filters, priceMax: e.target.value})}
-                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  placeholder="Sınırsız"
-                  min="0"
+                  placeholder="Max. Fiyat"
+                  className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
-            </div>
-            
-            <div className="mt-4 flex justify-end">
-              <button
-                onClick={clearFilters}
-                className="px-4 py-2 text-gray-700 bg-gray-100 rounded hover:bg-gray-200"
-              >
-                Filtreleri Temizle
-              </button>
+              
+              <div className="flex items-end">
+                <button
+                  onClick={clearFilters}
+                  className="px-4 py-2 text-blue-600 border border-blue-600 rounded hover:bg-blue-50"
+                >
+                  Filtreleri Temizle
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -415,96 +669,42 @@ function PropertyContent() {
           </Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProperties.map((property) => (
-            <div key={property._id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="relative h-48 bg-gray-200">
-                {property.images && property.images.length > 0 ? (
-                  <img 
-                    src={property.images[0]}
-                    alt={property.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full text-gray-400">
-                    Resim Yok
-                  </div>
-                )}
-                <button 
-                  onClick={() => handleToggleFavorite(property._id)}
-                  className="absolute top-2 right-2 p-1 rounded-full bg-white shadow-md hover:bg-gray-100"
-                >
-                  {property.isFavorite ? (
-                    <HeartIconSolid className="w-5 h-5 text-red-500" />
-                  ) : (
-                    <HeartIcon className="w-5 h-5 text-gray-500" />
-                  )}
-                </button>
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black to-transparent">
-                  <span className={`inline-block px-2 py-1 text-xs font-medium text-white rounded ${
-                    property.status === 'active' ? 'bg-green-600' :
-                    property.status === 'sold' ? 'bg-red-600' :
-                    'bg-yellow-600'
-                  }`}>
-                    {property.status === 'active' ? 'Aktif' : 
-                     property.status === 'sold' ? 'Satılmış' : 'Kiralık'}
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <Link href={`/dashboard/property/${property._id}`}>
-                  <h2 className="text-lg font-semibold text-gray-800 hover:text-blue-600">{property.title}</h2>
-                </Link>
-                <p className="text-gray-600 text-sm mt-1 truncate">{property.location.district}, {property.location.city}</p>
-                
-                <div className="flex justify-between items-end mt-3">
-                  <div>
-                    <p className="text-lg font-bold text-gray-900">{property.price.toLocaleString('tr-TR')} {property.currency}</p>
-                    {property.financials.currentValue !== property.price && (
-                      <p className="text-sm text-green-600">
-                        Güncel: {property.financials.currentValue.toLocaleString('tr-TR')} TL
-                      </p>
-                    )}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {property.features.size} m²
-                    {property.features.rooms && `, ${property.features.rooms} oda`}
-                  </div>
-                </div>
-                
-                <div className="mt-4 flex justify-between items-center pt-3 border-t border-gray-100">
-                  <span className="text-xs text-gray-500">
-                    {new Date(property.createdAt).toLocaleDateString('tr-TR')}
-                  </span>
-                  <div className="space-x-2">
-                    <Link
-                      href={`/dashboard/property/${property._id}`}
-                      className="px-3 py-1 text-sm text-blue-600 hover:text-blue-800"
-                    >
-                      Detaylar
-                    </Link>
-                    <Link
-                      href={`/dashboard/property/${property._id}/edit`}
-                      className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800"
-                    >
-                      Düzenle
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentProperties.map((property) => (
+              <PropertyCard 
+                key={property._id} 
+                property={property} 
+                onToggleFavorite={handleToggleFavorite} 
+              />
+            ))}
+          </div>
+          
+          {/* Sayfalama */}
+          <Pagination 
+            currentPage={currentPage} 
+            totalPages={totalPages} 
+            onPageChange={handlePageChange} 
+          />
+          
+          {/* Sonuç sayısı bilgisi */}
+          <div className="mt-4 text-center text-sm text-gray-600">
+            Toplam {filteredProperties.length} gayrimenkul, {currentPage}/{totalPages} sayfa gösteriliyor
+          </div>
+        </>
       )}
     </div>
   );
 }
 
+// Ana bileşeni React.memo ile sarmalayarak gereksiz render'ları önlüyoruz
+const PropertyContentMemo = React.memo(PropertyContent);
+PropertyContentMemo.displayName = 'PropertyContentMemo';
+
 export default function PropertyPage() {
   return (
     <Suspense fallback={<LoadingSpinner />}>
-      <PropertyContent />
+      <PropertyContentMemo />
     </Suspense>
   );
 } 
