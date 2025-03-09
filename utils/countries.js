@@ -34,6 +34,26 @@ export const COUNTRIES = [
       {
         name: 'Konya',
         districts: ['Ahırlı', 'Akören', 'Akşehir', 'Altınekin', 'Beyşehir', 'Bozkır', 'Çeltik', 'Cihanbeyli', 'Çumra', 'Derbent', 'Derebucak', 'Doğanhisar', 'Emirgazi', 'Ereğli', 'Güneysınır', 'Hadim', 'Halkapınar', 'Hüyük', 'Ilgın', 'Kadınhanı', 'Karapınar', 'Karatay', 'Kulu', 'Meram', 'Sarayönü', 'Selçuklu', 'Seydişehir', 'Taşkent', 'Tuzlukçu', 'Yalıhüyük', 'Yunak']
+      },
+      {
+        name: 'Eskişehir',
+        districts: ['Alpu', 'Beylikova', 'Çifteler', 'Günyüzü', 'Han', 'İnönü', 'Mahmudiye', 'Mihalgazi', 'Mihalıççık', 'Odunpazarı', 'Sarıcakaya', 'Seyitgazi', 'Sivrihisar', 'Tepebaşı']
+      },
+      {
+        name: 'Trabzon',
+        districts: ['Akçaabat', 'Araklı', 'Arsin', 'Beşikdüzü', 'Çarşıbaşı', 'Çaykara', 'Dernekpazarı', 'Düzköy', 'Hayrat', 'Köprübaşı', 'Maçka', 'Of', 'Ortahisar', 'Şalpazarı', 'Sürmene', 'Tonya', 'Vakfıkebir', 'Yomra']
+      },
+      {
+        name: 'Gaziantep',
+        districts: ['Araban', 'İslahiye', 'Karkamış', 'Nizip', 'Nurdağı', 'Oğuzeli', 'Şahinbey', 'Şehitkamil', 'Yavuzeli']
+      },
+      {
+        name: 'Muğla',
+        districts: ['Bodrum', 'Dalaman', 'Datça', 'Fethiye', 'Kavaklıdere', 'Köyceğiz', 'Marmaris', 'Menteşe', 'Milas', 'Ortaca', 'Seydikemer', 'Ula', 'Yatağan']
+      },
+      {
+        name: 'Kayseri',
+        districts: ['Akkışla', 'Bünyan', 'Develi', 'Felahiye', 'Hacılar', 'İncesu', 'Kocasinan', 'Melikgazi', 'Özvatan', 'Pınarbaşı', 'Sarıoğlan', 'Sarız', 'Talas', 'Tomarza', 'Yahyalı', 'Yeşilhisar']
       }
     ]
   },
@@ -216,6 +236,110 @@ export const COUNTRIES = [
       {
         name: 'Ras Al Khaimah',
         districts: ['Al Hamra', 'Al Nakheel', 'Al Mairid', 'Al Dhait', 'Al Rams', 'Khuzam']
+      }
+    ]
+  },
+  {
+    code: 'CA',
+    name: 'Kanada',
+    cities: [
+      {
+        name: 'Toronto',
+        districts: ['Downtown', 'North York', 'Scarborough', 'Etobicoke', 'East York', 'York']
+      },
+      {
+        name: 'Montreal',
+        districts: ['Ville-Marie', 'Le Plateau-Mont-Royal', 'Rosemont', 'Westmount', 'Outremont', 'Verdun']
+      },
+      {
+        name: 'Vancouver',
+        districts: ['Downtown', 'West End', 'Kitsilano', 'Gastown', 'Yaletown', 'Mount Pleasant']
+      },
+      {
+        name: 'Calgary',
+        districts: ['Downtown', 'Beltline', 'Inglewood', 'Kensington', 'Mission', 'Bridgeland']
+      },
+      {
+        name: 'Ottawa',
+        districts: ['Downtown', 'ByWard Market', 'Westboro', 'Glebe', 'Sandy Hill', 'Centretown']
+      }
+    ]
+  },
+  {
+    code: 'JP',
+    name: 'Japonya',
+    cities: [
+      {
+        name: 'Tokyo',
+        districts: ['Shinjuku', 'Shibuya', 'Minato', 'Chiyoda', 'Meguro', 'Setagaya']
+      },
+      {
+        name: 'Osaka',
+        districts: ['Kita', 'Minami', 'Chuo', 'Tennoji', 'Naniwa', 'Yodogawa']
+      },
+      {
+        name: 'Kyoto',
+        districts: ['Higashiyama', 'Shimogyo', 'Kamigyo', 'Nakagyo', 'Ukyo', 'Fushimi']
+      },
+      {
+        name: 'Yokohama',
+        districts: ['Nishi', 'Minami', 'Hodogaya', 'Kanagawa', 'Naka', 'Tsurumi']
+      },
+      {
+        name: 'Nagoya',
+        districts: ['Naka', 'Higashi', 'Kita', 'Showa', 'Mizuho', 'Atsuta']
+      }
+    ]
+  },
+  {
+    code: 'AU',
+    name: 'Avustralya',
+    cities: [
+      {
+        name: 'Sydney',
+        districts: ['CBD', 'Bondi', 'Manly', 'Parramatta', 'Surry Hills', 'Newtown']
+      },
+      {
+        name: 'Melbourne',
+        districts: ['CBD', 'St Kilda', 'Carlton', 'Fitzroy', 'South Yarra', 'Brunswick']
+      },
+      {
+        name: 'Brisbane',
+        districts: ['CBD', 'Fortitude Valley', 'South Bank', 'New Farm', 'West End', 'Paddington']
+      },
+      {
+        name: 'Perth',
+        districts: ['CBD', 'Fremantle', 'Subiaco', 'Cottesloe', 'South Perth', 'Northbridge']
+      },
+      {
+        name: 'Adelaide',
+        districts: ['CBD', 'North Adelaide', 'Glenelg', 'Norwood', 'Burnside', 'Prospect']
+      }
+    ]
+  },
+  {
+    code: 'KR',
+    name: 'Güney Kore',
+    cities: [
+      {
+        name: 'Seul',
+        districts: ['Gangnam', 'Hongdae', 'Itaewon', 'Myeongdong', 'Jongno', 'Yeouido']
+      },
+      {
+        name: 'Busan',
+        districts: ['Haeundae', 'Nampo', 'Seomyeon', 'Gwangalli', 'Gijang', 'Sasang']
+      },
+      {
+        name: 'Incheon',
+        districts: ['Jung-gu', 'Namdong', 'Bupyeong', 'Yeonsu', 'Seo-gu', 'Dong-gu']
+      },
+      {
+        name: 'Daegu',
+        districts: ['Jung-gu', 'Dong-gu', 'Seo-gu', 'Nam-gu', 'Buk-gu', 'Suseong']
+      },
+      {
+        name: 'Daejeon',
+        districts: ['Yuseong', 'Seo-gu', 'Jung-gu', 'Dong-gu', 'Daedeok', 'Daejeon']
       }
     ]
   }

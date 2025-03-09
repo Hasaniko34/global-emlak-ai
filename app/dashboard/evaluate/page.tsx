@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ChartBarIcon, HomeIcon, MapPinIcon, CurrencyDollarIcon, GlobeAltIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
+import { ChartBarIcon, HomeIcon, MapPinIcon, CurrencyDollarIcon, GlobeAltIcon, BuildingOfficeIcon, BookmarkIcon, PlusCircleIcon, StarIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ensureCSRFToken, addCSRFHeader } from '@/utils/csrf';
 import { 
   COUNTRIES, 
@@ -9,6 +9,29 @@ import {
   getCitiesByCountry, 
   getDistrictsByCity 
 } from '@/utils/countries';
+import { getSavedAddresses, saveAddress, deleteAddress, labelAddress } from '@/utils/savedAddresses';
+
+// Adres tip tanımlarını ekleyelim
+type SavedAddress = {
+  id: string;
+  label: string;
+  countryCode: string;
+  country: string;
+  city: string;
+  district?: string;
+  streetAddress: string;
+  postalCode?: string;
+};
+
+type PopularAddress = {
+  label: string;
+  countryCode: string;
+  country: string;
+  city: string;
+  district?: string;
+  streetAddress: string;
+  postalCode?: string;
+};
 
 export default function EvaluatePage() {
   // Form alanları
@@ -31,9 +54,24 @@ export default function EvaluatePage() {
   const [availableCities, setAvailableCities] = useState<Array<string>>([]);
   const [availableDistricts, setAvailableDistricts] = useState<Array<string>>([]);
   
+  // Kaydedilen adresler
+  const [savedAddresses, setSavedAddresses] = useState<Array<SavedAddress>>([]);
+  const [showSavedAddresses, setShowSavedAddresses] = useState(false);
+  const [addressLabel, setAddressLabel] = useState('');
+  const [showSaveModal, setShowSaveModal] = useState(false);
+  
+  // Popüler adresler
+  const [popularAddresses, setPopularAddresses] = useState<Array<PopularAddress>>([
+    { label: 'İstanbul - Kadıköy', country: 'Türkiye', countryCode: 'TR', city: 'İstanbul', district: 'Kadıköy', streetAddress: 'Bağdat Caddesi', postalCode: '34710' },
+    { label: 'Ankara - Çankaya', country: 'Türkiye', countryCode: 'TR', city: 'Ankara', district: 'Çankaya', streetAddress: 'Tunalı Hilmi Caddesi', postalCode: '06680' },
+    { label: 'İzmir - Konak', country: 'Türkiye', countryCode: 'TR', city: 'İzmir', district: 'Konak', streetAddress: 'Kıbrıs Şehitleri Caddesi', postalCode: '35220' },
+    { label: 'Antalya - Konyaaltı', country: 'Türkiye', countryCode: 'TR', city: 'Antalya', district: 'Konyaaltı', streetAddress: 'Boğaçayı Caddesi', postalCode: '07070' },
+  ]);
+  
   // Ülke listesini yükle
   useEffect(() => {
     setAvailableCountries(getAllCountries());
+    loadSavedAddresses();
   }, []);
   
   // Ülke değiştiğinde şehirleri güncelle
@@ -80,6 +118,61 @@ export default function EvaluatePage() {
     setAddress(addressParts.join(', '));
   }, [streetAddress, district, city, country, postalCode]);
 
+  // Kaydedilmiş adresleri yükle
+  const loadSavedAddresses = async () => {
+    const addresses = await getSavedAddresses();
+    setSavedAddresses(addresses);
+  };
+  
+  // Adres kaydet
+  const handleSaveAddress = async () => {
+    if (!country || !city || !streetAddress) {
+      alert('Lütfen en azından ülke, şehir ve sokak bilgilerini doldurun');
+      return;
+    }
+    
+    const addressData = {
+      label: addressLabel || `${city}, ${streetAddress}`,
+      countryCode,
+      country,
+      city,
+      district,
+      streetAddress, 
+      postalCode
+    };
+    
+    try {
+      await saveAddress(addressData);
+      loadSavedAddresses();
+      setShowSaveModal(false);
+      setAddressLabel('');
+      alert('Adres başarıyla kaydedildi!');
+    } catch (error) {
+      alert('Adres kaydedilirken bir hata oluştu');
+    }
+  };
+  
+  // Kaydedilmiş adresi seç
+  const selectSavedAddress = (savedAddress: SavedAddress) => {
+    setCountryCode(savedAddress.countryCode);
+    setCountry(savedAddress.country);
+    setCity(savedAddress.city);
+    setDistrict(savedAddress.district || '');
+    setStreetAddress(savedAddress.streetAddress);
+    setPostalCode(savedAddress.postalCode || '');
+    setShowSavedAddresses(false);
+  };
+  
+  // Popüler adresi seç
+  const selectPopularAddress = (popularAddress: PopularAddress) => {
+    setCountryCode(popularAddress.countryCode);
+    setCountry(popularAddress.country);
+    setCity(popularAddress.city);
+    setDistrict(popularAddress.district || '');
+    setStreetAddress(popularAddress.streetAddress);
+    setPostalCode(popularAddress.postalCode || '');
+  };
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -148,6 +241,141 @@ export default function EvaluatePage() {
           <div className="sm:ml-4">
             <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Emlak Değerleme</h1>
             <p className="text-gray-600 text-sm sm:text-base">Yapay zeka ile emlak değerinizi öğrenin</p>
+          </div>
+        </div>
+        
+        {/* Adres Kısayolları */}
+        <div className="mb-6 space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-gray-800">Adres Seçimi</h2>
+            <div className="flex space-x-2">
+              <button
+                type="button"
+                onClick={() => setShowSavedAddresses(!showSavedAddresses)}
+                className="flex items-center px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50"
+              >
+                <BookmarkIcon className="w-4 h-4 mr-1 text-blue-600" />
+                Kayıtlı Adreslerim
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowSaveModal(true)}
+                className="flex items-center px-3 py-1 text-sm border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50"
+              >
+                <PlusCircleIcon className="w-4 h-4 mr-1" />
+                Adresi Kaydet
+              </button>
+            </div>
+          </div>
+          
+          {/* Kayıtlı Adresler Dropdown */}
+          {showSavedAddresses && (
+            <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 absolute mt-1">
+              <div className="flex items-center justify-between mb-2 pb-2 border-b">
+                <h3 className="font-medium">Kayıtlı Adreslerim</h3>
+                <button className="text-gray-500 hover:text-gray-700" onClick={() => setShowSavedAddresses(false)}>
+                  <XMarkIcon className="w-5 h-5" />
+                </button>
+              </div>
+              {savedAddresses.length === 0 ? (
+                <p className="text-sm text-gray-500 py-2">Henüz kaydedilmiş adres bulunmamaktadır.</p>
+              ) : (
+                <div className="max-h-60 overflow-y-auto divide-y divide-gray-100">
+                  {savedAddresses.map((savedAddress, index) => (
+                    <div
+                      key={index}
+                      className="py-2 px-1 cursor-pointer hover:bg-gray-50 flex items-center justify-between"
+                      onClick={() => selectSavedAddress(savedAddress)}
+                    >
+                      <div>
+                        <p className="font-medium">{savedAddress.label}</p>
+                        <p className="text-sm text-gray-600">{savedAddress.streetAddress}, {savedAddress.city}</p>
+                      </div>
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (confirm('Bu adresi silmek istediğinize emin misiniz?')) {
+                            deleteAddress(savedAddress.id);
+                            setSavedAddresses(savedAddresses.filter(addr => addr.id !== savedAddress.id));
+                          }
+                        }}
+                        className="text-red-500 hover:text-red-700 p-1"
+                      >
+                        <XMarkIcon className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+          
+          {/* Adres Kaydetme Modal */}
+          {showSaveModal && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md mx-4">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold">Adres Kaydet</h3>
+                  <button onClick={() => setShowSaveModal(false)} className="text-gray-500 hover:text-gray-700">
+                    <XMarkIcon className="w-6 h-6" />
+                  </button>
+                </div>
+                
+                <div className="mb-4">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Adres Etiketi</label>
+                  <input
+                    type="text"
+                    value={addressLabel}
+                    onChange={(e) => setAddressLabel(e.target.value)}
+                    placeholder="Örn: Evim, İşyerim, Yazlık"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2"
+                  />
+                  <p className="text-sm text-gray-500 mt-1">Etiket belirtmezseniz adres bilgileri kullanılacaktır.</p>
+                </div>
+                
+                <div className="border rounded p-3 bg-gray-50 mb-4">
+                  <h4 className="font-medium mb-1">Kaydedilecek Adres</h4>
+                  <p className="text-sm">{address}</p>
+                </div>
+                
+                <div className="flex space-x-3 mt-4">
+                  <button
+                    type="button"
+                    onClick={() => setShowSaveModal(false)}
+                    className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+                  >
+                    İptal
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleSaveAddress}
+                    className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                  >
+                    Kaydet
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Popüler Adresler */}
+          <div className="bg-gray-50 rounded-lg p-3">
+            <h3 className="text-sm font-medium text-gray-700 mb-2 flex items-center">
+              <StarIcon className="w-4 h-4 mr-1 text-yellow-500" />
+              Popüler Konumlar
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {popularAddresses.map((popAddress, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => selectPopularAddress(popAddress)}
+                  className="px-3 py-1 text-xs bg-white border border-gray-200 rounded-full hover:bg-blue-50 hover:border-blue-200"
+                >
+                  {popAddress.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
