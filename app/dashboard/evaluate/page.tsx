@@ -4,11 +4,15 @@ import { useState, useEffect } from 'react';
 import { ChartBarIcon, HomeIcon, MapPinIcon, CurrencyDollarIcon, GlobeAltIcon, BuildingOfficeIcon, BookmarkIcon, PlusCircleIcon, StarIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ensureCSRFToken, addCSRFHeader } from '@/utils/csrf';
 import { 
-  COUNTRIES, 
-  getAllCountries, 
-  getCitiesByCountry, 
-  getDistrictsByCity 
-} from '@/utils/countries';
+  getAllCountries,
+  getCountryByCode,
+  getStatesByCountry,
+  getCitiesByState,
+  getCitiesByCountry,
+  getFormattedCountries,
+  getFormattedStates,
+  getFormattedCities
+} from '@/utils/addressHelper';
 import { getSavedAddresses, saveAddress, deleteAddress, labelAddress } from '@/utils/savedAddresses';
 
 // Adres tip tanımlarını ekleyelim
@@ -32,6 +36,31 @@ type PopularAddress = {
   streetAddress: string;
   postalCode?: string;
 };
+
+// Tip tanımlamaları
+interface FormattedCountry {
+  value: string;
+  label: string;
+  phoneCode: string;
+}
+
+interface FormattedState {
+  value: string;
+  label: string;
+  stateCode: string;
+  countryCode: string;
+  coordinates: {
+    lat: string;
+    lng: string;
+  };
+}
+
+interface FormattedCity {
+  value: string;
+  label: string;
+  stateCode: string;
+  countryCode: string;
+}
 
 export default function EvaluatePage() {
   // Form alanları
@@ -70,22 +99,27 @@ export default function EvaluatePage() {
   
   // Ülke listesini yükle
   useEffect(() => {
-    setAvailableCountries(getAllCountries());
+    const formattedCountries = getFormattedCountries().map(country => ({
+      code: country.value,
+      name: country.label
+    }));
+    setAvailableCountries(formattedCountries);
     loadSavedAddresses();
   }, []);
   
   // Ülke değiştiğinde şehirleri güncelle
   useEffect(() => {
     if (countryCode) {
-      const cities = getCitiesByCountry(countryCode);
-      setAvailableCities(cities);
+      const states = getStatesByCountry(countryCode);
+      const cityNames = states.map(state => state.name);
+      setAvailableCities(cityNames.filter(Boolean));
       
       // Ülke değiştiğinde şehir, ilçe ve adres resetle
       setCity('');
       setDistrict('');
       
       // Ülke adını ayarla
-      const selectedCountry = COUNTRIES.find(c => c.code === countryCode);
+      const selectedCountry = getCountryByCode(countryCode);
       setCountry(selectedCountry ? selectedCountry.name : '');
     } else {
       setAvailableCities([]);
@@ -95,8 +129,15 @@ export default function EvaluatePage() {
   // Şehir değiştiğinde ilçeleri güncelle
   useEffect(() => {
     if (countryCode && city) {
-      const districts = getDistrictsByCity(countryCode, city);
-      setAvailableDistricts(districts);
+      const states = getStatesByCountry(countryCode);
+      const selectedState = states.find(state => state.name === city);
+      if (selectedState) {
+        const cities = getFormattedCities(countryCode, selectedState.code);
+        const districts = cities.map(city => city.label).filter(Boolean);
+        setAvailableDistricts(districts);
+      } else {
+        setAvailableDistricts([]);
+      }
       
       // Şehir değiştiğinde ilçe resetle
       setDistrict('');
