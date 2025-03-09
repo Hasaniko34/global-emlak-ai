@@ -4,10 +4,16 @@ import { authOptions } from '@/lib/auth';
 import { connectToDatabase } from '@/utils/mongodb';
 import { ObjectId } from 'mongodb';
 
+type Context = {
+  params: {
+    id: string;
+  };
+};
+
 // Adresi sil
 export async function DELETE(
-  req: NextRequest,
-  context: { params: { id: string } }
+  request: NextRequest,
+  { params }: Context
 ) {
   try {
     // Oturumu kontrol et
@@ -16,7 +22,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Yetkilendirme hatası' }, { status: 401 });
     }
     
-    const addressId = context.params.id;
+    const addressId = params.id;
     
     // Adres ID'sini kontrol et
     if (!addressId || !ObjectId.isValid(addressId)) {
@@ -24,7 +30,12 @@ export async function DELETE(
     }
     
     // Veritabanına bağlan
-    const { db } = await connectToDatabase();
+    const connection = await connectToDatabase();
+    const db = connection.db;
+    
+    if (!db) {
+      return NextResponse.json({ error: 'Veritabanı bağlantısı kurulamadı' }, { status: 500 });
+    }
     
     // Adresi bul ve kullanıcı sahipliğini kontrol et
     const address = await db.collection('user_addresses').findOne({
@@ -50,8 +61,8 @@ export async function DELETE(
 
 // Adresi güncelle (etiket değişikliği)
 export async function PATCH(
-  req: NextRequest,
-  context: { params: { id: string } }
+  request: NextRequest,
+  { params }: Context
 ) {
   try {
     // Oturumu kontrol et
@@ -60,7 +71,7 @@ export async function PATCH(
       return NextResponse.json({ error: 'Yetkilendirme hatası' }, { status: 401 });
     }
     
-    const addressId = context.params.id;
+    const addressId = params.id;
     
     // Adres ID'sini kontrol et
     if (!addressId || !ObjectId.isValid(addressId)) {
@@ -68,14 +79,19 @@ export async function PATCH(
     }
     
     // İstek verisini al
-    const data = await req.json();
+    const data = await request.json();
     
     if (!data.label) {
       return NextResponse.json({ error: 'Etiket belirtilmedi' }, { status: 400 });
     }
     
     // Veritabanına bağlan
-    const { db } = await connectToDatabase();
+    const connection = await connectToDatabase();
+    const db = connection.db;
+    
+    if (!db) {
+      return NextResponse.json({ error: 'Veritabanı bağlantısı kurulamadı' }, { status: 500 });
+    }
     
     // Adresi bul ve kullanıcı sahipliğini kontrol et
     const address = await db.collection('user_addresses').findOne({
@@ -102,6 +118,10 @@ export async function PATCH(
     const updatedAddress = await db.collection('user_addresses').findOne({
       _id: new ObjectId(addressId)
     });
+    
+    if (!updatedAddress) {
+      return NextResponse.json({ error: 'Güncellenmiş adres alınamadı' }, { status: 500 });
+    }
     
     return NextResponse.json({
       address: {

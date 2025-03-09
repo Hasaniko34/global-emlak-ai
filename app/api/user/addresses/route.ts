@@ -5,7 +5,7 @@ import { connectToDatabase } from '@/utils/mongodb';
 import { ObjectId } from 'mongodb';
 
 // Tüm adresleri getir
-export async function GET(req: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
     // Oturumu kontrol et
     const session = await getServerSession(authOptions);
@@ -14,7 +14,12 @@ export async function GET(req: NextRequest) {
     }
     
     // Veritabanına bağlan
-    const { db } = await connectToDatabase();
+    const connection = await connectToDatabase();
+    const db = connection.db;
+    
+    if (!db) {
+      return NextResponse.json({ error: 'Veritabanı bağlantısı kurulamadı' }, { status: 500 });
+    }
     
     // Kullanıcının adreslerini al
     const addresses = await db.collection('user_addresses')
@@ -30,7 +35,7 @@ export async function GET(req: NextRequest) {
 }
 
 // Yeni adres ekle
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
     // Oturumu kontrol et
     const session = await getServerSession(authOptions);
@@ -39,7 +44,7 @@ export async function POST(req: NextRequest) {
     }
     
     // İstek verisini al
-    const data = await req.json();
+    const data = await request.json();
     
     // Zorunlu alanları kontrol et
     if (!data.country || !data.city || !data.streetAddress) {
@@ -47,7 +52,12 @@ export async function POST(req: NextRequest) {
     }
     
     // Veritabanına bağlan
-    const { db } = await connectToDatabase();
+    const connection = await connectToDatabase();
+    const db = connection.db;
+    
+    if (!db) {
+      return NextResponse.json({ error: 'Veritabanı bağlantısı kurulamadı' }, { status: 500 });
+    }
     
     // Adresi oluştur
     const addressToInsert = {
