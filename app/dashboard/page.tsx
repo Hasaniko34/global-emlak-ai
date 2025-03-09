@@ -1,53 +1,146 @@
 'use client';
 
-import { HomeIcon, ChartBarIcon, MapIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react';
+import { HomeIcon, ChartBarIcon, MapIcon, ChatBubbleLeftRightIcon, PlusIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 export default function DashboardPage() {
-  const stats = [
+  const { data: session, status } = useSession();
+  const [stats, setStats] = useState([
     {
-      title: 'Toplam İlan',
-      value: '1,234',
+      title: 'Toplam Gayrimenkul',
+      value: '0',
       icon: HomeIcon,
       color: 'blue',
     },
     {
-      title: 'Değerleme Sayısı',
-      value: '567',
+      title: 'Portföy Sayısı',
+      value: '0',
       icon: ChartBarIcon,
       color: 'green',
     },
     {
-      title: 'AI Sohbet Sayısı',
-      value: '890',
-      icon: ChatBubbleLeftRightIcon,
+      title: 'Değerleme Sayısı',
+      value: '0',
+      icon: ChartBarIcon,
       color: 'purple',
     },
-  ];
+  ]);
+  
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchDashboardData = async () => {
+      if (status !== 'authenticated') return;
+      
+      setIsLoading(true);
+      try {
+        // Gayrimenkul sayısını al
+        const propertyResponse = await fetch('/api/property');
+        const propertyData = await propertyResponse.json();
+        
+        // Portföy sayısını al
+        const portfolioResponse = await fetch('/api/portfolio');
+        const portfolioData = await portfolioResponse.json();
+        
+        // İstatistikleri güncelle
+        setStats([
+          {
+            title: 'Toplam Gayrimenkul',
+            value: propertyData.properties ? propertyData.properties.length.toString() : '0',
+            icon: HomeIcon,
+            color: 'blue',
+          },
+          {
+            title: 'Portföy Sayısı',
+            value: portfolioData.portfolios ? portfolioData.portfolios.length.toString() : '0',
+            icon: ChartBarIcon,
+            color: 'green',
+          },
+          {
+            title: 'Değerleme Sayısı',
+            value: '0', // Şimdilik sabit değer
+            icon: ChartBarIcon,
+            color: 'purple',
+          },
+        ]);
+      } catch (error) {
+        console.error('Dashboard veri yükleme hatası:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchDashboardData();
+  }, [status]);
 
   return (
     <div className="space-y-8">
       {/* Başlık */}
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Hoş Geldiniz</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Hoş Geldiniz{session?.user?.name ? `, ${session.user.name}` : ''}</h1>
         <p className="mt-2 text-gray-600">Global Emlak AI ile emlak işlemlerinizi kolaylaştırın</p>
       </div>
 
       {/* İstatistikler */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {stats.map((stat) => (
-          <div key={stat.title} className="rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div key={stat.title} className={`rounded-2xl bg-white p-6 shadow-sm hover:shadow-md transition-shadow border-l-4 border-${stat.color}-500`}>
             <div className="flex items-center">
               <div className={`rounded-lg bg-${stat.color}-100 p-3`}>
                 <stat.icon className={`h-6 w-6 text-${stat.color}-600`} />
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">{stat.title}</p>
-                <p className="text-2xl font-semibold text-gray-900">{stat.value}</p>
+                <p className="text-2xl font-semibold text-gray-900">{isLoading ? '...' : stat.value}</p>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      
+      {/* Hızlı Erişim Kartları */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Link href="/dashboard/property/new" className="group">
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group-hover:bg-blue-50 h-full flex flex-col items-center justify-center text-center">
+            <div className="bg-blue-100 p-4 rounded-full mb-4 group-hover:bg-blue-200 transition-colors">
+              <HomeIcon className="h-8 w-8 text-blue-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Yeni Gayrimenkul</h3>
+            <p className="text-gray-600 text-sm">Portföyünüze yeni bir gayrimenkul ekleyin</p>
+          </div>
+        </Link>
+        
+        <Link href="/dashboard/portfolio/new" className="group">
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group-hover:bg-green-50 h-full flex flex-col items-center justify-center text-center">
+            <div className="bg-green-100 p-4 rounded-full mb-4 group-hover:bg-green-200 transition-colors">
+              <PlusIcon className="h-8 w-8 text-green-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Yeni Portföy</h3>
+            <p className="text-gray-600 text-sm">Gayrimenkullerinizi gruplandırmak için portföy oluşturun</p>
+          </div>
+        </Link>
+        
+        <Link href="/dashboard/evaluate" className="group">
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group-hover:bg-purple-50 h-full flex flex-col items-center justify-center text-center">
+            <div className="bg-purple-100 p-4 rounded-full mb-4 group-hover:bg-purple-200 transition-colors">
+              <ChartBarIcon className="h-8 w-8 text-purple-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Değerleme Yap</h3>
+            <p className="text-gray-600 text-sm">Yapay zeka ile emlak değerlemesi yapın</p>
+          </div>
+        </Link>
+        
+        <Link href="/dashboard/map" className="group">
+          <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all group-hover:bg-orange-50 h-full flex flex-col items-center justify-center text-center">
+            <div className="bg-orange-100 p-4 rounded-full mb-4 group-hover:bg-orange-200 transition-colors">
+              <MapIcon className="h-8 w-8 text-orange-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">3D Harita</h3>
+            <p className="text-gray-600 text-sm">Gayrimenkullerinizi harita üzerinde görüntüleyin</p>
+          </div>
+        </Link>
       </div>
 
       {/* Son Aktiviteler */}
