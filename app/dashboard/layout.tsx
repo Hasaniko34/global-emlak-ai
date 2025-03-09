@@ -32,6 +32,8 @@ export default function DashboardLayout({
 
   const menuItems = [
     { href: '/dashboard', icon: HomeIcon, label: 'Dashboard' },
+    { href: '/dashboard/property', icon: HomeIcon, label: 'Gayrimenkuller' },
+    { href: '/dashboard/portfolio', icon: ChartBarIcon, label: 'Portföyler' },
     { href: '/dashboard/evaluate', icon: ChartBarIcon, label: 'Emlak Değerleme' },
     { href: '/dashboard/map', icon: MapIcon, label: '3D Harita' },
     { href: '/dashboard/ai-assistant', icon: ChatBubbleLeftRightIcon, label: 'AI Asistan' },
@@ -114,6 +116,8 @@ export default function DashboardLayout({
             </button>
             <h2 className="text-xl font-semibold text-gray-800">
               {pathname === '/dashboard' && 'Dashboard'}
+              {pathname === '/dashboard/property' && 'Gayrimenkuller'}
+              {pathname === '/dashboard/portfolio' && 'Portföyler'}
               {pathname === '/dashboard/evaluate' && 'Emlak Değerleme'}
               {pathname === '/dashboard/map' && '3D Harita'}
               {pathname === '/dashboard/ai-assistant' && 'AI Asistan'}
