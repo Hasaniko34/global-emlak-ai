@@ -127,42 +127,50 @@ export const getCitiesByCountry = (countryCode: string): { name: string; stateCo
   }
 };
 
-// Google Places API ile mahalle/sokak verileri getirme
-export const getNeighborhoodsByCity = async (countryCode: string, cityName: string): Promise<any[]> => {
+// Google Places API ile mahalle verilerini getir
+export const getNeighborhoodsByCity = async (countryCode: string, cityName: string): Promise<{ value: string; label: string }[]> => {
   try {
-    // API anahtarını al
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-    
-    // Bu nokta gerçek API çağrısı ile değiştirilecek
-    // NOT: Bu yaklaşım sadece client side'da çalışabilir, server API Route'ları gerekebilir
-    
-    // Şimdilik örnek bir veri yapısı dönelim
-    return [
-      { id: 1, name: "Merkez Mahallesi", city: cityName, country: countryCode },
-      { id: 2, name: "Sahil Mahallesi", city: cityName, country: countryCode },
-      { id: 3, name: "Yeni Mahalle", city: cityName, country: countryCode },
-    ];
+    const response = await fetch(`/api/address/places/neighborhoods?country=${countryCode}&city=${cityName}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Mahalle verileri alınamadı');
+    }
+
+    const data = await response.json();
+    return data.predictions.map((prediction: any) => ({
+      value: prediction.place_id,
+      label: prediction.structured_formatting.main_text
+    }));
   } catch (error) {
     console.error('Mahalle verileri getirilirken hata:', error);
     return [];
   }
 };
 
-// Sokak verilerini getir
-export const getStreetsByNeighborhood = async (countryCode: string, cityName: string, neighborhood: string): Promise<any[]> => {
+// Google Places API ile sokak verilerini getir
+export const getStreetsByNeighborhood = async (countryCode: string, cityName: string, neighborhood: string): Promise<{ value: string; label: string }[]> => {
   try {
-    // API anahtarını al
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-    
-    // Google Places API tekstbox autocomplete api'si
-    // Bunu client side'da 'use client' direktifiyle kullanmak daha uygun olabilir
-    
-    // Şimdilik örnek bir veri yapısı dönelim
-    return [
-      { id: 1, name: "Atatürk Caddesi", neighborhood, city: cityName, country: countryCode },
-      { id: 2, name: "Cumhuriyet Sokak", neighborhood, city: cityName, country: countryCode },
-      { id: 3, name: "İstiklal Caddesi", neighborhood, city: cityName, country: countryCode },
-    ];
+    const response = await fetch(`/api/address/places/streets?country=${countryCode}&city=${cityName}&neighborhood=${neighborhood}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Sokak verileri alınamadı');
+    }
+
+    const data = await response.json();
+    return data.predictions.map((prediction: any) => ({
+      value: prediction.place_id,
+      label: prediction.structured_formatting.main_text
+    }));
   } catch (error) {
     console.error('Sokak verileri getirilirken hata:', error);
     return [];

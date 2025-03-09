@@ -11,7 +11,9 @@ import {
   getCitiesByCountry,
   getFormattedCountries,
   getFormattedStates,
-  getFormattedCities
+  getFormattedCities,
+  getNeighborhoodsByCity,
+  getStreetsByNeighborhood
 } from '@/utils/addressHelper';
 import { getSavedAddresses, saveAddress, deleteAddress, labelAddress } from '@/utils/savedAddresses';
 
@@ -97,6 +99,14 @@ export default function EvaluatePage() {
     { label: 'Antalya - Konyaaltı', country: 'Türkiye', countryCode: 'TR', city: 'Antalya', district: 'Konyaaltı', streetAddress: 'Boğaçayı Caddesi', postalCode: '07070' },
   ]);
   
+  // Mahalle ve sokak seçimleri için state'ler
+  const [availableNeighborhoods, setAvailableNeighborhoods] = useState<Array<{value: string, label: string}>>([]);
+  const [availableStreets, setAvailableStreets] = useState<Array<{value: string, label: string}>>([]);
+  const [neighborhood, setNeighborhood] = useState('');
+  const [street, setStreet] = useState('');
+  const [loadingNeighborhoods, setLoadingNeighborhoods] = useState(false);
+  const [loadingStreets, setLoadingStreets] = useState(false);
+  
   // Ülke listesini yükle
   useEffect(() => {
     const formattedCountries = getFormattedCountries().map(country => ({
@@ -146,18 +156,70 @@ export default function EvaluatePage() {
     }
   }, [countryCode, city]);
   
+  // İlçe değiştiğinde mahalleleri güncelle
+  useEffect(() => {
+    const loadNeighborhoods = async () => {
+      if (countryCode && city && district) {
+        setLoadingNeighborhoods(true);
+        try {
+          const neighborhoods = await getNeighborhoodsByCity(countryCode, `${district}, ${city}`);
+          setAvailableNeighborhoods(neighborhoods);
+        } catch (error) {
+          console.error('Mahalleler yüklenirken hata:', error);
+          setAvailableNeighborhoods([]);
+        } finally {
+          setLoadingNeighborhoods(false);
+        }
+        
+        // İlçe değiştiğinde mahalle ve sokak resetle
+        setNeighborhood('');
+        setStreet('');
+      } else {
+        setAvailableNeighborhoods([]);
+      }
+    };
+
+    loadNeighborhoods();
+  }, [countryCode, city, district]);
+
+  // Mahalle değiştiğinde sokakları güncelle
+  useEffect(() => {
+    const loadStreets = async () => {
+      if (countryCode && city && district && neighborhood) {
+        setLoadingStreets(true);
+        try {
+          const streets = await getStreetsByNeighborhood(countryCode, `${district}, ${city}`, neighborhood);
+          setAvailableStreets(streets);
+        } catch (error) {
+          console.error('Sokaklar yüklenirken hata:', error);
+          setAvailableStreets([]);
+        } finally {
+          setLoadingStreets(false);
+        }
+        
+        // Mahalle değiştiğinde sokak resetle
+        setStreet('');
+      } else {
+        setAvailableStreets([]);
+      }
+    };
+
+    loadStreets();
+  }, [countryCode, city, district, neighborhood]);
+  
   // Tam adres oluştur
   useEffect(() => {
     const addressParts = [];
     
-    if (streetAddress) addressParts.push(streetAddress);
+    if (street) addressParts.push(street);
+    if (neighborhood) addressParts.push(neighborhood);
     if (district) addressParts.push(district);
     if (city) addressParts.push(city);
     if (country) addressParts.push(country);
     if (postalCode) addressParts.push(postalCode);
     
     setAddress(addressParts.join(', '));
-  }, [streetAddress, district, city, country, postalCode]);
+  }, [street, neighborhood, district, city, country, postalCode]);
 
   // Kaydedilmiş adresleri yükle
   const loadSavedAddresses = async () => {
@@ -498,23 +560,69 @@ export default function EvaluatePage() {
               </div>
             </div>
             
-            {/* Sokak Adresi */}
+            {/* Mahalle Seçimi */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Sokak Adresi <span className="text-red-600">*</span>
+                Mahalle
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
                 </div>
-                <input
-                  type="text"
-                  value={streetAddress}
-                  onChange={(e) => setStreetAddress(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
-                  placeholder="Cadde/Sokak, Bina No, Daire No"
-                  required
-                />
+                <select
+                  value={neighborhood}
+                  onChange={(e) => setNeighborhood(e.target.value)}
+                  className={`block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base ${!district ? 'bg-gray-100 cursor-not-allowed' : ''}`}
+                  disabled={!district || loadingNeighborhoods}
+                >
+                  <option value="">Mahalle Seçiniz</option>
+                  {availableNeighborhoods.map((neighborhood) => (
+                    <option key={neighborhood.value} value={neighborhood.value}>
+                      {neighborhood.label}
+                    </option>
+                  ))}
+                </select>
+                {loadingNeighborhoods && (
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <svg className="animate-spin h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Sokak Seçimi */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
+                Sokak
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
+                </div>
+                <select
+                  value={street}
+                  onChange={(e) => setStreet(e.target.value)}
+                  className={`block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base ${!neighborhood ? 'bg-gray-100 cursor-not-allowed' : ''}`}
+                  disabled={!neighborhood || loadingStreets}
+                >
+                  <option value="">Sokak Seçiniz</option>
+                  {availableStreets.map((street) => (
+                    <option key={street.value} value={street.value}>
+                      {street.label}
+                    </option>
+                  ))}
+                </select>
+                {loadingStreets && (
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <svg className="animate-spin h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  </div>
+                )}
               </div>
             </div>
             
