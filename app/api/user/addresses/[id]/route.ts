@@ -5,10 +5,7 @@ import { connectToDatabase } from '@/utils/mongodb';
 import { ObjectId } from 'mongodb';
 
 // Adresi sil
-export async function DELETE(
-  request: Request,
-  { params }: { params: { id: string } }
-) {
+export async function DELETE(request: NextRequest) {
   try {
     // Oturumu kontrol et
     const session = await getServerSession(authOptions);
@@ -16,7 +13,10 @@ export async function DELETE(
       return NextResponse.json({ error: 'Yetkilendirme hatası' }, { status: 401 });
     }
     
-    const addressId = params.id;
+    // URL'den ID parametresini al
+    const url = request.nextUrl;
+    const pathParts = url.pathname.split('/');
+    const addressId = pathParts[pathParts.length - 1];
     
     // Adres ID'sini kontrol et
     if (!addressId || !ObjectId.isValid(addressId)) {
@@ -54,10 +54,7 @@ export async function DELETE(
 }
 
 // Adresi güncelle (etiket değişikliği)
-export async function PATCH(
-  request: Request,
-  { params }: { params: { id: string } }
-) {
+export async function PATCH(request: NextRequest) {
   try {
     // Oturumu kontrol et
     const session = await getServerSession(authOptions);
@@ -65,7 +62,10 @@ export async function PATCH(
       return NextResponse.json({ error: 'Yetkilendirme hatası' }, { status: 401 });
     }
     
-    const addressId = params.id;
+    // URL'den ID parametresini al
+    const url = request.nextUrl;
+    const pathParts = url.pathname.split('/');
+    const addressId = pathParts[pathParts.length - 1];
     
     // Adres ID'sini kontrol et
     if (!addressId || !ObjectId.isValid(addressId)) {
