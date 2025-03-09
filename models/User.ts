@@ -1,5 +1,6 @@
 import mongoose, { Document, Model, Schema } from 'mongoose';
 import { hash, compare } from 'bcryptjs';
+import crypto from 'crypto';
 
 export interface IUser extends Document {
   _id: mongoose.Types.ObjectId;
@@ -9,6 +10,8 @@ export interface IUser extends Document {
   image?: string;
   password?: string;
   role: string;
+  resetToken?: string;
+  resetTokenExpiry?: Date;
   comparePassword(candidatePassword: string): Promise<boolean>;
   generateResetToken(): string;
 }
@@ -21,6 +24,8 @@ const UserSchema = new Schema<IUser>(
     image: String,
     password: String,
     role: { type: String, default: 'user' },
+    resetToken: String,
+    resetTokenExpiry: Date
   },
   { timestamps: true }
 );
@@ -29,6 +34,23 @@ const UserSchema = new Schema<IUser>(
 UserSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
   const user = this as IUser;
   return compare(candidatePassword, user.password || '');
+};
+
+// Şifre sıfırlama token'ı oluşturma metodu
+UserSchema.methods.generateResetToken = function (): string {
+  // Random token oluştur
+  const resetToken = crypto.randomBytes(32).toString('hex');
+  
+  // Token'ı hash'le ve kaydet
+  this.resetToken = crypto
+    .createHash('sha256')
+    .update(resetToken)
+    .digest('hex');
+    
+  // Token geçerlilik süresini 1 saat olarak ayarla
+  this.resetTokenExpiry = new Date(Date.now() + 3600000); // 1 saat
+  
+  return resetToken;
 };
 
 // Şifre hashlemek için pre-save hook
