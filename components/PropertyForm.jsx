@@ -103,4 +103,50 @@ export default function PropertyForm({ onResult }) {
       )}
     </form>
   );
-} 
+}
+
+// API'ye istek atarken CSRF token ekleyen yardımcı fonksiyon
+export const fetchWithCSRF = async (url, options = {}) => {
+  // CSRF token'ı al
+  let csrfToken = getCookie('csrfToken');
+  
+  // Token yoksa yeni bir token oluştur
+  if (!csrfToken) {
+    // Güvenli bir random token oluştur
+    csrfToken = generateRandomToken();
+    // Token'ı cookie olarak sakla
+    setCookie('csrfToken', csrfToken, 1); // 1 gün geçerli
+  }
+  
+  // Header'lara CSRF token ekle
+  const headers = {
+    ...options.headers,
+    'x-csrf-token': csrfToken,
+  };
+  
+  // İsteği gönder
+  return fetch(url, {
+    ...options,
+    headers,
+  });
+};
+
+// Random token oluşturan yardımcı fonksiyon
+const generateRandomToken = () => {
+  return Array(32)
+    .fill(0)
+    .map(() => Math.floor(Math.random() * 16).toString(16))
+    .join('');
+};
+
+// Cookie işlemleri için yardımcı fonksiyonlar
+const setCookie = (name, value, days) => {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; samesite=strict`;
+};
+
+const getCookie = (name) => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+}; 
