@@ -6,11 +6,6 @@ import dotenv from 'dotenv';
 // .env dosyasını yükle
 dotenv.config();
 
-// API anahtarları
-const MAPBOX_TOKEN = process.env.MAPBOX_API_KEY;
-const HERE_API_KEY = process.env.HERE_API_KEY;
-const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-
 // Veri klasörü
 const DATA_DIR = path.join(process.cwd(), 'data');
 
@@ -20,178 +15,6 @@ const EXISTING_PROVINCE_DATA = [
   "Konya", "Gaziantep", "Mersin", "Kayseri", "Kocaeli", "Eskişehir", 
   "Samsun", "Tekirdağ", "Trabzon", "Diyarbakır", "Hatay", "Manisa"
 ];
-
-// Türkiye'deki tüm illerin listesi ve bu illerin plaka kodları
-const ALL_TURKISH_PROVINCES = [
-  { code: "01", name: "Adana" },
-  { code: "02", name: "Adıyaman" },
-  { code: "03", name: "Afyonkarahisar" },
-  { code: "04", name: "Ağrı" },
-  { code: "05", name: "Amasya" },
-  { code: "06", name: "Ankara" },
-  { code: "07", name: "Antalya" },
-  { code: "08", name: "Artvin" },
-  { code: "09", name: "Aydın" },
-  { code: "10", name: "Balıkesir" },
-  { code: "11", name: "Bilecik" },
-  { code: "12", name: "Bingöl" },
-  { code: "13", name: "Bitlis" },
-  { code: "14", name: "Bolu" },
-  { code: "15", name: "Burdur" },
-  { code: "16", name: "Bursa" },
-  { code: "17", name: "Çanakkale" },
-  { code: "18", name: "Çankırı" },
-  { code: "19", name: "Çorum" },
-  { code: "20", name: "Denizli" },
-  { code: "21", name: "Diyarbakır" },
-  { code: "22", name: "Edirne" },
-  { code: "23", name: "Elazığ" },
-  { code: "24", name: "Erzincan" },
-  { code: "25", name: "Erzurum" },
-  { code: "26", name: "Eskişehir" },
-  { code: "27", name: "Gaziantep" },
-  { code: "28", name: "Giresun" },
-  { code: "29", name: "Gümüşhane" },
-  { code: "30", name: "Hakkari" },
-  { code: "31", name: "Hatay" },
-  { code: "32", name: "Isparta" },
-  { code: "33", name: "Mersin" },
-  { code: "34", name: "İstanbul" },
-  { code: "35", name: "İzmir" },
-  { code: "36", name: "Kars" },
-  { code: "37", name: "Kastamonu" },
-  { code: "38", name: "Kayseri" },
-  { code: "39", name: "Kırklareli" },
-  { code: "40", name: "Kırşehir" },
-  { code: "41", name: "Kocaeli" },
-  { code: "42", name: "Konya" },
-  { code: "43", name: "Kütahya" },
-  { code: "44", name: "Malatya" },
-  { code: "45", name: "Manisa" },
-  { code: "46", name: "Kahramanmaraş" },
-  { code: "47", name: "Mardin" },
-  { code: "48", name: "Muğla" },
-  { code: "49", name: "Muş" },
-  { code: "50", name: "Nevşehir" },
-  { code: "51", name: "Niğde" },
-  { code: "52", name: "Ordu" },
-  { code: "53", name: "Rize" },
-  { code: "54", name: "Sakarya" },
-  { code: "55", name: "Samsun" },
-  { code: "56", name: "Siirt" },
-  { code: "57", name: "Sinop" },
-  { code: "58", name: "Sivas" },
-  { code: "59", name: "Tekirdağ" },
-  { code: "60", name: "Tokat" },
-  { code: "61", name: "Trabzon" },
-  { code: "62", name: "Tunceli" },
-  { code: "63", name: "Şanlıurfa" },
-  { code: "64", name: "Uşak" },
-  { code: "65", name: "Van" },
-  { code: "66", name: "Yozgat" },
-  { code: "67", name: "Zonguldak" },
-  { code: "68", name: "Aksaray" },
-  { code: "69", name: "Bayburt" },
-  { code: "70", name: "Karaman" },
-  { code: "71", name: "Kırıkkale" },
-  { code: "72", name: "Batman" },
-  { code: "73", name: "Şırnak" },
-  { code: "74", name: "Bartın" },
-  { code: "75", name: "Ardahan" },
-  { code: "76", name: "Iğdır" },
-  { code: "77", name: "Yalova" },
-  { code: "78", name: "Karabük" },
-  { code: "79", name: "Kilis" },
-  { code: "80", name: "Osmaniye" },
-  { code: "81", name: "Düzce" }
-];
-
-// Eksik olan illeri filtrele (mevcut olanlara bakmak yerine eksik olanlara odaklanacağız)
-const MISSING_PROVINCES = ALL_TURKISH_PROVINCES.filter(province => 
-  !EXISTING_PROVINCE_DATA.includes(province.name) && 
-  !EXISTING_PROVINCE_DATA.includes(province.name.toLowerCase()));
-
-console.log(`Toplam ${MISSING_PROVINCES.length} il için veri çekilecek:`);
-MISSING_PROVINCES.forEach(province => console.log(`- ${province.name}`));
-
-// Mapbox'tan veri çekme fonksiyonu
-async function fetchFromMapbox(query: string, types: string[], country: string): Promise<any> {
-  try {
-    if (!MAPBOX_TOKEN) {
-      throw new Error('MAPBOX_TOKEN bulunamadı');
-    }
-    
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(query)}.json`;
-    
-    console.log(`🔍 Mapbox API isteği: ${url} - Query: ${query}`);
-    
-    const response = await axios.get(url, {
-      params: {
-        access_token: MAPBOX_TOKEN,
-        types: types.join(','),
-        country,
-        limit: 10
-      }
-    });
-    
-    return response.data;
-  } catch (error) {
-    console.error(`❌ Mapbox API hatası: ${error}`);
-    return { features: [] };
-  }
-}
-
-// HERE API ile veri çekme fonksiyonu
-async function fetchFromHereAPI(query: string, country: string): Promise<any> {
-  try {
-    if (!HERE_API_KEY) {
-      throw new Error('HERE_API_KEY bulunamadı');
-    }
-    
-    const url = 'https://geocode.search.hereapi.com/v1/geocode';
-    
-    console.log(`🔍 HERE API isteği - Query: ${query}, Ülke: ${country}`);
-    
-    const response = await axios.get(url, {
-      params: {
-        q: query,
-        apiKey: HERE_API_KEY,
-        in: `countryCode:${country}`
-      }
-    });
-    
-    return response.data;
-  } catch (error) {
-    console.error(`❌ HERE API hatası: ${error}`);
-    return { items: [] };
-  }
-}
-
-// İlçeleri çekmek için HERE API fonksiyonu
-async function fetchDistrictsFromHereAPI(cityName: string, countryCode: string): Promise<any[]> {
-  try {
-    console.log(`🔍 ${cityName} için ilçeler çekiliyor...`);
-    
-    const query = `${cityName}, Türkiye`;
-    const result = await fetchFromHereAPI(query, countryCode);
-    
-    if (!result.items || result.items.length === 0) {
-      console.warn(`⚠️ ${cityName} için ilçe bulunamadı`);
-      return [];
-    }
-    
-    const districts: string[] = [];
-    
-    // İlçeleri çekmek için özel bir sorgulama yapılması gerekebilir
-    // Burada sadece basit bir yaklaşım gösteriliyor
-    // Gerçek uygulamada daha karmaşık bir mantık gerekebilir
-    
-    return districts;
-  } catch (error) {
-    console.error(`❌ ${cityName} için ilçe çekme hatası: ${error}`);
-    return [];
-  }
-}
 
 // Verileri dosyaya kaydetme fonksiyonu
 function saveDataToFile(filename: string, data: any): void {
@@ -228,51 +51,6 @@ function readExistingDistricts(): any {
   return {};
 }
 
-// Google Maps API ile Türkiye'deki ilçeleri çekmek için
-async function fetchTurkeyDistricts(provinceName: string): Promise<string[]> {
-  try {
-    if (!GOOGLE_MAPS_API_KEY) {
-      throw new Error('GOOGLE_MAPS_API_KEY bulunamadı');
-    }
-    
-    console.log(`🔍 ${provinceName} için ilçeler çekiliyor (Google Maps API)...`);
-    
-    // Daha kesin sonuçlar için sorguyu şekillendirme
-    const query = `${provinceName} ilçeleri Türkiye`;
-    
-    const url = `https://maps.googleapis.com/maps/api/place/textsearch/json`;
-    const response = await axios.get(url, {
-      params: {
-        query,
-        key: GOOGLE_MAPS_API_KEY,
-        language: 'tr',
-        region: 'tr'
-      }
-    });
-    
-    if (!response.data.results || response.data.results.length === 0) {
-      console.warn(`⚠️ ${provinceName} için ilçe bulunamadı`);
-      return [];
-    }
-    
-    // İlçe adlarını çıkarmak için sonuçları işle
-    // Bu basit bir örnektir ve gerçek uygulamada daha karmaşık işleme gerekebilir
-    const districts = response.data.results.map((result: any) => {
-      // İlçe adını çıkar
-      const name = result.name;
-      if (name.includes('İlçesi') || name.includes('District')) {
-        return name.replace(' İlçesi', '').replace(' District', '');
-      }
-      return null;
-    }).filter(Boolean);
-    
-    return districts;
-  } catch (error) {
-    console.error(`❌ ${provinceName} için ilçe çekme hatası (Google Maps API): ${error}`);
-    return [];
-  }
-}
-
 // Sabit ilçe verilerini kullanarak veritabanını doldur
 async function populateTurkishDistrictsFromStaticData(): Promise<void> {
   try {
@@ -307,6 +85,9 @@ async function populateTurkishDistrictsFromStaticData(): Promise<void> {
       "Elazığ": ["Elazığ", "Ağın", "Alacakaya", "Arıcak", "Baskil", "Karakoçan", "Keban", "Kovancılar", "Maden", "Palu", "Sivrice"],
       "Erzincan": ["Erzincan", "Çayırlı", "İliç", "Kemah", "Kemaliye", "Otlukbeli", "Refahiye", "Tercan", "Üzümlü"],
       "Erzurum": ["Aşkale", "Aziziye", "Çat", "Hınıs", "Horasan", "İspir", "Karaçoban", "Karayazı", "Köprüköy", "Narman", "Oltu", "Olur", "Palandöken", "Pasinler", "Pazaryolu", "Şenkaya", "Tekman", "Tortum", "Uzundere", "Yakutiye"],
+      "Giresun": ["Giresun", "Alucra", "Bulancak", "Çamoluk", "Çanakçı", "Dereli", "Doğankent", "Espiye", "Eynesil", "Görele", "Güce", "Keşap", "Piraziz", "Şebinkarahisar", "Tirebolu", "Yağlıdere"],
+      "Gümüşhane": ["Gümüşhane", "Kelkit", "Köse", "Kürtün", "Şiran", "Torul"],
+      "Hakkari": ["Hakkari", "Çukurca", "Derecik", "Şemdinli", "Yüksekova"],
       "Iğdır": ["Iğdır", "Aralık", "Karakoyunlu", "Tuzluca"],
       "Isparta": ["Isparta", "Aksu", "Atabey", "Eğirdir", "Gelendost", "Gönen", "Keçiborlu", "Senirkent", "Sütçüler", "Şarkikaraağaç", "Uluborlu", "Yalvaç", "Yenişarbademli"],
       "Kahramanmaraş": ["Afşin", "Andırın", "Çağlayancerit", "Dulkadiroğlu", "Ekinözü", "Elbistan", "Göksun", "Nurhak", "Onikişubat", "Pazarcık", "Türkoğlu"],
@@ -346,14 +127,22 @@ async function populateTurkishDistrictsFromStaticData(): Promise<void> {
     // Mevcut ilçe verilerini oku
     let existingDistrictsData = readExistingDistricts();
     
-    // Eksik olan iller için ilçe verilerini ekle
-    for (const province of MISSING_PROVINCES) {
-      const provinceName = province.name;
-      if (turkishDistrictsData[provinceName]) {
-        console.log(`✅ ${provinceName} için statik ilçe verileri ekleniyor...`);
+    // İsimleri doğru formata getir (İstanbul olacak, Istanbul değil)
+    if (existingDistrictsData["Istanbul"]) {
+      existingDistrictsData["İstanbul"] = existingDistrictsData["Istanbul"];
+      delete existingDistrictsData["Istanbul"];
+    }
+    
+    if (existingDistrictsData["Izmir"]) {
+      existingDistrictsData["İzmir"] = existingDistrictsData["Izmir"];
+      delete existingDistrictsData["Izmir"];
+    }
+    
+    // Tüm iller için ilçe verilerini ekle veya güncelle
+    for (const provinceName in turkishDistrictsData) {
+      if (!existingDistrictsData[provinceName]) {
+        console.log(`✅ ${provinceName} için ilçe verileri ekleniyor...`);
         existingDistrictsData[provinceName] = turkishDistrictsData[provinceName];
-      } else {
-        console.warn(`⚠️ ${provinceName} için statik ilçe verisi bulunamadı.`);
       }
     }
     
@@ -392,4 +181,4 @@ process.on('uncaughtException', (error) => {
 main().catch(error => {
   console.error('❌ Ana hata:', error);
   process.exit(1);
-});
+}); 

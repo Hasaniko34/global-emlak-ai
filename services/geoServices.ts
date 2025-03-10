@@ -1,16 +1,6 @@
 import axios from 'axios';
 import trDistricts from '@/data/tr_districts.json';
 import trIstanbulNeighborhoods from '@/data/tr_istanbul_neighborhoods.json';
-import deDistricts from '@/data/de_districts.json';
-import deNeighborhoods from '@/data/de_neighborhoods.json';
-import gbDistricts from '@/data/gb_districts.json';
-import gbNeighborhoods from '@/data/gb_neighborhoods.json';
-import frDistricts from '@/data/fr_districts.json';
-import frNeighborhoods from '@/data/fr_neighborhoods.json';
-import itDistricts from '@/data/it_districts.json';
-import itNeighborhoods from '@/data/it_neighborhoods.json';
-import esDistricts from '@/data/es_districts.json';
-import esNeighborhoods from '@/data/es_neighborhoods.json';
 
 const API_KEY = process.env.HERE_API_KEY;
 
@@ -32,7 +22,7 @@ interface Districts {
 
 interface Neighborhoods {
   [city: string]: {
-    [district: string]: Array<{
+    [district: string]: string[] | Array<{
       label: string;
       value: string;
       type: string;
@@ -54,34 +44,35 @@ interface TrIstanbulNeighborhoods {
 
 const typedTrDistricts = trDistricts as TrDistricts;
 const typedTrIstanbulNeighborhoods = trIstanbulNeighborhoods as TrIstanbulNeighborhoods;
-const typedDeDistricts = deDistricts as Districts;
-const typedDeNeighborhoods = deNeighborhoods as Neighborhoods;
-const typedGbDistricts = gbDistricts as Districts;
-const typedGbNeighborhoods = gbNeighborhoods as Neighborhoods;
-const typedFrDistricts = frDistricts as Districts;
-const typedFrNeighborhoods = frNeighborhoods as Neighborhoods;
-const typedItDistricts = itDistricts as Districts;
-const typedItNeighborhoods = itNeighborhoods as Neighborhoods;
-const typedEsDistricts = esDistricts as Districts;
-const typedEsNeighborhoods = esNeighborhoods as Neighborhoods;
 
 const countryDistrictsMap: Record<string, Districts | TrDistricts> = {
   TR: typedTrDistricts,
-  DE: typedDeDistricts,
-  GB: typedGbDistricts,
-  FR: typedFrDistricts,
-  IT: typedItDistricts,
-  ES: typedEsDistricts
 };
 
 const countryNeighborhoodsMap = {
   TR: { Istanbul: typedTrIstanbulNeighborhoods },
-  DE: typedDeNeighborhoods,
-  GB: typedGbNeighborhoods,
-  FR: typedFrNeighborhoods,
-  IT: typedItNeighborhoods,
-  ES: typedEsNeighborhoods
 };
+
+export function getCountries() {
+  return ['Türkiye']; // Sadece Türkiye
+}
+
+export function getDistricts(country: string) {
+  if (country === 'Türkiye') {
+    return trDistricts;
+  }
+  return {};
+}
+
+export function getNeighborhoods(country: string, district: string) {
+  if (country === 'Türkiye') {
+    if (district === 'İstanbul') {
+      return trIstanbulNeighborhoods;
+    }
+    // Diğer iller için...
+  }
+  return [];
+}
 
 export async function getCitiesByCountryHere(countryCode: string): Promise<GeoResponse[]> {
   try {
@@ -193,12 +184,8 @@ export async function getNeighborhoodsByDistrict(
           type: 'neighborhood'
         }));
       } else {
-        const neighborhoods = countryNeighborhoods as Neighborhoods;
-        return ((neighborhoods[city] && neighborhoods[city][district]) || []).map((neighborhood: { label: string; value: string; type: string }) => ({
-          label: neighborhood.label,
-          value: neighborhood.value,
-          type: neighborhood.type
-        }));
+        // TR dışındaki ülkeler için şu an veri olmadığından boş dizi döndürüyoruz
+        return [];
       }
     }
 

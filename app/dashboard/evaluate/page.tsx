@@ -76,12 +76,46 @@ export default function EvaluatePage() {
   const [size, setSize] = useState('');
   const [grossSize, setGrossSize] = useState('');
   const [netSize, setNetSize] = useState('');
+  
+  // Detaylı gayrimenkul özellikleri
+  const [rooms, setRooms] = useState('');
+  const [bathrooms, setBathrooms] = useState('');
+  const [buildingAge, setBuildingAge] = useState('');
+  const [floor, setFloor] = useState('');
+  const [totalFloors, setTotalFloors] = useState('');
+  const [hasElevator, setHasElevator] = useState(false);
+  const [hasParking, setHasParking] = useState(false);
+  const [hasBalcony, setHasBalcony] = useState(false);
+  const [hasGarden, setHasGarden] = useState(false);
+  const [heatingType, setHeatingType] = useState('');
+  const [furnishStatus, setFurnishStatus] = useState('');
+  const [facingDirection, setFacingDirection] = useState('');
+  
+  // Türkiye'ye özgü emlak özellikleri
+  const [buildingType, setBuildingType] = useState(''); // Bina tipi (müstakil, apartman, site içi vb.)
+  const [buildingStyle, setBuildingStyle] = useState(''); // Mimari stil (modern, klasik, köşk, tarihi vb.)
+  const [deedType, setDeedType] = useState(''); // Tapu durumu (kat mülkiyeti, kat irtifakı vb.)
+  const [hasNaturalGas, setHasNaturalGas] = useState(false); // Doğalgaz var mı?
+  const [isFurnished, setIsFurnished] = useState(false); // Eşyalı mı?
+  const [hasKitchenAppliances, setHasKitchenAppliances] = useState(false); // Ankastre ürünler var mı?
+  const [hasSiteStatus, setHasSiteStatus] = useState(false); // Site içerisinde mi?
+  const [hasGenerator, setHasGenerator] = useState(false); // Jeneratör var mı?
+  const [hasDoorman, setHasDoorman] = useState(false); // Kapıcı var mı?
+  const [hasSecurity, setHasSecurity] = useState(false); // Güvenlik var mı?
+  const [aidat, setAidat] = useState(''); // Site/apartman aidatı
+  
+  // Arsa özellikleri
+  const [landStatus, setLandStatus] = useState(''); // İmar durumu
+  const [landUsage, setLandUsage] = useState(''); // Kullanım şekli
+  const [landParcelNo, setLandParcelNo] = useState(''); // Parsel numarası
+  const [landBlockNo, setLandBlockNo] = useState(''); // Ada no
+  
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
-  
-  // Adres bileşenleri
-  const [countryCode, setCountryCode] = useState('');
-  const [country, setCountry] = useState('');
+
+  // Adres bileşenleri - Türkiye için varsayılan değerler
+  const [countryCode, setCountryCode] = useState('TR');
+  const [country, setCountry] = useState('Türkiye');
   const [city, setCity] = useState('');
   const [district, setDistrict] = useState('');
   const [postalCode, setPostalCode] = useState('');
@@ -124,14 +158,15 @@ export default function EvaluatePage() {
   
   // Adım adım form için gerekli state
   const [currentStep, setCurrentStep] = useState(1);
-  const totalSteps = 4;
+  const totalSteps = 5;
   
-  // Adım başlıkları
+  // Adım başlıkları ve toplam adım sayısını Türkiye'ye özgü güncelliyoruz
   const stepTitles = [
-    "Ülke ve Şehir Seçimi",
+    "İl Seçimi",
     "İlçe ve Mahalle Seçimi",
     "Adres Detayları",
-    "Emlak Özellikleri"
+    "Emlak Temel Özellikleri",
+    "Detaylı Gayrimenkul Özellikleri"
   ];
   
   // Form geçerlilik kontrolü
@@ -144,7 +179,9 @@ export default function EvaluatePage() {
       case 3:
         return true; // Opsiyonel alanlar
       case 4:
-        return !!propertyType && !!size;
+        return !!propertyType && (!!grossSize || !!netSize);
+      case 5:
+        return true; // Detaylı özellikler opsiyonel
       default:
         return false;
     }
@@ -166,8 +203,16 @@ export default function EvaluatePage() {
   
   // Ülkeleri yükle
   useEffect(() => {
-    const countryList = getAllowedCountries();
-    setCountries(countryList);
+    // Sayfa yüklendiğinde Türkiye'yi otomatik olarak seç
+    const turkeyOption = { value: 'TR', label: 'Türkiye', nativeName: 'Türkiye' };
+    setSelectedCountry(turkeyOption);
+    setCountryCode('TR');
+    setCountry('Türkiye');
+    
+    // Türkiye'nin illerini yükle
+    const cityList = getStatesByCountry('TR');
+    setStates(cityList);
+    
     loadSavedAddresses();
   }, []);
   
@@ -683,7 +728,41 @@ export default function EvaluatePage() {
           size: parseInt(sizeToUse),
           grossSize: grossSize ? parseInt(grossSize) : undefined,
           netSize: netSize ? parseInt(netSize) : undefined,
-          rooms,
+          rooms: rooms || undefined,
+          bathrooms: bathrooms || undefined,
+          buildingAge: buildingAge || undefined,
+          floor: floor || undefined,
+          totalFloors: totalFloors || undefined,
+          features: {
+            hasElevator,
+            hasParking,
+            hasBalcony,
+            hasGarden,
+            hasNaturalGas,
+            isFurnished,
+            hasKitchenAppliances,
+            hasSiteStatus,
+            hasGenerator,
+            hasDoorman,
+            hasSecurity
+          },
+          heatingType: heatingType || undefined,
+          furnishStatus: furnishStatus || undefined,
+          facingDirection: facingDirection || undefined,
+          // Türkiye'ye özgü özellikler
+          turkishFeatures: {
+            buildingType: buildingType || undefined,
+            buildingStyle: buildingStyle || undefined,
+            deedType: deedType || undefined,
+            aidat: aidat ? parseInt(aidat) : undefined,
+          },
+          // Arsa özellikleri
+          landFeatures: propertyType.includes('land') ? {
+            landStatus: landStatus || undefined,
+            landUsage: landUsage || undefined,
+            landParcelNo: landParcelNo || undefined,
+            landBlockNo: landBlockNo || undefined
+          } : undefined,
           location: {
             country,
             countryCode,
@@ -752,11 +831,58 @@ export default function EvaluatePage() {
           estimatedValue: estimatedValue,
           rentalValue: `${parseInt(estimatedValue.replace(/\D/g, '')) / 300} TL/ay`,
           confidence: `85%`,
-          marketTrend: 'Yükseliş',
-          similarProperties: [
+        marketTrend: 'Yükseliş',
+        similarProperties: [
             { address: `${district}, ${city}`, price: estimatedValue },
             { address: `${neighborhood || 'Merkez'}, ${district}, ${city}`, price: `${parseInt(estimatedValue.replace(/\D/g, '')) * 0.9} TL` },
           ],
+          propertyDetails: {
+            propertyType,
+            size: sizeToUse,
+            grossSize,
+            netSize,
+            rooms,
+            bathrooms,
+            buildingAge,
+            floor,
+            totalFloors,
+            heatingType,
+            // Türkiye'ye özgü detaylar
+            turkishFeatures: {
+              buildingType,
+              deedType,
+              aidat
+            },
+            // Arsa özellikleri
+            landFeatures: propertyType.includes('land') ? {
+              landStatus,
+              landUsage,
+              landParcelNo,
+              landBlockNo
+            } : undefined,
+            features: {
+              hasElevator,
+              hasParking,
+              hasBalcony,
+              hasGarden,
+              hasNaturalGas,
+              isFurnished,
+              hasKitchenAppliances,
+              hasSiteStatus,
+              hasGenerator,
+              hasDoorman,
+              hasSecurity
+            }
+          },
+          locationScore: {
+            overall: "8.5/10",
+            transportation: "7/10",
+            safety: "9/10",
+            schools: "8/10",
+            shopping: "9/10",
+            restaurants: "8/10",
+            parks: "7/10"
+          },
           analysis: `${city} ${district} bölgesinde ${
             propertyType === 'apartment' ? 'daire' : 
             propertyType === 'duplex' ? 'dubleks daire' : 
@@ -774,7 +900,7 @@ export default function EvaluatePage() {
             propertyType === 'industrial' ? 'fabrika' : 
             propertyType === 'hotel' ? 'otel' : 
             propertyType === 'workshop' ? 'atölye' : 
-            'ticari emlak'} fiyatları son 1 yılda %15 artış göstermiştir. Bu lokasyon yatırım için ideal bir seçimdir.`
+            'ticari emlak'} fiyatları son 1 yılda %15 artış göstermiştir. Bu lokasyon yatırım için ideal bir seçimdir.${deedType ? ` Gayrimenkulün ${deedType === 'ownership' ? 'kat mülkiyetli' : deedType === 'floor_easement' ? 'kat irtifaklı' : deedType === 'shared' ? 'hisseli' : 'inşaat servisi'} tapu durumu değerlemede önemli bir faktördür.` : ''}`
         }
       });
     } finally {
@@ -928,6 +1054,362 @@ export default function EvaluatePage() {
     }
   };
 
+  // Konut tipi seçenekleri, müstakil ev, villa vb için - Türkiye'ye özgü
+  const getPropertyTypeSpecificFields = () => {
+    if (!propertyType) return null;
+    
+    // Konut türleri
+    const residentialTypes = ['apartment', 'duplex', 'penthouse', 'garden_apt', 'house', 'villa', 'farm_house', 'residence'];
+    
+    // Arazi türleri
+    const landTypes = ['land', 'land_agriculture'];
+    
+    // Ticari türler
+    const commercialTypes = ['office', 'store', 'warehouse', 'industrial', 'hotel', 'workshop'];
+    
+    if (residentialTypes.includes(propertyType)) {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Oda Sayısı
+            </label>
+            <select
+              value={rooms}
+              onChange={(e) => setRooms(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="0">Stüdyo (1+0)</option>
+              <option value="1.5">1+1</option>
+              <option value="2.5">2+1</option>
+              <option value="3.5">3+1</option>
+              <option value="4.5">4+1</option>
+              <option value="5.5">5+1</option>
+              <option value="6.5">6+1</option>
+              <option value="7+">7+</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Banyo Sayısı
+            </label>
+            <select
+              value={bathrooms}
+              onChange={(e) => setBathrooms(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4+</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Bina Yaşı
+            </label>
+            <select
+              value={buildingAge}
+              onChange={(e) => setBuildingAge(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="0-1">0-1 Yıl</option>
+              <option value="1-5">1-5 Yıl</option>
+              <option value="5-10">5-10 Yıl</option>
+              <option value="10-15">10-15 Yıl</option>
+              <option value="15-20">15-20 Yıl</option>
+              <option value="20-30">20-30 Yıl</option>
+              <option value="30+">30+ Yıl</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Bulunduğu Kat
+            </label>
+            <select
+              value={floor}
+              onChange={(e) => setFloor(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="-2">-2</option>
+              <option value="-1">-1</option>
+              <option value="0">Zemin</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="10+">10+</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Bina Kat Sayısı
+            </label>
+            <select
+              value={totalFloors}
+              onChange={(e) => setTotalFloors(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="10+">10+</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Isıtma Sistemi
+            </label>
+            <select
+              value={heatingType}
+              onChange={(e) => setHeatingType(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="natural_gas">Doğalgaz Kombi</option>
+              <option value="central_gas">Merkezi Doğalgaz</option>
+              <option value="central_fuel">Merkezi Fuel-Oil</option>
+              <option value="electric">Elektrikli</option>
+              <option value="boiler">Kat Kaloriferi</option>
+              <option value="stove">Soba</option>
+              <option value="floor_heating">Yerden Isıtma</option>
+              <option value="heat_pump">Isı Pompası</option>
+              <option value="none">Isıtma Yok</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Cephe Yönü
+            </label>
+            <select
+              value={facingDirection}
+              onChange={(e) => setFacingDirection(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="north">Kuzey</option>
+              <option value="east">Doğu</option>
+              <option value="south">Güney</option>
+              <option value="west">Batı</option>
+              <option value="northeast">Kuzey-Doğu</option>
+              <option value="southeast">Güney-Doğu</option>
+              <option value="southwest">Güney-Batı</option>
+              <option value="northwest">Kuzey-Batı</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Bina Tipi
+            </label>
+            <select
+              value={buildingType}
+              onChange={(e) => setBuildingType(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="apartment">Apartman</option>
+              <option value="residence">Residence</option>
+              <option value="site">Site içi</option>
+              <option value="detached">Müstakil</option>
+              <option value="historic">Tarihi Bina</option>
+              <option value="compound">Toplu Konut</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Tapu Durumu
+            </label>
+            <select
+              value={deedType}
+              onChange={(e) => setDeedType(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="ownership">Kat Mülkiyetli</option>
+              <option value="floor_easement">Kat İrtifaklı</option>
+              <option value="shared">Hisseli Tapu</option>
+              <option value="construction_servitude">İnşaat Servisi</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Aidat (TL/Ay)
+            </label>
+            <input
+              type="number"
+              value={aidat}
+              onChange={(e) => setAidat(e.target.value)}
+              placeholder="Aylık aidat tutarı"
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            />
+          </div>
+        </div>
+      );
+    }
+    
+    if (landTypes.includes(propertyType)) {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              İmar Durumu
+            </label>
+            <select
+              value={landStatus}
+              onChange={(e) => setLandStatus(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="residential">Konut İmarlı</option>
+              <option value="commercial">Ticari İmarlı</option>
+              <option value="industrial">Sanayi İmarlı</option>
+              <option value="agricultural">Tarım Arazisi</option>
+              <option value="mixed">Karma İmarlı</option>
+              <option value="unzoned">İmarsız</option>
+              <option value="tourism">Turizm İmarlı</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Kaks (Emsal)
+            </label>
+            <input
+              type="text"
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+              placeholder="Örn: 0.75, 1.20, 2.05"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Ada No
+            </label>
+            <input
+              type="text"
+              value={landBlockNo}
+              onChange={(e) => setLandBlockNo(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+              placeholder="Ada no"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Parsel No
+            </label>
+            <input
+              type="text"
+              value={landParcelNo}
+              onChange={(e) => setLandParcelNo(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+              placeholder="Parsel no"
+            />
+          </div>
+        </div>
+      );
+    }
+    
+    if (commercialTypes.includes(propertyType)) {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Kullanım Durumu
+            </label>
+            <select
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="empty">Boş</option>
+              <option value="tenant">Kiracılı</option>
+              <option value="owner">Sahibi Kullanıyor</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Bina Yaşı
+            </label>
+            <select
+              value={buildingAge}
+              onChange={(e) => setBuildingAge(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="0-1">0-1 Yıl</option>
+              <option value="1-5">1-5 Yıl</option>
+              <option value="5-10">5-10 Yıl</option>
+              <option value="10-15">10-15 Yıl</option>
+              <option value="15-20">15-20 Yıl</option>
+              <option value="20-30">20-30 Yıl</option>
+              <option value="30+">30+ Yıl</option>
+            </select>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Aidat (TL/Ay)
+            </label>
+            <input
+              type="number"
+              value={aidat}
+              onChange={(e) => setAidat(e.target.value)}
+              placeholder="Aylık aidat tutarı"
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-800 mb-1">
+              Tapu Durumu
+            </label>
+            <select
+              value={deedType}
+              onChange={(e) => setDeedType(e.target.value)}
+              className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+            >
+              <option value="">Seçiniz</option>
+              <option value="ownership">Kat Mülkiyetli</option>
+              <option value="floor_easement">Kat İrtifaklı</option>
+              <option value="shared">Hisseli Tapu</option>
+              <option value="construction_servitude">İnşaat Servisi</option>
+            </select>
+          </div>
+        </div>
+      );
+    }
+    
+    return null;
+  };
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8">
@@ -940,7 +1422,7 @@ export default function EvaluatePage() {
             <p className="text-gray-700 text-sm sm:text-base">Yapay zeka ile emlak değerinizi öğrenin</p>
           </div>
         </div>
-        
+
         {/* Adım Göstergesi */}
         <div className="mb-8">
           <div className="flex items-center justify-between">
@@ -968,82 +1450,66 @@ export default function EvaluatePage() {
         </div>
         
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-          {/* Adım 1: Ülke ve Şehir Seçimi */}
+          {/* Adım 1: İl Seçimi */}
           {currentStep === 1 && (
             <div className="space-y-6">
-              {/* Ülke ve Şehir form alanları */}
               <div className="grid grid-cols-1 gap-6">
-                {/* Ülke Seçimi */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
-                    Ülke <span className="text-red-600">*</span>
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <GlobeAltIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
-                    </div>
-                    <Select
-                      instanceId="country-select"
-                      placeholder="Ülke seçin"
-                      options={countries}
-                      value={selectedCountry}
-                      onChange={handleCountryChange}
-                      isSearchable
-                      aria-label="Ülke seçin"
-                      styles={customSelectStyles}
-                      classNames={{
-                        control: (state) => 'pl-10 !bg-white',
-                        input: () => '!text-gray-900',
-                        menu: () => '!text-gray-900'
-                      }}
-                    />
+                {/* İl Seçimi */}
+            <div>
+                  <div className="flex justify-between items-center mb-1 sm:mb-2">
+                    <label className="block text-sm font-medium text-gray-800">
+                      İl <span className="text-red-600">*</span>
+              </label>
+                    {savedAddresses.length > 0 && (
+                      <button
+                        type="button"
+                        className="text-xs text-blue-600 hover:text-blue-700 focus:outline-none focus:underline flex items-center"
+                        onClick={() => setShowSavedAddresses(true)}
+                      >
+                        <BookmarkIcon className="h-3 w-3 mr-1" />
+                        Kayıtlı Adresleri Göster
+                      </button>
+                    )}
                   </div>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <GlobeAltIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
                 </div>
-                
-                {/* Şehir Seçimi */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
-                    Şehir <span className="text-red-600">*</span>
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <BuildingOfficeIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
-                    </div>
                     <Select
-                      instanceId="state-select"
-                      placeholder="Şehir seçin"
+                      instanceId="city-select"
+                      placeholder="İl seçin"
                       options={states}
                       value={selectedState}
                       onChange={handleCityChange}
                       isSearchable
-                      isDisabled={!selectedCountry}
-                      aria-label="Şehir seçin"
+                      aria-label="İl seçin"
                       styles={customSelectStyles}
                       classNames={{
                         control: (state) => 'pl-10 !bg-white',
                         input: () => '!text-gray-900',
                         menu: () => '!text-gray-900'
                       }}
-                    />
-                  </div>
-                </div>
+                      noOptionsMessage={() => "Seçenek bulunamadı."}
+                />
+              </div>
+            </div>
               </div>
             </div>
           )}
-          
+
           {/* Adım 2: İlçe ve Mahalle Seçimi */}
           {currentStep === 2 && (
             <div className="space-y-6">
               <div className="grid grid-cols-1 gap-6">
                 {/* İlçe Seçimi */}
-                <div>
+            <div>
                   <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
                     İlçe <span className="text-red-600">*</span>
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              </label>
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
-                    </div>
+                </div>
                     <Select
                       instanceId="city-select"
                       placeholder="İlçe seçin"
@@ -1161,7 +1627,7 @@ export default function EvaluatePage() {
             </div>
           )}
           
-          {/* Adım 4: Emlak Özellikleri */}
+          {/* Adım 4: Emlak Temel Özellikleri */}
           {currentStep === 4 && (
             <div className="space-y-6">
               <div className="grid grid-cols-1 gap-6">
@@ -1205,35 +1671,35 @@ export default function EvaluatePage() {
                         </span>
                       </div>
                     ))}
-                  </div>
-                </div>
+              </div>
+            </div>
 
                 {/* Metrekare */}
-                <div>
+            <div>
                   <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
                     Metrekare <span className="text-red-600">*</span>
-                  </label>
+              </label>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Brüt Metrekare */}
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <span className="text-gray-500 text-sm">m²</span>
-                      </div>
-                      <input
-                        type="number"
+                </div>
+                <input
+                  type="number"
                         value={grossSize}
                         onChange={handleGrossSizeChange}
                         placeholder="Brüt Metrekare"
                         className="pl-10 pr-3 py-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-gray-900"
                       />
                       <span className="text-xs text-gray-500 mt-1 block">Tapu üzerinde yazan resmi alan</span>
-                    </div>
+              </div>
                     
                     {/* Net Metrekare */}
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <span className="text-gray-500 text-sm">m²</span>
-                      </div>
+            </div>
                       <input
                         type="number" 
                         value={netSize}
@@ -1242,8 +1708,181 @@ export default function EvaluatePage() {
                         className="pl-10 pr-3 py-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-gray-900"
                       />
                       <span className="text-xs text-gray-500 mt-1 block">Kullanılabilir iç alan</span>
+          </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Adım 5: Detaylı Gayrimenkul Özellikleri - Türkiye'ye özgü özellikler */}
+          {currentStep === 5 && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 gap-6">
+                {/* Emlak tipine göre spesifik alanlar */}
+                {getPropertyTypeSpecificFields()}
+                
+                {/* Ortak özellikler - checkbox'lar */}
+                <div className="mt-4">
+                  <label className="block text-sm font-medium text-gray-800 mb-3">
+                    Özellikler
+                  </label>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasElevator"
+                        checked={hasElevator}
+                        onChange={(e) => setHasElevator(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasElevator" className="ml-2 text-sm text-gray-800">
+                        Asansör
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasParking"
+                        checked={hasParking}
+                        onChange={(e) => setHasParking(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasParking" className="ml-2 text-sm text-gray-800">
+                        Otopark
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasBalcony"
+                        checked={hasBalcony}
+                        onChange={(e) => setHasBalcony(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasBalcony" className="ml-2 text-sm text-gray-800">
+                        Balkon
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasGarden"
+                        checked={hasGarden}
+                        onChange={(e) => setHasGarden(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasGarden" className="ml-2 text-sm text-gray-800">
+                        Bahçe
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasNaturalGas"
+                        checked={hasNaturalGas}
+                        onChange={(e) => setHasNaturalGas(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasNaturalGas" className="ml-2 text-sm text-gray-800">
+                        Doğalgaz
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="isFurnished"
+                        checked={isFurnished}
+                        onChange={(e) => setIsFurnished(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="isFurnished" className="ml-2 text-sm text-gray-800">
+                        Eşyalı
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasKitchenAppliances"
+                        checked={hasKitchenAppliances}
+                        onChange={(e) => setHasKitchenAppliances(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasKitchenAppliances" className="ml-2 text-sm text-gray-800">
+                        Ankastre
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasSiteStatus"
+                        checked={hasSiteStatus}
+                        onChange={(e) => setHasSiteStatus(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasSiteStatus" className="ml-2 text-sm text-gray-800">
+                        Site İçinde
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasDoorman"
+                        checked={hasDoorman}
+                        onChange={(e) => setHasDoorman(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasDoorman" className="ml-2 text-sm text-gray-800">
+                        Kapıcı
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasSecurity"
+                        checked={hasSecurity}
+                        onChange={(e) => setHasSecurity(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasSecurity" className="ml-2 text-sm text-gray-800">
+                        Güvenlik
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <input
+                        type="checkbox"
+                        id="hasGenerator"
+                        checked={hasGenerator}
+                        onChange={(e) => setHasGenerator(e.target.checked)}
+                        className="h-4 w-4 rounded text-blue-600 focus:ring-blue-500"
+                      />
+                      <label htmlFor="hasGenerator" className="ml-2 text-sm text-gray-800">
+                        Jeneratör
+                      </label>
                     </div>
                   </div>
+                </div>
+                
+                {/* Ekstra özellik notu */}
+                <div className="mt-3">
+                  <label className="block text-sm font-medium text-gray-800 mb-1">
+                    Ek Özellikler
+                  </label>
+                  <textarea
+                    placeholder="Değerlemede faydalı olacak ek özellikleri buraya yazabilirsiniz..."
+                    rows={3}
+                    className="block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                  ></textarea>
                 </div>
               </div>
             </div>
@@ -1276,23 +1915,23 @@ export default function EvaluatePage() {
                 <ChevronRightIcon className="w-4 h-4 ml-1" />
               </button>
             ) : (
-              <button
-                type="submit"
+          <button
+            type="submit"
                 disabled={loading || !isStepValid(currentStep)}
                 className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm"
-              >
-                {loading ? (
-                  <div className="flex items-center justify-center">
+          >
+            {loading ? (
+              <div className="flex items-center justify-center">
                     <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Değerleme Yapılıyor...
-                  </div>
-                ) : (
-                  'Değerleme Yap'
-                )}
-              </button>
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Değerleme Yapılıyor...
+              </div>
+            ) : (
+              'Değerleme Yap'
+            )}
+          </button>
             )}
           </div>
         </form>
@@ -1318,15 +1957,15 @@ export default function EvaluatePage() {
                   <div className="bg-white rounded-xl p-4 shadow-sm">
                     <div className="text-sm text-gray-700 mb-1">Tahmini Kira</div>
                     <div className="text-2xl font-bold text-blue-600">{result.result.rentalValue}</div>
-                  </div>
+                </div>
                 )}
                 
                 <div className="bg-white rounded-xl p-4 shadow-sm">
                   <div className="text-sm text-gray-700 mb-1">Piyasa Trendi</div>
                   <div className="text-2xl font-bold text-green-600">{result.result?.marketTrend || result.marketTrend}</div>
-                </div>
               </div>
-              
+            </div>
+
               {/* Benzer Emlaklar */}
               <div className="mt-6">
                 <h4 className="font-semibold text-gray-800 mb-3">Benzer Emlaklar</h4>
@@ -1346,6 +1985,293 @@ export default function EvaluatePage() {
                   <h4 className="font-semibold text-gray-800 mb-3">Piyasa Analizi</h4>
                   <div className="bg-white p-4 rounded-lg border border-gray-100">
                     <p className="text-gray-700">{result.result.analysis}</p>
+                  </div>
+                </div>
+              )}
+              
+              {/* Gayrimenkul Detayları */}
+              {result.result?.propertyDetails && (
+                <div className="mt-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Gayrimenkul Detayları</h4>
+                  <div className="bg-white p-4 rounded-lg border border-gray-100">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div>
+                        <span className="text-sm text-gray-500">Emlak Türü</span>
+                        <p className="font-medium text-gray-800">
+                          {propertyType === 'apartment' ? 'Daire' : 
+                            propertyType === 'duplex' ? 'Dubleks' : 
+                            propertyType === 'penthouse' ? 'Çatı Katı' : 
+                            propertyType === 'garden_apt' ? 'Bahçe Katı' :
+                            propertyType === 'house' ? 'Müstakil Ev' : 
+                            propertyType === 'villa' ? 'Villa' : 
+                            propertyType === 'farm_house' ? 'Çiftlik Evi' : 
+                            propertyType === 'residence' ? 'Residence' : 
+                            propertyType === 'land' ? 'Arsa' : 
+                            propertyType === 'land_agriculture' ? 'Tarla' : 
+                            propertyType === 'office' ? 'Ofis' : 
+                            propertyType === 'store' ? 'Dükkan' : 
+                            propertyType === 'warehouse' ? 'Depo' : 
+                            propertyType === 'industrial' ? 'Fabrika' : 
+                            propertyType === 'hotel' ? 'Otel' : 
+                            propertyType === 'workshop' ? 'Atölye' : 
+                            'Bilinmiyor'}
+                        </p>
+                    </div>
+                      
+                      {result.result.propertyDetails.grossSize && (
+                        <div>
+                          <span className="text-sm text-gray-500">Brüt Alan</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.grossSize} m²</p>
+                  </div>
+                      )}
+                      
+                      {result.result.propertyDetails.netSize && (
+                        <div>
+                          <span className="text-sm text-gray-500">Net Alan</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.netSize} m²</p>
+              </div>
+                      )}
+                      
+                      {result.result.propertyDetails.rooms && (
+                        <div>
+                          <span className="text-sm text-gray-500">Oda Sayısı</span>
+                          <p className="font-medium text-gray-800">
+                            {result.result.propertyDetails.rooms === "0" ? "Stüdyo (1+0)" : 
+                             result.result.propertyDetails.rooms === "1.5" ? "1+1" :
+                             result.result.propertyDetails.rooms === "2.5" ? "2+1" :
+                             result.result.propertyDetails.rooms === "3.5" ? "3+1" :
+                             result.result.propertyDetails.rooms === "4.5" ? "4+1" :
+                             result.result.propertyDetails.rooms === "5.5" ? "5+1" :
+                             result.result.propertyDetails.rooms === "6.5" ? "6+1" :
+                             result.result.propertyDetails.rooms === "7+" ? "7+" :
+                             result.result.propertyDetails.rooms}
+                          </p>
+            </div>
+                      )}
+                      
+                      {result.result.propertyDetails.bathrooms && (
+                        <div>
+                          <span className="text-sm text-gray-500">Banyo Sayısı</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.bathrooms}</p>
+          </div>
+        )}
+                      
+                      {result.result.propertyDetails.buildingAge && (
+                        <div>
+                          <span className="text-sm text-gray-500">Bina Yaşı</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.buildingAge}</p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.floor && (
+                        <div>
+                          <span className="text-sm text-gray-500">Bulunduğu Kat</span>
+                          <p className="font-medium text-gray-800">
+                            {result.result.propertyDetails.floor === "0" ? "Zemin Kat" : 
+                             result.result.propertyDetails.floor === "-1" ? "Bodrum Kat" :
+                             result.result.propertyDetails.floor === "-2" ? "2. Bodrum Kat" :
+                             result.result.propertyDetails.floor + ". Kat"}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.totalFloors && (
+                        <div>
+                          <span className="text-sm text-gray-500">Toplam Kat</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.totalFloors}</p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.heatingType && (
+                        <div>
+                          <span className="text-sm text-gray-500">Isıtma</span>
+                          <p className="font-medium text-gray-800">
+                            {result.result.propertyDetails.heatingType === "natural_gas" ? "Doğalgaz Kombi" :
+                             result.result.propertyDetails.heatingType === "central_gas" ? "Merkezi Doğalgaz" :
+                             result.result.propertyDetails.heatingType === "central_fuel" ? "Merkezi Fuel-Oil" :
+                             result.result.propertyDetails.heatingType === "electric" ? "Elektrikli" :
+                             result.result.propertyDetails.heatingType === "boiler" ? "Kat Kaloriferi" :
+                             result.result.propertyDetails.heatingType === "stove" ? "Soba" :
+                             result.result.propertyDetails.heatingType === "floor_heating" ? "Yerden Isıtma" :
+                             result.result.propertyDetails.heatingType === "heat_pump" ? "Isı Pompası" :
+                             result.result.propertyDetails.heatingType === "none" ? "Isıtma Yok" :
+                             result.result.propertyDetails.heatingType}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {/* Türkiye'ye özgü detaylar */}
+                      {result.result.propertyDetails.turkishFeatures?.buildingType && (
+                        <div>
+                          <span className="text-sm text-gray-500">Bina Tipi</span>
+                          <p className="font-medium text-gray-800">
+                            {result.result.propertyDetails.turkishFeatures.buildingType === "apartment" ? "Apartman" :
+                             result.result.propertyDetails.turkishFeatures.buildingType === "residence" ? "Residence" :
+                             result.result.propertyDetails.turkishFeatures.buildingType === "site" ? "Site içi" :
+                             result.result.propertyDetails.turkishFeatures.buildingType === "detached" ? "Müstakil" :
+                             result.result.propertyDetails.turkishFeatures.buildingType === "historic" ? "Tarihi Bina" :
+                             result.result.propertyDetails.turkishFeatures.buildingType === "compound" ? "Toplu Konut" :
+                             result.result.propertyDetails.turkishFeatures.buildingType}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.turkishFeatures?.deedType && (
+                        <div>
+                          <span className="text-sm text-gray-500">Tapu Durumu</span>
+                          <p className="font-medium text-gray-800">
+                            {result.result.propertyDetails.turkishFeatures.deedType === "ownership" ? "Kat Mülkiyetli" :
+                             result.result.propertyDetails.turkishFeatures.deedType === "floor_easement" ? "Kat İrtifaklı" :
+                             result.result.propertyDetails.turkishFeatures.deedType === "shared" ? "Hisseli Tapu" :
+                             result.result.propertyDetails.turkishFeatures.deedType === "construction_servitude" ? "İnşaat Servisi" :
+                             result.result.propertyDetails.turkishFeatures.deedType}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.turkishFeatures?.aidat && (
+                        <div>
+                          <span className="text-sm text-gray-500">Aidat</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.turkishFeatures.aidat} TL/ay</p>
+                        </div>
+                      )}
+                      
+                      {/* Arsa Özellikleri */}
+                      {result.result.propertyDetails.landFeatures?.landStatus && (
+                        <div>
+                          <span className="text-sm text-gray-500">İmar Durumu</span>
+                          <p className="font-medium text-gray-800">
+                            {result.result.propertyDetails.landFeatures.landStatus === "residential" ? "Konut İmarlı" :
+                             result.result.propertyDetails.landFeatures.landStatus === "commercial" ? "Ticari İmarlı" :
+                             result.result.propertyDetails.landFeatures.landStatus === "industrial" ? "Sanayi İmarlı" :
+                             result.result.propertyDetails.landFeatures.landStatus === "agricultural" ? "Tarım Arazisi" :
+                             result.result.propertyDetails.landFeatures.landStatus === "mixed" ? "Karma İmarlı" :
+                             result.result.propertyDetails.landFeatures.landStatus === "tourism" ? "Turizm İmarlı" :
+                             result.result.propertyDetails.landFeatures.landStatus === "unzoned" ? "İmarsız" :
+                             result.result.propertyDetails.landFeatures.landStatus}
+                          </p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.landFeatures?.landBlockNo && (
+                        <div>
+                          <span className="text-sm text-gray-500">Ada No</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.landFeatures.landBlockNo}</p>
+                        </div>
+                      )}
+                      
+                      {result.result.propertyDetails.landFeatures?.landParcelNo && (
+                        <div>
+                          <span className="text-sm text-gray-500">Parsel No</span>
+                          <p className="font-medium text-gray-800">{result.result.propertyDetails.landFeatures.landParcelNo}</p>
+                        </div>
+                      )}
+                    </div>
+                    
+                    {/* Özellikler */}
+                    {result.result.propertyDetails.features && (
+                      <div className="mt-4 pt-3 border-t border-gray-100">
+                        <span className="text-sm text-gray-500 block mb-2">Özellikler</span>
+                        <div className="flex flex-wrap gap-2">
+                          {result.result.propertyDetails.features.hasElevator && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Asansör</span>
+                          )}
+                          {result.result.propertyDetails.features.hasParking && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Otopark</span>
+                          )}
+                          {result.result.propertyDetails.features.hasBalcony && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Balkon</span>
+                          )}
+                          {result.result.propertyDetails.features.hasGarden && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Bahçe</span>
+                          )}
+                          {result.result.propertyDetails.features.hasNaturalGas && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Doğalgaz</span>
+                          )}
+                          {result.result.propertyDetails.features.isFurnished && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Eşyalı</span>
+                          )}
+                          {result.result.propertyDetails.features.hasKitchenAppliances && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Ankastre</span>
+                          )}
+                          {result.result.propertyDetails.features.hasSiteStatus && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Site İçinde</span>
+                          )}
+                          {result.result.propertyDetails.features.hasDoorman && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Kapıcı</span>
+                          )}
+                          {result.result.propertyDetails.features.hasSecurity && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Güvenlik</span>
+                          )}
+                          {result.result.propertyDetails.features.hasGenerator && (
+                            <span className="px-2 py-1 bg-blue-50 text-blue-700 rounded-md text-xs font-medium">Jeneratör</span>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+              
+              {/* Lokasyon Puanları */}
+              {result.result?.locationScore && (
+                <div className="mt-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Lokasyon Değerlendirmesi</h4>
+                  <div className="bg-white p-4 rounded-lg border border-gray-100">
+                    <div className="flex items-center mb-3">
+                      <span className="text-lg font-bold text-blue-700">{result.result.locationScore.overall}</span>
+                      <span className="ml-2 text-gray-600">Genel Puan</span>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
+                      <div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
+                          <span className="text-sm text-gray-700">Ulaşım</span>
+                        </div>
+                        <div className="font-medium">{result.result.locationScore.transportation}</div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
+                          <span className="text-sm text-gray-700">Güvenlik</span>
+                        </div>
+                        <div className="font-medium">{result.result.locationScore.safety}</div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
+                          <span className="text-sm text-gray-700">Okullar</span>
+                        </div>
+                        <div className="font-medium">{result.result.locationScore.schools}</div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
+                          <span className="text-sm text-gray-700">Alışveriş</span>
+                        </div>
+                        <div className="font-medium">{result.result.locationScore.shopping}</div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-red-500 mr-2"></div>
+                          <span className="text-sm text-gray-700">Restoranlar</span>
+                        </div>
+                        <div className="font-medium">{result.result.locationScore.restaurants}</div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-teal-500 mr-2"></div>
+                          <span className="text-sm text-gray-700">Parklar</span>
+                        </div>
+                        <div className="font-medium">{result.result.locationScore.parks}</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}

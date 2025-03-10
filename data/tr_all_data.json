@@ -1,37 +1,134 @@
 {
   "country": {
-    "title": "Country TR, Quitman, AR 72131, United States",
-    "id": "here:af:streetsection:kFJOtGUO8.W86zKEriZKgA",
-    "resultType": "street",
+    "title": "Türkiye",
+    "id": "country.79507",
+    "resultType": "country",
     "address": {
-      "label": "Country TR, Quitman, AR 72131, United States",
-      "countryCode": "USA",
-      "countryName": "United States",
-      "stateCode": "AR",
-      "state": "Arkansas",
-      "county": "Cleburne",
-      "city": "Quitman",
-      "street": "Country TR",
-      "postalCode": "72131"
+      "label": "Türkiye",
+      "countryCode": "TR",
+      "countryName": "Türkiye"
     },
     "position": {
-      "lat": 35.38766,
-      "lng": -92.22458
+      "lat": 38.9597594,
+      "lng": 34.9249653
     },
     "mapView": {
-      "west": -92.22459,
-      "south": 35.38628,
-      "east": -92.22347,
-      "north": 35.38901
-    },
-    "scoring": {
-      "queryScore": 1,
-      "fieldScore": {
-        "streets": [
-          1
-        ]
-      }
+      "west": 25.6212891,
+      "south": 35.8076729,
+      "east": 44.8176638,
+      "north": 42.1414648
     }
   },
-  "cities": {}
+  "cities": {
+    "İstanbul": {
+      "title": "İstanbul, İstanbul, Türkiye",
+      "id": "city.384729",
+      "resultType": "city",
+      "address": {
+        "label": "İstanbul, İstanbul, Türkiye",
+        "countryCode": "TR",
+        "countryName": "Türkiye",
+        "state": "İstanbul",
+        "city": "İstanbul"
+      },
+      "position": {
+        "lat": 41.0082376,
+        "lng": 28.9783589
+      },
+      "mapView": {
+        "west": 28.5957795,
+        "south": 40.8027449,
+        "east": 29.4307364,
+        "north": 41.2171358
+      }
+    },
+    "Ankara": {
+      "title": "Ankara, Ankara, Türkiye",
+      "id": "city.287762",
+      "resultType": "city",
+      "address": {
+        "label": "Ankara, Ankara, Türkiye",
+        "countryCode": "TR",
+        "countryName": "Türkiye",
+        "state": "Ankara",
+        "city": "Ankara"
+      },
+      "position": {
+        "lat": 39.9333635,
+        "lng": 32.8597419
+      },
+      "mapView": {
+        "west": 32.5486298,
+        "south": 39.7197993,
+        "east": 33.1708569,
+        "north": 40.1467263
+      }
+    },
+    "İzmir": {
+      "title": "İzmir, İzmir, Türkiye",
+      "id": "city.359056",
+      "resultType": "city",
+      "address": {
+        "label": "İzmir, İzmir, Türkiye",
+        "countryCode": "TR",
+        "countryName": "Türkiye",
+        "state": "İzmir",
+        "city": "İzmir"
+      },
+      "position": {
+        "lat": 38.4236511,
+        "lng": 27.142826
+      },
+      "mapView": {
+        "west": 26.8975182,
+        "south": 38.3028297,
+        "east": 27.3881378,
+        "north": 38.5445442
+      }
+    },
+    "Bursa": {
+      "title": "Bursa, Bursa, Türkiye",
+      "id": "city.272299",
+      "resultType": "city",
+      "address": {
+        "label": "Bursa, Bursa, Türkiye",
+        "countryCode": "TR",
+        "countryName": "Türkiye",
+        "state": "Bursa",
+        "city": "Bursa"
+      },
+      "position": {
+        "lat": 40.1885281,
+        "lng": 29.0609636
+      },
+      "mapView": {
+        "west": 28.8744278,
+        "south": 40.1316452,
+        "east": 29.2474975,
+        "north": 40.2454125
+      }
+    },
+    "Antalya": {
+      "title": "Antalya, Antalya, Türkiye",
+      "id": "city.233055",
+      "resultType": "city",
+      "address": {
+        "label": "Antalya, Antalya, Türkiye",
+        "countryCode": "TR",
+        "countryName": "Türkiye",
+        "state": "Antalya",
+        "city": "Antalya"
+      },
+      "position": {
+        "lat": 36.8968908,
+        "lng": 30.7133233
+      },
+      "mapView": {
+        "west": 30.5778694,
+        "south": 36.8019485,
+        "east": 30.8487797,
+        "north": 36.9918308
+      }
+    }
+  }
 }
