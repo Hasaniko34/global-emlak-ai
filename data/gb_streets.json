@@ -1,0 +1,117 @@
+{
+  "London": {
+    "Londra": [
+      { "label": "Oxford Street", "value": "Oxford Street", "type": "street" },
+      { "label": "Regent Street", "value": "Regent Street", "type": "street" },
+      { "label": "Baker Street", "value": "Baker Street", "type": "street" },
+      { "label": "Piccadilly", "value": "Piccadilly", "type": "street" },
+      { "label": "The Strand", "value": "The Strand", "type": "street" }
+    ],
+    "Westminster": [
+      { "label": "Downing Street", "value": "Downing Street", "type": "street" },
+      { "label": "Victoria Street", "value": "Victoria Street", "type": "street" },
+      { "label": "Parliament Square", "value": "Parliament Square", "type": "street" },
+      { "label": "Whitehall", "value": "Whitehall", "type": "street" },
+      { "label": "Birdcage Walk", "value": "Birdcage Walk", "type": "street" }
+    ],
+    "Kensington": [
+      { "label": "Kensington High Street", "value": "Kensington High Street", "type": "street" },
+      { "label": "Cromwell Road", "value": "Cromwell Road", "type": "street" },
+      { "label": "Exhibition Road", "value": "Exhibition Road", "type": "street" },
+      { "label": "Queen's Gate", "value": "Queen's Gate", "type": "street" },
+      { "label": "Holland Park Avenue", "value": "Holland Park Avenue", "type": "street" }
+    ]
+  },
+  "Manchester": {
+    "Manchester": [
+      { "label": "Deansgate", "value": "Deansgate", "type": "street" },
+      { "label": "Market Street", "value": "Market Street", "type": "street" },
+      { "label": "Oxford Road", "value": "Oxford Road", "type": "street" },
+      { "label": "Portland Street", "value": "Portland Street", "type": "street" },
+      { "label": "Piccadilly", "value": "Piccadilly", "type": "street" }
+    ],
+    "Northern Quarter": [
+      { "label": "Oldham Street", "value": "Oldham Street", "type": "street" },
+      { "label": "Thomas Street", "value": "Thomas Street", "type": "street" },
+      { "label": "Tib Street", "value": "Tib Street", "type": "street" },
+      { "label": "Dale Street", "value": "Dale Street", "type": "street" },
+      { "label": "Lever Street", "value": "Lever Street", "type": "street" }
+    ],
+    "Salford": [
+      { "label": "Chapel Street", "value": "Chapel Street", "type": "street" },
+      { "label": "Trinity Way", "value": "Trinity Way", "type": "street" },
+      { "label": "Blackfriars Road", "value": "Blackfriars Road", "type": "street" },
+      { "label": "Regent Road", "value": "Regent Road", "type": "street" },
+      { "label": "Liverpool Street", "value": "Liverpool Street", "type": "street" }
+    ]
+  },
+  "Birmingham": {
+    "Birmingham": [
+      { "label": "New Street", "value": "New Street", "type": "street" },
+      { "label": "Corporation Street", "value": "Corporation Street", "type": "street" },
+      { "label": "Broad Street", "value": "Broad Street", "type": "street" },
+      { "label": "High Street", "value": "High Street", "type": "street" },
+      { "label": "Colmore Row", "value": "Colmore Row", "type": "street" }
+    ],
+    "Jewellery Quarter": [
+      { "label": "Vyse Street", "value": "Vyse Street", "type": "street" },
+      { "label": "Warstone Lane", "value": "Warstone Lane", "type": "street" },
+      { "label": "Frederick Street", "value": "Frederick Street", "type": "street" },
+      { "label": "Spencer Street", "value": "Spencer Street", "type": "street" },
+      { "label": "Caroline Street", "value": "Caroline Street", "type": "street" }
+    ],
+    "Digbeth": [
+      { "label": "Digbeth High Street", "value": "Digbeth High Street", "type": "street" },
+      { "label": "Floodgate Street", "value": "Floodgate Street", "type": "street" },
+      { "label": "Heath Mill Lane", "value": "Heath Mill Lane", "type": "street" },
+      { "label": "Fazeley Street", "value": "Fazeley Street", "type": "street" },
+      { "label": "Gibb Street", "value": "Gibb Street", "type": "street" }
+    ]
+  },
+  "Liverpool": {
+    "Liverpool": [
+      { "label": "Bold Street", "value": "Bold Street", "type": "street" },
+      { "label": "Church Street", "value": "Church Street", "type": "street" },
+      { "label": "Lord Street", "value": "Lord Street", "type": "street" },
+      { "label": "Dale Street", "value": "Dale Street", "type": "street" },
+      { "label": "Hanover Street", "value": "Hanover Street", "type": "street" }
+    ],
+    "Albert Dock": [
+      { "label": "The Strand", "value": "The Strand", "type": "street" },
+      { "label": "Gower Street", "value": "Gower Street", "type": "street" },
+      { "label": "Salthouse Quay", "value": "Salthouse Quay", "type": "street" },
+      { "label": "Hartley Quay", "value": "Hartley Quay", "type": "street" },
+      { "label": "Wapping", "value": "Wapping", "type": "street" }
+    ],
+    "Anfield": [
+      { "label": "Anfield Road", "value": "Anfield Road", "type": "street" },
+      { "label": "Walton Breck Road", "value": "Walton Breck Road", "type": "street" },
+      { "label": "Oakfield Road", "value": "Oakfield Road", "type": "street" },
+      { "label": "Breck Road", "value": "Breck Road", "type": "street" },
+      { "label": "Walton Lane", "value": "Walton Lane", "type": "street" }
+    ]
+  },
+  "Edinburgh": {
+    "Edinburgh": [
+      { "label": "Royal Mile", "value": "Royal Mile", "type": "street" },
+      { "label": "Princes Street", "value": "Princes Street", "type": "street" },
+      { "label": "George Street", "value": "George Street", "type": "street" },
+      { "label": "Queen Street", "value": "Queen Street", "type": "street" },
+      { "label": "Lothian Road", "value": "Lothian Road", "type": "street" }
+    ],
+    "Old Town": [
+      { "label": "Royal Mile", "value": "Royal Mile", "type": "street" },
+      { "label": "Grassmarket", "value": "Grassmarket", "type": "street" },
+      { "label": "Cowgate", "value": "Cowgate", "type": "street" },
+      { "label": "Canongate", "value": "Canongate", "type": "street" },
+      { "label": "Victoria Street", "value": "Victoria Street", "type": "street" }
+    ],
+    "New Town": [
+      { "label": "Princes Street", "value": "Princes Street", "type": "street" },
+      { "label": "George Street", "value": "George Street", "type": "street" },
+      { "label": "Queen Street", "value": "Queen Street", "type": "street" },
+      { "label": "Charlotte Square", "value": "Charlotte Square", "type": "street" },
+      { "label": "St Andrew Square", "value": "St Andrew Square", "type": "street" }
+    ]
+  }
+} 

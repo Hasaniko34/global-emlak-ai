@@ -1,0 +1,139 @@
+{
+  "İstanbul": {
+    "Kadıköy": {
+      "Caferağa": [
+        { "label": "Moda Caddesi", "value": "Moda Caddesi", "type": "street" },
+        { "label": "Bahariye Caddesi", "value": "Bahariye Caddesi", "type": "street" },
+        { "label": "Mühürdar Caddesi", "value": "Mühürdar Caddesi", "type": "street" },
+        { "label": "Güneşli Bahçe Sokak", "value": "Güneşli Bahçe Sokak", "type": "street" },
+        { "label": "Yeni Fikir Sokak", "value": "Yeni Fikir Sokak", "type": "street" }
+      ],
+      "Fenerbahçe": [
+        { "label": "Bağdat Caddesi", "value": "Bağdat Caddesi", "type": "street" },
+        { "label": "Fener Kalamış Caddesi", "value": "Fener Kalamış Caddesi", "type": "street" },
+        { "label": "Kuyubaşı Sokak", "value": "Kuyubaşı Sokak", "type": "street" },
+        { "label": "Ahmet Mithat Efendi Sokak", "value": "Ahmet Mithat Efendi Sokak", "type": "street" },
+        { "label": "Dalyan Sokak", "value": "Dalyan Sokak", "type": "street" }
+      ],
+      "Göztepe": [
+        { "label": "Bağdat Caddesi", "value": "Bağdat Caddesi", "type": "street" },
+        { "label": "Tütüncü Mehmet Efendi Caddesi", "value": "Tütüncü Mehmet Efendi Caddesi", "type": "street" },
+        { "label": "Göztepe Parkı Sokak", "value": "Göztepe Parkı Sokak", "type": "street" },
+        { "label": "Fahrettin Kerim Gökay Caddesi", "value": "Fahrettin Kerim Gökay Caddesi", "type": "street" },
+        { "label": "Çiftehavuzlar Caddesi", "value": "Çiftehavuzlar Caddesi", "type": "street" }
+      ]
+    },
+    "Beşiktaş": {
+      "Levent": [
+        { "label": "Büyükdere Caddesi", "value": "Büyükdere Caddesi", "type": "street" },
+        { "label": "Levent Caddesi", "value": "Levent Caddesi", "type": "street" },
+        { "label": "Ebulula Mardin Caddesi", "value": "Ebulula Mardin Caddesi", "type": "street" },
+        { "label": "Çarşı Caddesi", "value": "Çarşı Caddesi", "type": "street" },
+        { "label": "Nispetiye Caddesi", "value": "Nispetiye Caddesi", "type": "street" }
+      ],
+      "Etiler": [
+        { "label": "Nispetiye Caddesi", "value": "Nispetiye Caddesi", "type": "street" },
+        { "label": "Etiler Caddesi", "value": "Etiler Caddesi", "type": "street" },
+        { "label": "Ahmet Adnan Saygun Caddesi", "value": "Ahmet Adnan Saygun Caddesi", "type": "street" },
+        { "label": "Bebek Caddesi", "value": "Bebek Caddesi", "type": "street" },
+        { "label": "Maya Sokak", "value": "Maya Sokak", "type": "street" }
+      ],
+      "Ortaköy": [
+        { "label": "Muallim Naci Caddesi", "value": "Muallim Naci Caddesi", "type": "street" },
+        { "label": "Ortaköy Dereboyu Caddesi", "value": "Ortaköy Dereboyu Caddesi", "type": "street" },
+        { "label": "Mecidiye Köprüsü Sokak", "value": "Mecidiye Köprüsü Sokak", "type": "street" },
+        { "label": "Portakal Yokuşu", "value": "Portakal Yokuşu", "type": "street" },
+        { "label": "Ambarlı Sokak", "value": "Ambarlı Sokak", "type": "street" }
+      ]
+    },
+    "Üsküdar": {
+      "Acıbadem": [
+        { "label": "Acıbadem Caddesi", "value": "Acıbadem Caddesi", "type": "street" },
+        { "label": "Tekin Sokak", "value": "Tekin Sokak", "type": "street" },
+        { "label": "Şair Arşi Caddesi", "value": "Şair Arşi Caddesi", "type": "street" },
+        { "label": "Sarayardı Caddesi", "value": "Sarayardı Caddesi", "type": "street" },
+        { "label": "Hilmipaşa Sokak", "value": "Hilmipaşa Sokak", "type": "street" }
+      ],
+      "Altunizade": [
+        { "label": "Altunizade Caddesi", "value": "Altunizade Caddesi", "type": "street" },
+        { "label": "Kısıklı Caddesi", "value": "Kısıklı Caddesi", "type": "street" },
+        { "label": "Nuhkuyusu Caddesi", "value": "Nuhkuyusu Caddesi", "type": "street" },
+        { "label": "Oymacı Sokak", "value": "Oymacı Sokak", "type": "street" },
+        { "label": "Fahrettin Kerim Gökay Caddesi", "value": "Fahrettin Kerim Gökay Caddesi", "type": "street" }
+      ],
+      "Kuzguncuk": [
+        { "label": "İcadiye Caddesi", "value": "İcadiye Caddesi", "type": "street" },
+        { "label": "Kuzguncuk Caddesi", "value": "Kuzguncuk Caddesi", "type": "street" },
+        { "label": "Paşa Limanı Caddesi", "value": "Paşa Limanı Caddesi", "type": "street" },
+        { "label": "Bereketli Sokak", "value": "Bereketli Sokak", "type": "street" },
+        { "label": "İcadiye Bağları Sokak", "value": "İcadiye Bağları Sokak", "type": "street" }
+      ]
+    }
+  },
+  "Ankara": {
+    "Çankaya": {
+      "Kızılay": [
+        { "label": "Atatürk Bulvarı", "value": "Atatürk Bulvarı", "type": "street" },
+        { "label": "Ziya Gökalp Caddesi", "value": "Ziya Gökalp Caddesi", "type": "street" },
+        { "label": "Meşrutiyet Caddesi", "value": "Meşrutiyet Caddesi", "type": "street" },
+        { "label": "Sakarya Caddesi", "value": "Sakarya Caddesi", "type": "street" },
+        { "label": "Mithatpaşa Caddesi", "value": "Mithatpaşa Caddesi", "type": "street" }
+      ],
+      "Bahçelievler": [
+        { "label": "7. Cadde", "value": "7. Cadde", "type": "street" },
+        { "label": "Aşkabat Caddesi", "value": "Aşkabat Caddesi", "type": "street" },
+        { "label": "Emek Caddesi", "value": "Emek Caddesi", "type": "street" },
+        { "label": "Yukarı Bahçelievler Caddesi", "value": "Yukarı Bahçelievler Caddesi", "type": "street" },
+        { "label": "Milli Egemenlik Caddesi", "value": "Milli Egemenlik Caddesi", "type": "street" }
+      ],
+      "Gaziosmanpaşa": [
+        { "label": "Filistin Caddesi", "value": "Filistin Caddesi", "type": "street" },
+        { "label": "Simon Bolivar Caddesi", "value": "Simon Bolivar Caddesi", "type": "street" },
+        { "label": "Hollanda Caddesi", "value": "Hollanda Caddesi", "type": "street" },
+        { "label": "Kuleli Sokak", "value": "Kuleli Sokak", "type": "street" },
+        { "label": "Şehit Ersan Caddesi", "value": "Şehit Ersan Caddesi", "type": "street" }
+      ]
+    },
+    "Keçiören": {
+      "Etlik": [
+        { "label": "Etlik Caddesi", "value": "Etlik Caddesi", "type": "street" },
+        { "label": "Ayvacık Caddesi", "value": "Ayvacık Caddesi", "type": "street" },
+        { "label": "Çaldıran Caddesi", "value": "Çaldıran Caddesi", "type": "street" },
+        { "label": "Ayvalı Caddesi", "value": "Ayvalı Caddesi", "type": "street" },
+        { "label": "Tepebaşı Caddesi", "value": "Tepebaşı Caddesi", "type": "street" }
+      ],
+      "Aktepe": [
+        { "label": "Aktepe Caddesi", "value": "Aktepe Caddesi", "type": "street" },
+        { "label": "Fatih Caddesi", "value": "Fatih Caddesi", "type": "street" },
+        { "label": "Plevne Caddesi", "value": "Plevne Caddesi", "type": "street" },
+        { "label": "Tepebaşı Caddesi", "value": "Tepebaşı Caddesi", "type": "street" },
+        { "label": "Ufuk Caddesi", "value": "Ufuk Caddesi", "type": "street" }
+      ]
+    }
+  },
+  "İzmir": {
+    "Konak": {
+      "Alsancak": [
+        { "label": "Atatürk Caddesi", "value": "Atatürk Caddesi", "type": "street" },
+        { "label": "Kıbrıs Şehitleri Caddesi", "value": "Kıbrıs Şehitleri Caddesi", "type": "street" },
+        { "label": "Plevne Bulvarı", "value": "Plevne Bulvarı", "type": "street" },
+        { "label": "Kordon Caddesi", "value": "Kordon Caddesi", "type": "street" },
+        { "label": "1472 Sokak", "value": "1472 Sokak", "type": "street" }
+      ],
+      "Karşıyaka": [
+        { "label": "Girne Bulvarı", "value": "Girne Bulvarı", "type": "street" },
+        { "label": "Cemal Gürsel Caddesi", "value": "Cemal Gürsel Caddesi", "type": "street" },
+        { "label": "Yalı Caddesi", "value": "Yalı Caddesi", "type": "street" },
+        { "label": "1721 Sokak", "value": "1721 Sokak", "type": "street" },
+        { "label": "Hürriyet Caddesi", "value": "Hürriyet Caddesi", "type": "street" }
+      ],
+      "Göztepe": [
+        { "label": "Mithatpaşa Caddesi", "value": "Mithatpaşa Caddesi", "type": "street" },
+        { "label": "Hatay Caddesi", "value": "Hatay Caddesi", "type": "street" },
+        { "label": "İnönü Caddesi", "value": "İnönü Caddesi", "type": "street" },
+        { "label": "Talatpaşa Bulvarı", "value": "Talatpaşa Bulvarı", "type": "street" },
+        { "label": "Göztepe Caddesi", "value": "Göztepe Caddesi", "type": "street" }
+      ]
+    }
+  }
+} 

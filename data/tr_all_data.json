@@ -1,0 +1,37 @@
+{
+  "country": {
+    "title": "Country TR, Quitman, AR 72131, United States",
+    "id": "here:af:streetsection:kFJOtGUO8.W86zKEriZKgA",
+    "resultType": "street",
+    "address": {
+      "label": "Country TR, Quitman, AR 72131, United States",
+      "countryCode": "USA",
+      "countryName": "United States",
+      "stateCode": "AR",
+      "state": "Arkansas",
+      "county": "Cleburne",
+      "city": "Quitman",
+      "street": "Country TR",
+      "postalCode": "72131"
+    },
+    "position": {
+      "lat": 35.38766,
+      "lng": -92.22458
+    },
+    "mapView": {
+      "west": -92.22459,
+      "south": 35.38628,
+      "east": -92.22347,
+      "north": 35.38901
+    },
+    "scoring": {
+      "queryScore": 1,
+      "fieldScore": {
+        "streets": [
+          1
+        ]
+      }
+    }
+  },
+  "cities": {}
+}

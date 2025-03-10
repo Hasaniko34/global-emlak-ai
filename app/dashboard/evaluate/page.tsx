@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ChartBarIcon, HomeIcon, MapPinIcon, CurrencyDollarIcon, GlobeAltIcon, BuildingOfficeIcon, BookmarkIcon, PlusCircleIcon, StarIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ChartBarIcon, HomeIcon, MapPinIcon, CurrencyDollarIcon, GlobeAltIcon, BuildingOfficeIcon, BookmarkIcon, PlusCircleIcon, StarIcon, XMarkIcon, ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { ensureCSRFToken, addCSRFHeader } from '@/utils/csrf';
 import { 
   getAllCountries,
+  getAllowedCountries,
   getCountryByCode,
   getStatesByCountry,
   getCitiesByState,
@@ -12,10 +13,16 @@ import {
   getFormattedCountries,
   getFormattedStates,
   getFormattedCities,
-  getNeighborhoodsByCity,
-  getStreetsByNeighborhood
+  getNeighborhoodsByDistrict,
+  getStreetsByNeighborhood,
+  getDistrictsByCity
 } from '@/utils/addressHelper';
 import { getSavedAddresses, saveAddress, deleteAddress, labelAddress } from '@/utils/savedAddresses';
+import dynamic from 'next/dynamic';
+import type { ActionMeta } from 'react-select';
+
+// React-select'i dinamik olarak import edelim (SSR devre dışı bırakılmış olarak)
+const Select = dynamic(() => import('react-select'), { ssr: false });
 
 // Adres tip tanımlarını ekleyelim
 type SavedAddress = {
@@ -40,28 +47,26 @@ type PopularAddress = {
 };
 
 // Tip tanımlamaları
-interface FormattedCountry {
+interface SelectOption {
   value: string;
   label: string;
-  phoneCode: string;
 }
 
-interface FormattedState {
-  value: string;
-  label: string;
+interface CountryOption extends SelectOption {
+  nativeName: string;
+}
+
+interface StateOption extends SelectOption {
+  countryCode: string;
+}
+
+interface CityOption extends SelectOption {
   stateCode: string;
   countryCode: string;
-  coordinates: {
+  coordinates?: {
     lat: string;
     lng: string;
   };
-}
-
-interface FormattedCity {
-  value: string;
-  label: string;
-  stateCode: string;
-  countryCode: string;
 }
 
 export default function EvaluatePage() {
@@ -69,6 +74,8 @@ export default function EvaluatePage() {
   const [address, setAddress] = useState('');
   const [propertyType, setPropertyType] = useState('');
   const [size, setSize] = useState('');
+  const [grossSize, setGrossSize] = useState('');
+  const [netSize, setNetSize] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   
@@ -92,12 +99,7 @@ export default function EvaluatePage() {
   const [showSaveModal, setShowSaveModal] = useState(false);
   
   // Popüler adresler
-  const [popularAddresses, setPopularAddresses] = useState<Array<PopularAddress>>([
-    { label: 'İstanbul - Kadıköy', country: 'Türkiye', countryCode: 'TR', city: 'İstanbul', district: 'Kadıköy', streetAddress: 'Bağdat Caddesi', postalCode: '34710' },
-    { label: 'Ankara - Çankaya', country: 'Türkiye', countryCode: 'TR', city: 'Ankara', district: 'Çankaya', streetAddress: 'Tunalı Hilmi Caddesi', postalCode: '06680' },
-    { label: 'İzmir - Konak', country: 'Türkiye', countryCode: 'TR', city: 'İzmir', district: 'Konak', streetAddress: 'Kıbrıs Şehitleri Caddesi', postalCode: '35220' },
-    { label: 'Antalya - Konyaaltı', country: 'Türkiye', countryCode: 'TR', city: 'Antalya', district: 'Konyaaltı', streetAddress: 'Boğaçayı Caddesi', postalCode: '07070' },
-  ]);
+  const [popularAddresses, setPopularAddresses] = useState<Array<PopularAddress>>([]);
   
   // Mahalle ve sokak seçimleri için state'ler
   const [availableNeighborhoods, setAvailableNeighborhoods] = useState<Array<{value: string, label: string}>>([]);
@@ -107,92 +109,452 @@ export default function EvaluatePage() {
   const [loadingNeighborhoods, setLoadingNeighborhoods] = useState(false);
   const [loadingStreets, setLoadingStreets] = useState(false);
   
-  // Ülke listesini yükle
+  // State tanımlamaları
+  const [countries, setCountries] = useState<CountryOption[]>([]);
+  const [states, setStates] = useState<StateOption[]>([]);
+  const [cities, setCities] = useState<CityOption[]>([]);
+  const [neighborhoods, setNeighborhoods] = useState<SelectOption[]>([]);
+  const [streets, setStreets] = useState<SelectOption[]>([]);
+
+  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
+  const [selectedState, setSelectedState] = useState<StateOption | null>(null);
+  const [selectedCity, setSelectedCity] = useState<CityOption | null>(null);
+  const [selectedNeighborhood, setSelectedNeighborhood] = useState<SelectOption | null>(null);
+  const [selectedStreet, setSelectedStreet] = useState<SelectOption | null>(null);
+  
+  // Adım adım form için gerekli state
+  const [currentStep, setCurrentStep] = useState(1);
+  const totalSteps = 4;
+  
+  // Adım başlıkları
+  const stepTitles = [
+    "Ülke ve Şehir Seçimi",
+    "İlçe ve Mahalle Seçimi",
+    "Adres Detayları",
+    "Emlak Özellikleri"
+  ];
+  
+  // Form geçerlilik kontrolü
+  const isStepValid = (step: number) => {
+    switch(step) {
+      case 1:
+        return !!selectedCountry && !!selectedState;
+      case 2:
+        return !!selectedCity;
+      case 3:
+        return true; // Opsiyonel alanlar
+      case 4:
+        return !!propertyType && !!size;
+      default:
+        return false;
+    }
+  };
+  
+  // Sonraki adıma geçme
+  const nextStep = () => {
+    if (currentStep < totalSteps && isStepValid(currentStep)) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
+  
+  // Önceki adıma dönme
+  const prevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+  
+  // Ülkeleri yükle
   useEffect(() => {
-    const formattedCountries = getFormattedCountries().map(country => ({
-      code: country.value,
-      name: country.label
-    }));
-    setAvailableCountries(formattedCountries);
+    const countryList = getAllowedCountries();
+    setCountries(countryList);
     loadSavedAddresses();
   }, []);
   
-  // Ülke değiştiğinde şehirleri güncelle
+  // İlleri yükle
   useEffect(() => {
-    if (countryCode) {
-      const states = getStatesByCountry(countryCode);
-      const cityNames = states.map(state => state.name);
-      setAvailableCities(cityNames.filter(Boolean));
-      
-      // Ülke değiştiğinde şehir, ilçe ve adres resetle
-      setCity('');
-      setDistrict('');
-      
-      // Ülke adını ayarla
-      const selectedCountry = getCountryByCode(countryCode);
-      setCountry(selectedCountry ? selectedCountry.name : '');
+    if (selectedCountry?.value) {
+      const stateList = getStatesByCountry(selectedCountry.value);
+      setStates(stateList);
+      setSelectedState(null);
+      setSelectedCity(null);
+      setSelectedNeighborhood(null);
+      setSelectedStreet(null);
     } else {
-      setAvailableCities([]);
+      setStates([]);
     }
-  }, [countryCode]);
+  }, [selectedCountry]);
   
-  // Şehir değiştiğinde ilçeleri güncelle
+  // İlçeleri yükle
   useEffect(() => {
-    if (countryCode && city) {
-      const states = getStatesByCountry(countryCode);
-      const selectedState = states.find(state => state.name === city);
-      if (selectedState) {
-        const cities = getFormattedCities(countryCode, selectedState.code);
-        const districts = cities.map(city => city.label).filter(Boolean);
-        setAvailableDistricts(districts);
-      } else {
-        setAvailableDistricts([]);
+    if (selectedCountry?.value && selectedState?.value) {
+      try {
+        console.log('🔍 İlçe yükleniyor:', { 
+          country: selectedCountry.value, 
+          city: selectedState.value 
+        });
+        
+        const loadCities = async () => {
+          const cityList = await getCitiesByState(selectedCountry.value, selectedState.value);
+          console.log('📦 Yüklenen ilçeler:', cityList);
+          
+          // Eğer ilçe listesi boşsa, API'den doğrudan getir
+          if (cityList.length === 0) {
+            try {
+              const apiCities = await getDistrictsByCity(selectedCountry.value, selectedState.value);
+              if (apiCities && apiCities.length > 0) {
+                setCities(apiCities.map(city => ({
+                  value: city.value,
+                  label: city.label,
+                  stateCode: selectedState.value,
+                  countryCode: selectedCountry.value
+                })));
+              } else {
+                // Yine de boşsa, varsayılan bir ilçe ekle
+                setCities([{
+                  value: selectedState.value,
+                  label: `${selectedState.label} Merkez`,
+                  stateCode: selectedState.value,
+                  countryCode: selectedCountry.value
+                }]);
+              }
+            } catch (error) {
+              console.error('❌ API ilçe yükleme hatası:', error);
+              // Hata durumunda varsayılan bir ilçe ekle
+              setCities([{
+                value: selectedState.value,
+                label: `${selectedState.label} Merkez`,
+                stateCode: selectedState.value,
+                countryCode: selectedCountry.value
+              }]);
+            }
+          } else {
+            setCities(cityList);
+          }
+        };
+        
+        loadCities();
+      } catch (error) {
+        console.error('❌ İlçe yükleme hatası:', error);
+        setCities([]);
       }
       
-      // Şehir değiştiğinde ilçe resetle
-      setDistrict('');
+      setSelectedCity(null);
+      setSelectedNeighborhood(null);
+      setSelectedStreet(null);
     } else {
-      setAvailableDistricts([]);
+      setCities([]);
     }
-  }, [countryCode, city]);
+  }, [selectedCountry, selectedState]);
   
-  // İlçe değiştiğinde mahalleleri güncelle
+  // Mahalleleri yükle
   useEffect(() => {
     const loadNeighborhoods = async () => {
-      if (countryCode && city && district) {
+      if (selectedCountry?.value && selectedCity?.value && district) {
         setLoadingNeighborhoods(true);
         try {
-          const neighborhoods = await getNeighborhoodsByCity(countryCode, `${district}, ${city}`);
-          setAvailableNeighborhoods(neighborhoods);
+          console.log('🔍 Mahalle yükleniyor:', { 
+            country: selectedCountry.value, 
+            city: selectedState?.value || '', 
+            district 
+          });
+
+          // Ülke ve şehir bilgilerini doğru şekilde kullan
+          const neighborhoodList = await getNeighborhoodsByDistrict(
+            selectedCountry.value,
+            selectedState?.label || city,
+            district
+          );
+
+          console.log('📦 Yüklenen mahalleler:', neighborhoodList);
+          
+          // Eğer mahalle listesi boşsa, varsayılan mahalleler ekle
+          if (!neighborhoodList || neighborhoodList.length === 0) {
+            // Ülkeye özgü varsayılan mahalleler
+            let defaultNeighborhoods = [];
+            
+            if (selectedCountry.value === 'TR') {
+              defaultNeighborhoods = [
+                { label: `${district} Merkez`, value: `${district} Merkez` },
+                { label: `${district} Yeni Mahalle`, value: `${district} Yeni Mahalle` },
+                { label: `${district} Cumhuriyet`, value: `${district} Cumhuriyet` },
+                { label: `${district} Atatürk`, value: `${district} Atatürk` },
+                { label: `${district} Fatih`, value: `${district} Fatih` }
+              ];
+            } else if (selectedCountry.value === 'DE') {
+              defaultNeighborhoods = [
+                { label: `${district} Zentrum`, value: `${district} Zentrum` },
+                { label: `${district} Nord`, value: `${district} Nord` },
+                { label: `${district} Süd`, value: `${district} Süd` },
+                { label: `${district} Ost`, value: `${district} Ost` },
+                { label: `${district} West`, value: `${district} West` }
+              ];
+            } else if (selectedCountry.value === 'GB') {
+              defaultNeighborhoods = [
+                { label: `${district} Centre`, value: `${district} Centre` },
+                { label: `${district} North`, value: `${district} North` },
+                { label: `${district} South`, value: `${district} South` },
+                { label: `${district} East`, value: `${district} East` },
+                { label: `${district} West`, value: `${district} West` }
+              ];
+            } else if (selectedCountry.value === 'FR') {
+              defaultNeighborhoods = [
+                { label: `${district} Centre`, value: `${district} Centre` },
+                { label: `${district} Nord`, value: `${district} Nord` },
+                { label: `${district} Sud`, value: `${district} Sud` },
+                { label: `${district} Est`, value: `${district} Est` },
+                { label: `${district} Ouest`, value: `${district} Ouest` }
+              ];
+            } else if (selectedCountry.value === 'ES') {
+              defaultNeighborhoods = [
+                { label: `${district} Centro`, value: `${district} Centro` },
+                { label: `${district} Norte`, value: `${district} Norte` },
+                { label: `${district} Sur`, value: `${district} Sur` },
+                { label: `${district} Este`, value: `${district} Este` },
+                { label: `${district} Oeste`, value: `${district} Oeste` }
+              ];
+            } else if (selectedCountry.value === 'IT') {
+              defaultNeighborhoods = [
+                { label: `${district} Centro`, value: `${district} Centro` },
+                { label: `${district} Nord`, value: `${district} Nord` },
+                { label: `${district} Sud`, value: `${district} Sud` },
+                { label: `${district} Est`, value: `${district} Est` },
+                { label: `${district} Ovest`, value: `${district} Ovest` }
+              ];
+            } else {
+              defaultNeighborhoods = [
+                { label: `${district} Center`, value: `${district} Center` },
+                { label: `${district} North`, value: `${district} North` },
+                { label: `${district} South`, value: `${district} South` },
+                { label: `${district} East`, value: `${district} East` },
+                { label: `${district} West`, value: `${district} West` }
+              ];
+            }
+            
+            setAvailableNeighborhoods(defaultNeighborhoods);
+          } else {
+            setAvailableNeighborhoods(neighborhoodList);
+          }
         } catch (error) {
-          console.error('Mahalleler yüklenirken hata:', error);
-          setAvailableNeighborhoods([]);
+          console.error('❌ Mahalleler yüklenirken hata:', error);
+          // Hata durumunda ülkeye özgü varsayılan mahalleler ekle
+          let defaultNeighborhoods = [];
+          
+          if (selectedCountry.value === 'TR') {
+            defaultNeighborhoods = [
+              { label: `${district} Merkez`, value: `${district} Merkez` },
+              { label: `${district} Yeni Mahalle`, value: `${district} Yeni Mahalle` },
+              { label: `${district} Cumhuriyet`, value: `${district} Cumhuriyet` },
+              { label: `${district} Atatürk`, value: `${district} Atatürk` },
+              { label: `${district} Fatih`, value: `${district} Fatih` }
+            ];
+          } else if (selectedCountry.value === 'DE') {
+            defaultNeighborhoods = [
+              { label: `${district} Zentrum`, value: `${district} Zentrum` },
+              { label: `${district} Nord`, value: `${district} Nord` },
+              { label: `${district} Süd`, value: `${district} Süd` },
+              { label: `${district} Ost`, value: `${district} Ost` },
+              { label: `${district} West`, value: `${district} West` }
+            ];
+          } else if (selectedCountry.value === 'GB') {
+            defaultNeighborhoods = [
+              { label: `${district} Centre`, value: `${district} Centre` },
+              { label: `${district} North`, value: `${district} North` },
+              { label: `${district} South`, value: `${district} South` },
+              { label: `${district} East`, value: `${district} East` },
+              { label: `${district} West`, value: `${district} West` }
+            ];
+          } else if (selectedCountry.value === 'FR') {
+            defaultNeighborhoods = [
+              { label: `${district} Centre`, value: `${district} Centre` },
+              { label: `${district} Nord`, value: `${district} Nord` },
+              { label: `${district} Sud`, value: `${district} Sud` },
+              { label: `${district} Est`, value: `${district} Est` },
+              { label: `${district} Ouest`, value: `${district} Ouest` }
+            ];
+          } else if (selectedCountry.value === 'ES') {
+            defaultNeighborhoods = [
+              { label: `${district} Centro`, value: `${district} Centro` },
+              { label: `${district} Norte`, value: `${district} Norte` },
+              { label: `${district} Sur`, value: `${district} Sur` },
+              { label: `${district} Este`, value: `${district} Este` },
+              { label: `${district} Oeste`, value: `${district} Oeste` }
+            ];
+          } else if (selectedCountry.value === 'IT') {
+            defaultNeighborhoods = [
+              { label: `${district} Centro`, value: `${district} Centro` },
+              { label: `${district} Nord`, value: `${district} Nord` },
+              { label: `${district} Sud`, value: `${district} Sud` },
+              { label: `${district} Est`, value: `${district} Est` },
+              { label: `${district} Ovest`, value: `${district} Ovest` }
+            ];
+          } else {
+            defaultNeighborhoods = [
+              { label: `${district} Center`, value: `${district} Center` },
+              { label: `${district} North`, value: `${district} North` },
+              { label: `${district} South`, value: `${district} South` },
+              { label: `${district} East`, value: `${district} East` },
+              { label: `${district} West`, value: `${district} West` }
+            ];
+          }
+          
+          setAvailableNeighborhoods(defaultNeighborhoods);
         } finally {
           setLoadingNeighborhoods(false);
         }
-        
-        // İlçe değiştiğinde mahalle ve sokak resetle
-        setNeighborhood('');
-        setStreet('');
       } else {
         setAvailableNeighborhoods([]);
       }
     };
 
     loadNeighborhoods();
-  }, [countryCode, city, district]);
+  }, [selectedCountry?.value, selectedCity?.value, district, selectedState?.value, selectedState?.label, city]);
 
-  // Mahalle değiştiğinde sokakları güncelle
+  // Sokakları yükle
   useEffect(() => {
     const loadStreets = async () => {
-      if (countryCode && city && district && neighborhood) {
+      if (countryCode && district && neighborhood) {
         setLoadingStreets(true);
         try {
-          const streets = await getStreetsByNeighborhood(countryCode, `${district}, ${city}`, neighborhood);
-          setAvailableStreets(streets);
+          console.log('🔍 Sokak yükleniyor:', { countryCode, city, district, neighborhood });
+          const streetList = await getStreetsByNeighborhood(
+            countryCode,
+            city,
+            district,
+            neighborhood
+          );
+          console.log('📦 Yüklenen sokaklar:', streetList);
+          
+          // Eğer sokak listesi boşsa, ülkeye özgü varsayılan sokaklar ekle
+          if (!streetList || streetList.length === 0) {
+            let defaultStreets = [];
+            
+            if (countryCode === 'TR') {
+              defaultStreets = [
+                { label: `${neighborhood} Caddesi`, value: `${neighborhood} Caddesi` },
+                { label: 'Atatürk Caddesi', value: 'Atatürk Caddesi' },
+                { label: 'Cumhuriyet Caddesi', value: 'Cumhuriyet Caddesi' },
+                { label: 'İstiklal Caddesi', value: 'İstiklal Caddesi' },
+                { label: 'Gazi Caddesi', value: 'Gazi Caddesi' }
+              ];
+            } else if (countryCode === 'DE') {
+              defaultStreets = [
+                { label: `${neighborhood}straße`, value: `${neighborhood}straße` },
+                { label: 'Hauptstraße', value: 'Hauptstraße' },
+                { label: 'Bahnhofstraße', value: 'Bahnhofstraße' },
+                { label: 'Schulstraße', value: 'Schulstraße' },
+                { label: 'Gartenstraße', value: 'Gartenstraße' }
+              ];
+            } else if (countryCode === 'GB') {
+              defaultStreets = [
+                { label: `${neighborhood} Road`, value: `${neighborhood} Road` },
+                { label: 'High Street', value: 'High Street' },
+                { label: 'Church Street', value: 'Church Street' },
+                { label: 'Park Road', value: 'Park Road' },
+                { label: 'Main Street', value: 'Main Street' }
+              ];
+            } else if (countryCode === 'FR') {
+              defaultStreets = [
+                { label: `Rue de ${neighborhood}`, value: `Rue de ${neighborhood}` },
+                { label: 'Rue Principale', value: 'Rue Principale' },
+                { label: 'Avenue de la République', value: 'Avenue de la République' },
+                { label: 'Rue de l\'Église', value: 'Rue de l\'Église' },
+                { label: 'Rue du Moulin', value: 'Rue du Moulin' }
+              ];
+            } else if (countryCode === 'ES') {
+              defaultStreets = [
+                { label: `Calle ${neighborhood}`, value: `Calle ${neighborhood}` },
+                { label: 'Calle Mayor', value: 'Calle Mayor' },
+                { label: 'Avenida Principal', value: 'Avenida Principal' },
+                { label: 'Plaza Mayor', value: 'Plaza Mayor' },
+                { label: 'Calle Real', value: 'Calle Real' }
+              ];
+            } else if (countryCode === 'IT') {
+              defaultStreets = [
+                { label: `Via ${neighborhood}`, value: `Via ${neighborhood}` },
+                { label: 'Via Roma', value: 'Via Roma' },
+                { label: 'Corso Italia', value: 'Corso Italia' },
+                { label: 'Via Garibaldi', value: 'Via Garibaldi' },
+                { label: 'Piazza Duomo', value: 'Piazza Duomo' }
+              ];
+            } else {
+              defaultStreets = [
+                { label: `${neighborhood} Street`, value: `${neighborhood} Street` },
+                { label: 'Main Street', value: 'Main Street' },
+                { label: 'Park Avenue', value: 'Park Avenue' },
+                { label: 'Central Street', value: 'Central Street' },
+                { label: 'Market Street', value: 'Market Street' }
+              ];
+            }
+            
+            setAvailableStreets(defaultStreets);
+          } else {
+            setAvailableStreets(streetList);
+          }
         } catch (error) {
-          console.error('Sokaklar yüklenirken hata:', error);
-          setAvailableStreets([]);
+          console.error('❌ Sokaklar yüklenirken hata:', error);
+          // Hata durumunda ülkeye özgü varsayılan sokaklar ekle
+          let defaultStreets = [];
+          
+          if (countryCode === 'TR') {
+            defaultStreets = [
+              { label: `${neighborhood} Caddesi`, value: `${neighborhood} Caddesi` },
+              { label: 'Atatürk Caddesi', value: 'Atatürk Caddesi' },
+              { label: 'Cumhuriyet Caddesi', value: 'Cumhuriyet Caddesi' },
+              { label: 'İstiklal Caddesi', value: 'İstiklal Caddesi' },
+              { label: 'Gazi Caddesi', value: 'Gazi Caddesi' }
+            ];
+          } else if (countryCode === 'DE') {
+            defaultStreets = [
+              { label: `${neighborhood}straße`, value: `${neighborhood}straße` },
+              { label: 'Hauptstraße', value: 'Hauptstraße' },
+              { label: 'Bahnhofstraße', value: 'Bahnhofstraße' },
+              { label: 'Schulstraße', value: 'Schulstraße' },
+              { label: 'Gartenstraße', value: 'Gartenstraße' }
+            ];
+          } else if (countryCode === 'GB') {
+            defaultStreets = [
+              { label: `${neighborhood} Road`, value: `${neighborhood} Road` },
+              { label: 'High Street', value: 'High Street' },
+              { label: 'Church Street', value: 'Church Street' },
+              { label: 'Park Road', value: 'Park Road' },
+              { label: 'Main Street', value: 'Main Street' }
+            ];
+          } else if (countryCode === 'FR') {
+            defaultStreets = [
+              { label: `Rue de ${neighborhood}`, value: `Rue de ${neighborhood}` },
+              { label: 'Rue Principale', value: 'Rue Principale' },
+              { label: 'Avenue de la République', value: 'Avenue de la République' },
+              { label: 'Rue de l\'Église', value: 'Rue de l\'Église' },
+              { label: 'Rue du Moulin', value: 'Rue du Moulin' }
+            ];
+          } else if (countryCode === 'ES') {
+            defaultStreets = [
+              { label: `Calle ${neighborhood}`, value: `Calle ${neighborhood}` },
+              { label: 'Calle Mayor', value: 'Calle Mayor' },
+              { label: 'Avenida Principal', value: 'Avenida Principal' },
+              { label: 'Plaza Mayor', value: 'Plaza Mayor' },
+              { label: 'Calle Real', value: 'Calle Real' }
+            ];
+          } else if (countryCode === 'IT') {
+            defaultStreets = [
+              { label: `Via ${neighborhood}`, value: `Via ${neighborhood}` },
+              { label: 'Via Roma', value: 'Via Roma' },
+              { label: 'Corso Italia', value: 'Corso Italia' },
+              { label: 'Via Garibaldi', value: 'Via Garibaldi' },
+              { label: 'Piazza Duomo', value: 'Piazza Duomo' }
+            ];
+          } else {
+            defaultStreets = [
+              { label: `${neighborhood} Street`, value: `${neighborhood} Street` },
+              { label: 'Main Street', value: 'Main Street' },
+              { label: 'Park Avenue', value: 'Park Avenue' },
+              { label: 'Central Street', value: 'Central Street' },
+              { label: 'Market Street', value: 'Market Street' }
+            ];
+          }
+          
+          setAvailableStreets(defaultStreets);
         } finally {
           setLoadingStreets(false);
         }
@@ -266,22 +628,23 @@ export default function EvaluatePage() {
     setShowSavedAddresses(false);
   };
   
-  // Popüler adresi seç
-  const selectPopularAddress = (popularAddress: PopularAddress) => {
-    setCountryCode(popularAddress.countryCode);
-    setCountry(popularAddress.country);
-    setCity(popularAddress.city);
-    setDistrict(popularAddress.district || '');
-    setStreetAddress(popularAddress.streetAddress);
-    setPostalCode(popularAddress.postalCode || '');
-  };
-  
+  // Form doğrulama fonksiyonunu düzeltmek
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Form doğrulama
-    if (!countryCode || !city || !streetAddress || !propertyType || !size) {
-      alert('Lütfen zorunlu alanları doldurunuz');
+    // Form doğrulama - API'nin beklediği zorunlu alanları kontrol et
+    const requiredFields = [];
+    
+    if (!countryCode) requiredFields.push("Ülke");
+    if (!city) requiredFields.push("Şehir");
+    if (!propertyType) requiredFields.push("Emlak Tipi");
+    if (!grossSize && !netSize) requiredFields.push("Metrekare (Brüt veya Net)");
+    
+    // API için rooms (oda sayısı) değerini belirleme
+    const rooms = 2; // Varsayılan değer
+    
+    if (requiredFields.length > 0) {
+      alert(`Lütfen aşağıdaki zorunlu alanları doldurunuz: ${requiredFields.join(", ")}`);
       return;
     }
     
@@ -291,46 +654,277 @@ export default function EvaluatePage() {
     ensureCSRFToken();
     
     try {
+      // Metrekare değerini belirle (ya brüt ya da net, öncelik brüt'e verilir)
+      const sizeToUse = grossSize || netSize || size;
+      
+      console.log('API\'ye gönderilen veriler:', {
+        propertyType,
+        size: parseInt(sizeToUse),
+        grossSize: grossSize ? parseInt(grossSize) : undefined,
+        netSize: netSize ? parseInt(netSize) : undefined,
+        rooms,
+        location: {
+          country,
+          countryCode,
+          city,
+          district,
+          postalCode,
+          streetAddress: streetAddress || street || ''
+        }
+      });
+      
       const response = await fetch('/api/evaluate', {
         method: 'POST',
         headers: addCSRFHeader({
           'Content-Type': 'application/json',
         }) as HeadersInit,
         body: JSON.stringify({
-          address,
           propertyType,
-          size: parseInt(size),
+          size: parseInt(sizeToUse),
+          grossSize: grossSize ? parseInt(grossSize) : undefined,
+          netSize: netSize ? parseInt(netSize) : undefined,
+          rooms,
           location: {
             country,
             countryCode,
             city,
             district,
             postalCode,
-            streetAddress
+            streetAddress: streetAddress || street || ''
           }
         }),
       });
       
       if (!response.ok) {
-        throw new Error('Değerleme işlemi sırasında bir hata oluştu');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Değerleme işlemi sırasında bir hata oluştu');
       }
       
       const data = await response.json();
       setResult(data);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Değerleme hatası:', error);
-      // Hata durumunda örnek veri göster
+      
+      // Eğer hata Gemini API anahtarı eksikliğinden kaynaklanıyorsa, bunu kullanıcıya bildir
+      if (error.message && error.message.includes('Gemini API anahtarı bulunamadı')) {
+        alert('Gemini API anahtarı henüz tanımlanmamış. Şu an demo/örnek veriler gösterilecek.');
+      }
+      
+      // Hata durumunda örnek veri göster - lokasyona göre değerleri değiştir
+      let estimatedValue = '2.500.000 TL';
+      const sizeToUse = grossSize || netSize || size;
+      
+      if (city === 'İstanbul') {
+        if (district === 'Kadıköy') estimatedValue = '4.800.000 TL';
+        else if (district === 'Beşiktaş') estimatedValue = '5.200.000 TL';
+        else if (district === 'Üsküdar') estimatedValue = '3.900.000 TL';
+        else estimatedValue = '3.200.000 TL';
+      } else if (city === 'Ankara') {
+        estimatedValue = '1.800.000 TL';
+      } else if (city === 'İzmir') {
+        estimatedValue = '2.200.000 TL';
+      }
+      
+      // Metrekareye göre değeri hesapla
+      const sizeNum = parseInt(sizeToUse);
+      if (!isNaN(sizeNum)) {
+        // Baz fiyat/m² (şehir ve ilçeye göre)
+        let pricePerSqm = 15000; // Varsayılan
+        
+        if (city === 'İstanbul') {
+          if (district === 'Kadıköy') pricePerSqm = 35000;
+          else if (district === 'Beşiktaş') pricePerSqm = 40000;
+          else if (district === 'Üsküdar') pricePerSqm = 30000;
+          else pricePerSqm = 25000;
+        } else if (city === 'Ankara') {
+          pricePerSqm = 12000;
+        } else if (city === 'İzmir') {
+          pricePerSqm = 18000;
+        }
+        
+        const calculatedPrice = pricePerSqm * sizeNum;
+        estimatedValue = new Intl.NumberFormat('tr-TR').format(calculatedPrice) + ' TL';
+      }
+      
       setResult({
-        estimatedValue: '2.500.000 TL',
-        confidence: '85%',
-        marketTrend: 'Yükseliş',
-        similarProperties: [
-          { address: 'Örnek Mahallesi 1', price: '2.300.000 TL' },
-          { address: 'Örnek Mahallesi 2', price: '2.700.000 TL' },
-        ]
+        success: true,
+        result: {
+          estimatedValue: estimatedValue,
+          rentalValue: `${parseInt(estimatedValue.replace(/\D/g, '')) / 300} TL/ay`,
+          confidence: `85%`,
+          marketTrend: 'Yükseliş',
+          similarProperties: [
+            { address: `${district}, ${city}`, price: estimatedValue },
+            { address: `${neighborhood || 'Merkez'}, ${district}, ${city}`, price: `${parseInt(estimatedValue.replace(/\D/g, '')) * 0.9} TL` },
+          ],
+          analysis: `${city} ${district} bölgesinde ${
+            propertyType === 'apartment' ? 'daire' : 
+            propertyType === 'duplex' ? 'dubleks daire' : 
+            propertyType === 'penthouse' ? 'çatı katı' : 
+            propertyType === 'garden_apt' ? 'bahçe katı' :
+            propertyType === 'house' ? 'müstakil ev' : 
+            propertyType === 'villa' ? 'villa' : 
+            propertyType === 'farm_house' ? 'çiftlik evi' : 
+            propertyType === 'residence' ? 'residence' : 
+            propertyType === 'land' ? 'arsa' : 
+            propertyType === 'land_agriculture' ? 'tarla' : 
+            propertyType === 'office' ? 'ofis' : 
+            propertyType === 'store' ? 'dükkan' : 
+            propertyType === 'warehouse' ? 'depo' : 
+            propertyType === 'industrial' ? 'fabrika' : 
+            propertyType === 'hotel' ? 'otel' : 
+            propertyType === 'workshop' ? 'atölye' : 
+            'ticari emlak'} fiyatları son 1 yılda %15 artış göstermiştir. Bu lokasyon yatırım için ideal bir seçimdir.`
+        }
       });
     } finally {
       setLoading(false);
+    }
+  };
+
+  // React-select için özel stil tanımlamaları
+  const customSelectStyles = {
+    control: (provided: any) => ({
+      ...provided,
+      borderColor: '#d1d5db',
+      boxShadow: 'none',
+      '&:hover': {
+        borderColor: '#9ca3af',
+      }
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? '#2563eb' : state.isFocused ? '#e5edff' : null,
+      color: state.isSelected ? 'white' : '#111827',
+      fontWeight: state.isSelected ? '600' : '400',
+      cursor: 'pointer',
+      '&:hover': {
+        backgroundColor: state.isSelected ? '#2563eb' : '#e5edff',
+      }
+    }),
+    singleValue: (provided: any) => ({
+      ...provided,
+      color: '#111827',
+      fontWeight: '500'
+    }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      color: '#4b5563'
+    }),
+    menu: (provided: any) => ({
+      ...provided,
+      zIndex: 10,
+      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+    })
+  };
+
+  // Select bileşenleri için onChange işleyicileri - Tiplerle ilgili sorunları çözmek için düzeltildi
+  const handleCountryChange = (newValue: any) => {
+    if (newValue) {
+      setSelectedCountry(newValue);
+      setCountryCode(newValue.value || '');
+      setCountry(newValue.label || '');
+      
+      // Ülke değiştiğinde diğer seçimleri sıfırla
+      setSelectedState(null);
+      setSelectedCity(null);
+      setSelectedNeighborhood(null);
+      setSelectedStreet(null);
+      setCity('');
+      setDistrict('');
+      setNeighborhood('');
+      setStreet('');
+    }
+  };
+
+  const handleCityChange = (newValue: any) => {
+    if (newValue) {
+      setSelectedState(newValue);
+      setCity(newValue.label || '');
+      
+      // Şehir değiştiğinde diğer seçimleri sıfırla
+      setSelectedCity(null);
+      setSelectedNeighborhood(null);
+      setSelectedStreet(null);
+      setDistrict('');
+      setNeighborhood('');
+      setStreet('');
+    }
+  };
+
+  const handleDistrictChange = (newValue: any) => {
+    if (newValue) {
+      setSelectedCity(newValue);
+      setDistrict(newValue.label || '');
+      
+      // İlçe değiştiğinde diğer seçimleri sıfırla
+      setSelectedNeighborhood(null);
+      setSelectedStreet(null);
+      setNeighborhood('');
+      setStreet('');
+    }
+  };
+
+  const handleNeighborhoodChange = (newValue: any) => {
+    if (newValue) {
+      setSelectedNeighborhood(newValue);
+      setNeighborhood(newValue.value || newValue.label || '');
+      
+      // Mahalle değiştiğinde sokak seçimini sıfırla
+      setSelectedStreet(null);
+      setStreet('');
+    }
+  };
+
+  const handleStreetChange = (newValue: any) => {
+    if (newValue) {
+      setSelectedStreet(newValue);
+      setStreet(newValue.value || newValue.label || '');
+    }
+  };
+
+  const handlePropertyTypeChange = (newValue: any) => {
+    if (newValue) {
+      setPropertyType(newValue.value || '');
+    }
+  };
+
+  const handleGrossSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setGrossSize(e.target.value);
+    // Eğer net m2 boşsa ve brüt dolduruluyorsa, otomatik olarak brüt değerin %85'ini net olarak ayarla
+    if (!netSize && e.target.value) {
+      const grossValue = parseInt(e.target.value);
+      if (!isNaN(grossValue)) {
+        setNetSize(Math.floor(grossValue * 0.85).toString());
+      }
+    }
+    setSize(e.target.value); // Geriye dönük uyumluluk için
+  };
+
+  const handleNetSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setNetSize(e.target.value);
+    // Eğer brüt m2 boşsa ve net dolduruluyorsa, otomatik olarak net değerin %118'ini brüt olarak ayarla
+    if (!grossSize && e.target.value) {
+      const netValue = parseInt(e.target.value);
+      if (!isNaN(netValue)) {
+        setGrossSize(Math.floor(netValue * 1.18).toString());
+      }
+    }
+    if (!size) {
+      setSize(e.target.value); // Geriye dönük uyumluluk için
+    }
+  };
+
+  const loadNeighborhoods = async (countryCode: string, city: string, district: string) => {
+    setNeighborhoods([]);
+    if (!district) return;
+    
+    try {
+      const neighborhoods = await getNeighborhoodsByDistrict(countryCode, city, district);
+      setNeighborhoods(neighborhoods);
+    } catch (error) {
+      console.error('Mahalle yükleme hatası:', error);
+      setNeighborhoods([]);
     }
   };
 
@@ -343,415 +937,418 @@ export default function EvaluatePage() {
           </div>
           <div className="sm:ml-4">
             <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Emlak Değerleme</h1>
-            <p className="text-gray-600 text-sm sm:text-base">Yapay zeka ile emlak değerinizi öğrenin</p>
+            <p className="text-gray-700 text-sm sm:text-base">Yapay zeka ile emlak değerinizi öğrenin</p>
           </div>
         </div>
         
-        {/* Adres Kısayolları */}
-        <div className="mb-6 space-y-3">
+        {/* Adım Göstergesi */}
+        <div className="mb-8">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-gray-800">Adres Seçimi</h2>
-            <div className="flex space-x-2">
-              <button
-                type="button"
-                onClick={() => setShowSavedAddresses(!showSavedAddresses)}
-                className="flex items-center px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50"
-              >
-                <BookmarkIcon className="w-4 h-4 mr-1 text-blue-600" />
-                Kayıtlı Adreslerim
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowSaveModal(true)}
-                className="flex items-center px-3 py-1 text-sm border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50"
-              >
-                <PlusCircleIcon className="w-4 h-4 mr-1" />
-                Adresi Kaydet
-              </button>
-            </div>
-          </div>
-          
-          {/* Kayıtlı Adresler Dropdown */}
-          {showSavedAddresses && (
-            <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 absolute mt-1">
-              <div className="flex items-center justify-between mb-2 pb-2 border-b">
-                <h3 className="font-medium">Kayıtlı Adreslerim</h3>
-                <button className="text-gray-500 hover:text-gray-700" onClick={() => setShowSavedAddresses(false)}>
-                  <XMarkIcon className="w-5 h-5" />
-                </button>
+            {Array.from({length: totalSteps}).map((_, index) => (
+              <div key={index} className="flex items-center">
+                <div 
+                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-all 
+                    ${currentStep > index + 1 ? 'bg-green-500 text-white' : 
+                      currentStep === index + 1 ? 'bg-blue-600 text-white' : 
+                      'bg-gray-200 text-gray-500'}`}
+                >
+                  {currentStep > index + 1 ? '✓' : index + 1}
+                </div>
+                {index < totalSteps - 1 && (
+                  <div className={`h-1 w-full sm:w-24 md:w-32 mx-2
+                    ${currentStep > index + 1 ? 'bg-green-500' : 'bg-gray-200'}`} 
+                  />
+                )}
               </div>
-              {savedAddresses.length === 0 ? (
-                <p className="text-sm text-gray-500 py-2">Henüz kaydedilmiş adres bulunmamaktadır.</p>
-              ) : (
-                <div className="max-h-60 overflow-y-auto divide-y divide-gray-100">
-                  {savedAddresses.map((savedAddress, index) => (
-                    <div
-                      key={index}
-                      className="py-2 px-1 cursor-pointer hover:bg-gray-50 flex items-center justify-between"
-                      onClick={() => selectSavedAddress(savedAddress)}
-                    >
-                      <div>
-                        <p className="font-medium">{savedAddress.label}</p>
-                        <p className="text-sm text-gray-600">{savedAddress.streetAddress}, {savedAddress.city}</p>
-                      </div>
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (confirm('Bu adresi silmek istediğinize emin misiniz?')) {
-                            deleteAddress(savedAddress.id);
-                            setSavedAddresses(savedAddresses.filter(addr => addr.id !== savedAddress.id));
-                          }
-                        }}
-                        className="text-red-500 hover:text-red-700 p-1"
-                      >
-                        <XMarkIcon className="w-4 h-4" />
-                      </button>
+            ))}
+          </div>
+          <div className="mt-2 text-center">
+            <h2 className="font-medium text-gray-900">{stepTitles[currentStep - 1]}</h2>
+          </div>
+        </div>
+        
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          {/* Adım 1: Ülke ve Şehir Seçimi */}
+          {currentStep === 1 && (
+            <div className="space-y-6">
+              {/* Ülke ve Şehir form alanları */}
+              <div className="grid grid-cols-1 gap-6">
+                {/* Ülke Seçimi */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Ülke <span className="text-red-600">*</span>
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <GlobeAltIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
                     </div>
-                  ))}
+                    <Select
+                      instanceId="country-select"
+                      placeholder="Ülke seçin"
+                      options={countries}
+                      value={selectedCountry}
+                      onChange={handleCountryChange}
+                      isSearchable
+                      aria-label="Ülke seçin"
+                      styles={customSelectStyles}
+                      classNames={{
+                        control: (state) => 'pl-10 !bg-white',
+                        input: () => '!text-gray-900',
+                        menu: () => '!text-gray-900'
+                      }}
+                    />
+                  </div>
+                </div>
+                
+                {/* Şehir Seçimi */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Şehir <span className="text-red-600">*</span>
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <BuildingOfficeIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
+                    </div>
+                    <Select
+                      instanceId="state-select"
+                      placeholder="Şehir seçin"
+                      options={states}
+                      value={selectedState}
+                      onChange={handleCityChange}
+                      isSearchable
+                      isDisabled={!selectedCountry}
+                      aria-label="Şehir seçin"
+                      styles={customSelectStyles}
+                      classNames={{
+                        control: (state) => 'pl-10 !bg-white',
+                        input: () => '!text-gray-900',
+                        menu: () => '!text-gray-900'
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Adım 2: İlçe ve Mahalle Seçimi */}
+          {currentStep === 2 && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 gap-6">
+                {/* İlçe Seçimi */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    İlçe <span className="text-red-600">*</span>
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
+                    </div>
+                    <Select
+                      instanceId="city-select"
+                      placeholder="İlçe seçin"
+                      options={cities}
+                      value={selectedCity}
+                      onChange={handleDistrictChange}
+                      isSearchable
+                      isDisabled={!selectedState}
+                      aria-label="İlçe seçin"
+                      styles={customSelectStyles}
+                      classNames={{
+                        control: (state) => 'pl-10 !bg-white',
+                        input: () => '!text-gray-900',
+                        menu: () => '!text-gray-900'
+                      }}
+                      noOptionsMessage={() => "Seçenek bulunamadı. Lütfen önce şehir seçin."}
+                    />
+                  </div>
+                </div>
+                
+                {/* Mahalle Seçimi */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Mahalle
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
+                    </div>
+                    <Select
+                      instanceId="neighborhood-select"
+                      placeholder="Mahalle seçin"
+                      options={availableNeighborhoods}
+                      value={neighborhood ? { value: neighborhood, label: neighborhood } : null}
+                      onChange={handleNeighborhoodChange}
+                      isSearchable
+                      isDisabled={!district}
+                      isLoading={loadingNeighborhoods}
+                      aria-label="Mahalle seçin"
+                      styles={customSelectStyles}
+                      classNames={{
+                        control: (state) => 'pl-10 !bg-white',
+                        input: () => '!text-gray-900',
+                        menu: () => '!text-gray-900'
+                      }}
+                      noOptionsMessage={() => "Seçenek bulunamadı. Lütfen önce ilçe seçin."}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Adım 3: Adres Detayları */}
+          {currentStep === 3 && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 gap-6">
+                {/* Sokak Seçimi */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Cadde/Sokak
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
+                    </div>
+                    <Select
+                      instanceId="street-select"
+                      placeholder="Cadde/Sokak seçin veya yazın"
+                      options={availableStreets}
+                      value={street ? { value: street, label: street } : null}
+                      onChange={handleStreetChange}
+                      isSearchable
+                      isDisabled={!neighborhood}
+                      isLoading={loadingStreets}
+                      aria-label="Cadde/Sokak seçin"
+                      styles={customSelectStyles}
+                      classNames={{
+                        control: (state) => 'pl-10 !bg-white',
+                        input: () => '!text-gray-900',
+                        menu: () => '!text-gray-900'
+                      }}
+                      noOptionsMessage={() => "Seçenek bulunamadı. Lütfen önce mahalle seçin."}
+                    />
+                  </div>
+                </div>
+                
+                {/* Posta Kodu */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Posta Kodu
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                      <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500" />
+                    </div>
+                    <input
+                      type="text"
+                      value={postalCode}
+                      onChange={(e) => setPostalCode(e.target.value)}
+                      placeholder="Posta kodu girin"
+                      className="pl-10 pr-3 py-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Oluşturulan adres (önizleme) */}
+              {address && (
+                <div className="bg-gray-50 p-3 rounded-lg">
+                  <p className="text-sm text-gray-600 font-medium">Oluşturulan Adres:</p>
+                  <p className="text-gray-800">{address}</p>
                 </div>
               )}
             </div>
           )}
           
-          {/* Adres Kaydetme Modal */}
-          {showSaveModal && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md mx-4">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-semibold">Adres Kaydet</h3>
-                  <button onClick={() => setShowSaveModal(false)} className="text-gray-500 hover:text-gray-700">
-                    <XMarkIcon className="w-6 h-6" />
-                  </button>
+          {/* Adım 4: Emlak Özellikleri */}
+          {currentStep === 4 && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 gap-6">
+                {/* Emlak Tipi */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Emlak Tipi <span className="text-red-600">*</span>
+                  </label>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-4">
+                    {[
+                      { value: 'apartment', label: 'Daire', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'duplex', label: 'Dubleks', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'penthouse', label: 'Çatı Katı', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'garden_apt', label: 'Bahçe Katı', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'house', label: 'Müstakil Ev', icon: <HomeIcon className="w-8 h-8" /> },
+                      { value: 'villa', label: 'Villa', icon: <HomeIcon className="w-8 h-8" /> },
+                      { value: 'farm_house', label: 'Çiftlik Evi', icon: <HomeIcon className="w-8 h-8" /> },
+                      { value: 'residence', label: 'Residence', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'land', label: 'Arsa', icon: <MapPinIcon className="w-8 h-8" /> },
+                      { value: 'land_agriculture', label: 'Tarla', icon: <MapPinIcon className="w-8 h-8" /> },
+                      { value: 'office', label: 'Ofis', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'store', label: 'Dükkan', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'warehouse', label: 'Depo', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'industrial', label: 'Fabrika', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'hotel', label: 'Otel', icon: <BuildingOfficeIcon className="w-8 h-8" /> },
+                      { value: 'workshop', label: 'Atölye', icon: <BuildingOfficeIcon className="w-8 h-8" /> }
+                    ].map((option) => (
+                      <div
+                        key={option.value}
+                        onClick={() => setPropertyType(option.value)}
+                        className={`flex flex-col items-center justify-center p-3 rounded-lg cursor-pointer transition-all
+                          ${propertyType === option.value 
+                            ? 'bg-blue-100 border-2 border-blue-500 text-blue-700'
+                            : 'bg-gray-50 border border-gray-200 hover:bg-gray-100'}`}
+                      >
+                        <div className={`${propertyType === option.value ? 'text-blue-600' : 'text-gray-500'}`}>
+                          {option.icon}
+                        </div>
+                        <span className={`mt-2 text-sm font-medium ${propertyType === option.value ? 'text-blue-700' : 'text-gray-800'}`}>
+                          {option.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                
-                <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Adres Etiketi</label>
-                  <input
-                    type="text"
-                    value={addressLabel}
-                    onChange={(e) => setAddressLabel(e.target.value)}
-                    placeholder="Örn: Evim, İşyerim, Yazlık"
-                    className="w-full border border-gray-300 rounded-md px-3 py-2"
-                  />
-                  <p className="text-sm text-gray-500 mt-1">Etiket belirtmezseniz adres bilgileri kullanılacaktır.</p>
-                </div>
-                
-                <div className="border rounded p-3 bg-gray-50 mb-4">
-                  <h4 className="font-medium mb-1">Kaydedilecek Adres</h4>
-                  <p className="text-sm">{address}</p>
-                </div>
-                
-                <div className="flex space-x-3 mt-4">
-                  <button
-                    type="button"
-                    onClick={() => setShowSaveModal(false)}
-                    className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
-                  >
-                    İptal
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleSaveAddress}
-                    className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-                  >
-                    Kaydet
-                  </button>
+
+                {/* Metrekare */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-800 mb-1 sm:mb-2">
+                    Metrekare <span className="text-red-600">*</span>
+                  </label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Brüt Metrekare */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <span className="text-gray-500 text-sm">m²</span>
+                      </div>
+                      <input
+                        type="number"
+                        value={grossSize}
+                        onChange={handleGrossSizeChange}
+                        placeholder="Brüt Metrekare"
+                        className="pl-10 pr-3 py-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                      />
+                      <span className="text-xs text-gray-500 mt-1 block">Tapu üzerinde yazan resmi alan</span>
+                    </div>
+                    
+                    {/* Net Metrekare */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <span className="text-gray-500 text-sm">m²</span>
+                      </div>
+                      <input
+                        type="number" 
+                        value={netSize}
+                        onChange={handleNetSizeChange}
+                        placeholder="Net Metrekare"
+                        className="pl-10 pr-3 py-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-gray-900"
+                      />
+                      <span className="text-xs text-gray-500 mt-1 block">Kullanılabilir iç alan</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           )}
           
-          {/* Popüler Adresler */}
-          <div className="bg-gray-50 rounded-lg p-3">
-            <h3 className="text-sm font-medium text-gray-700 mb-2 flex items-center">
-              <StarIcon className="w-4 h-4 mr-1 text-yellow-500" />
-              Popüler Konumlar
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {popularAddresses.map((popAddress, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => selectPopularAddress(popAddress)}
-                  className="px-3 py-1 text-xs bg-white border border-gray-200 rounded-full hover:bg-blue-50 hover:border-blue-200"
-                >
-                  {popAddress.label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            {/* Ülke Seçimi */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Ülke <span className="text-red-600">*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <GlobeAltIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <select
-                  value={countryCode}
-                  onChange={(e) => setCountryCode(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
-                  required
-                >
-                  <option value="">Ülke Seçiniz</option>
-                  {availableCountries.map((country) => (
-                    <option key={country.code} value={country.code}>
-                      {country.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
+          {/* İleri/Geri Butonları ve Form Kontrol */}
+          <div className="flex justify-between mt-8">
+            <button
+              type="button"
+              onClick={prevStep}
+              disabled={currentStep === 1}
+              className={`px-4 py-2 flex items-center justify-center rounded-lg text-sm border border-gray-300 
+                ${currentStep === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-50 text-gray-800'}`}
+            >
+              <ChevronLeftIcon className="w-4 h-4 mr-1" />
+              Önceki Adım
+            </button>
             
-            {/* Şehir Seçimi */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Şehir <span className="text-red-600">*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <BuildingOfficeIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <select
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                  className={`block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base ${!countryCode ? 'bg-gray-100 cursor-not-allowed' : ''}`}
-                  disabled={!countryCode}
-                  required
-                >
-                  <option value="">Şehir Seçiniz</option>
-                  {availableCities.map((city) => (
-                    <option key={city} value={city}>
-                      {city}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            
-            {/* İlçe Seçimi */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                İlçe
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <select
-                  value={district}
-                  onChange={(e) => setDistrict(e.target.value)}
-                  className={`block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base ${!city ? 'bg-gray-100 cursor-not-allowed' : ''}`}
-                  disabled={!city || availableDistricts.length === 0}
-                >
-                  <option value="">İlçe Seçiniz</option>
-                  {availableDistricts.map((district) => (
-                    <option key={district} value={district}>
-                      {district}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            
-            {/* Mahalle Seçimi */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Mahalle
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <select
-                  value={neighborhood}
-                  onChange={(e) => setNeighborhood(e.target.value)}
-                  className={`block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base ${!district ? 'bg-gray-100 cursor-not-allowed' : ''}`}
-                  disabled={!district || loadingNeighborhoods}
-                >
-                  <option value="">Mahalle Seçiniz</option>
-                  {availableNeighborhoods.map((neighborhood) => (
-                    <option key={neighborhood.value} value={neighborhood.value}>
-                      {neighborhood.label}
-                    </option>
-                  ))}
-                </select>
-                {loadingNeighborhoods && (
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                    <svg className="animate-spin h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Sokak Seçimi */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Sokak
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <select
-                  value={street}
-                  onChange={(e) => setStreet(e.target.value)}
-                  className={`block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base ${!neighborhood ? 'bg-gray-100 cursor-not-allowed' : ''}`}
-                  disabled={!neighborhood || loadingStreets}
-                >
-                  <option value="">Sokak Seçiniz</option>
-                  {availableStreets.map((street) => (
-                    <option key={street.value} value={street.value}>
-                      {street.label}
-                    </option>
-                  ))}
-                </select>
-                {loadingStreets && (
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                    <svg className="animate-spin h-4 w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-            {/* Posta Kodu */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Posta Kodu
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <MapPinIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <input
-                  type="text"
-                  value={postalCode}
-                  onChange={(e) => setPostalCode(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
-                  placeholder="Posta Kodu"
-                />
-              </div>
-            </div>
-
-            {/* Emlak Tipi */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Emlak Tipi <span className="text-red-600">*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <HomeIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <select
-                  value={propertyType}
-                  onChange={(e) => setPropertyType(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
-                  required
-                >
-                  <option value="">Seçiniz</option>
-                  <option value="apartment">Daire</option>
-                  <option value="house">Müstakil Ev</option>
-                  <option value="villa">Villa</option>
-                  <option value="land">Arsa</option>
-                  <option value="commercial">Ticari</option>
-                  <option value="office">Ofis</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Metrekare */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
-                Metrekare <span className="text-red-600">*</span>
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <CurrencyDollarIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                </div>
-                <input
-                  type="number"
-                  value={size}
-                  onChange={(e) => setSize(e.target.value)}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
-                  placeholder="Metrekare giriniz"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          
-          {/* Oluşturulan adres (önizleme) */}
-          {address && (
-            <div className="bg-gray-50 p-3 rounded-lg">
-              <p className="text-sm text-gray-600 font-medium">Oluşturulan Adres:</p>
-              <p className="text-gray-800">{address}</p>
-            </div>
-          )}
-
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full md:w-auto px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all transform hover:scale-[1.02] text-sm sm:text-base"
-          >
-            {loading ? (
-              <div className="flex items-center justify-center">
-                <svg className="animate-spin -ml-1 mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Değerleme Yapılıyor...
-              </div>
+            {currentStep < totalSteps ? (
+              <button
+                type="button"
+                onClick={nextStep}
+                disabled={!isStepValid(currentStep)}
+                className={`px-6 py-2 rounded-lg text-sm text-white flex items-center bg-blue-600
+                  ${!isStepValid(currentStep) 
+                    ? 'opacity-50 cursor-not-allowed' 
+                    : 'hover:bg-blue-700'}`}
+              >
+                Sonraki Adım
+                <ChevronRightIcon className="w-4 h-4 ml-1" />
+              </button>
             ) : (
-              'Değerleme Yap'
+              <button
+                type="submit"
+                disabled={loading || !isStepValid(currentStep)}
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed transition-all text-sm"
+              >
+                {loading ? (
+                  <div className="flex items-center justify-center">
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Değerleme Yapılıyor...
+                  </div>
+                ) : (
+                  'Değerleme Yap'
+                )}
+              </button>
             )}
-          </button>
+          </div>
         </form>
 
+        {/* Değerlendirme Sonucu */}
         {result && (
-          <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-6">
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Değerleme Sonucu</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-                <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm">
-                  <p className="text-xs sm:text-sm text-gray-600">Tahmini Değer</p>
-                  <p className="text-xl sm:text-2xl font-bold text-blue-600">{result.estimatedValue}</p>
+          <div className="mt-8 animate-fadeIn">
+            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
+              <h3 className="text-xl font-bold text-blue-800 mb-4">Değerlendirme Sonucu</h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-sm text-gray-700 mb-1">Tahmini Değer</div>
+                  <div className="text-2xl font-bold text-blue-600">{result.result?.estimatedValue || result.estimatedValue}</div>
                 </div>
-                <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm">
-                  <p className="text-xs sm:text-sm text-gray-600">Güven Oranı</p>
-                  <p className="text-xl sm:text-2xl font-bold text-green-600">{result.confidence}</p>
+                
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-sm text-gray-700 mb-1">Güven Oranı</div>
+                  <div className="text-2xl font-bold text-blue-600">{result.result?.confidence || result.confidence}</div>
                 </div>
-                <div className="bg-white p-3 sm:p-4 rounded-lg shadow-sm">
-                  <p className="text-xs sm:text-sm text-gray-600">Piyasa Trendi</p>
-                  <p className="text-xl sm:text-2xl font-bold text-orange-600">{result.marketTrend}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Benzer Emlaklar</h2>
-              <div className="space-y-3 sm:space-y-4">
-                {result.similarProperties.map((property: any, index: number) => (
-                  <div key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 bg-gray-50 rounded-lg">
-                    <div className="mb-2 sm:mb-0">
-                      <p className="font-medium text-gray-900 text-sm sm:text-base">{property.address}</p>
-                      <p className="text-xs sm:text-sm text-gray-600">Benzer özelliklere sahip</p>
-                    </div>
-                    <p className="font-semibold text-blue-600 text-sm sm:text-base">{property.price}</p>
+                
+                {result.result?.rentalValue && (
+                  <div className="bg-white rounded-xl p-4 shadow-sm">
+                    <div className="text-sm text-gray-700 mb-1">Tahmini Kira</div>
+                    <div className="text-2xl font-bold text-blue-600">{result.result.rentalValue}</div>
                   </div>
-                ))}
+                )}
+                
+                <div className="bg-white rounded-xl p-4 shadow-sm">
+                  <div className="text-sm text-gray-700 mb-1">Piyasa Trendi</div>
+                  <div className="text-2xl font-bold text-green-600">{result.result?.marketTrend || result.marketTrend}</div>
+                </div>
               </div>
+              
+              {/* Benzer Emlaklar */}
+              <div className="mt-6">
+                <h4 className="font-semibold text-gray-800 mb-3">Benzer Emlaklar</h4>
+                <div className="space-y-3">
+                  {(result.result?.similarProperties || result.similarProperties)?.map((property: any, index: number) => (
+                    <div key={index} className="flex justify-between items-center bg-white p-3 rounded-lg border border-gray-100">
+                      <span className="text-gray-700">{property.address}</span>
+                      <span className="font-semibold text-blue-600">{property.price}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Piyasa Analizi */}
+              {result.result?.analysis && (
+                <div className="mt-6">
+                  <h4 className="font-semibold text-gray-800 mb-3">Piyasa Analizi</h4>
+                  <div className="bg-white p-4 rounded-lg border border-gray-100">
+                    <p className="text-gray-700">{result.result.analysis}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}

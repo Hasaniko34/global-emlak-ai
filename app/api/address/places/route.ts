@@ -1,56 +1,47 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  // Query parametrelerini al
-  const searchParams = request.nextUrl.searchParams;
-  const query = searchParams.get('query');
-  const type = searchParams.get('type') || 'neighborhood'; // 'neighborhood' veya 'street'
-  const country = searchParams.get('country');
-  const city = searchParams.get('city');
-
-  if (!query) {
-    return NextResponse.json({ error: 'Arama sorgusu belirtilmedi' }, { status: 400 });
-  }
-
   try {
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+    const searchParams = request.nextUrl.searchParams;
+    const query = searchParams.get('query') || '';
+    const type = searchParams.get('type') || 'address';
+    const lat = searchParams.get('lat');
+    const lng = searchParams.get('lng');
     
-    if (!apiKey) {
-      return NextResponse.json({ error: 'Google Maps API anahtarı bulunamadı' }, { status: 500 });
+    const HERE_API_KEY = process.env.NEXT_PUBLIC_HERE_API_KEY;
+    if (!HERE_API_KEY) {
+      return NextResponse.json({ error: 'Here Maps API anahtarı bulunamadı' }, { status: 500 });
     }
 
-    // Şehir veya ülke belirtildiyse, sonuçları filtrele
     let locationBias = '';
-    if (city) {
-      locationBias = `&locationBias=locality:${city}`;
-    } else if (country) {
-      locationBias = `&locationBias=country:${country}`;
+    if (lat && lng) {
+      locationBias = `&in=circle:${lat},${lng};r=5000`;
     }
 
-    // Places API'ye istek at
-    const placesUrl = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(query)}&types=${type}${locationBias}&language=tr&key=${apiKey}`;
-    
-    const response = await fetch(placesUrl, { cache: 'no-store' });
-    
+    const url = `https://discover.search.hereapi.com/v1/discover?` +
+      `q=${encodeURIComponent(query)}&` +
+      `apiKey=${HERE_API_KEY}&` +
+      `lang=tr&` +
+      `limit=10${locationBias}`;
+
+    const response = await fetch(url);
     if (!response.ok) {
-      throw new Error(`Google Places API hatası: ${response.status} ${response.statusText}`);
+      throw new Error(`Here Maps API error: ${response.status}`);
     }
-    
+
     const data = await response.json();
-    
-    // Yanıtı formatla
-    const results = data.predictions.map((prediction: any) => ({
-      place_id: prediction.place_id,
-      name: prediction.structured_formatting.main_text,
-      description: prediction.description,
-      secondaryText: prediction.structured_formatting.secondary_text,
-      types: prediction.types
+    const suggestions = data.items.map((item: any) => ({
+      description: item.title,
+      place_id: item.id,
+      structured_formatting: {
+        main_text: item.title,
+        secondary_text: item.address?.label || ''
+      }
     }));
-    
-    return NextResponse.json({ results });
-    
+
+    return NextResponse.json({ predictions: suggestions });
   } catch (error) {
-    console.error('Google Places API hatası:', error);
-    return NextResponse.json({ error: 'Adres verileri getirilemedi' }, { status: 500 });
+    console.error('Yer arama hatası:', error);
+    return NextResponse.json({ error: 'Yer araması başarısız oldu' }, { status: 500 });
   }
 } 

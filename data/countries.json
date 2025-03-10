@@ -1,0 +1,192 @@
+[
+  {
+    "code": "TR",
+    "name": "Turkey",
+    "data": {
+      "title": "Country TR, Quitman, AR 72131, United States",
+      "id": "here:af:streetsection:kFJOtGUO8.W86zKEriZKgA",
+      "resultType": "street",
+      "address": {
+        "label": "Country TR, Quitman, AR 72131, United States",
+        "countryCode": "USA",
+        "countryName": "United States",
+        "stateCode": "AR",
+        "state": "Arkansas",
+        "county": "Cleburne",
+        "city": "Quitman",
+        "street": "Country TR",
+        "postalCode": "72131"
+      },
+      "position": {
+        "lat": 35.38766,
+        "lng": -92.22458
+      },
+      "mapView": {
+        "west": -92.22459,
+        "south": 35.38628,
+        "east": -92.22347,
+        "north": 35.38901
+      },
+      "scoring": {
+        "queryScore": 1,
+        "fieldScore": {
+          "streets": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "code": "US",
+    "name": "United States",
+    "data": {
+      "title": "Lake Country, BC, Canada",
+      "id": "here:cm:namedplace:21163440",
+      "resultType": "locality",
+      "localityType": "city",
+      "address": {
+        "label": "Lake Country, BC, Canada",
+        "countryCode": "CAN",
+        "countryName": "Canada",
+        "stateCode": "BC",
+        "state": "British Columbia",
+        "county": "Central Okanagan",
+        "city": "Lake Country",
+        "postalCode": "V4V"
+      },
+      "position": {
+        "lat": 50.05353,
+        "lng": -119.41109
+      },
+      "mapView": {
+        "west": -119.47247,
+        "south": 50.00483,
+        "east": -119.28856,
+        "north": 50.1515
+      },
+      "scoring": {
+        "queryScore": 0.78,
+        "fieldScore": {
+          "city": 0.78
+        }
+      }
+    }
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "data": {
+      "title": "Country Way, Feltham, TW13 6, United Kingdom",
+      "id": "here:af:streetsection:L1ArXCEBsvSSfpzrLoBlRD",
+      "resultType": "street",
+      "address": {
+        "label": "Country Way, Feltham, TW13 6, United Kingdom",
+        "countryCode": "GBR",
+        "countryName": "United Kingdom",
+        "state": "England",
+        "countyCode": "MDX",
+        "county": "Middlesex",
+        "city": "Feltham",
+        "district": "Hanworth",
+        "street": "Country Way",
+        "postalCode": "TW13 6"
+      },
+      "position": {
+        "lat": 51.43241,
+        "lng": -0.39532
+      },
+      "mapView": {
+        "west": -0.40476,
+        "south": 51.42747,
+        "east": -0.38375,
+        "north": 51.43544
+      },
+      "scoring": {
+        "queryScore": 0.99,
+        "fieldScore": {
+          "country": 1,
+          "streets": [
+            0.9
+          ]
+        }
+      }
+    }
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "data": {
+      "title": "North Country, Redruth, England, United Kingdom",
+      "id": "here:cm:namedplace:20353216",
+      "resultType": "locality",
+      "localityType": "district",
+      "address": {
+        "label": "North Country, Redruth, England, United Kingdom",
+        "countryCode": "GBR",
+        "countryName": "United Kingdom",
+        "state": "England",
+        "countyCode": "CON",
+        "county": "Cornwall",
+        "city": "Redruth",
+        "district": "North Country",
+        "postalCode": "TR16 4"
+      },
+      "position": {
+        "lat": 50.25039,
+        "lng": -5.23321
+      },
+      "mapView": {
+        "west": -5.24136,
+        "south": 50.23952,
+        "east": -5.21403,
+        "north": 50.26345
+      },
+      "scoring": {
+        "queryScore": 0.78,
+        "fieldScore": {
+          "district": 0.88
+        }
+      }
+    }
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "data": {
+      "title": "Rue du Country, 29800 Saint-Divy, France",
+      "id": "here:af:streetsection:dBnEiXhTj6arsCrMM.lusB",
+      "resultType": "street",
+      "address": {
+        "label": "Rue du Country, 29800 Saint-Divy, France",
+        "countryCode": "FRA",
+        "countryName": "France",
+        "stateCode": "BRE",
+        "state": "Bretagne",
+        "county": "Finistère",
+        "city": "Saint-Divy",
+        "street": "Rue du Country",
+        "postalCode": "29800"
+      },
+      "position": {
+        "lat": 48.45431,
+        "lng": -4.34139
+      },
+      "mapView": {
+        "west": -4.3422,
+        "south": 48.45387,
+        "east": -4.34131,
+        "north": 48.45466
+      },
+      "scoring": {
+        "queryScore": 1,
+        "fieldScore": {
+          "country": 1,
+          "streets": [
+            0.9
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,3846 @@
+{
+  "Berlin": {
+    "Berlin": [
+      {
+        "label": "Berlin, Almanya",
+        "value": "Berlin",
+        "type": "region",
+        "position": {
+          "lat": 52.517037,
+          "lng": 13.38886
+        }
+      },
+      {
+        "label": "Berlin, Seedorf, Schleswig-Holstein, Almanya",
+        "value": "Berlin",
+        "type": "locality",
+        "position": {
+          "lat": 54.036045,
+          "lng": 10.44758
+        }
+      },
+      {
+        "label": "Berlin, 24848 Klein Bennebek, Almanya",
+        "value": "Berlin",
+        "type": "address",
+        "position": {
+          "lat": 54.404248,
+          "lng": 9.422626
+        }
+      },
+      {
+        "label": "Deutschhofer Allee, 12621 Berlin, Almanya",
+        "value": "Deutschhofer Allee",
+        "type": "address",
+        "position": {
+          "lat": 52.478975,
+          "lng": 13.569765
+        }
+      },
+      {
+        "label": "Deutsch Wusterhausen, Königs Wusterhausen, Brandenburg, Almanya",
+        "value": "Deutsch Wusterhausen",
+        "type": "locality",
+        "position": {
+          "lat": 52.2949,
+          "lng": 13.586696
+        }
+      },
+      {
+        "label": "Densow, Templin, Brandenburg, Almanya",
+        "value": "Densow",
+        "type": "locality",
+        "position": {
+          "lat": 53.144957,
+          "lng": 13.377167
+        }
+      },
+      {
+        "label": "Dennewitz, Niedergörsdorf, Brandenburg, Almanya",
+        "value": "Dennewitz",
+        "type": "locality",
+        "position": {
+          "lat": 51.969751,
+          "lng": 13.011382
+        }
+      },
+      {
+        "label": "Derwitz, Werder, Brandenburg, Almanya",
+        "value": "Derwitz",
+        "type": "locality",
+        "position": {
+          "lat": 52.403205,
+          "lng": 12.825358
+        }
+      },
+      {
+        "label": "Deutschhof, Fehrbellin, Brandenburg, Almanya",
+        "value": "Deutschhof",
+        "type": "locality",
+        "position": {
+          "lat": 52.69612,
+          "lng": 12.818669
+        }
+      },
+      {
+        "label": "Dechtow, Fehrbellin, Brandenburg, Almanya",
+        "value": "Dechtow",
+        "type": "locality",
+        "position": {
+          "lat": 52.753514,
+          "lng": 12.809893
+        }
+      }
+    ],
+    "Deutsch Wusterhausen": [
+      {
+        "label": "Deutsch Wusterhausen, Königs Wusterhausen, Brandenburg, Almanya",
+        "value": "Deutsch Wusterhausen",
+        "type": "locality",
+        "position": {
+          "lat": 52.2949,
+          "lng": 13.586696
+        }
+      },
+      {
+        "label": "Am Denkmalplatz, 15711 Königs Wusterhausen, Almanya",
+        "value": "Am Denkmalplatz",
+        "type": "address",
+        "position": {
+          "lat": 52.295409,
+          "lng": 13.58543
+        }
+      },
+      {
+        "label": "Berlin, Almanya",
+        "value": "Berlin",
+        "type": "region",
+        "position": {
+          "lat": 52.517037,
+          "lng": 13.38886
+        }
+      },
+      {
+        "label": "Wusterhausen, Kreis Ostprignitz-Ruppin, Brandenburg, Almanya",
+        "value": "Wusterhausen",
+        "type": "place",
+        "position": {
+          "lat": 52.891018,
+          "lng": 12.462167
+        }
+      },
+      {
+        "label": "Deutsch, Zehrental, Saksonya-Anhalt, Almanya",
+        "value": "Deutsch",
+        "type": "locality",
+        "position": {
+          "lat": 52.965451,
+          "lng": 11.584593
+        }
+      },
+      {
+        "label": "Berlin, Seedorf, Schleswig-Holstein, Almanya",
+        "value": "Berlin",
+        "type": "locality",
+        "position": {
+          "lat": 54.036045,
+          "lng": 10.44758
+        }
+      },
+      {
+        "label": "Berlin, 24848 Klein Bennebek, Almanya",
+        "value": "Berlin",
+        "type": "address",
+        "position": {
+          "lat": 54.404248,
+          "lng": 9.422626
+        }
+      },
+      {
+        "label": "Dessow, Wusterhausen, Brandenburg, Almanya",
+        "value": "Dessow",
+        "type": "locality",
+        "position": {
+          "lat": 52.895804,
+          "lng": 12.551145
+        }
+      },
+      {
+        "label": "An Den Eiskuten, 15749 Mittenwalde, Almanya",
+        "value": "An Den Eiskuten",
+        "type": "address",
+        "position": {
+          "lat": 52.274255,
+          "lng": 13.597629
+        }
+      },
+      {
+        "label": "Densow, Templin, Brandenburg, Almanya",
+        "value": "Densow",
+        "type": "locality",
+        "position": {
+          "lat": 53.144957,
+          "lng": 13.377167
+        }
+      }
+    ],
+    "Densow": [
+      {
+        "label": "Berlin, Almanya",
+        "value": "Berlin",
+        "type": "region",
+        "position": {
+          "lat": 52.517037,
+          "lng": 13.38886
+        }
+      },
+      {
+        "label": "Densow, Templin, Brandenburg, Almanya",
+        "value": "Densow",
+        "type": "locality",
+        "position": {
+          "lat": 53.144957,
+          "lng": 13.377167
+        }
+      },
+      {
+        "label": "Berlin, Seedorf, Schleswig-Holstein, Almanya",
+        "value": "Berlin",
+        "type": "locality",
+        "position": {
+          "lat": 54.036045,
+          "lng": 10.44758
+        }
+      },
+      {
+        "label": "Berlin, 24848 Klein Bennebek, Almanya",
+        "value": "Berlin",
+        "type": "address",
+        "position": {
+          "lat": 54.404248,
+          "lng": 9.422626
+        }
+      },
+      {
+        "label": "Deutsch Wusterhausen, Königs Wusterhausen, Brandenburg, Almanya",
+        "value": "Deutsch Wusterhausen",
+        "type": "locality",
+        "position": {
+          "lat": 52.2949,
+          "lng": 13.586696
+        }
+      },
+      {
+        "label": "Dennewitz, Niedergörsdorf, Brandenburg, Almanya",
+        "value": "Dennewitz",
+        "type": "locality",
+        "position": {
+          "lat": 51.969751,
+          "lng": 13.011382
+        }
+      },
+      {
+        "label": "Derwitz, Werder, Brandenburg, Almanya",
+        "value": "Derwitz",
+        "type": "locality",
+        "position": {
+          "lat": 52.403205,
+          "lng": 12.825358
+        }
+      },
+      {
+        "label": "Deutschhof, Fehrbellin, Brandenburg, Almanya",
+        "value": "Deutschhof",
+        "type": "locality",
+        "position": {
+          "lat": 52.69612,
+          "lng": 12.818669
+        }
+      },
+      {
+        "label": "Dechtow, Fehrbellin, Brandenburg, Almanya",
+        "value": "Dechtow",
+        "type": "locality",
+        "position": {
+          "lat": 52.753514,
+          "lng": 12.809893
+        }
+      },
+      {
+        "label": "Deetz, Groß Kreutz, Brandenburg, Almanya",
+        "value": "Deetz",
+        "type": "locality",
+        "position": {
+          "lat": 52.445775,
+          "lng": 12.771144
+        }
+      }
+    ],
+    "Dennewitz": [
+      {
+        "label": "Berlin, Almanya",
+        "value": "Berlin",
+        "type": "region",
+        "position": {
+          "lat": 52.517037,
+          "lng": 13.38886
+        }
+      },
+      {
+        "label": "Dennewitz, Niedergörsdorf, Brandenburg, Almanya",
+        "value": "Dennewitz",
+        "type": "locality",
+        "position": {
+          "lat": 51.969751,
+          "lng": 13.011382
+        }
+      },
+      {
+        "label": "Berlin, Seedorf, Schleswig-Holstein, Almanya",
+        "value": "Berlin",
+        "type": "locality",
+        "position": {
+          "lat": 54.036045,
+          "lng": 10.44758
+        }
+      },
+      {
+        "label": "Dennewitz, 14913 Niedergörsdorf, Almanya",
+        "value": "Dennewitz",
+        "type": "address",
+        "position": {
+          "lat": 51.969889,
+          "lng": 13.010477
+        }
+      },
+      {
+        "label": "Berlin, 24848 Klein Bennebek, Almanya",
+        "value": "Berlin",
+        "type": "address",
+        "position": {
+          "lat": 54.404248,
+          "lng": 9.422626
+        }
+      },
+      {
+        "label": "Dennewitzer Straße, 14913 Niedergörsdorf, Almanya",
+        "value": "Dennewitzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.966277,
+          "lng": 13.043463
+        }
+      },
+      {
+        "label": "Dennewitzer Straße, 14913 Jüterbog, Almanya",
+        "value": "Dennewitzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.987147,
+          "lng": 13.068371
+        }
+      }
+    ],
+    "Derwitz": [
+      {
+        "label": "Derwitz, Werder, Brandenburg, Almanya",
+        "value": "Derwitz",
+        "type": "locality",
+        "position": {
+          "lat": 52.403205,
+          "lng": 12.825358
+        }
+      },
+      {
+        "label": "Derwitzer Chaussee, 14542 Werder, Almanya",
+        "value": "Derwitzer Chaussee",
+        "type": "address",
+        "position": {
+          "lat": 52.396315,
+          "lng": 12.828261
+        }
+      },
+      {
+        "label": "Drewitz, Potsdam, Brandenburg, Almanya",
+        "value": "Drewitz",
+        "type": "locality",
+        "position": {
+          "lat": 52.364437,
+          "lng": 13.128051
+        }
+      },
+      {
+        "label": "In Den Neuen Höfen, 14480 Potsdam, Almanya",
+        "value": "In Den Neuen Höfen",
+        "type": "address",
+        "position": {
+          "lat": 52.362879,
+          "lng": 13.128788
+        }
+      },
+      {
+        "label": "Derwitzer Straße, 14550 Groß Kreutz, Almanya",
+        "value": "Derwitzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 52.380411,
+          "lng": 12.795957
+        }
+      },
+      {
+        "label": "In Den Gehren, 14558 Nuthetal, Almanya",
+        "value": "In Den Gehren",
+        "type": "address",
+        "position": {
+          "lat": 52.344442,
+          "lng": 13.105153
+        }
+      }
+    ],
+    "Deutschhof": [
+      {
+        "label": "Berlin, Almanya",
+        "value": "Berlin",
+        "type": "region",
+        "position": {
+          "lat": 52.517037,
+          "lng": 13.38886
+        }
+      },
+      {
+        "label": "Deutschhof, Schweinfurt, Bavyera, Almanya",
+        "value": "Deutschhof",
+        "type": "locality",
+        "position": {
+          "lat": 50.069606,
+          "lng": 10.253891
+        }
+      },
+      {
+        "label": "Deutschhof, Fehrbellin, Brandenburg, Almanya",
+        "value": "Deutschhof",
+        "type": "locality",
+        "position": {
+          "lat": 52.69612,
+          "lng": 12.818669
+        }
+      },
+      {
+        "label": "Berlin, Seedorf, Schleswig-Holstein, Almanya",
+        "value": "Berlin",
+        "type": "locality",
+        "position": {
+          "lat": 54.036045,
+          "lng": 10.44758
+        }
+      },
+      {
+        "label": "Berlin, 24848 Klein Bennebek, Almanya",
+        "value": "Berlin",
+        "type": "address",
+        "position": {
+          "lat": 54.404248,
+          "lng": 9.422626
+        }
+      },
+      {
+        "label": "Deutschhof, 67346 Speyer, Almanya",
+        "value": "Deutschhof",
+        "type": "address",
+        "position": {
+          "lat": 49.342322,
+          "lng": 8.461929
+        }
+      },
+      {
+        "label": "Deutschhof, 76889 Kapellen-Drusweiler, Almanya",
+        "value": "Deutschhof",
+        "type": "address",
+        "position": {
+          "lat": 49.08505,
+          "lng": 8.015918
+        }
+      },
+      {
+        "label": "Dechtower Damm, 14641 Nauen, Almanya",
+        "value": "Dechtower Damm",
+        "type": "address",
+        "position": {
+          "lat": 52.641108,
+          "lng": 12.89795
+        }
+      },
+      {
+        "label": "Dechtower Straße, 16833 Fehrbellin, Almanya",
+        "value": "Dechtower Straße",
+        "type": "address",
+        "position": {
+          "lat": 52.710831,
+          "lng": 12.791917
+        }
+      }
+    ],
+    "Dechtow": [
+      {
+        "label": "Berlin, Almanya",
+        "value": "Berlin",
+        "type": "region",
+        "position": {
+          "lat": 52.517037,
+          "lng": 13.38886
+        }
+      },
+      {
+        "label": "Dechtow, Fehrbellin, Brandenburg, Almanya",
+        "value": "Dechtow",
+        "type": "locality",
+        "position": {
+          "lat": 52.753514,
+          "lng": 12.809893
+        }
+      },
+      {
+        "label": "Berlin, Seedorf, Schleswig-Holstein, Almanya",
+        "value": "Berlin",
+        "type": "locality",
+        "position": {
+          "lat": 54.036045,
+          "lng": 10.44758
+        }
+      },
+      {
+        "label": "Berlin, 24848 Klein Bennebek, Almanya",
+        "value": "Berlin",
+        "type": "address",
+        "position": {
+          "lat": 54.404248,
+          "lng": 9.422626
+        }
+      },
+      {
+        "label": "Dechtower Weg, 16833 Fehrbellin, Almanya",
+        "value": "Dechtower Weg",
+        "type": "address",
+        "position": {
+          "lat": 52.758678,
+          "lng": 12.872808
+        }
+      },
+      {
+        "label": "Deutsch Wusterhausen, Königs Wusterhausen, Brandenburg, Almanya",
+        "value": "Deutsch Wusterhausen",
+        "type": "locality",
+        "position": {
+          "lat": 52.2949,
+          "lng": 13.586696
+        }
+      }
+    ],
+    "Deetz": [
+      {
+        "label": "Deetz, Groß Kreutz, Brandenburg, Almanya",
+        "value": "Deetz",
+        "type": "locality",
+        "position": {
+          "lat": 52.445775,
+          "lng": 12.771144
+        }
+      },
+      {
+        "label": "Beetz, Kremmen, Brandenburg, Almanya",
+        "value": "Beetz",
+        "type": "locality",
+        "position": {
+          "lat": 52.814297,
+          "lng": 13.019273
+        }
+      },
+      {
+        "label": "Zum Deetzer Knie, 14550 Groß Kreutz, Almanya",
+        "value": "Zum Deetzer Knie",
+        "type": "address",
+        "position": {
+          "lat": 52.448376,
+          "lng": 12.755881
+        }
+      },
+      {
+        "label": "Am Dreetz, 17258 Feldberger Seenlandschaft, Almanya",
+        "value": "Am Dreetz",
+        "type": "address",
+        "position": {
+          "lat": 53.297817,
+          "lng": 13.431317
+        }
+      },
+      {
+        "label": "Derwitzer Weg, 14542 Werder, Almanya",
+        "value": "Derwitzer Weg",
+        "type": "address",
+        "position": {
+          "lat": 52.397245,
+          "lng": 12.825024
+        }
+      },
+      {
+        "label": "Dechtower Weg, 16833 Fehrbellin, Almanya",
+        "value": "Dechtower Weg",
+        "type": "address",
+        "position": {
+          "lat": 52.758678,
+          "lng": 12.872808
+        }
+      },
+      {
+        "label": "Am Deich, 14669 Ketzin, Almanya",
+        "value": "Am Deich",
+        "type": "address",
+        "position": {
+          "lat": 52.483743,
+          "lng": 12.809558
+        }
+      }
+    ],
+    "Kreis Mecklenburgische Seenplatte": [
+      {
+        "label": "Barlin, 17159 Dargun, Almanya",
+        "value": "Barlin",
+        "type": "address",
+        "position": {
+          "lat": 53.92157,
+          "lng": 12.881775
+        }
+      },
+      {
+        "label": "An Den Havelbergen, 17237 Userin, Almanya",
+        "value": "An Den Havelbergen",
+        "type": "address",
+        "position": {
+          "lat": 53.308044,
+          "lng": 13.004635
+        }
+      },
+      {
+        "label": "Vor Dem Wendischen Tor, 17255 Wesenberg, Almanya",
+        "value": "Vor Dem Wendischen Tor",
+        "type": "address",
+        "position": {
+          "lat": 53.282392,
+          "lng": 12.964716
+        }
+      },
+      {
+        "label": "Densow, Templin, Brandenburg, Almanya",
+        "value": "Densow",
+        "type": "locality",
+        "position": {
+          "lat": 53.144957,
+          "lng": 13.377167
+        }
+      },
+      {
+        "label": "Denglerweg, 16230 Chorin, Almanya",
+        "value": "Denglerweg",
+        "type": "address",
+        "position": {
+          "lat": 52.90252,
+          "lng": 13.929696
+        }
+      },
+      {
+        "label": "Dellenstraße, 17268 Templin, Almanya",
+        "value": "Dellenstraße",
+        "type": "address",
+        "position": {
+          "lat": 52.993923,
+          "lng": 13.521417
+        }
+      }
+    ]
+  },
+  "Hamburg": {
+    "Hamburg": [
+      {
+        "label": "Harburg, Hamburg, Almanya",
+        "value": "Harburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.457101,
+          "lng": 9.98774
+        }
+      },
+      {
+        "label": "Deichhausweg, 21073 Hamburg, Almanya",
+        "value": "Deichhausweg",
+        "type": "address",
+        "position": {
+          "lat": 53.459651,
+          "lng": 9.981791
+        }
+      },
+      {
+        "label": "Brücke Des 17. Juni, 21107 Hamburg, Almanya",
+        "value": "Brücke Des 17. Juni",
+        "type": "address",
+        "position": {
+          "lat": 53.475454,
+          "lng": 9.996461
+        }
+      },
+      {
+        "label": "Denickestraße, 21075 Hamburg, Almanya",
+        "value": "Denickestraße",
+        "type": "address",
+        "position": {
+          "lat": 53.459631,
+          "lng": 9.957661
+        }
+      },
+      {
+        "label": "Mamburg, Stedesdorf, Aşağı Saksonya, Almanya",
+        "value": "Mamburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.628363,
+          "lng": 7.634589
+        }
+      },
+      {
+        "label": "In De Bans, 21077 Hamburg, Almanya",
+        "value": "In De Bans",
+        "type": "address",
+        "position": {
+          "lat": 53.439437,
+          "lng": 9.958845
+        }
+      },
+      {
+        "label": "Deichhammer Weg, 26409 Wittmund, Almanya",
+        "value": "Deichhammer Weg",
+        "type": "address",
+        "position": {
+          "lat": 53.629924,
+          "lng": 7.731347
+        }
+      }
+    ],
+    "Harburg": [
+      {
+        "label": "Harburg, Hamburg, Almanya",
+        "value": "Harburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.457101,
+          "lng": 9.98774
+        }
+      },
+      {
+        "label": "Deichhausweg, 21073 Hamburg, Almanya",
+        "value": "Deichhausweg",
+        "type": "address",
+        "position": {
+          "lat": 53.459651,
+          "lng": 9.981791
+        }
+      },
+      {
+        "label": "Denickestraße, 21075 Hamburg, Almanya",
+        "value": "Denickestraße",
+        "type": "address",
+        "position": {
+          "lat": 53.459631,
+          "lng": 9.957661
+        }
+      },
+      {
+        "label": "Horburg, Barum, Aşağı Saksonya, Almanya",
+        "value": "Horburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.354855,
+          "lng": 10.401438
+        }
+      },
+      {
+        "label": "Mamburg, Stedesdorf, Aşağı Saksonya, Almanya",
+        "value": "Mamburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.628363,
+          "lng": 7.634589
+        }
+      },
+      {
+        "label": "Brücke Des 17. Juni, 21107 Hamburg, Almanya",
+        "value": "Brücke Des 17. Juni",
+        "type": "address",
+        "position": {
+          "lat": 53.475454,
+          "lng": 9.996461
+        }
+      },
+      {
+        "label": "In De Bans, 21077 Hamburg, Almanya",
+        "value": "In De Bans",
+        "type": "address",
+        "position": {
+          "lat": 53.439437,
+          "lng": 9.958845
+        }
+      },
+      {
+        "label": "Auf Dem Weidedeich, 21357 Barum, Almanya",
+        "value": "Auf Dem Weidedeich",
+        "type": "address",
+        "position": {
+          "lat": 53.361059,
+          "lng": 10.39064
+        }
+      }
+    ],
+    "Homburg": [
+      {
+        "label": "Deichhausweg, 21073 Hamburg, Almanya",
+        "value": "Deichhausweg",
+        "type": "address",
+        "position": {
+          "lat": 53.459651,
+          "lng": 9.981791
+        }
+      },
+      {
+        "label": "Himburg, 56459 Rothenbach, Almanya",
+        "value": "Himburg",
+        "type": "address",
+        "position": {
+          "lat": 50.568574,
+          "lng": 7.890548
+        }
+      },
+      {
+        "label": "Denickestraße, 21075 Hamburg, Almanya",
+        "value": "Denickestraße",
+        "type": "address",
+        "position": {
+          "lat": 53.459631,
+          "lng": 9.957661
+        }
+      },
+      {
+        "label": "Harburg, Hamburg, Almanya",
+        "value": "Harburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.457101,
+          "lng": 9.98774
+        }
+      },
+      {
+        "label": "Brücke Des 17. Juni, 21107 Hamburg, Almanya",
+        "value": "Brücke Des 17. Juni",
+        "type": "address",
+        "position": {
+          "lat": 53.475454,
+          "lng": 9.996461
+        }
+      },
+      {
+        "label": "In De Bans, 21077 Hamburg, Almanya",
+        "value": "In De Bans",
+        "type": "address",
+        "position": {
+          "lat": 53.439437,
+          "lng": 9.958845
+        }
+      },
+      {
+        "label": "Horburg, Barum, Aşağı Saksonya, Almanya",
+        "value": "Horburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.354855,
+          "lng": 10.401438
+        }
+      },
+      {
+        "label": "Mamburg, Stedesdorf, Aşağı Saksonya, Almanya",
+        "value": "Mamburg",
+        "type": "locality",
+        "position": {
+          "lat": 53.628363,
+          "lng": 7.634589
+        }
+      }
+    ],
+    "Dedesdorf": [
+      {
+        "label": "Dedesdorf, Loxstedt, Aşağı Saksonya, Almanya",
+        "value": "Dedesdorf",
+        "type": "locality",
+        "position": {
+          "lat": 53.444512,
+          "lng": 8.500274
+        }
+      },
+      {
+        "label": "Dedesdorfer Weg, 27612 Loxstedt, Almanya",
+        "value": "Dedesdorfer Weg",
+        "type": "address",
+        "position": {
+          "lat": 53.436994,
+          "lng": 8.51012
+        }
+      },
+      {
+        "label": "Dedesdorfer Straße, 26935 Stadland, Almanya",
+        "value": "Dedesdorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 53.420861,
+          "lng": 8.465038
+        }
+      },
+      {
+        "label": "Auf Dem Heidland, 27628 Hagen im Bremischen, Almanya",
+        "value": "Auf Dem Heidland",
+        "type": "address",
+        "position": {
+          "lat": 53.380233,
+          "lng": 8.614558
+        }
+      },
+      {
+        "label": "Deichgräfenstraße, 26954 Nordenham, Almanya",
+        "value": "Deichgräfenstraße",
+        "type": "address",
+        "position": {
+          "lat": 53.486673,
+          "lng": 8.487488
+        }
+      }
+    ],
+    "Dersenow": [
+      {
+        "label": "Hamburg, Almanya",
+        "value": "Hamburg",
+        "type": "region",
+        "position": {
+          "lat": 53.550341,
+          "lng": 10.000654
+        }
+      },
+      {
+        "label": "Dersenow, Kreis Ludwigslust-Parchim, Mecklenburg-Vorpommern, Almanya",
+        "value": "Dersenow",
+        "type": "place",
+        "position": {
+          "lat": 53.380745,
+          "lng": 10.890305
+        }
+      },
+      {
+        "label": "Hamburg, 38889 Oberharz am Brocken, Almanya",
+        "value": "Hamburg",
+        "type": "address",
+        "position": {
+          "lat": 51.752737,
+          "lng": 10.872935
+        }
+      },
+      {
+        "label": "Hamburg, 54608 Bleialf, Almanya",
+        "value": "Hamburg",
+        "type": "address",
+        "position": {
+          "lat": 50.231471,
+          "lng": 6.286919
+        }
+      },
+      {
+        "label": "Deich, 19258 Besitz, Almanya",
+        "value": "Deich",
+        "type": "address",
+        "position": {
+          "lat": 53.34003,
+          "lng": 10.85394
+        }
+      },
+      {
+        "label": "Deichweg, 19273 Teldau, Almanya",
+        "value": "Deichweg",
+        "type": "address",
+        "position": {
+          "lat": 53.343525,
+          "lng": 10.82687
+        }
+      },
+      {
+        "label": "An Den Wiesen, 19273 Brahlstorf, Almanya",
+        "value": "An Den Wiesen",
+        "type": "address",
+        "position": {
+          "lat": 53.350916,
+          "lng": 10.972355
+        }
+      }
+    ],
+    "Dechow": [
+      {
+        "label": "Hamburg, Almanya",
+        "value": "Hamburg",
+        "type": "region",
+        "position": {
+          "lat": 53.550341,
+          "lng": 10.000654
+        }
+      },
+      {
+        "label": "Dechow, Kreis Nordwestmecklenburg, Mecklenburg-Vorpommern, Almanya",
+        "value": "Dechow",
+        "type": "place",
+        "position": {
+          "lat": 53.7169,
+          "lng": 10.92635
+        }
+      },
+      {
+        "label": "Hamburg, 38889 Oberharz am Brocken, Almanya",
+        "value": "Hamburg",
+        "type": "address",
+        "position": {
+          "lat": 51.752737,
+          "lng": 10.872935
+        }
+      },
+      {
+        "label": "Hamburg, 54608 Bleialf, Almanya",
+        "value": "Hamburg",
+        "type": "address",
+        "position": {
+          "lat": 50.231471,
+          "lng": 6.286919
+        }
+      },
+      {
+        "label": "Demern, Königsfeld, Mecklenburg-Vorpommern, Almanya",
+        "value": "Demern",
+        "type": "locality",
+        "position": {
+          "lat": 53.742152,
+          "lng": 10.985593
+        }
+      },
+      {
+        "label": "An Den Neubauten, 19217 Schlagsdorf, Almanya",
+        "value": "An Den Neubauten",
+        "type": "address",
+        "position": {
+          "lat": 53.729253,
+          "lng": 10.827836
+        }
+      },
+      {
+        "label": "Dedesdorf, Loxstedt, Aşağı Saksonya, Almanya",
+        "value": "Dedesdorf",
+        "type": "locality",
+        "position": {
+          "lat": 53.444512,
+          "lng": 8.500274
+        }
+      },
+      {
+        "label": "Dersenow, Kreis Ludwigslust-Parchim, Mecklenburg-Vorpommern, Almanya",
+        "value": "Dersenow",
+        "type": "place",
+        "position": {
+          "lat": 53.380745,
+          "lng": 10.890305
+        }
+      },
+      {
+        "label": "Delingsdorf, Kreis Stormarn, Schleswig-Holstein, Almanya",
+        "value": "Delingsdorf",
+        "type": "place",
+        "position": {
+          "lat": 53.708344,
+          "lng": 10.25179
+        }
+      }
+    ],
+    "Delingsdorf": [
+      {
+        "label": "Hamburg, Almanya",
+        "value": "Hamburg",
+        "type": "region",
+        "position": {
+          "lat": 53.550341,
+          "lng": 10.000654
+        }
+      },
+      {
+        "label": "Delingsdorf, Kreis Stormarn, Schleswig-Holstein, Almanya",
+        "value": "Delingsdorf",
+        "type": "place",
+        "position": {
+          "lat": 53.708344,
+          "lng": 10.25179
+        }
+      },
+      {
+        "label": "Deensdörper Weg, 22941 Delingsdorf, Almanya",
+        "value": "Deensdörper Weg",
+        "type": "address",
+        "position": {
+          "lat": 53.705078,
+          "lng": 10.287441
+        }
+      },
+      {
+        "label": "Déviller Straße, 22941 Bargteheide, Almanya",
+        "value": "Déviller Straße",
+        "type": "address",
+        "position": {
+          "lat": 53.731337,
+          "lng": 10.285581
+        }
+      },
+      {
+        "label": "Depenwisch, 22927 Großhansdorf, Almanya",
+        "value": "Depenwisch",
+        "type": "address",
+        "position": {
+          "lat": 53.665898,
+          "lng": 10.265119
+        }
+      },
+      {
+        "label": "In De Eck, 23847 Lasbek, Almanya",
+        "value": "In De Eck",
+        "type": "address",
+        "position": {
+          "lat": 53.734124,
+          "lng": 10.367138
+        }
+      }
+    ],
+    "Dersau": [
+      {
+        "label": "Hamburg, Almanya",
+        "value": "Hamburg",
+        "type": "region",
+        "position": {
+          "lat": 53.550341,
+          "lng": 10.000654
+        }
+      },
+      {
+        "label": "Dersau, Kreis Plön, Schleswig-Holstein, Almanya",
+        "value": "Dersau",
+        "type": "place",
+        "position": {
+          "lat": 54.11787,
+          "lng": 10.336175
+        }
+      },
+      {
+        "label": "Hamburg, 38889 Oberharz am Brocken, Almanya",
+        "value": "Hamburg",
+        "type": "address",
+        "position": {
+          "lat": 51.752737,
+          "lng": 10.872935
+        }
+      },
+      {
+        "label": "Hamburg, 54608 Bleialf, Almanya",
+        "value": "Hamburg",
+        "type": "address",
+        "position": {
+          "lat": 50.231471,
+          "lng": 6.286919
+        }
+      },
+      {
+        "label": "Depenau, Stolpe, Schleswig-Holstein, Almanya",
+        "value": "Depenau",
+        "type": "locality",
+        "position": {
+          "lat": 54.156341,
+          "lng": 10.235444
+        }
+      },
+      {
+        "label": "In Dem Horn, 24326 Stocksee, Almanya",
+        "value": "In Dem Horn",
+        "type": "address",
+        "position": {
+          "lat": 54.089112,
+          "lng": 10.348431
+        }
+      },
+      {
+        "label": "Dedesdorf, Loxstedt, Aşağı Saksonya, Almanya",
+        "value": "Dedesdorf",
+        "type": "locality",
+        "position": {
+          "lat": 53.444512,
+          "lng": 8.500274
+        }
+      },
+      {
+        "label": "Dersenow, Kreis Ludwigslust-Parchim, Mecklenburg-Vorpommern, Almanya",
+        "value": "Dersenow",
+        "type": "place",
+        "position": {
+          "lat": 53.380745,
+          "lng": 10.890305
+        }
+      },
+      {
+        "label": "Dechow, Kreis Nordwestmecklenburg, Mecklenburg-Vorpommern, Almanya",
+        "value": "Dechow",
+        "type": "place",
+        "position": {
+          "lat": 53.7169,
+          "lng": 10.92635
+        }
+      },
+      {
+        "label": "Delingsdorf, Kreis Stormarn, Schleswig-Holstein, Almanya",
+        "value": "Delingsdorf",
+        "type": "place",
+        "position": {
+          "lat": 53.708344,
+          "lng": 10.25179
+        }
+      }
+    ],
+    "Deinste": [
+      {
+        "label": "Deinste, Kreis Stade, Aşağı Saksonya, Almanya",
+        "value": "Deinste",
+        "type": "place",
+        "position": {
+          "lat": 53.52775,
+          "lng": 9.442621
+        }
+      },
+      {
+        "label": "Deinster Kirchweg, 21717 Deinste, Almanya",
+        "value": "Deinster Kirchweg",
+        "type": "address",
+        "position": {
+          "lat": 53.494508,
+          "lng": 9.459996
+        }
+      },
+      {
+        "label": "In Den Niederhöfen, 21640 Horneburg, Almanya",
+        "value": "In Den Niederhöfen",
+        "type": "address",
+        "position": {
+          "lat": 53.505276,
+          "lng": 9.577698
+        }
+      },
+      {
+        "label": "Auf Dem Reller, 21739 Dollern, Almanya",
+        "value": "Auf Dem Reller",
+        "type": "address",
+        "position": {
+          "lat": 53.538306,
+          "lng": 9.551063
+        }
+      },
+      {
+        "label": "Vör De Weid, 21684 Stade, Almanya",
+        "value": "Vör De Weid",
+        "type": "address",
+        "position": {
+          "lat": 53.557197,
+          "lng": 9.458068
+        }
+      },
+      {
+        "label": "An Den Kreuzsteinen, 21680 Stade, Almanya",
+        "value": "An Den Kreuzsteinen",
+        "type": "address",
+        "position": {
+          "lat": 53.583754,
+          "lng": 9.465928
+        }
+      }
+    ]
+  },
+  "Munich": {
+    "Münih": [
+      {
+        "label": "Münih, Bavyera, Almanya",
+        "value": "Münih",
+        "type": "place",
+        "position": {
+          "lat": 48.136973,
+          "lng": 11.575968
+        }
+      },
+      {
+        "label": "De-Gasperi-Bogen, 81829 Münih, Almanya",
+        "value": "De-Gasperi-Bogen",
+        "type": "address",
+        "position": {
+          "lat": 48.13342,
+          "lng": 11.709845
+        }
+      },
+      {
+        "label": "Denninger Straße, 81927 Münih, Almanya",
+        "value": "Denninger Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.148177,
+          "lng": 11.624533
+        }
+      },
+      {
+        "label": "Demblerstraße, 81549 Münih, Almanya",
+        "value": "Demblerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.105818,
+          "lng": 11.606391
+        }
+      },
+      {
+        "label": "Dellauerweg, 81737 Münih, Almanya",
+        "value": "Dellauerweg",
+        "type": "address",
+        "position": {
+          "lat": 48.105322,
+          "lng": 11.618501
+        }
+      },
+      {
+        "label": "Deggendorfer Straße, 81673 Münih, Almanya",
+        "value": "Deggendorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.132251,
+          "lng": 11.615648
+        }
+      },
+      {
+        "label": "Deutenhofen, Hebertshausen, Bavyera, Almanya",
+        "value": "Deutenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.292695,
+          "lng": 11.477524
+        }
+      }
+    ],
+    "Kreis München": [
+      {
+        "label": "Defreggerstraße, 85540 Haar, Almanya",
+        "value": "Defreggerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.103966,
+          "lng": 11.727045
+        }
+      },
+      {
+        "label": "Defreggerstraße, 85521 Ottobrunn, Almanya",
+        "value": "Defreggerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.068709,
+          "lng": 11.672087
+        }
+      },
+      {
+        "label": "Delpstraße, 82008 Unterhaching, Almanya",
+        "value": "Delpstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.063919,
+          "lng": 11.624231
+        }
+      },
+      {
+        "label": "Deutenhofen, Hebertshausen, Bavyera, Almanya",
+        "value": "Deutenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.292695,
+          "lng": 11.477524
+        }
+      },
+      {
+        "label": "Münih, Bavyera, Almanya",
+        "value": "Münih",
+        "type": "place",
+        "position": {
+          "lat": 48.136973,
+          "lng": 11.575968
+        }
+      },
+      {
+        "label": "De-Gasperi-Bogen, 81829 Münih, Almanya",
+        "value": "De-Gasperi-Bogen",
+        "type": "address",
+        "position": {
+          "lat": 48.13342,
+          "lng": 11.709845
+        }
+      },
+      {
+        "label": "Denninger Straße, 81927 Münih, Almanya",
+        "value": "Denninger Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.148177,
+          "lng": 11.624533
+        }
+      }
+    ],
+    "Deisenhofen": [
+      {
+        "label": "Deisenhofen, Oberhaching, Bavyera, Almanya",
+        "value": "Deisenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.018896,
+          "lng": 11.591569
+        }
+      },
+      {
+        "label": "Deisenhofener Weg, 82041 Oberhaching, Almanya",
+        "value": "Deisenhofener Weg",
+        "type": "address",
+        "position": {
+          "lat": 48.016266,
+          "lng": 11.600959
+        }
+      },
+      {
+        "label": "Eisenhofen, Erdweg, Bavyera, Almanya",
+        "value": "Eisenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.342984,
+          "lng": 11.305233
+        }
+      },
+      {
+        "label": "Deisenhofen, Höchstädt an der Donau, Bavyera, Almanya",
+        "value": "Deisenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.618384,
+          "lng": 10.537949
+        }
+      },
+      {
+        "label": "Deisenhofen, 93333 Neustadt an der Donau, Almanya",
+        "value": "Deisenhofen",
+        "type": "address",
+        "position": {
+          "lat": 48.824023,
+          "lng": 11.805645
+        }
+      },
+      {
+        "label": "Deisenhofener Straße, 82216 Maisach, Almanya",
+        "value": "Deisenhofener Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.250571,
+          "lng": 11.239101
+        }
+      },
+      {
+        "label": "An Den Römerhügeln, 82031 Grünwald, Almanya",
+        "value": "An Den Römerhügeln",
+        "type": "address",
+        "position": {
+          "lat": 48.035507,
+          "lng": 11.524744
+        }
+      },
+      {
+        "label": "Deutenhofen, 85250 Altomünster, Almanya",
+        "value": "Deutenhofen",
+        "type": "address",
+        "position": {
+          "lat": 48.368571,
+          "lng": 11.277119
+        }
+      }
+    ],
+    "Deutsches Museum": [
+      {
+        "label": "Deutsches Museum, Münih, Bavyera, Almanya",
+        "value": "Deutsches Museum",
+        "type": "locality",
+        "position": {
+          "lat": 48.130967,
+          "lng": 11.582394
+        }
+      },
+      {
+        "label": "Deisenhofener Straße, 81539 Münih, Almanya",
+        "value": "Deisenhofener Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.112706,
+          "lng": 11.587194
+        }
+      },
+      {
+        "label": "Destouchesstraße, 80803 Münih, Almanya",
+        "value": "Destouchesstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.164689,
+          "lng": 11.576513
+        }
+      },
+      {
+        "label": "Deutingerstraße, 80469 Münih, Almanya",
+        "value": "Deutingerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.126705,
+          "lng": 11.573011
+        }
+      },
+      {
+        "label": "Deidesheimer Straße, 80797 Münih, Almanya",
+        "value": "Deidesheimer Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.166716,
+          "lng": 11.560187
+        }
+      },
+      {
+        "label": "Demleitnerstraße, 81371 Münih, Almanya",
+        "value": "Demleitnerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.114055,
+          "lng": 11.544707
+        }
+      }
+    ],
+    "Deutenhofen": [
+      {
+        "label": "Deutenhofen, Hebertshausen, Bavyera, Almanya",
+        "value": "Deutenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.292695,
+          "lng": 11.477524
+        }
+      },
+      {
+        "label": "Deutenhofen, 85250 Altomünster, Almanya",
+        "value": "Deutenhofen",
+        "type": "address",
+        "position": {
+          "lat": 48.368571,
+          "lng": 11.277119
+        }
+      },
+      {
+        "label": "Münih, Bavyera, Almanya",
+        "value": "Münih",
+        "type": "place",
+        "position": {
+          "lat": 48.136973,
+          "lng": 11.575968
+        }
+      },
+      {
+        "label": "Dutenhofen, Wetzlar, Hessen, Almanya",
+        "value": "Dutenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 50.562376,
+          "lng": 8.600111
+        }
+      },
+      {
+        "label": "Deutenkofen, Adlkofen, Bavyera, Almanya",
+        "value": "Deutenkofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.558748,
+          "lng": 12.264929
+        }
+      },
+      {
+        "label": "Eutenhofen, Dietfurt an der Altmühl, Bavyera, Almanya",
+        "value": "Eutenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 49.046793,
+          "lng": 11.647872
+        }
+      },
+      {
+        "label": "Dettenhofen, 92331 Lupburg, Almanya",
+        "value": "Dettenhofen",
+        "type": "address",
+        "position": {
+          "lat": 49.137149,
+          "lng": 11.747301
+        }
+      },
+      {
+        "label": "Eutenhofen, 92345 Dietfurt an der Altmühl, Almanya",
+        "value": "Eutenhofen",
+        "type": "address",
+        "position": {
+          "lat": 49.046689,
+          "lng": 11.648666
+        }
+      }
+    ],
+    "Deining": [
+      {
+        "label": "Deining, Egling, Bavyera, Almanya",
+        "value": "Deining",
+        "type": "locality",
+        "position": {
+          "lat": 47.952093,
+          "lng": 11.498388
+        }
+      },
+      {
+        "label": "Deininger Berg, 83737 Irschenberg, Almanya",
+        "value": "Deininger Berg",
+        "type": "address",
+        "position": {
+          "lat": 47.775744,
+          "lng": 11.904593
+        }
+      },
+      {
+        "label": "Deining, Kreis Neumarkt in der Oberpfalz, Bavyera, Almanya",
+        "value": "Deining",
+        "type": "place",
+        "position": {
+          "lat": 49.224583,
+          "lng": 11.539436
+        }
+      },
+      {
+        "label": "Deininger Straße, 92364 Deining, Almanya",
+        "value": "Deininger Straße",
+        "type": "address",
+        "position": {
+          "lat": 49.231693,
+          "lng": 11.509932
+        }
+      },
+      {
+        "label": "Deininger Weiher, 82064 Straßlach-Dingharting, Almanya",
+        "value": "Deininger Weiher",
+        "type": "address",
+        "position": {
+          "lat": 47.967683,
+          "lng": 11.524623
+        }
+      },
+      {
+        "label": "Deininger Straße, 82544 Egling, Almanya",
+        "value": "Deininger Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.93461,
+          "lng": 11.499026
+        }
+      },
+      {
+        "label": "Deininger Weg, 92318 Neumarkt in der Oberpfalz, Almanya",
+        "value": "Deininger Weg",
+        "type": "address",
+        "position": {
+          "lat": 49.266939,
+          "lng": 11.469512
+        }
+      }
+    ],
+    "Dettenhausen": [
+      {
+        "label": "Jettenhausen, 82064 Oberhaching, Almanya",
+        "value": "Jettenhausen",
+        "type": "address",
+        "position": {
+          "lat": 47.975187,
+          "lng": 11.546668
+        }
+      },
+      {
+        "label": "Jettenhausner Straße, 82064 Straßlach-Dingharting, Almanya",
+        "value": "Jettenhausner Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.981161,
+          "lng": 11.529536
+        }
+      },
+      {
+        "label": "Dettenhausen, Egling, Bavyera, Almanya",
+        "value": "Dettenhausen",
+        "type": "locality",
+        "position": {
+          "lat": 47.939291,
+          "lng": 11.507233
+        }
+      },
+      {
+        "label": "Deininger Straße, 82544 Egling, Almanya",
+        "value": "Deininger Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.93461,
+          "lng": 11.499026
+        }
+      },
+      {
+        "label": "Dettenhausen, Landkreis Tübingen, Baden-Württemberg, Almanya",
+        "value": "Dettenhausen",
+        "type": "place",
+        "position": {
+          "lat": 48.60894,
+          "lng": 9.098703
+        }
+      },
+      {
+        "label": "Deigstetten, 82064 Straßlach-Dingharting, Almanya",
+        "value": "Deigstetten",
+        "type": "address",
+        "position": {
+          "lat": 47.98284,
+          "lng": 11.490097
+        }
+      },
+      {
+        "label": "Dettenhäuser Weg, 72631 Aichtal, Almanya",
+        "value": "Dettenhäuser Weg",
+        "type": "address",
+        "position": {
+          "lat": 48.621233,
+          "lng": 9.155972
+        }
+      }
+    ],
+    "Deutenhausen": [
+      {
+        "label": "Deutenhausen, Bergkirchen, Bavyera, Almanya",
+        "value": "Deutenhausen",
+        "type": "locality",
+        "position": {
+          "lat": 48.261453,
+          "lng": 11.343175
+        }
+      },
+      {
+        "label": "Dettenhausen, Egling, Bavyera, Almanya",
+        "value": "Dettenhausen",
+        "type": "locality",
+        "position": {
+          "lat": 47.939291,
+          "lng": 11.507233
+        }
+      },
+      {
+        "label": "Eutenhausen, 83620 Feldkirchen-Westerham, Almanya",
+        "value": "Eutenhausen",
+        "type": "address",
+        "position": {
+          "lat": 47.935335,
+          "lng": 11.862105
+        }
+      },
+      {
+        "label": "Deininger Straße, 82544 Egling, Almanya",
+        "value": "Deininger Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.93461,
+          "lng": 11.499026
+        }
+      },
+      {
+        "label": "Deutenhausen, Weilheim in Oberbayern, Bavyera, Almanya",
+        "value": "Deutenhausen",
+        "type": "locality",
+        "position": {
+          "lat": 47.826849,
+          "lng": 11.174994
+        }
+      },
+      {
+        "label": "Münih, Bavyera, Almanya",
+        "value": "Münih",
+        "type": "place",
+        "position": {
+          "lat": 48.136973,
+          "lng": 11.575968
+        }
+      },
+      {
+        "label": "Deigstetten, 82064 Straßlach-Dingharting, Almanya",
+        "value": "Deigstetten",
+        "type": "address",
+        "position": {
+          "lat": 47.98284,
+          "lng": 11.490097
+        }
+      },
+      {
+        "label": "Dellingerweg, 82216 Maisach, Almanya",
+        "value": "Dellingerweg",
+        "type": "address",
+        "position": {
+          "lat": 48.240545,
+          "lng": 11.274848
+        }
+      },
+      {
+        "label": "Deutenhausener Straße, 82362 Weilheim in Oberbayern, Almanya",
+        "value": "Deutenhausener Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.835328,
+          "lng": 11.158662
+        }
+      }
+    ],
+    "Degerndorf": [
+      {
+        "label": "Degerndorf, Münsing, Bavyera, Almanya",
+        "value": "Degerndorf",
+        "type": "locality",
+        "position": {
+          "lat": 47.880356,
+          "lng": 11.379797
+        }
+      },
+      {
+        "label": "Münih, Bavyera, Almanya",
+        "value": "Münih",
+        "type": "place",
+        "position": {
+          "lat": 48.136973,
+          "lng": 11.575968
+        }
+      },
+      {
+        "label": "Degerndorf, Lupburg, Bavyera, Almanya",
+        "value": "Degerndorf",
+        "type": "locality",
+        "position": {
+          "lat": 49.171172,
+          "lng": 11.746007
+        }
+      },
+      {
+        "label": "Deberndorf, Cadolzburg, Bavyera, Almanya",
+        "value": "Deberndorf",
+        "type": "locality",
+        "position": {
+          "lat": 49.440131,
+          "lng": 10.7964
+        }
+      },
+      {
+        "label": "Egerndorf, 83209 Prien am Chiemsee, Almanya",
+        "value": "Egerndorf",
+        "type": "address",
+        "position": {
+          "lat": 47.836042,
+          "lng": 12.351487
+        }
+      },
+      {
+        "label": "Deisenhofen, Oberhaching, Bavyera, Almanya",
+        "value": "Deisenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.018896,
+          "lng": 11.591569
+        }
+      },
+      {
+        "label": "Deutenhofen, Hebertshausen, Bavyera, Almanya",
+        "value": "Deutenhofen",
+        "type": "locality",
+        "position": {
+          "lat": 48.292695,
+          "lng": 11.477524
+        }
+      },
+      {
+        "label": "Deining, Egling, Bavyera, Almanya",
+        "value": "Deining",
+        "type": "locality",
+        "position": {
+          "lat": 47.952093,
+          "lng": 11.498388
+        }
+      },
+      {
+        "label": "Degerndorfer Straße, 82547 Eurasburg, Almanya",
+        "value": "Degerndorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.884052,
+          "lng": 11.409558
+        }
+      },
+      {
+        "label": "Degerndorfer Straße, 82541 Münsing, Almanya",
+        "value": "Degerndorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 47.901141,
+          "lng": 11.36925
+        }
+      }
+    ],
+    "Dettendorf": [
+      {
+        "label": "Dettendorf, Bad Feilnbach, Bavyera, Almanya",
+        "value": "Dettendorf",
+        "type": "locality",
+        "position": {
+          "lat": 47.822731,
+          "lng": 11.972256
+        }
+      },
+      {
+        "label": "Münih, Bavyera, Almanya",
+        "value": "Münih",
+        "type": "place",
+        "position": {
+          "lat": 48.136973,
+          "lng": 11.575968
+        }
+      },
+      {
+        "label": "Dettendorf, Tuntenhausen, Bavyera, Almanya",
+        "value": "Dettendorf",
+        "type": "locality",
+        "position": {
+          "lat": 47.966291,
+          "lng": 12.064873
+        }
+      },
+      {
+        "label": "Dettendorf, Diespeck, Bavyera, Almanya",
+        "value": "Dettendorf",
+        "type": "locality",
+        "position": {
+          "lat": 49.590744,
+          "lng": 10.673946
+        }
+      },
+      {
+        "label": "Dottendorf, Bonn, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dottendorf",
+        "type": "locality",
+        "position": {
+          "lat": 50.704433,
+          "lng": 7.114096
+        }
+      },
+      {
+        "label": "Pettendorf, Kreis Regensburg, Bavyera, Almanya",
+        "value": "Pettendorf",
+        "type": "place",
+        "position": {
+          "lat": 49.058351,
+          "lng": 12.003648
+        }
+      },
+      {
+        "label": "Bettendorf, Rhein-Lahn-Kreis, Renanya-Palatina, Almanya",
+        "value": "Bettendorf",
+        "type": "place",
+        "position": {
+          "lat": 50.2329,
+          "lng": 7.872059
+        }
+      },
+      {
+        "label": "Deßl, 83737 Irschenberg, Almanya",
+        "value": "Deßl",
+        "type": "address",
+        "position": {
+          "lat": 47.858946,
+          "lng": 11.88809
+        }
+      }
+    ]
+  },
+  "Cologne": {
+    "Köln": [
+      {
+        "label": "Kölln, 18292 Hoppenrade, Almanya",
+        "value": "Kölln",
+        "type": "address",
+        "position": {
+          "lat": 53.717809,
+          "lng": 12.278735
+        }
+      },
+      {
+        "label": "Kölln, Hoppenrade, Mecklenburg-Vorpommern, Almanya",
+        "value": "Kölln",
+        "type": "locality",
+        "position": {
+          "lat": 53.718185,
+          "lng": 12.27855
+        }
+      },
+      {
+        "label": "Kölln, Werder, Mecklenburg-Vorpommern, Almanya",
+        "value": "Kölln",
+        "type": "locality",
+        "position": {
+          "lat": 53.760557,
+          "lng": 13.344704
+        }
+      },
+      {
+        "label": "Köbeln, Bad Muskau, Saksonya, Almanya",
+        "value": "Köbeln",
+        "type": "locality",
+        "position": {
+          "lat": 51.573363,
+          "lng": 14.717087
+        }
+      },
+      {
+        "label": "An Den Vorrüben, 01594 Hirschstein, Almanya",
+        "value": "An Den Vorrüben",
+        "type": "address",
+        "position": {
+          "lat": 51.248084,
+          "lng": 13.289663
+        }
+      },
+      {
+        "label": "In Den Nonnenfeldern, 07570 Weida, Almanya",
+        "value": "In Den Nonnenfeldern",
+        "type": "address",
+        "position": {
+          "lat": 50.779473,
+          "lng": 12.046546
+        }
+      }
+    ],
+    "Dellbrück": [
+      {
+        "label": "Dellbrück, Köln, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dellbrück",
+        "type": "locality",
+        "position": {
+          "lat": 50.975325,
+          "lng": 7.07393
+        }
+      },
+      {
+        "label": "Dellbrücker Mauspfad, 51069 Köln, Almanya",
+        "value": "Dellbrücker Mauspfad",
+        "type": "address",
+        "position": {
+          "lat": 50.970221,
+          "lng": 7.066233
+        }
+      },
+      {
+        "label": "Deisterweg, 51109 Köln, Almanya",
+        "value": "Deisterweg",
+        "type": "address",
+        "position": {
+          "lat": 50.941352,
+          "lng": 7.081167
+        }
+      },
+      {
+        "label": "Auf Dem Kamp, 51107 Köln, Almanya",
+        "value": "Auf Dem Kamp",
+        "type": "address",
+        "position": {
+          "lat": 50.917909,
+          "lng": 7.084313
+        }
+      },
+      {
+        "label": "Auf Dem Streitacker, 51149 Köln, Almanya",
+        "value": "Auf Dem Streitacker",
+        "type": "address",
+        "position": {
+          "lat": 50.903584,
+          "lng": 7.058671
+        }
+      },
+      {
+        "label": "Auf Dem Pützacker, 51067 Köln, Almanya",
+        "value": "Auf Dem Pützacker",
+        "type": "address",
+        "position": {
+          "lat": 50.968249,
+          "lng": 7.052257
+        }
+      }
+    ],
+    "Deutz": [
+      {
+        "label": "Deutz, Köln, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Deutz",
+        "type": "locality",
+        "position": {
+          "lat": 50.938351,
+          "lng": 6.981646
+        }
+      },
+      {
+        "label": "Deutz-Kalker Straße, 50679 Köln, Almanya",
+        "value": "Deutz-Kalker Straße",
+        "type": "address",
+        "position": {
+          "lat": 50.936623,
+          "lng": 6.985547
+        }
+      },
+      {
+        "label": "Deutschordensstraße, 51067 Köln, Almanya",
+        "value": "Deutschordensstraße",
+        "type": "address",
+        "position": {
+          "lat": 50.958646,
+          "lng": 7.022825
+        }
+      },
+      {
+        "label": "Deutz-Mülheimer Straße, 51063 Köln, Almanya",
+        "value": "Deutz-Mülheimer Straße",
+        "type": "address",
+        "position": {
+          "lat": 50.951497,
+          "lng": 6.989074
+        }
+      },
+      {
+        "label": "Dechant-Löbbel-Platz, 50668 Köln, Almanya",
+        "value": "Dechant-Löbbel-Platz",
+        "type": "address",
+        "position": {
+          "lat": 50.945803,
+          "lng": 6.953856
+        }
+      },
+      {
+        "label": "Derwitzer Weg, 14542 Werder, Almanya",
+        "value": "Derwitzer Weg",
+        "type": "address",
+        "position": {
+          "lat": 52.397245,
+          "lng": 12.825024
+        }
+      }
+    ],
+    "Delrath": [
+      {
+        "label": "Delrath, Dormagen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Delrath",
+        "type": "locality",
+        "position": {
+          "lat": 51.128417,
+          "lng": 6.783371
+        }
+      },
+      {
+        "label": "An Den Kaulen, 50769 Köln, Almanya",
+        "value": "An Den Kaulen",
+        "type": "address",
+        "position": {
+          "lat": 51.071457,
+          "lng": 6.855723
+        }
+      },
+      {
+        "label": "Deichstraße, 41541 Dormagen, Almanya",
+        "value": "Deichstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.126014,
+          "lng": 6.846987
+        }
+      },
+      {
+        "label": "Delhovener Lindenhof, 41540 Dormagen, Almanya",
+        "value": "Delhovener Lindenhof",
+        "type": "address",
+        "position": {
+          "lat": 51.085379,
+          "lng": 6.795381
+        }
+      },
+      {
+        "label": "An Den Peschen, 41539 Dormagen, Almanya",
+        "value": "An Den Peschen",
+        "type": "address",
+        "position": {
+          "lat": 51.100265,
+          "lng": 6.855758
+        }
+      },
+      {
+        "label": "Auf Dem Kappus, 41542 Dormagen, Almanya",
+        "value": "Auf Dem Kappus",
+        "type": "address",
+        "position": {
+          "lat": 51.11867,
+          "lng": 6.773516
+        }
+      }
+    ],
+    "Delhoven": [
+      {
+        "label": "Delhoven, Dormagen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Delhoven",
+        "type": "locality",
+        "position": {
+          "lat": 51.078954,
+          "lng": 6.781739
+        }
+      },
+      {
+        "label": "Delhovener Lindenhof, 41540 Dormagen, Almanya",
+        "value": "Delhovener Lindenhof",
+        "type": "address",
+        "position": {
+          "lat": 51.085379,
+          "lng": 6.795381
+        }
+      },
+      {
+        "label": "Deeler Weg, 50769 Köln, Almanya",
+        "value": "Deeler Weg",
+        "type": "address",
+        "position": {
+          "lat": 51.065319,
+          "lng": 6.85026
+        }
+      },
+      {
+        "label": "Auf Dem Driesch, 50765 Köln, Almanya",
+        "value": "Auf Dem Driesch",
+        "type": "address",
+        "position": {
+          "lat": 51.015707,
+          "lng": 6.853564
+        }
+      },
+      {
+        "label": "Deichstraße, 41541 Dormagen, Almanya",
+        "value": "Deichstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.126014,
+          "lng": 6.846987
+        }
+      },
+      {
+        "label": "Delhovener Straße, 50259 Pulheim, Almanya",
+        "value": "Delhovener Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.047736,
+          "lng": 6.770747
+        }
+      }
+    ],
+    "Dessau-Roßlau": [
+      {
+        "label": "Dessau-Roßlau, Saksonya-Anhalt, Almanya",
+        "value": "Dessau-Roßlau",
+        "type": "place",
+        "position": {
+          "lat": 51.837173,
+          "lng": 12.246157
+        }
+      },
+      {
+        "label": "Dessau, Dessau-Roßlau, Saksonya-Anhalt, Almanya",
+        "value": "Dessau",
+        "type": "locality",
+        "position": {
+          "lat": 51.830866,
+          "lng": 12.242561
+        }
+      },
+      {
+        "label": "Deichanlage Schwedenwall, 06844 Dessau-Roßlau, Almanya",
+        "value": "Deichanlage Schwedenwall",
+        "type": "address",
+        "position": {
+          "lat": 51.85557,
+          "lng": 12.289326
+        }
+      },
+      {
+        "label": "Deich Möster Höhen, 06849 Dessau-Roßlau, Almanya",
+        "value": "Deich Möster Höhen",
+        "type": "address",
+        "position": {
+          "lat": 51.785333,
+          "lng": 12.271521
+        }
+      },
+      {
+        "label": "Dessauer Straße, 06862 Dessau-Roßlau, Almanya",
+        "value": "Dessauer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.887127,
+          "lng": 12.239387
+        }
+      },
+      {
+        "label": "Deichplatz, 06846 Dessau-Roßlau, Almanya",
+        "value": "Deichplatz",
+        "type": "address",
+        "position": {
+          "lat": 51.854465,
+          "lng": 12.222285
+        }
+      },
+      {
+        "label": "An Den Steinbergen, 06861 Dessau-Roßlau, Almanya",
+        "value": "An Den Steinbergen",
+        "type": "address",
+        "position": {
+          "lat": 51.897966,
+          "lng": 12.197425
+        }
+      }
+    ]
+  },
+  "Frankfurt": {
+    "Frankfurt": [
+      {
+        "label": "Frankfurt, 91480 Markt Taschendorf, Almanya",
+        "value": "Frankfurt",
+        "type": "address",
+        "position": {
+          "lat": 49.680643,
+          "lng": 10.527024
+        }
+      },
+      {
+        "label": "Frankfurt, Hessen, Almanya",
+        "value": "Frankfurt",
+        "type": "place",
+        "position": {
+          "lat": 50.110596,
+          "lng": 8.683012
+        }
+      },
+      {
+        "label": "Frankfurt, Brandenburg, Almanya",
+        "value": "Frankfurt",
+        "type": "place",
+        "position": {
+          "lat": 52.341811,
+          "lng": 14.54924
+        }
+      },
+      {
+        "label": "Frankfurt, 02625 Bautzen, Almanya",
+        "value": "Frankfurt",
+        "type": "address",
+        "position": {
+          "lat": 51.18857,
+          "lng": 14.422401
+        }
+      },
+      {
+        "label": "Frankfurt, Markt Taschendorf, Bavyera, Almanya",
+        "value": "Frankfurt",
+        "type": "locality",
+        "position": {
+          "lat": 49.680265,
+          "lng": 10.525602
+        }
+      },
+      {
+        "label": "Tränkfurt, 99195 Großrudestedt, Almanya",
+        "value": "Tränkfurt",
+        "type": "address",
+        "position": {
+          "lat": 51.092578,
+          "lng": 11.093117
+        }
+      }
+    ]
+  },
+  "Stuttgart": {
+    "Stuttgart": [
+      {
+        "label": "Stuttgart, Baden-Württemberg, Almanya",
+        "value": "Stuttgart",
+        "type": "place",
+        "position": {
+          "lat": 48.77353,
+          "lng": 9.17742
+        }
+      },
+      {
+        "label": "Degerloch, Stuttgart, Baden-Württemberg, Almanya",
+        "value": "Degerloch",
+        "type": "locality",
+        "position": {
+          "lat": 48.74959,
+          "lng": 9.170057
+        }
+      },
+      {
+        "label": "Degenfelder Straße, 70327 Stuttgart, Almanya",
+        "value": "Degenfelder Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.772243,
+          "lng": 9.245911
+        }
+      },
+      {
+        "label": "Deckerstraße, 70372 Stuttgart, Almanya",
+        "value": "Deckerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.799688,
+          "lng": 9.227727
+        }
+      },
+      {
+        "label": "Denkendorfer Wiesen, 70619 Stuttgart, Almanya",
+        "value": "Denkendorfer Wiesen",
+        "type": "address",
+        "position": {
+          "lat": 48.733053,
+          "lng": 9.218625
+        }
+      },
+      {
+        "label": "Dessauer Straße, 70376 Stuttgart, Almanya",
+        "value": "Dessauer Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.817512,
+          "lng": 9.209311
+        }
+      },
+      {
+        "label": "Deyhleweg, 70186 Stuttgart, Almanya",
+        "value": "Deyhleweg",
+        "type": "address",
+        "position": {
+          "lat": 48.772738,
+          "lng": 9.20198
+        }
+      }
+    ],
+    "Degerloch": [
+      {
+        "label": "Degerloch, Stuttgart, Baden-Württemberg, Almanya",
+        "value": "Degerloch",
+        "type": "locality",
+        "position": {
+          "lat": 48.74959,
+          "lng": 9.170057
+        }
+      },
+      {
+        "label": "Dettenhäuser Straße, 70597 Stuttgart, Almanya",
+        "value": "Dettenhäuser Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.743764,
+          "lng": 9.167159
+        }
+      },
+      {
+        "label": "Denkendorfer Wiesen, 70619 Stuttgart, Almanya",
+        "value": "Denkendorfer Wiesen",
+        "type": "address",
+        "position": {
+          "lat": 48.733053,
+          "lng": 9.218625
+        }
+      },
+      {
+        "label": "Deckerstraße, 70372 Stuttgart, Almanya",
+        "value": "Deckerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.799688,
+          "lng": 9.227727
+        }
+      },
+      {
+        "label": "Deyhleweg, 70186 Stuttgart, Almanya",
+        "value": "Deyhleweg",
+        "type": "address",
+        "position": {
+          "lat": 48.772738,
+          "lng": 9.20198
+        }
+      },
+      {
+        "label": "Delpweg, 70565 Stuttgart, Almanya",
+        "value": "Delpweg",
+        "type": "address",
+        "position": {
+          "lat": 48.712649,
+          "lng": 9.157811
+        }
+      }
+    ],
+    "An der Burg": [
+      {
+        "label": "An Der Burg, 70192 Stuttgart, Almanya",
+        "value": "An Der Burg",
+        "type": "address",
+        "position": {
+          "lat": 48.801172,
+          "lng": 9.159988
+        }
+      },
+      {
+        "label": "An der Burg, Stuttgart, Baden-Württemberg, Almanya",
+        "value": "An der Burg",
+        "type": "locality",
+        "position": {
+          "lat": 48.801383,
+          "lng": 9.161286
+        }
+      },
+      {
+        "label": "Am Berg, 71642 Ludwigsburg, Almanya",
+        "value": "Am Berg",
+        "type": "address",
+        "position": {
+          "lat": 48.91082,
+          "lng": 9.212649
+        }
+      },
+      {
+        "label": "Deckerstraße, 70372 Stuttgart, Almanya",
+        "value": "Deckerstraße",
+        "type": "address",
+        "position": {
+          "lat": 48.799688,
+          "lng": 9.227727
+        }
+      },
+      {
+        "label": "Dessauer Straße, 70376 Stuttgart, Almanya",
+        "value": "Dessauer Straße",
+        "type": "address",
+        "position": {
+          "lat": 48.817512,
+          "lng": 9.209311
+        }
+      },
+      {
+        "label": "Deyhleweg, 70186 Stuttgart, Almanya",
+        "value": "Deyhleweg",
+        "type": "address",
+        "position": {
+          "lat": 48.772738,
+          "lng": 9.20198
+        }
+      }
+    ]
+  },
+  "Düsseldorf": {
+    "Düsseldorf": [
+      {
+        "label": "Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Düsseldorf",
+        "type": "place",
+        "position": {
+          "lat": 51.22615,
+          "lng": 6.773766
+        }
+      },
+      {
+        "label": "Derendorf, Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Derendorf",
+        "type": "locality",
+        "position": {
+          "lat": 51.244989,
+          "lng": 6.792853
+        }
+      },
+      {
+        "label": "Demagstraße, 40597 Düsseldorf, Almanya",
+        "value": "Demagstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.170056,
+          "lng": 6.880556
+        }
+      },
+      {
+        "label": "Dellestraße, 40627 Düsseldorf, Almanya",
+        "value": "Dellestraße",
+        "type": "address",
+        "position": {
+          "lat": 51.202012,
+          "lng": 6.8971
+        }
+      },
+      {
+        "label": "Deutzer Straße, 40229 Düsseldorf, Almanya",
+        "value": "Deutzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.193589,
+          "lng": 6.856197
+        }
+      },
+      {
+        "label": "Dernbuschweg, 40625 Düsseldorf, Almanya",
+        "value": "Dernbuschweg",
+        "type": "address",
+        "position": {
+          "lat": 51.244563,
+          "lng": 6.865022
+        }
+      },
+      {
+        "label": "Güsseldorfer Straße, 91174 Spalt, Almanya",
+        "value": "Güsseldorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 49.182262,
+          "lng": 10.931761
+        }
+      },
+      {
+        "label": "Delrath, Dormagen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Delrath",
+        "type": "locality",
+        "position": {
+          "lat": 51.128417,
+          "lng": 6.783371
+        }
+      }
+    ],
+    "Derendorf": [
+      {
+        "label": "Derendorf, Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Derendorf",
+        "type": "locality",
+        "position": {
+          "lat": 51.244989,
+          "lng": 6.792853
+        }
+      },
+      {
+        "label": "Derendorfer Allee, 40476 Düsseldorf, Almanya",
+        "value": "Derendorfer Allee",
+        "type": "address",
+        "position": {
+          "lat": 51.252776,
+          "lng": 6.783096
+        }
+      },
+      {
+        "label": "Derfflingerstraße, 40470 Düsseldorf, Almanya",
+        "value": "Derfflingerstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.257555,
+          "lng": 6.816029
+        }
+      },
+      {
+        "label": "Deg-Platz, 40472 Düsseldorf, Almanya",
+        "value": "Deg-Platz",
+        "type": "address",
+        "position": {
+          "lat": 51.271614,
+          "lng": 6.811542
+        }
+      },
+      {
+        "label": "Derendorfer Straße, 40479 Düsseldorf, Almanya",
+        "value": "Derendorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.235223,
+          "lng": 6.78991
+        }
+      },
+      {
+        "label": "Detmolder Weg, 40468 Düsseldorf, Almanya",
+        "value": "Detmolder Weg",
+        "type": "address",
+        "position": {
+          "lat": 51.266259,
+          "lng": 6.78558
+        }
+      }
+    ],
+    "Güsseldorf": [
+      {
+        "label": "Gösseldorf, 91522 Ansbach, Almanya",
+        "value": "Gösseldorf",
+        "type": "address",
+        "position": {
+          "lat": 49.252769,
+          "lng": 10.629629
+        }
+      },
+      {
+        "label": "Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Düsseldorf",
+        "type": "place",
+        "position": {
+          "lat": 51.22615,
+          "lng": 6.773766
+        }
+      },
+      {
+        "label": "Güsseldorfer Straße, 91174 Spalt, Almanya",
+        "value": "Güsseldorfer Straße",
+        "type": "address",
+        "position": {
+          "lat": 49.182262,
+          "lng": 10.931761
+        }
+      },
+      {
+        "label": "Derendorf, Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Derendorf",
+        "type": "locality",
+        "position": {
+          "lat": 51.244989,
+          "lng": 6.792853
+        }
+      },
+      {
+        "label": "Güsseldorf, Spalt, Bavyera, Almanya",
+        "value": "Güsseldorf",
+        "type": "locality",
+        "position": {
+          "lat": 49.192582,
+          "lng": 10.944278
+        }
+      },
+      {
+        "label": "Gösseldorf, Ansbach, Bavyera, Almanya",
+        "value": "Gösseldorf",
+        "type": "locality",
+        "position": {
+          "lat": 49.252325,
+          "lng": 10.63022
+        }
+      },
+      {
+        "label": "Gösseldorf, 91344 Waischenfeld, Almanya",
+        "value": "Gösseldorf",
+        "type": "address",
+        "position": {
+          "lat": 49.825388,
+          "lng": 11.297181
+        }
+      },
+      {
+        "label": "Rüsseldorf, 26188 Edewecht, Almanya",
+        "value": "Rüsseldorf",
+        "type": "address",
+        "position": {
+          "lat": 53.105866,
+          "lng": 8.049447
+        }
+      },
+      {
+        "label": "Gösseldorf, Waischenfeld, Bavyera, Almanya",
+        "value": "Gösseldorf",
+        "type": "locality",
+        "position": {
+          "lat": 49.823643,
+          "lng": 11.297836
+        }
+      },
+      {
+        "label": "Delrath, Dormagen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Delrath",
+        "type": "locality",
+        "position": {
+          "lat": 51.128417,
+          "lng": 6.783371
+        }
+      }
+    ],
+    "Delrath": [
+      {
+        "label": "Delrath, Dormagen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Delrath",
+        "type": "locality",
+        "position": {
+          "lat": 51.128417,
+          "lng": 6.783371
+        }
+      },
+      {
+        "label": "Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Düsseldorf",
+        "type": "place",
+        "position": {
+          "lat": 51.22615,
+          "lng": 6.773766
+        }
+      },
+      {
+        "label": "Derendorf, Düsseldorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Derendorf",
+        "type": "locality",
+        "position": {
+          "lat": 51.244989,
+          "lng": 6.792853
+        }
+      },
+      {
+        "label": "Deichstraße, 41541 Dormagen, Almanya",
+        "value": "Deichstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.126014,
+          "lng": 6.846987
+        }
+      },
+      {
+        "label": "Deichstraße, 41468 Neuss, Almanya",
+        "value": "Deichstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.168261,
+          "lng": 6.791965
+        }
+      }
+    ]
+  },
+  "Leipzig": {
+    "Leipzig": [
+      {
+        "label": "Gohlis, Leipzig, Saksonya, Almanya",
+        "value": "Gohlis",
+        "type": "locality",
+        "position": {
+          "lat": 51.360193,
+          "lng": 12.361997
+        }
+      },
+      {
+        "label": "Dessauer Straße, 04129 Leipzig, Almanya",
+        "value": "Dessauer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.35933,
+          "lng": 12.390179
+        }
+      },
+      {
+        "label": "Delitzscher Landstraße, 04158 Leipzig, Almanya",
+        "value": "Delitzscher Landstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.397873,
+          "lng": 12.369944
+        }
+      },
+      {
+        "label": "Defoestraße, 04159 Leipzig, Almanya",
+        "value": "Defoestraße",
+        "type": "address",
+        "position": {
+          "lat": 51.376171,
+          "lng": 12.342291
+        }
+      },
+      {
+        "label": "Platz Des 20. Juli 1944, 04157 Leipzig, Almanya",
+        "value": "Platz Des 20. Juli 1944",
+        "type": "address",
+        "position": {
+          "lat": 51.369684,
+          "lng": 12.361065
+        }
+      },
+      {
+        "label": "Leipzig, Saksonya, Almanya",
+        "value": "Leipzig",
+        "type": "place",
+        "position": {
+          "lat": 51.34083,
+          "lng": 12.375101
+        }
+      }
+    ],
+    "Gohlis": [
+      {
+        "label": "Gohlis, Leipzig, Saksonya, Almanya",
+        "value": "Gohlis",
+        "type": "locality",
+        "position": {
+          "lat": 51.360193,
+          "lng": 12.361997
+        }
+      },
+      {
+        "label": "Leipzig, Saksonya, Almanya",
+        "value": "Leipzig",
+        "type": "place",
+        "position": {
+          "lat": 51.34083,
+          "lng": 12.375101
+        }
+      },
+      {
+        "label": "Dessauer Straße, 04129 Leipzig, Almanya",
+        "value": "Dessauer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.35933,
+          "lng": 12.390179
+        }
+      },
+      {
+        "label": "Delitzscher Landstraße, 04158 Leipzig, Almanya",
+        "value": "Delitzscher Landstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.397873,
+          "lng": 12.369944
+        }
+      },
+      {
+        "label": "Defoestraße, 04159 Leipzig, Almanya",
+        "value": "Defoestraße",
+        "type": "address",
+        "position": {
+          "lat": 51.376171,
+          "lng": 12.342291
+        }
+      },
+      {
+        "label": "Platz Des 20. Juli 1944, 04157 Leipzig, Almanya",
+        "value": "Platz Des 20. Juli 1944",
+        "type": "address",
+        "position": {
+          "lat": 51.369684,
+          "lng": 12.361065
+        }
+      }
+    ],
+    "Dewitz": [
+      {
+        "label": "Dewitz, Taucha, Saksonya, Almanya",
+        "value": "Dewitz",
+        "type": "locality",
+        "position": {
+          "lat": 51.384451,
+          "lng": 12.525119
+        }
+      },
+      {
+        "label": "An Den Höfen, 04425 Taucha, Almanya",
+        "value": "An Den Höfen",
+        "type": "address",
+        "position": {
+          "lat": 51.383105,
+          "lng": 12.524961
+        }
+      },
+      {
+        "label": "Dewitzer Straße, 04838 Jesewitz, Almanya",
+        "value": "Dewitzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.414953,
+          "lng": 12.560427
+        }
+      },
+      {
+        "label": "An Den Werkstätten, 04451 Borsdorf, Almanya",
+        "value": "An Den Werkstätten",
+        "type": "address",
+        "position": {
+          "lat": 51.348364,
+          "lng": 12.513102
+        }
+      }
+    ],
+    "Dechwitz": [
+      {
+        "label": "Dechwitz, Großpösna, Saksonya, Almanya",
+        "value": "Dechwitz",
+        "type": "locality",
+        "position": {
+          "lat": 51.238566,
+          "lng": 12.437794
+        }
+      },
+      {
+        "label": "Leipzig, Saksonya, Almanya",
+        "value": "Leipzig",
+        "type": "place",
+        "position": {
+          "lat": 51.34083,
+          "lng": 12.375101
+        }
+      },
+      {
+        "label": "Defreggerweg, 04328 Leipzig, Almanya",
+        "value": "Defreggerweg",
+        "type": "address",
+        "position": {
+          "lat": 51.347061,
+          "lng": 12.461645
+        }
+      },
+      {
+        "label": "Debyestraße, 04329 Leipzig, Almanya",
+        "value": "Debyestraße",
+        "type": "address",
+        "position": {
+          "lat": 51.366211,
+          "lng": 12.467968
+        }
+      },
+      {
+        "label": "Deutsche Einheit, 04288 Leipzig, Almanya",
+        "value": "Deutsche Einheit",
+        "type": "address",
+        "position": {
+          "lat": 51.285506,
+          "lng": 12.456336
+        }
+      },
+      {
+        "label": "Dechwitzer Straße, 04463 Großpösna, Almanya",
+        "value": "Dechwitzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.25495,
+          "lng": 12.4611
+        }
+      },
+      {
+        "label": "Dewitz, Taucha, Saksonya, Almanya",
+        "value": "Dewitz",
+        "type": "locality",
+        "position": {
+          "lat": 51.384451,
+          "lng": 12.525119
+        }
+      },
+      {
+        "label": "Dewitzer Straße, 04838 Jesewitz, Almanya",
+        "value": "Dewitzer Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.414953,
+          "lng": 12.560427
+        }
+      }
+    ]
+  },
+  "Dortmund": {
+    "Dortmund": [
+      {
+        "label": "Dortmund, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dortmund",
+        "type": "place",
+        "position": {
+          "lat": 51.513924,
+          "lng": 7.465331
+        }
+      },
+      {
+        "label": "Derne, Dortmund, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Derne",
+        "type": "locality",
+        "position": {
+          "lat": 51.568896,
+          "lng": 7.521811
+        }
+      },
+      {
+        "label": "Deusen, Dortmund, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Deusen",
+        "type": "locality",
+        "position": {
+          "lat": 51.542836,
+          "lng": 7.428568
+        }
+      },
+      {
+        "label": "Denkmalstraße, 44319 Dortmund, Almanya",
+        "value": "Denkmalstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.56072,
+          "lng": 7.59895
+        }
+      },
+      {
+        "label": "Deutzer Weg, 44287 Dortmund, Almanya",
+        "value": "Deutzer Weg",
+        "type": "address",
+        "position": {
+          "lat": 51.485358,
+          "lng": 7.550988
+        }
+      },
+      {
+        "label": "Deintelleweg, 44309 Dortmund, Almanya",
+        "value": "Deintelleweg",
+        "type": "address",
+        "position": {
+          "lat": 51.519341,
+          "lng": 7.555924
+        }
+      },
+      {
+        "label": "Derner Bahnstraße, 44329 Dortmund, Almanya",
+        "value": "Derner Bahnstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.564507,
+          "lng": 7.528134
+        }
+      },
+      {
+        "label": "Dessauerstraße, 44263 Dortmund, Almanya",
+        "value": "Dessauerstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.493403,
+          "lng": 7.493608
+        }
+      },
+      {
+        "label": "Deininghausen, Castrop-Rauxel, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Deininghausen",
+        "type": "locality",
+        "position": {
+          "lat": 51.56754,
+          "lng": 7.339719
+        }
+      }
+    ],
+    "Derne": [
+      {
+        "label": "Derne, Dortmund, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Derne",
+        "type": "locality",
+        "position": {
+          "lat": 51.568896,
+          "lng": 7.521811
+        }
+      },
+      {
+        "label": "Derner Kippshof, 44329 Dortmund, Almanya",
+        "value": "Derner Kippshof",
+        "type": "address",
+        "position": {
+          "lat": 51.572752,
+          "lng": 7.517214
+        }
+      },
+      {
+        "label": "Deintelleweg, 44309 Dortmund, Almanya",
+        "value": "Deintelleweg",
+        "type": "address",
+        "position": {
+          "lat": 51.519341,
+          "lng": 7.555924
+        }
+      },
+      {
+        "label": "Detmolder Straße, 44143 Dortmund, Almanya",
+        "value": "Detmolder Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.516097,
+          "lng": 7.499435
+        }
+      },
+      {
+        "label": "Deutsche Straße, 44339 Dortmund, Almanya",
+        "value": "Deutsche Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.550648,
+          "lng": 7.469296
+        }
+      },
+      {
+        "label": "Derner Straße, 44532 Lünen, Almanya",
+        "value": "Derner Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.582459,
+          "lng": 7.532255
+        }
+      }
+    ],
+    "Deusen": [
+      {
+        "label": "Deusen, Dortmund, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Deusen",
+        "type": "locality",
+        "position": {
+          "lat": 51.542836,
+          "lng": 7.428568
+        }
+      },
+      {
+        "label": "Deusener Straße, 44369 Dortmund, Almanya",
+        "value": "Deusener Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.544097,
+          "lng": 7.428502
+        }
+      },
+      {
+        "label": "Detmarstraße, 44137 Dortmund, Almanya",
+        "value": "Detmarstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.510186,
+          "lng": 7.452009
+        }
+      },
+      {
+        "label": "Deutsche Straße, 44339 Dortmund, Almanya",
+        "value": "Deutsche Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.550648,
+          "lng": 7.469296
+        }
+      },
+      {
+        "label": "Dechenstraße, 44147 Dortmund, Almanya",
+        "value": "Dechenstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.518538,
+          "lng": 7.441551
+        }
+      },
+      {
+        "label": "Denickestraße, 44359 Dortmund, Almanya",
+        "value": "Denickestraße",
+        "type": "address",
+        "position": {
+          "lat": 51.55954,
+          "lng": 7.394355
+        }
+      }
+    ],
+    "Deininghausen": [
+      {
+        "label": "Deininghausen, Castrop-Rauxel, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Deininghausen",
+        "type": "locality",
+        "position": {
+          "lat": 51.56754,
+          "lng": 7.339719
+        }
+      },
+      {
+        "label": "Dellwiger Straße, 44388 Dortmund, Almanya",
+        "value": "Dellwiger Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.510965,
+          "lng": 7.347488
+        }
+      },
+      {
+        "label": "Deininghauser Straße, 44357 Dortmund, Almanya",
+        "value": "Deininghauser Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.554859,
+          "lng": 7.365535
+        }
+      },
+      {
+        "label": "Delftstraße, 44577 Castrop-Rauxel, Almanya",
+        "value": "Delftstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.533179,
+          "lng": 7.346972
+        }
+      },
+      {
+        "label": "Detmolder Straße, 44575 Castrop-Rauxel, Almanya",
+        "value": "Detmolder Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.556728,
+          "lng": 7.31465
+        }
+      },
+      {
+        "label": "Denrodtstraße, 44581 Castrop-Rauxel, Almanya",
+        "value": "Denrodtstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.602483,
+          "lng": 7.31161
+        }
+      }
+    ]
+  },
+  "Essen": {
+    "Essen": [
+      {
+        "label": "Essen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Essen",
+        "type": "place",
+        "position": {
+          "lat": 51.4576,
+          "lng": 7.011914
+        }
+      },
+      {
+        "label": "Deile, 45257 Essen, Almanya",
+        "value": "Deile",
+        "type": "address",
+        "position": {
+          "lat": 51.388833,
+          "lng": 7.106363
+        }
+      },
+      {
+        "label": "Dellmannsweg, 45277 Essen, Almanya",
+        "value": "Dellmannsweg",
+        "type": "address",
+        "position": {
+          "lat": 51.41629,
+          "lng": 7.090938
+        }
+      },
+      {
+        "label": "Deipenbecke, 45289 Essen, Almanya",
+        "value": "Deipenbecke",
+        "type": "address",
+        "position": {
+          "lat": 51.407294,
+          "lng": 7.107713
+        }
+      },
+      {
+        "label": "Elsen, 58849 Herscheid, Almanya",
+        "value": "Elsen",
+        "type": "address",
+        "position": {
+          "lat": 51.191624,
+          "lng": 7.775378
+        }
+      },
+      {
+        "label": "Denkmalstraße, 45529 Hattingen, Almanya",
+        "value": "Denkmalstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.411558,
+          "lng": 7.174787
+        }
+      }
+    ],
+    "Dellwig": [
+      {
+        "label": "Dellwig, Essen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dellwig",
+        "type": "locality",
+        "position": {
+          "lat": 51.486085,
+          "lng": 6.932654
+        }
+      },
+      {
+        "label": "Dellweg, 63110 Rodgau, Almanya",
+        "value": "Dellweg",
+        "type": "address",
+        "position": {
+          "lat": 50.008423,
+          "lng": 8.886108
+        }
+      },
+      {
+        "label": "Dellweg, 35066 Frankenberg, Almanya",
+        "value": "Dellweg",
+        "type": "address",
+        "position": {
+          "lat": 51.025191,
+          "lng": 8.85439
+        }
+      },
+      {
+        "label": "Dellwiger Straße, 45357 Essen, Almanya",
+        "value": "Dellwiger Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.487096,
+          "lng": 6.914474
+        }
+      },
+      {
+        "label": "Dellwig, Fröndenberg, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dellwig",
+        "type": "locality",
+        "position": {
+          "lat": 51.478889,
+          "lng": 7.691419
+        }
+      },
+      {
+        "label": "Dellwig, 45549 Sprockhövel, Almanya",
+        "value": "Dellwig",
+        "type": "address",
+        "position": {
+          "lat": 51.339244,
+          "lng": 7.294447
+        }
+      },
+      {
+        "label": "De-Wolff-Straße, 45326 Essen, Almanya",
+        "value": "De-Wolff-Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.480699,
+          "lng": 7.000812
+        }
+      }
+    ],
+    "Delkenheim": [
+      {
+        "label": "Delkenheim, Wiesbaden, Hessen, Almanya",
+        "value": "Delkenheim",
+        "type": "locality",
+        "position": {
+          "lat": 50.047312,
+          "lng": 8.361984
+        }
+      },
+      {
+        "label": "Dekan-Lindenbein-Straße, 65205 Wiesbaden, Almanya",
+        "value": "Dekan-Lindenbein-Straße",
+        "type": "address",
+        "position": {
+          "lat": 50.046607,
+          "lng": 8.361496
+        }
+      },
+      {
+        "label": "Essen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Essen",
+        "type": "place",
+        "position": {
+          "lat": 51.4576,
+          "lng": 7.011914
+        }
+      },
+      {
+        "label": "Essen, Kreis Cloppenburg, Aşağı Saksonya, Almanya",
+        "value": "Essen",
+        "type": "place",
+        "position": {
+          "lat": 52.717358,
+          "lng": 7.939512
+        }
+      },
+      {
+        "label": "Delkenheimer Weg, 65239 Hochheim am Main, Almanya",
+        "value": "Delkenheimer Weg",
+        "type": "address",
+        "position": {
+          "lat": 50.042131,
+          "lng": 8.383595
+        }
+      },
+      {
+        "label": "B 40, 65439 Flörsheim am Main, Almanya",
+        "value": "B 40",
+        "type": "address",
+        "position": {
+          "lat": 50.033139,
+          "lng": 8.413877
+        }
+      }
+    ],
+    "Detmold": [
+      {
+        "label": "Detmold, Kreis Lippe, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Detmold",
+        "type": "place",
+        "position": {
+          "lat": 51.933976,
+          "lng": 8.878601
+        }
+      },
+      {
+        "label": "Degenhardstraße, 32760 Detmold, Almanya",
+        "value": "Degenhardstraße",
+        "type": "address",
+        "position": {
+          "lat": 51.929211,
+          "lng": 8.904465
+        }
+      },
+      {
+        "label": "Dehlentruper Weg, 32758 Detmold, Almanya",
+        "value": "Dehlentruper Weg",
+        "type": "address",
+        "position": {
+          "lat": 51.958235,
+          "lng": 8.881084
+        }
+      },
+      {
+        "label": "Dehlenkamp, 32756 Detmold, Almanya",
+        "value": "Dehlenkamp",
+        "type": "address",
+        "position": {
+          "lat": 51.922294,
+          "lng": 8.859278
+        }
+      },
+      {
+        "label": "Dehlentrup, Detmold, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dehlentrup",
+        "type": "locality",
+        "position": {
+          "lat": 51.968261,
+          "lng": 8.895622
+        }
+      },
+      {
+        "label": "Getmold, Preußisch Oldendorf, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Getmold",
+        "type": "locality",
+        "position": {
+          "lat": 52.335812,
+          "lng": 8.488689
+        }
+      },
+      {
+        "label": "Detmolder Straße, 32825 Blomberg, Almanya",
+        "value": "Detmolder Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.948598,
+          "lng": 9.045693
+        }
+      },
+      {
+        "label": "Detmolder Straße, 32805 Horn-Bad Meinberg, Almanya",
+        "value": "Detmolder Straße",
+        "type": "address",
+        "position": {
+          "lat": 51.895815,
+          "lng": 8.953041
+        }
+      }
+    ],
+    "Damm": [
+      {
+        "label": "Damm, Lohra, Hessen, Almanya",
+        "value": "Damm",
+        "type": "locality",
+        "position": {
+          "lat": 50.726579,
+          "lng": 8.645813
+        }
+      },
+      {
+        "label": "Damm (Hessen), 38835 Osterwieck, Almanya",
+        "value": "Damm (Hessen)",
+        "type": "address",
+        "position": {
+          "lat": 52.018141,
+          "lng": 10.776679
+        }
+      },
+      {
+        "label": "Damm, Aschaffenburg, Bavyera, Almanya",
+        "value": "Damm",
+        "type": "locality",
+        "position": {
+          "lat": 49.983897,
+          "lng": 9.139336
+        }
+      },
+      {
+        "label": "Dessauerstraße, 63808 Haibach, Almanya",
+        "value": "Dessauerstraße",
+        "type": "address",
+        "position": {
+          "lat": 49.966763,
+          "lng": 9.199633
+        }
+      },
+      {
+        "label": "Denkmalstraße, 63739 Aschaffenburg, Almanya",
+        "value": "Denkmalstraße",
+        "type": "address",
+        "position": {
+          "lat": 49.984483,
+          "lng": 9.164623
+        }
+      },
+      {
+        "label": "Dessauerstraße, 63743 Aschaffenburg, Almanya",
+        "value": "Dessauerstraße",
+        "type": "address",
+        "position": {
+          "lat": 49.965167,
+          "lng": 9.153606
+        }
+      },
+      {
+        "label": "Denkmalstraße, 63867 Johannesberg, Almanya",
+        "value": "Denkmalstraße",
+        "type": "address",
+        "position": {
+          "lat": 50.026124,
+          "lng": 9.135753
+        }
+      }
+    ],
+    "Dellbrück": [
+      {
+        "label": "Dellbrücke, 35066 Frankenberg, Almanya",
+        "value": "Dellbrücke",
+        "type": "address",
+        "position": {
+          "lat": 51.06059,
+          "lng": 8.800273
+        }
+      },
+      {
+        "label": "Dellbrück, Köln, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dellbrück",
+        "type": "locality",
+        "position": {
+          "lat": 50.975325,
+          "lng": 7.07393
+        }
+      },
+      {
+        "label": "Dellbrücker Mauspfad, 51069 Köln, Almanya",
+        "value": "Dellbrücker Mauspfad",
+        "type": "address",
+        "position": {
+          "lat": 50.970221,
+          "lng": 7.066233
+        }
+      },
+      {
+        "label": "Delbrück, Kreis Paderborn, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Delbrück",
+        "type": "place",
+        "position": {
+          "lat": 51.765045,
+          "lng": 8.562094
+        }
+      },
+      {
+        "label": "Dellbrücker Straße, 51469 Bergisch Gladbach, Almanya",
+        "value": "Dellbrücker Straße",
+        "type": "address",
+        "position": {
+          "lat": 50.993917,
+          "lng": 7.093536
+        }
+      },
+      {
+        "label": "Deisterweg, 51109 Köln, Almanya",
+        "value": "Deisterweg",
+        "type": "address",
+        "position": {
+          "lat": 50.941352,
+          "lng": 7.081167
+        }
+      },
+      {
+        "label": "Delbrücker Weg, 33106 Paderborn, Almanya",
+        "value": "Delbrücker Weg",
+        "type": "address",
+        "position": {
+          "lat": 51.687341,
+          "lng": 8.685758
+        }
+      }
+    ],
+    "Dettingen am Main": [
+      {
+        "label": "Dettingen am Main, Karlstein am Main, Bavyera, Almanya",
+        "value": "Dettingen am Main",
+        "type": "locality",
+        "position": {
+          "lat": 50.041725,
+          "lng": 9.034718
+        }
+      },
+      {
+        "label": "In Den Baumstücken, 63791 Karlstein am Main, Almanya",
+        "value": "In Den Baumstücken",
+        "type": "address",
+        "position": {
+          "lat": 50.035985,
+          "lng": 9.035403
+        }
+      },
+      {
+        "label": "An Den Mainwiesen, 63533 Mainhausen, Almanya",
+        "value": "An Den Mainwiesen",
+        "type": "address",
+        "position": {
+          "lat": 50.037488,
+          "lng": 9.025238
+        }
+      },
+      {
+        "label": "In Den Mainauen, 63512 Hainburg, Almanya",
+        "value": "In Den Mainauen",
+        "type": "address",
+        "position": {
+          "lat": 50.066435,
+          "lng": 8.983503
+        }
+      },
+      {
+        "label": "Am Rain, 78476 Allensbach, Almanya",
+        "value": "Am Rain",
+        "type": "address",
+        "position": {
+          "lat": 47.719049,
+          "lng": 9.069254
+        }
+      },
+      {
+        "label": "Denkmalstraße, 63867 Johannesberg, Almanya",
+        "value": "Denkmalstraße",
+        "type": "address",
+        "position": {
+          "lat": 50.026124,
+          "lng": 9.135753
+        }
+      }
+    ],
+    "Dettelbach": [
+      {
+        "label": "Essen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Essen",
+        "type": "place",
+        "position": {
+          "lat": 51.4576,
+          "lng": 7.011914
+        }
+      },
+      {
+        "label": "Dettelbach, Kreis Kitzingen, Bavyera, Almanya",
+        "value": "Dettelbach",
+        "type": "place",
+        "position": {
+          "lat": 49.802036,
+          "lng": 10.160448
+        }
+      },
+      {
+        "label": "Essen, Kreis Cloppenburg, Aşağı Saksonya, Almanya",
+        "value": "Essen",
+        "type": "place",
+        "position": {
+          "lat": 52.717358,
+          "lng": 7.939512
+        }
+      },
+      {
+        "label": "Dellwig, Essen, Kuzey Ren-Vestfalya, Almanya",
+        "value": "Dellwig",
+        "type": "locality",
+        "position": {
+          "lat": 51.486085,
+          "lng": 6.932654
+        }
+      },
+      {
+        "label": "Mettelbach, 71540 Murrhardt, Almanya",
+        "value": "Mettelbach",
+        "type": "address",
+        "position": {
+          "lat": 48.953616,
+          "lng": 9.641663
+        }
+      },
+      {
+        "label": "Deutelbach, Aura im Sinngrund, Bavyera, Almanya",
+        "value": "Deutelbach",
+        "type": "locality",
+        "position": {
+          "lat": 50.178631,
+          "lng": 9.515228
+        }
+      },
+      {
+        "label": "Im Kettelbach, 58135 Hagen, Almanya",
+        "value": "Im Kettelbach",
+        "type": "address",
+        "position": {
+          "lat": 51.32497,
+          "lng": 7.431703
+        }
+      },
+      {
+        "label": "Am Zettelbach, 88339 Bad Waldsee, Almanya",
+        "value": "Am Zettelbach",
+        "type": "address",
+        "position": {
+          "lat": 47.896675,
+          "lng": 9.727788
+        }
+      },
+      {
+        "label": "Dettelbacher Straße, 97359 Schwarzach am Main, Almanya",
+        "value": "Dettelbacher Straße",
+        "type": "address",
+        "position": {
+          "lat": 49.805765,
+          "lng": 10.216029
+        }
+      }
+    ]
+  }
+}

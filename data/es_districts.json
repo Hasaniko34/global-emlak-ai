@@ -1,0 +1,659 @@
+{
+  "Madrid": [
+    {
+      "title": "Madrid",
+      "position": {
+        "lat": 40.421345,
+        "lng": -3.701219
+      }
+    },
+    {
+      "title": "Madrid",
+      "position": {
+        "lat": 37.465306,
+        "lng": -2.285926
+      }
+    },
+    {
+      "title": "Estremera",
+      "position": {
+        "lat": 40.18398,
+        "lng": -3.106438
+      }
+    },
+    {
+      "title": "Estoril",
+      "position": {
+        "lat": 40.323852,
+        "lng": -3.84428
+      }
+    },
+    {
+      "title": "España",
+      "position": {
+        "lat": 40.619805,
+        "lng": -4.03081
+      }
+    },
+    {
+      "title": "Escalona",
+      "position": {
+        "lat": 40.166782,
+        "lng": -4.402459
+      }
+    },
+    {
+      "title": "Esquivias",
+      "position": {
+        "lat": 40.10447,
+        "lng": -3.76608
+      }
+    },
+    {
+      "title": "Escalonilla",
+      "position": {
+        "lat": 39.925255,
+        "lng": -4.349029
+      }
+    },
+    {
+      "title": "Espirdo",
+      "position": {
+        "lat": 40.996964,
+        "lng": -4.073689
+      }
+    }
+  ],
+  "Barcelona": [
+    {
+      "title": "Barselona",
+      "position": {
+        "lat": 41.38723,
+        "lng": 2.16538
+      }
+    },
+    {
+      "title": "Gracia",
+      "position": {
+        "lat": 41.406568,
+        "lng": 2.158325
+      }
+    },
+    {
+      "title": "Esplugues de Llobregat",
+      "position": {
+        "lat": 41.37563,
+        "lng": 2.086649
+      }
+    },
+    {
+      "title": "Esparreguera",
+      "position": {
+        "lat": 41.53863,
+        "lng": 1.869172
+      }
+    },
+    {
+      "title": "Estadilla",
+      "position": {
+        "lat": 42.055977,
+        "lng": 0.243912
+      }
+    },
+    {
+      "title": "Esplús",
+      "position": {
+        "lat": 41.797924,
+        "lng": 0.275257
+      }
+    },
+    {
+      "title": "Sant Esteve d'en Bas",
+      "position": {
+        "lat": 42.119148,
+        "lng": 2.457186
+      }
+    },
+    {
+      "title": "Estoll",
+      "position": {
+        "lat": 42.386147,
+        "lng": 1.886285
+      }
+    },
+    {
+      "title": "Esponellà",
+      "position": {
+        "lat": 42.178802,
+        "lng": 2.793807
+      }
+    },
+    {
+      "title": "Espinelves",
+      "position": {
+        "lat": 41.867634,
+        "lng": 2.417727
+      }
+    }
+  ],
+  "Valencia": [
+    {
+      "title": "Valensiya",
+      "position": {
+        "lat": 39.47132,
+        "lng": -0.375984
+      }
+    },
+    {
+      "title": "Estivella",
+      "position": {
+        "lat": 39.712543,
+        "lng": -0.348558
+      }
+    },
+    {
+      "title": "Estubeny",
+      "position": {
+        "lat": 39.017593,
+        "lng": -0.623872
+      }
+    },
+    {
+      "title": "Palencia",
+      "position": {
+        "lat": 42.00925,
+        "lng": -4.532189
+      }
+    },
+    {
+      "title": "Estació de les Valls",
+      "position": {
+        "lat": 39.717945,
+        "lng": -0.24131
+      }
+    },
+    {
+      "title": "Escucha",
+      "position": {
+        "lat": 40.794113,
+        "lng": -0.810592
+      }
+    },
+    {
+      "title": "Esplegares",
+      "position": {
+        "lat": 40.85741,
+        "lng": -2.369898
+      }
+    },
+    {
+      "title": "Es Cubells",
+      "position": {
+        "lat": 38.881533,
+        "lng": 1.272026
+      }
+    },
+    {
+      "title": "Es Vedrà",
+      "position": {
+        "lat": 38.866939,
+        "lng": 1.199439
+      }
+    },
+    {
+      "title": "Eslida",
+      "position": {
+        "lat": 39.88142,
+        "lng": -0.307512
+      }
+    }
+  ],
+  "Seville": [
+    {
+      "title": "Sevilla",
+      "position": {
+        "lat": 37.389416,
+        "lng": -5.992558
+      }
+    },
+    {
+      "title": "Espartinas",
+      "position": {
+        "lat": 37.381367,
+        "lng": -6.123854
+      }
+    },
+    {
+      "title": "Estepa",
+      "position": {
+        "lat": 37.291523,
+        "lng": -4.878099
+      }
+    },
+    {
+      "title": "Este - Alcosa - Torreblanca",
+      "position": {
+        "lat": 37.402466,
+        "lng": -5.936579
+      }
+    },
+    {
+      "title": "Esquivel",
+      "position": {
+        "lat": 37.544617,
+        "lng": -5.943879
+      }
+    },
+    {
+      "title": "Estación de Benacazón",
+      "position": {
+        "lat": 37.370663,
+        "lng": -6.193155
+      }
+    },
+    {
+      "title": "Estación de Cazalla",
+      "position": {
+        "lat": 37.932612,
+        "lng": -5.704893
+      }
+    },
+    {
+      "title": "Estación de Ferrocarril",
+      "position": {
+        "lat": 37.577119,
+        "lng": -5.805207
+      }
+    },
+    {
+      "title": "Espiel",
+      "position": {
+        "lat": 38.188457,
+        "lng": -5.021507
+      }
+    },
+    {
+      "title": "Espera",
+      "position": {
+        "lat": 36.87066,
+        "lng": -5.80644
+      }
+    }
+  ],
+  "Zaragoza": [
+    {
+      "title": "Zaragoza",
+      "position": {
+        "lat": 41.65295,
+        "lng": -0.879501
+      }
+    },
+    {
+      "title": "Zaragoza",
+      "position": {
+        "lat": 43.553467,
+        "lng": -7.457969
+      }
+    },
+    {
+      "title": "Escatrón",
+      "position": {
+        "lat": 41.28531,
+        "lng": -0.325168
+      }
+    },
+    {
+      "title": "Estella",
+      "position": {
+        "lat": 42.671722,
+        "lng": -2.030696
+      }
+    },
+    {
+      "title": "Eskoriatza",
+      "position": {
+        "lat": 43.01636,
+        "lng": -2.526299
+      }
+    },
+    {
+      "title": "Esteríbar",
+      "position": {
+        "lat": 42.929996,
+        "lng": -1.503901
+      }
+    },
+    {
+      "title": "Estadilla",
+      "position": {
+        "lat": 42.055977,
+        "lng": 0.243912
+      }
+    },
+    {
+      "title": "Escarrilla",
+      "position": {
+        "lat": 42.735478,
+        "lng": -0.312359
+      }
+    },
+    {
+      "title": "Esplús",
+      "position": {
+        "lat": 41.797924,
+        "lng": 0.275257
+      }
+    },
+    {
+      "title": "Esparza de Salazar-Espartza Zaraitzu",
+      "position": {
+        "lat": 42.853832,
+        "lng": -1.09897
+      }
+    }
+  ],
+  "Málaga": [
+    {
+      "title": "Málaga",
+      "position": {
+        "lat": 36.720476,
+        "lng": -4.412525
+      }
+    },
+    {
+      "title": "Este",
+      "position": {
+        "lat": 36.74165,
+        "lng": -4.360692
+      }
+    },
+    {
+      "title": "Estepona",
+      "position": {
+        "lat": 36.426193,
+        "lng": -5.145435
+      }
+    },
+    {
+      "title": "Estación de Cártama",
+      "position": {
+        "lat": 36.735114,
+        "lng": -4.612758
+      }
+    },
+    {
+      "title": "Estación de Salinas",
+      "position": {
+        "lat": 37.124401,
+        "lng": -4.298283
+      }
+    },
+    {
+      "title": "Espino",
+      "position": {
+        "lat": 36.9387,
+        "lng": -4.113562
+      }
+    },
+    {
+      "title": "Estepa",
+      "position": {
+        "lat": 37.291523,
+        "lng": -4.878099
+      }
+    },
+    {
+      "title": "Espejo",
+      "position": {
+        "lat": 37.679802,
+        "lng": -4.554504
+      }
+    },
+    {
+      "title": "Escúzar",
+      "position": {
+        "lat": 37.06204,
+        "lng": -3.760696
+      }
+    },
+    {
+      "title": "Escóznar",
+      "position": {
+        "lat": 37.239116,
+        "lng": -3.846842
+      }
+    }
+  ],
+  "Murcia": [
+    {
+      "title": "Murcia",
+      "position": {
+        "lat": 37.986664,
+        "lng": -1.129442
+      }
+    },
+    {
+      "title": "Fortuna",
+      "position": {
+        "lat": 38.179222,
+        "lng": -1.123181
+      }
+    },
+    {
+      "title": "Esparragal",
+      "position": {
+        "lat": 38.033161,
+        "lng": -1.079524
+      }
+    },
+    {
+      "title": "El Estrecho de San Ginés",
+      "position": {
+        "lat": 37.629148,
+        "lng": -0.829284
+      }
+    },
+    {
+      "title": "Estación Férrea",
+      "position": {
+        "lat": 38.226281,
+        "lng": -1.327908
+      }
+    },
+    {
+      "title": "Estanco Serafín",
+      "position": {
+        "lat": 37.666019,
+        "lng": -1.645874
+      }
+    },
+    {
+      "title": "Escombreras",
+      "position": {
+        "lat": 37.577041,
+        "lng": -0.921843
+      }
+    },
+    {
+      "title": "Esparragueral",
+      "position": {
+        "lat": 37.707871,
+        "lng": -1.0283
+      }
+    },
+    {
+      "title": "Estación de Archena",
+      "position": {
+        "lat": 38.131027,
+        "lng": -1.236736
+      }
+    }
+  ],
+  "Palma": [
+    {
+      "title": "Palma de Mallorca",
+      "position": {
+        "lat": 39.570812,
+        "lng": 2.647822
+      }
+    },
+    {
+      "title": "es Secar de la Real",
+      "position": {
+        "lat": 39.607269,
+        "lng": 2.633577
+      }
+    },
+    {
+      "title": "Establiments",
+      "position": {
+        "lat": 39.636433,
+        "lng": 2.615761
+      }
+    },
+    {
+      "title": "es Pil.larí",
+      "position": {
+        "lat": 39.529225,
+        "lng": 2.755306
+      }
+    },
+    {
+      "title": "Establiments Vell",
+      "position": {
+        "lat": 39.615211,
+        "lng": 2.630155
+      }
+    },
+    {
+      "title": "es Pinaret",
+      "position": {
+        "lat": 39.586985,
+        "lng": 2.738175
+      }
+    },
+    {
+      "title": "es Pla de na Tesa",
+      "position": {
+        "lat": 39.598092,
+        "lng": 2.708181
+      }
+    },
+    {
+      "title": "es Pont d'Inca",
+      "position": {
+        "lat": 39.598408,
+        "lng": 2.693889
+      }
+    },
+    {
+      "title": "es Pont d´Inca Nou",
+      "position": {
+        "lat": 39.603906,
+        "lng": 2.699259
+      }
+    },
+    {
+      "title": "Es Caulls",
+      "position": {
+        "lat": 39.631011,
+        "lng": 2.725446
+      }
+    }
+  ],
+  "Bilbao": [
+    {
+      "title": "Bilbao",
+      "position": {
+        "lat": 43.260117,
+        "lng": -2.931466
+      }
+    },
+    {
+      "title": "San Esteban Derio",
+      "position": {
+        "lat": 43.296859,
+        "lng": -2.892081
+      }
+    },
+    {
+      "title": "Estepona",
+      "position": {
+        "lat": 36.426193,
+        "lng": -5.145435
+      }
+    }
+  ],
+  "Alicante": [
+    {
+      "title": "Alicante",
+      "position": {
+        "lat": 38.34558,
+        "lng": -0.4855
+      }
+    },
+    {
+      "title": "Estació Nord",
+      "position": {
+        "lat": 38.753333,
+        "lng": -0.446036
+      }
+    },
+    {
+      "title": "Estación de Monóvar",
+      "position": {
+        "lat": 38.441643,
+        "lng": -0.811688
+      }
+    },
+    {
+      "title": "La Estrada",
+      "position": {
+        "lat": 38.574736,
+        "lng": -0.081306
+      }
+    },
+    {
+      "title": "El Escorratel",
+      "position": {
+        "lat": 38.101551,
+        "lng": -0.92597
+      }
+    },
+    {
+      "title": "Estivella",
+      "position": {
+        "lat": 39.712543,
+        "lng": -0.348558
+      }
+    },
+    {
+      "title": "Es Cubells",
+      "position": {
+        "lat": 38.881533,
+        "lng": 1.272026
+      }
+    },
+    {
+      "title": "Es Vedrà",
+      "position": {
+        "lat": 38.866939,
+        "lng": 1.199439
+      }
+    },
+    {
+      "title": "Eslida",
+      "position": {
+        "lat": 39.88142,
+        "lng": -0.307512
+      }
+    },
+    {
+      "title": "Estubeny",
+      "position": {
+        "lat": 39.017593,
+        "lng": -0.623872
+      }
+    }
+  ]
+}

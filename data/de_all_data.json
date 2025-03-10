@@ -1,0 +1,36 @@
+{
+  "country": {
+    "title": "North Country, Redruth, England, United Kingdom",
+    "id": "here:cm:namedplace:20353216",
+    "resultType": "locality",
+    "localityType": "district",
+    "address": {
+      "label": "North Country, Redruth, England, United Kingdom",
+      "countryCode": "GBR",
+      "countryName": "United Kingdom",
+      "state": "England",
+      "countyCode": "CON",
+      "county": "Cornwall",
+      "city": "Redruth",
+      "district": "North Country",
+      "postalCode": "TR16 4"
+    },
+    "position": {
+      "lat": 50.25039,
+      "lng": -5.23321
+    },
+    "mapView": {
+      "west": -5.24136,
+      "south": 50.23952,
+      "east": -5.21403,
+      "north": 50.26345
+    },
+    "scoring": {
+      "queryScore": 0.78,
+      "fieldScore": {
+        "district": 0.88
+      }
+    }
+  },
+  "cities": {}
+}

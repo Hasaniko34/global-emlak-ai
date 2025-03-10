@@ -1,0 +1,39 @@
+{
+  "country": {
+    "title": "Country Way, Feltham, TW13 6, United Kingdom",
+    "id": "here:af:streetsection:L1ArXCEBsvSSfpzrLoBlRD",
+    "resultType": "street",
+    "address": {
+      "label": "Country Way, Feltham, TW13 6, United Kingdom",
+      "countryCode": "GBR",
+      "countryName": "United Kingdom",
+      "state": "England",
+      "countyCode": "MDX",
+      "county": "Middlesex",
+      "city": "Feltham",
+      "district": "Hanworth",
+      "street": "Country Way",
+      "postalCode": "TW13 6"
+    },
+    "position": {
+      "lat": 51.43241,
+      "lng": -0.39532
+    },
+    "mapView": {
+      "west": -0.40476,
+      "south": 51.42747,
+      "east": -0.38375,
+      "north": 51.43544
+    },
+    "scoring": {
+      "queryScore": 0.99,
+      "fieldScore": {
+        "country": 1,
+        "streets": [
+          0.9
+        ]
+      }
+    }
+  },
+  "cities": {}
+}

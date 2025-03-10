@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "building": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
-    "create-test-user": "ts-node scripts/create-test-user.ts"
+    "create-test-user": "ts-node scripts/create-test-user.ts",
+    "fetch-geo-data": "ts-node scripts/fetchGeoData.ts"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.8.0",
@@ -19,6 +21,7 @@
     "@heroicons/react": "^2.2.0",
     "@prisma/client": "^6.4.1",
     "@types/bcryptjs": "^2.4.6",
+    "@types/react-select": "^5.0.0",
     "axios": "^1.8.2",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",

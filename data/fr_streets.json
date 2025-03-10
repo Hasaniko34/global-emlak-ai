@@ -1,0 +1,94 @@
+{
+  "Paris": {
+    "Paris": [
+      { "label": "Avenue des Champs-Élysées", "value": "Avenue des Champs-Élysées", "type": "street" },
+      { "label": "Rue de Rivoli", "value": "Rue de Rivoli", "type": "street" },
+      { "label": "Boulevard Saint-Germain", "value": "Boulevard Saint-Germain", "type": "street" },
+      { "label": "Rue du Faubourg Saint-Honoré", "value": "Rue du Faubourg Saint-Honoré", "type": "street" },
+      { "label": "Avenue Montaigne", "value": "Avenue Montaigne", "type": "street" }
+    ],
+    "Montmartre": [
+      { "label": "Rue Lepic", "value": "Rue Lepic", "type": "street" },
+      { "label": "Rue des Abbesses", "value": "Rue des Abbesses", "type": "street" },
+      { "label": "Place du Tertre", "value": "Place du Tertre", "type": "street" },
+      { "label": "Rue Norvins", "value": "Rue Norvins", "type": "street" },
+      { "label": "Rue Gabrielle", "value": "Rue Gabrielle", "type": "street" }
+    ],
+    "Le Marais": [
+      { "label": "Rue des Rosiers", "value": "Rue des Rosiers", "type": "street" },
+      { "label": "Rue Vieille du Temple", "value": "Rue Vieille du Temple", "type": "street" },
+      { "label": "Rue des Francs Bourgeois", "value": "Rue des Francs Bourgeois", "type": "street" },
+      { "label": "Place des Vosges", "value": "Place des Vosges", "type": "street" },
+      { "label": "Rue Saint-Antoine", "value": "Rue Saint-Antoine", "type": "street" }
+    ]
+  },
+  "Lyon": {
+    "Lyon": [
+      { "label": "Rue de la République", "value": "Rue de la République", "type": "street" },
+      { "label": "Rue Victor Hugo", "value": "Rue Victor Hugo", "type": "street" },
+      { "label": "Place Bellecour", "value": "Place Bellecour", "type": "street" },
+      { "label": "Rue Mercière", "value": "Rue Mercière", "type": "street" },
+      { "label": "Rue Saint-Jean", "value": "Rue Saint-Jean", "type": "street" }
+    ],
+    "Vieux Lyon": [
+      { "label": "Rue Saint-Jean", "value": "Rue Saint-Jean", "type": "street" },
+      { "label": "Rue du Boeuf", "value": "Rue du Boeuf", "type": "street" },
+      { "label": "Place Saint-Jean", "value": "Place Saint-Jean", "type": "street" },
+      { "label": "Rue Juiverie", "value": "Rue Juiverie", "type": "street" },
+      { "label": "Montée du Gourguillon", "value": "Montée du Gourguillon", "type": "street" }
+    ],
+    "Croix-Rousse": [
+      { "label": "Grande Rue de la Croix-Rousse", "value": "Grande Rue de la Croix-Rousse", "type": "street" },
+      { "label": "Rue des Pierres Plantées", "value": "Rue des Pierres Plantées", "type": "street" },
+      { "label": "Place de la Croix-Rousse", "value": "Place de la Croix-Rousse", "type": "street" },
+      { "label": "Montée de la Grande Côte", "value": "Montée de la Grande Côte", "type": "street" },
+      { "label": "Boulevard de la Croix-Rousse", "value": "Boulevard de la Croix-Rousse", "type": "street" }
+    ]
+  },
+  "Marseille": {
+    "Marseille": [
+      { "label": "La Canebière", "value": "La Canebière", "type": "street" },
+      { "label": "Rue de la République", "value": "Rue de la République", "type": "street" },
+      { "label": "Quai des Belges", "value": "Quai des Belges", "type": "street" },
+      { "label": "Rue Saint-Ferréol", "value": "Rue Saint-Ferréol", "type": "street" },
+      { "label": "Cours Julien", "value": "Cours Julien", "type": "street" }
+    ],
+    "Le Panier": [
+      { "label": "Rue du Panier", "value": "Rue du Panier", "type": "street" },
+      { "label": "Montée des Accoules", "value": "Montée des Accoules", "type": "street" },
+      { "label": "Place des Moulins", "value": "Place des Moulins", "type": "street" },
+      { "label": "Rue des Pistoles", "value": "Rue des Pistoles", "type": "street" },
+      { "label": "Place de Lenche", "value": "Place de Lenche", "type": "street" }
+    ],
+    "Vieux-Port": [
+      { "label": "Quai du Port", "value": "Quai du Port", "type": "street" },
+      { "label": "Quai de Rive Neuve", "value": "Quai de Rive Neuve", "type": "street" },
+      { "label": "Cours d'Estienne d'Orves", "value": "Cours d'Estienne d'Orves", "type": "street" },
+      { "label": "Rue Fort Notre-Dame", "value": "Rue Fort Notre-Dame", "type": "street" },
+      { "label": "Rue Saint-Saëns", "value": "Rue Saint-Saëns", "type": "street" }
+    ]
+  },
+  "Nice": {
+    "Nice": [
+      { "label": "Promenade des Anglais", "value": "Promenade des Anglais", "type": "street" },
+      { "label": "Avenue Jean Médecin", "value": "Avenue Jean Médecin", "type": "street" },
+      { "label": "Rue de France", "value": "Rue de France", "type": "street" },
+      { "label": "Boulevard Victor Hugo", "value": "Boulevard Victor Hugo", "type": "street" },
+      { "label": "Rue Masséna", "value": "Rue Masséna", "type": "street" }
+    ],
+    "Vieux Nice": [
+      { "label": "Cours Saleya", "value": "Cours Saleya", "type": "street" },
+      { "label": "Rue de la Préfecture", "value": "Rue de la Préfecture", "type": "street" },
+      { "label": "Rue Droite", "value": "Rue Droite", "type": "street" },
+      { "label": "Rue Rossetti", "value": "Rue Rossetti", "type": "street" },
+      { "label": "Place Rossetti", "value": "Place Rossetti", "type": "street" }
+    ],
+    "Cimiez": [
+      { "label": "Avenue des Arènes de Cimiez", "value": "Avenue des Arènes de Cimiez", "type": "street" },
+      { "label": "Boulevard de Cimiez", "value": "Boulevard de Cimiez", "type": "street" },
+      { "label": "Avenue Cap de Croix", "value": "Avenue Cap de Croix", "type": "street" },
+      { "label": "Avenue Bieckert", "value": "Avenue Bieckert", "type": "street" },
+      { "label": "Avenue des Sycomores", "value": "Avenue des Sycomores", "type": "street" }
+    ]
+  }
+} 

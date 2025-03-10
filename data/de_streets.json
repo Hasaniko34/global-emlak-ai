@@ -1,0 +1,117 @@
+{
+  "Berlin": {
+    "Berlin": [
+      { "label": "Unter den Linden", "value": "Unter den Linden", "type": "street" },
+      { "label": "Kurfürstendamm", "value": "Kurfürstendamm", "type": "street" },
+      { "label": "Friedrichstraße", "value": "Friedrichstraße", "type": "street" },
+      { "label": "Alexanderplatz", "value": "Alexanderplatz", "type": "street" },
+      { "label": "Potsdamer Platz", "value": "Potsdamer Platz", "type": "street" }
+    ],
+    "Mitte": [
+      { "label": "Friedrichstraße", "value": "Friedrichstraße", "type": "street" },
+      { "label": "Unter den Linden", "value": "Unter den Linden", "type": "street" },
+      { "label": "Leipziger Straße", "value": "Leipziger Straße", "type": "street" },
+      { "label": "Oranienburger Straße", "value": "Oranienburger Straße", "type": "street" },
+      { "label": "Torstraße", "value": "Torstraße", "type": "street" }
+    ],
+    "Kreuzberg": [
+      { "label": "Oranienstraße", "value": "Oranienstraße", "type": "street" },
+      { "label": "Bergmannstraße", "value": "Bergmannstraße", "type": "street" },
+      { "label": "Mehringdamm", "value": "Mehringdamm", "type": "street" },
+      { "label": "Kottbusser Tor", "value": "Kottbusser Tor", "type": "street" },
+      { "label": "Schlesische Straße", "value": "Schlesische Straße", "type": "street" }
+    ]
+  },
+  "Hamburg": {
+    "Hamburg": [
+      { "label": "Reeperbahn", "value": "Reeperbahn", "type": "street" },
+      { "label": "Jungfernstieg", "value": "Jungfernstieg", "type": "street" },
+      { "label": "Mönckebergstraße", "value": "Mönckebergstraße", "type": "street" },
+      { "label": "Elbchaussee", "value": "Elbchaussee", "type": "street" },
+      { "label": "Große Freiheit", "value": "Große Freiheit", "type": "street" }
+    ],
+    "St. Pauli": [
+      { "label": "Reeperbahn", "value": "Reeperbahn", "type": "street" },
+      { "label": "Große Freiheit", "value": "Große Freiheit", "type": "street" },
+      { "label": "Hamburger Berg", "value": "Hamburger Berg", "type": "street" },
+      { "label": "Simon-von-Utrecht-Straße", "value": "Simon-von-Utrecht-Straße", "type": "street" },
+      { "label": "Talstraße", "value": "Talstraße", "type": "street" }
+    ],
+    "Altona": [
+      { "label": "Große Bergstraße", "value": "Große Bergstraße", "type": "street" },
+      { "label": "Ottenser Hauptstraße", "value": "Ottenser Hauptstraße", "type": "street" },
+      { "label": "Bahrenfelder Straße", "value": "Bahrenfelder Straße", "type": "street" },
+      { "label": "Max-Brauer-Allee", "value": "Max-Brauer-Allee", "type": "street" },
+      { "label": "Holstenstraße", "value": "Holstenstraße", "type": "street" }
+    ]
+  },
+  "Munich": {
+    "München": [
+      { "label": "Maximilianstraße", "value": "Maximilianstraße", "type": "street" },
+      { "label": "Leopoldstraße", "value": "Leopoldstraße", "type": "street" },
+      { "label": "Kaufingerstraße", "value": "Kaufingerstraße", "type": "street" },
+      { "label": "Ludwigstraße", "value": "Ludwigstraße", "type": "street" },
+      { "label": "Prinzregentenstraße", "value": "Prinzregentenstraße", "type": "street" }
+    ],
+    "Schwabing": [
+      { "label": "Leopoldstraße", "value": "Leopoldstraße", "type": "street" },
+      { "label": "Hohenzollernstraße", "value": "Hohenzollernstraße", "type": "street" },
+      { "label": "Schellingstraße", "value": "Schellingstraße", "type": "street" },
+      { "label": "Belgradstraße", "value": "Belgradstraße", "type": "street" },
+      { "label": "Occamstraße", "value": "Occamstraße", "type": "street" }
+    ],
+    "Altstadt": [
+      { "label": "Kaufingerstraße", "value": "Kaufingerstraße", "type": "street" },
+      { "label": "Marienplatz", "value": "Marienplatz", "type": "street" },
+      { "label": "Tal", "value": "Tal", "type": "street" },
+      { "label": "Sendlinger Straße", "value": "Sendlinger Straße", "type": "street" },
+      { "label": "Theatinerstraße", "value": "Theatinerstraße", "type": "street" }
+    ]
+  },
+  "Cologne": {
+    "Köln": [
+      { "label": "Hohe Straße", "value": "Hohe Straße", "type": "street" },
+      { "label": "Schildergasse", "value": "Schildergasse", "type": "street" },
+      { "label": "Ehrenstraße", "value": "Ehrenstraße", "type": "street" },
+      { "label": "Zülpicher Straße", "value": "Zülpicher Straße", "type": "street" },
+      { "label": "Aachener Straße", "value": "Aachener Straße", "type": "street" }
+    ],
+    "Altstadt": [
+      { "label": "Hohe Straße", "value": "Hohe Straße", "type": "street" },
+      { "label": "Schildergasse", "value": "Schildergasse", "type": "street" },
+      { "label": "Heumarkt", "value": "Heumarkt", "type": "street" },
+      { "label": "Alter Markt", "value": "Alter Markt", "type": "street" },
+      { "label": "Rheinuferpromenade", "value": "Rheinuferpromenade", "type": "street" }
+    ],
+    "Ehrenfeld": [
+      { "label": "Venloer Straße", "value": "Venloer Straße", "type": "street" },
+      { "label": "Ehrenfeldgürtel", "value": "Ehrenfeldgürtel", "type": "street" },
+      { "label": "Subbelrather Straße", "value": "Subbelrather Straße", "type": "street" },
+      { "label": "Bartholomäus-Schink-Straße", "value": "Bartholomäus-Schink-Straße", "type": "street" },
+      { "label": "Körnerstraße", "value": "Körnerstraße", "type": "street" }
+    ]
+  },
+  "Frankfurt": {
+    "Frankfurt": [
+      { "label": "Zeil", "value": "Zeil", "type": "street" },
+      { "label": "Kaiserstraße", "value": "Kaiserstraße", "type": "street" },
+      { "label": "Mainzer Landstraße", "value": "Mainzer Landstraße", "type": "street" },
+      { "label": "Berger Straße", "value": "Berger Straße", "type": "street" },
+      { "label": "Schweizer Straße", "value": "Schweizer Straße", "type": "street" }
+    ],
+    "Altstadt": [
+      { "label": "Römerberg", "value": "Römerberg", "type": "street" },
+      { "label": "Neue Kräme", "value": "Neue Kräme", "type": "street" },
+      { "label": "Braubachstraße", "value": "Braubachstraße", "type": "street" },
+      { "label": "Berliner Straße", "value": "Berliner Straße", "type": "street" },
+      { "label": "Fahrgasse", "value": "Fahrgasse", "type": "street" }
+    ],
+    "Sachsenhausen": [
+      { "label": "Schweizer Straße", "value": "Schweizer Straße", "type": "street" },
+      { "label": "Textorstraße", "value": "Textorstraße", "type": "street" },
+      { "label": "Dreieichstraße", "value": "Dreieichstraße", "type": "street" },
+      { "label": "Brückenstraße", "value": "Brückenstraße", "type": "street" },
+      { "label": "Affentorplatz", "value": "Affentorplatz", "type": "street" }
+    ]
+  }
+} 

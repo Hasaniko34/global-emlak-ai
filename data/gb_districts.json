@@ -1,0 +1,232 @@
+{
+  "London": [
+    {
+      "title": "Londra",
+      "position": {
+        "lat": 51.5073,
+        "lng": -0.127647
+      }
+    },
+    {
+      "title": "Büyük Londra",
+      "position": {
+        "lat": 51.511806,
+        "lng": -0.132429
+      }
+    },
+    {
+      "title": "Loddon",
+      "position": {
+        "lat": 52.534923,
+        "lng": 1.481583
+      }
+    },
+    {
+      "title": "Lyndon",
+      "position": {
+        "lat": 52.629385,
+        "lng": -0.657822
+      }
+    },
+    {
+      "title": "Longdon",
+      "position": {
+        "lat": 52.726756,
+        "lng": -1.882958
+      }
+    },
+    {
+      "title": "Lonton",
+      "position": {
+        "lat": 54.616303,
+        "lng": -2.070715
+      }
+    },
+    {
+      "title": "Longdon",
+      "position": {
+        "lat": 52.024968,
+        "lng": -2.238963
+      }
+    }
+  ],
+  "Manchester": [
+    {
+      "title": "Manchester",
+      "position": {
+        "lat": 53.479489,
+        "lng": -2.245115
+      }
+    },
+    {
+      "title": "Lanchester",
+      "position": {
+        "lat": 54.821605,
+        "lng": -1.741602
+      }
+    }
+  ],
+  "Birmingham": [
+    {
+      "title": "Birmingham",
+      "position": {
+        "lat": 52.479699,
+        "lng": -1.902691
+      }
+    },
+    {
+      "title": "Birlingham",
+      "position": {
+        "lat": 52.087158,
+        "lng": -2.10082
+      }
+    }
+  ],
+  "Leeds": [
+    {
+      "title": "Leeds",
+      "position": {
+        "lat": 53.797418,
+        "lng": -1.543794
+      }
+    },
+    {
+      "title": "Lees",
+      "position": {
+        "lat": 53.538012,
+        "lng": -2.072422
+      }
+    },
+    {
+      "title": "Lees",
+      "position": {
+        "lat": 52.931555,
+        "lng": -1.607829
+      }
+    }
+  ],
+  "Glasgow": [
+    {
+      "title": "Glasgow",
+      "position": {
+        "lat": 55.860982,
+        "lng": -4.248879
+      }
+    },
+    {
+      "title": "Glasgow",
+      "position": {
+        "lat": 55.860092,
+        "lng": -4.253246
+      }
+    }
+  ],
+  "Liverpool": [
+    {
+      "title": "Liverpool",
+      "position": {
+        "lat": 53.407154,
+        "lng": -2.991665
+      }
+    }
+  ],
+  "Bristol": [
+    {
+      "title": "Bristol",
+      "position": {
+        "lat": 51.453802,
+        "lng": -2.597298
+      }
+    },
+    {
+      "title": "Bristol",
+      "position": {
+        "lat": 51.45339,
+        "lng": -2.594567
+      }
+    },
+    {
+      "title": "Briston",
+      "position": {
+        "lat": 52.851838,
+        "lng": 1.059733
+      }
+    }
+  ],
+  "Sheffield": [
+    {
+      "title": "Sheffield",
+      "position": {
+        "lat": 53.380663,
+        "lng": -1.470228
+      }
+    },
+    {
+      "title": "Sheffield",
+      "position": {
+        "lat": 50.085979,
+        "lng": -5.555175
+      }
+    },
+    {
+      "title": "Shelfield",
+      "position": {
+        "lat": 52.615894,
+        "lng": -1.951344
+      }
+    },
+    {
+      "title": "Shedfield",
+      "position": {
+        "lat": 50.916222,
+        "lng": -1.201625
+      }
+    },
+    {
+      "title": "Shelfield",
+      "position": {
+        "lat": 52.26062,
+        "lng": -1.815562
+      }
+    },
+    {
+      "title": "Sheffield Green",
+      "position": {
+        "lat": 51.005552,
+        "lng": 0.00997
+      }
+    }
+  ],
+  "Edinburgh": [
+    {
+      "title": "Edinburgh",
+      "position": {
+        "lat": 55.953346,
+        "lng": -3.188375
+      }
+    },
+    {
+      "title": "Edinburgh",
+      "position": {
+        "lat": 55.95017,
+        "lng": -3.187548
+      }
+    }
+  ],
+  "Cardiff": [
+    {
+      "title": "Cardiff",
+      "position": {
+        "lat": 51.481655,
+        "lng": -3.179193
+      }
+    },
+    {
+      "title": "Cardiff",
+      "position": {
+        "lat": 51.4798,
+        "lng": -3.17726
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "country": {
+    "title": "Urbanización Marbella Country Club, 29660 Marbella (Málaga), España",
+    "id": "here:af:streetsection:ET2FjzBRto8ZzFn.5J2F0A",
+    "resultType": "street",
+    "address": {
+      "label": "Urbanización Marbella Country Club, 29660 Marbella (Málaga), España",
+      "countryCode": "ESP",
+      "countryName": "España",
+      "stateCode": "AN",
+      "state": "Andalucía",
+      "county": "Málaga",
+      "city": "Marbella",
+      "district": "Nueva Andalucía",
+      "street": "Urbanización Marbella Country Club",
+      "postalCode": "29660"
+    },
+    "position": {
+      "lat": 36.52028,
+      "lng": -4.96874
+    },
+    "mapView": {
+      "west": -4.97023,
+      "south": 36.51942,
+      "east": -4.96729,
+      "north": 36.52029
+    },
+    "scoring": {
+      "queryScore": 0.99,
+      "fieldScore": {
+        "country": 1,
+        "streets": [
+          0.66
+        ]
+      }
+    }
+  },
+  "cities": {}
+}

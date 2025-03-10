@@ -7,29 +7,26 @@ export async function GET(request: NextRequest) {
     const city = searchParams.get('city');
     const neighborhood = searchParams.get('neighborhood');
 
-    if (!country || !city || !neighborhood) {
-      return NextResponse.json({ error: 'Ülke, şehir ve mahalle parametreleri gerekli' }, { status: 400 });
-    }
+    console.log('🔍 Gelen parametreler:', { country, city, neighborhood });
 
-    const apiKey = process.env.GOOGLE_MAPS_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: 'API anahtarı bulunamadı' }, { status: 500 });
-    }
+    // Test verisi döndür
+    const testStreets = [
+      { value: '1', label: 'Moda Caddesi' },
+      { value: '2', label: 'Bahariye Caddesi' },
+      { value: '3', label: 'Bağdat Caddesi' },
+      { value: '4', label: 'Kalamış Caddesi' },
+      { value: '5', label: 'Rıhtım Caddesi' },
+      { value: '6', label: 'Söğütlüçeşme Caddesi' },
+      { value: '7', label: 'Mühürdar Caddesi' },
+      { value: '8', label: 'Recaizade Sokak' }
+    ];
 
-    const query = `${neighborhood} ${city} ${country} sokak`;
-    const response = await fetch(
-      `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${encodeURIComponent(query)}&types=route&components=country:${country}&key=${apiKey}&language=tr`,
-      { cache: 'no-store' }
-    );
-
-    if (!response.ok) {
-      throw new Error('Google Places API yanıt vermedi');
-    }
-
-    const data = await response.json();
-    return NextResponse.json(data);
+    return NextResponse.json({ predictions: testStreets });
   } catch (error) {
-    console.error('Sokak verileri alınırken hata:', error);
-    return NextResponse.json({ error: 'Sokak verileri alınamadı' }, { status: 500 });
+    console.error('❌ Hata:', error);
+    return NextResponse.json({ 
+      error: 'Sokak verileri alınamadı', 
+      details: error instanceof Error ? error.message : 'Bilinmeyen hata'
+    }, { status: 500 });
   }
 } 
