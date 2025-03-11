@@ -1,0 +1,175 @@
+{
+  "Abbasağa": [
+    "Abbasağa Sokak"
+  ],
+  "Akat": [
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Akar Sokak",
+    "Beşiktaş 1. Cadde",
+    "Akat Sokak",
+    "Türkiye Caddesi"
+  ],
+  "Arnavutköy": [
+    "Bebek-Arnavutköy",
+    "İstanbul Caddesi",
+    "Türkiye Caddesi",
+    "Arnavutköy Yolu Sokak",
+    "Arnavutköy-Ortaköy"
+  ],
+  "Balmumcu": [
+    "Balmumcu Sokak",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde",
+    "Balmumu Sokak",
+    "Türkiye Caddesi"
+  ],
+  "Bebek": [
+    "Manolya Sokak",
+    "Bebek Yokuşu"
+  ],
+  "Cihannüma": [
+    "Cihannüma Sokak",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde"
+  ],
+  "Dikilitaş": [
+    "Dikilitaş Sokak",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde"
+  ],
+  "Etiler": [
+    "Etiler Sokak",
+    "Etiler Yolu",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Etiler Caddesi",
+    "İstinye-Beşiktaş",
+    "Beşiktaş 1. Cadde",
+    "Etiler 1. Sokak"
+  ],
+  "Gayrettepe": [
+    "Prof Dr Bülent Tarcan Sokak",
+    "Fahri Gizden Sokak",
+    "Gayrettepe Sokak",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde"
+  ],
+  "Konaklar": [
+    "Söğüt Sokak",
+    "Üç Konaklar Sokak",
+    "Ulus Konakları"
+  ],
+  "Kuruçeşme": [
+    "Çeşme Sokak",
+    "Çukurlu Çeşme Sokak",
+    "Kuruçeşme Caddesi",
+    "Kuruçeşme Sokak",
+    "Kuru Çeşme Caddesi",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Küçüksu-Beşiktaş",
+    "Beşiktaş 1. Cadde",
+    "Üsküdar-Beşiktaş",
+    "Gürçeşme Sokak"
+  ],
+  "Levazım": [
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde",
+    "Levazım Sokak",
+    "Türkiye Caddesi"
+  ],
+  "Levent": [
+    "Levent Viyadüğü",
+    "Levent Caddesi",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde",
+    "1. Levent Sokak",
+    "Levent Sokak",
+    "Levent Çıkmazı"
+  ],
+  "Mecidiye": [
+    "Mecidiye Caddesi",
+    "Beşiktaş Sokak",
+    "Mecidiye Sokak",
+    "Beşiktaş Caddesi",
+    "İstinye-Beşiktaş",
+    "Kadıköy-Beşiktaş",
+    "Beşiktaş 1. Cadde"
+  ],
+  "Muradiye": [
+    "Kadıköy-Beşiktaş",
+    "1. Muradiye Sokak",
+    "Muradiye Caddesi",
+    "Muradiye Sokak",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Türkiye Caddesi",
+    "İstinye-Beşiktaş",
+    "Beşiktaş 1. Cadde",
+    "Muradiye Deresi Sokak",
+    "Muradiye Mektebi Sokak"
+  ],
+  "Nisbetiye": [
+    "Aydın Sokak",
+    "Nisbetiye Caddesi",
+    "İstinye-Beşiktaş",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde"
+  ],
+  "Ortaköy": [
+    "Ortaköy-Beşiktaş"
+  ],
+  "Sinanpaşa": [
+    "Sinanpaşa Kuyu Sokak",
+    "Sinan Paşa Sokak",
+    "Sinanpaşa Caddesi",
+    "Sinanpaşa Sokak",
+    "Gazi Sinan Paşa Sokak",
+    "Büyük Sinan Paşa Sokak",
+    "Eminönü-Beşiktaş",
+    "Sinan Paşa Yumak Sokak",
+    "Eski Beşiktaş Caddesi"
+  ],
+  "Türkali": [
+    "Sütçü Ali Sokak",
+    "Türkali Sokak",
+    "Eski Beşiktaş Caddesi",
+    "Kadıköy-Beşiktaş",
+    "Türkeli Sokak",
+    "Türkeli Caddesi",
+    "Türkeli 1. Sokak"
+  ],
+  "Ulus": [
+    "Polat Ulus Sokak",
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Küçüksu-Beşiktaş",
+    "Beşiktaş 1. Cadde",
+    "Ulus Caddesi",
+    "Ulu Sokak",
+    "Ulus Sokak",
+    "Ulusu Caddesi",
+    "Ulaş Sokak",
+    "Ulus 1. Cadde",
+    "Ulus 2. Sokak"
+  ],
+  "Vişnezade": [
+    "Beşiktaş Sokak",
+    "Beşiktaş Caddesi",
+    "Beşiktaş 1. Cadde"
+  ],
+  "Yıldız": [
+    "Seher Yıldız Sokak",
+    "Yıldız Çiçeği Sokak",
+    "Yıldız Caddesi",
+    "Yıldız Sokak"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "Konak": [
+    "Akarcalı", "Akdeniz", "Akın Simav", "Alsancak", "Altay", "Altınordu", "Atamer", "Aziziye", "Ballıkuyu", 
+    "Barbaros", "Basmane", "Bayramyeri", "Boğaziçi", "Çahabey", "Çankaya", "Çınartepe", "Dayıemir", 
+    "Devrim", "Dolaplıkuyu", "Duatepe", "Ege", "Emir Sultan", "Eşrefpaşa", "Etiler", "Faik Paşa", 
+    "Faikpaşa", "Fatih", "Ferahlı", "Göztepe", "Güneş", "Güney", "Güzelyalı", "Güzelyurt", "Hasan Özdemir", 
+    "Hilal", "İsmet Kaptan", "İsmetpaşa", "Kadifekale", "Kahraman Mescit", "Kemer", "Kocakapı", 
+    "Konak", "Konak Pier", "Köprü", "Kültür", "Kurtuluş", "Levent", "Liman", "Mecidiye", "Mersinli", 
+    "Millet", "Mimar Sinan", "Mirali", "Mithatpaşa", "Namık Kemal", "Odunkapı", "Oğuzlar", "Pazaryeri", 
+    "Piyalepaşa", "Sakarya", "Selçuk", "Sultaniye", "Sümer", "Tan", "Tınaztepe", "Tuzcu", "Türkyılmaz", 
+    "Ülkü", "Uğur", "Umurbey", "Uzundere", "Vezirağa", "Yeni", "Yeşildere", "Yıldız", "Zafertepe"
+  ],
+  "Karşıyaka": [
+    "Alaybey", "Bahçelievler", "Bahariye", "Bahriye Üçok", "Bostanlı", "Cumhuriyet", "Dedebaşı", 
+    "Demirköprü", "Donanmacı", "Emek", "Fikri Altay", "Goncalar", "İmbatlı", "İnönü", "Latife Hanım", 
+    "Mavişehir", "Mustafa Kemal", "Nergiz", "Nilüfer", "Onur", "Örnekköy", "Sancaklı", "Şemikler", 
+    "Tersane", "Tuna", "Yamanlar", "Yalı"
+  ],
+  "Bornova": [
+    "Altındağ", "Atatürk", "Barbaros", "Beşyol", "Çamdibi", "Çiçekli", "Çamkule", "Doğanlar", "Ege Mahallesi", 
+    "Ergene", "Evka 3", "Evka 4", "Göksu", "Gürpınar", "İnönü", "Işıkkent", "Kazım Dirik", "Kemalpaşa", 
+    "Kibar", "Koşukavak", "Kuruçeşme", "Kızılay", "Meriç", "Mevlana", "Naldöken", "Osmangazi", "Pınarbaşı", 
+    "Rafet Paşa", "Serintepe", "Tuna", "Türkan Özilhan", "Umut", "Üniversite", "Yeşilova", "Yeşilçam", 
+    "1. Kadriye", "10.Sokak"
+  ],
+  "Buca": [
+    "Adatepe", "Akıncılar", "Aydoğdu", "Barış", "Çamlıkule", "Çamlıpınar", "Dicle", "Dumlupınar", 
+    "Efeler", "Evka 1", "Fırat", "Gaziemir", "Gediz", "Göksu", "Güven", "İnkılap", "İnönü", "İzkent", 
+    "Karanfilköy", "Kozağaç", "Kuruçeşme", "Laleli", "Menderes", "Murathan", "Mustafa Kemal", "Seyhan", 
+    "Ufuk", "Vali Rahmi Bey", "Yenigün", "Yeşilbağlar", "Yıldız", "Yüzbaşı Şerafettin", "29 Ekim", "354. Sokak"
+  ],
+  "Bayraklı": [
+    "Adalet", "Alpaslan", "Bayraklı", "Cengizhan", "Çay", "Doğançay", "Emek", "Fuat Edip Baksı", 
+    "Gümüşpala", "Manavkuyu", "Mansuroğlu", "Mustafa Kemal", "Nafiz Gürman", "Onur", "Osmangazi", 
+    "Postacılar", "Soğukkuyu", "Turan", "Yamanlar"
+  ],
+  "Karabağlar": [
+    "Abdi İpekçi", "Arap Hasan", "Aşık Veysel", "Bahçelievler", "Balatçık", "Basın Sitesi", "Bozyaka", 
+    "Cennetçeşme", "Devrim", "Doğanay", "Esenlik", "Esentepe", "Fahrettin Altay", "Gazi", "General Asım Gündüz", 
+    "Gülyaka", "Günaltay", "İhsan Alyanak", "Kadifekale", "Karabağlar", "Kibar", "Limontepe", "Metin Oktay", 
+    "Muammer Akar", "Osman Aksuner", "Özgür", "Poligon", "Refet Bele", "Reis", "Salih Omurtak", "Sarıyer", 
+    "Selvili", "Sevgi", "Tahsin Yazıcı", "Uğur", "Uzundere", "Vatan", "Yurtoğlu", "Yunus Emre", "Yüzbaşı Şerafettin", 
+    "1. İnönü", "2. İnönü", "29 Ekim", "9. Eylül", "Ali Fuat Erden", "Ayşe Necla Kızılbağ", "Bahçelievler", 
+    "Bahriye Üçok", "Basın Sitesi", "Aydın", "Peker", "Umut", "Atatürk", "Yeşillik"
+  ],
+  "Çiğli": [
+    "8780/1", "Anadolu", "Ataşehir", "Atatürk", "Balatçık", "Büyük Çiğli", "Cumhuriyet", "Çiğli Merkez", 
+    "Egekent", "Egekent 2", "Evka 5", "Güzeltepe", "Harmandalı", "İstasyonaltı", "İzkent", "Kahramanlar", 
+    "Kaklıç", "Köyiçi", "Küçük Çiğli", "Maltepe", "Sasalı", "Şirintepe", "Yeni Mahalle"
+  ],
+  "Gaziemir": [
+    "Aktepe", "Atıfbey", "Beyazevler", "Binbaşı Reşatbey", "Cumhuriyet", "Emrez", "Irmak", "Gazi", 
+    "Gazikent", "Sarnıç", "Sevgi", "Ülkü", "Yazıbaşı", "Yeşil", "Zafer"
+  ]
+} 

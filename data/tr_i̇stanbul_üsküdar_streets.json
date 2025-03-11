@@ -1,0 +1,208 @@
+{
+  "Acıbadem": [
+    "Acıbadem Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Acıbadem Sokak",
+    "Acıbadem 1. Sokak"
+  ],
+  "Altunizade": [
+    "Altunizade Sokak",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak"
+  ],
+  "Aziz Mahmut Hüdayi": [
+    "Taşcı Mahmut Sokak",
+    "Kaşgarlı Mahmut Sokak",
+    "Nan-ı Aziz Sokak",
+    "Aziz Mahmut Hüdai Caddesi",
+    "Mahmut Dayı Sokak",
+    "Üsküdar Caddesi",
+    "Mahmut İkinci Sokak",
+    "Mahmut Efendi Sokak",
+    "Gazneli Mahmut Caddesi",
+    "Abacı Mahmut Sokak",
+    "Kaşgarlı Mahmut Caddesi",
+    "Mahmut Yesari Caddesi"
+  ],
+  "Bahçelievler": [
+    "Bahçelievler Sokak",
+    "Bahçeli Sokak",
+    "İstanbul Sokak",
+    "Bahçelievler Caddesi",
+    "İstanbul Bulvarı",
+    "Bahçeli Evler Sokak"
+  ],
+  "Barbaros": [
+    "2. Barbaros Sokak",
+    "3. Barbaros Sokak",
+    "Üsküdar Caddesi",
+    "Barbaros Bulvarı",
+    "Barbaros Caddesi",
+    "Barbaros Kavşağı",
+    "Barbaros Sokak",
+    "İstanbul Caddesi",
+    "Büyük Barbaros Sokak",
+    "4. Barbaros Caddesi",
+    "Barbaros 3. Sokak",
+    "Barbaros 2. Sokak",
+    "Barbaros 1. Sokak",
+    "Barbaros 5. Sokak",
+    "Barbaros 4. Sokak",
+    "Barbaros 1. Cadde"
+  ],
+  "Beylerbeyi": [
+    "Çengelköy-Beylerbeyi",
+    "Beylerbeyi Caddesi",
+    "Beylerbeyi Sokak",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Beşiktaş-Beylerbeyi",
+    "Eski Üsküdar Caddesi",
+    "Beşiktaş-Üsküdar"
+  ],
+  "Bulgurlu": [
+    "Etiler Sokak",
+    "Bulgurlu Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Bulgurcu Sokak",
+    "Bulgurlu Sokak"
+  ],
+  "Burhaniye": [
+    "Burhan Felek Caddesi",
+    "Üsküdar Caddesi",
+    "Burhaniye Sokak",
+    "Üsküdar Sokak",
+    "Burhan Sokak",
+    "Burhan 1. Sokak",
+    "Eski Üsküdar Caddesi",
+    "Hafız Burhan Sokak"
+  ],
+  "Cumhuriyet": [
+    "Cumhuriyet Caddesi",
+    "Cumhuriyet Meydanı",
+    "İstanbul Caddesi",
+    "Cumhuriyet Sokak",
+    "İstanbul Sokak"
+  ],
+  "Çengelköy": [
+    "Çengelköy Caddesi"
+  ],
+  "Ferah": [
+    "Necmeddin Okyay Sokağı",
+    "Ferah Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Ferah Sokak",
+    "Ferah 2. Sokak",
+    "Ferah 1. Sokak"
+  ],
+  "Güzeltepe": [
+    "Güzeltepe Caddesi",
+    "Güzeltepe Sokak",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak"
+  ],
+  "İcadiye": [
+    "İcadiye Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "İcadiye Sokak"
+  ],
+  "Kandilli": [
+    "Kandilli Caddesi"
+  ],
+  "Kirazlıtepe": [
+    "Camialtı Sayal Sokak",
+    "Eski Üsküdar Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak"
+  ],
+  "Kısıklı": [
+    "Minare sokak",
+    "Kısıklı Caddesi",
+    "Kısıklı Sokak"
+  ],
+  "Kuleli": [
+    "Kuleli Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Kuleli Sokak"
+  ],
+  "Kuzguncuk": [
+    "Çengelköy-Kuzguncuk",
+    "Beylerbeyi-Kuzguncuk",
+    "Kuzguncuk-Ortaköy",
+    "Üsküdar Caddesi",
+    "Kuzguncuk Sokak",
+    "Üsküdar Sokak"
+  ],
+  "Küçük Çamlıca": [
+    "Küçük Çamlıca Caddesi",
+    "Çamlıca Caddesi",
+    "Çamlıca Yolu",
+    "Küçük Sokak",
+    "Büyük Çamlıca Yolu"
+  ],
+  "Küçüksu": [
+    "Küçüksu Caddesi",
+    "Küçük Sokak"
+  ],
+  "Mehmet Akif Ersoy": [
+    "Mehmet Akif Ersoy Caddesi",
+    "Şair Mehmet Akif Ersoy Sokak",
+    "Ersoy Sokak"
+  ],
+  "Mimar Sinan": [
+    "Mimar Sinan Sokak",
+    "Sinan Sokak",
+    "Mimar Sinan Caddesi",
+    "Mimar Sinan Bulvarı",
+    "Mimar Sinan Köprüsü",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak"
+  ],
+  "Murat Reis": [
+    "Murat Reis Sokağı",
+    "Murat Reis Sokak",
+    "Murat Sokak",
+    "Dördüncü Murat Sokak",
+    "Reis Sokak"
+  ],
+  "Salacak": [
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Salacak Sokak",
+    "İstanbul Bulvarı",
+    "Türkiye Caddesi"
+  ],
+  "Selami Ali": [
+    "Selam Sokak"
+  ],
+  "Selimiye": [
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Selimiye Caddesi",
+    "Selimiye Sokak",
+    "Yeni Selimiye Sokak"
+  ],
+  "Sultantepe": [
+    "Sultan Sokak",
+    "Tepe Sokak"
+  ],
+  "Ünalan": [
+    "Ünalan Caddesi",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak",
+    "Ünalan Sokak"
+  ],
+  "Valide-i Atik": [
+    "Valide Çıkmazı Sokak",
+    "Üsküdar Caddesi",
+    "Üsküdar Sokak"
+  ],
+  "Yavuztürk": [
+    "Yavuz Sokak"
+  ]
+}

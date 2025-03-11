@@ -1,0 +1,176 @@
+{
+  "19 Mayıs": [
+    "19 Mayıs Caddesi",
+    "19 Mayıs Sokak",
+    "19 Mayıs Bulvarı",
+    "19. Mayıs Sokak",
+    "İstanbul Caddesi",
+    "Mayıs Sokak",
+    "Şişli Sokak"
+  ],
+  "Bozkurt": [
+    "Bozkurt Caddesi",
+    "Bozkurt Sokak",
+    "1. Bozkurt Sokak",
+    "Bozkurt 1. Sokak",
+    "Bozkurt 1. Cadde",
+    "Şişli Sokak"
+  ],
+  "Cumhuriyet": [
+    "Cumhuriyet Caddesi",
+    "Cumhuriyet Sitesi",
+    "Cumhuriyet Meydanı",
+    "İstanbul Caddesi",
+    "Cumhuriyet Sokak",
+    "İstanbul Sokak",
+    "Cumhuriyet Caddesi Alt Geçidi",
+    "Cumhuriyet Bulvarı"
+  ],
+  "Duatepe": [
+    "Duatepe Sokak",
+    "Şişli Sokak",
+    "İstanbul Caddesi",
+    "Türkiye Caddesi",
+    "Düztepe Sokak"
+  ],
+  "Ergenekon": [
+    "Ergenekon Caddesi"
+  ],
+  "Esentepe": [
+    "Dede Korkut Sokak",
+    "Esen Sokak",
+    "Esen 1. Sokak",
+    "Esentepe Sokak",
+    "Esentepe Caddesi",
+    "İstanbul Caddesi",
+    "Şişli Sokak",
+    "Esen Caddesi",
+    "Tepe Sokak",
+    "Tepe Çıkmazı",
+    "Tepe 1. Sokak",
+    "2. Tepe Sokak"
+  ],
+  "Eskişehir": [
+    "İstanbul Sokak",
+    "Eskişehir Sokak",
+    "İstanbul Caddesi",
+    "Sisli Sokak",
+    "Şişli Sokak",
+    "Türkiye Caddesi"
+  ],
+  "Feriköy": [
+    "Feriköy Fırın Sokak",
+    "Şişli Sokak"
+  ],
+  "Fulya": [
+    "Fulya Bayırı Sokak",
+    "Fulya Sokak",
+    "Fulya Caddesi",
+    "Şişli Sokak",
+    "Fulya Çıkmazı"
+  ],
+  "Gülbahar": [
+    "Muhtar Sokak",
+    "Gülbahar Caddesi",
+    "Gülbahar Sokak",
+    "Şişli Sokak",
+    "Gülbahçe Sokak"
+  ],
+  "Halaskargazi": [
+    "Halaskargazi Caddesi"
+  ],
+  "Halide Edip Adıvar": [
+    "Halide Edip Adıvar Caddesi",
+    "Halide Edip Adıvar Sokak"
+  ],
+  "Halil Rıfat Paşa": [
+    "Mithat Paşa Caddesi",
+    "Halil Rıfat Paşa Viyadüğü",
+    "Rıfatpaşa Sokak",
+    "Rıfat Paşa Sokak",
+    "Rıfat Sokak",
+    "Dr. Rıfatpaşa Sokak",
+    "Halit Paşa Caddesi",
+    "Halit Paşa Sokak",
+    "Halil Paşa Sokak",
+    "Halil Paşa Caddesi",
+    "Faik Paşa Caddesi"
+  ],
+  "Harbiye": [
+    "Cebel Topu Sokağı",
+    "Harbiye Caddesi",
+    "Harbiye Sokak",
+    "Şişli Sokak",
+    "Türkiye Caddesi"
+  ],
+  "İnönü": [
+    "İnönü Caddesi",
+    "Şişli Sokak"
+  ],
+  "Kaptan Paşa": [
+    "Kaptan Sokak",
+    "Kaptanpaşa Sokak",
+    "Kaptan Paşa Sokak",
+    "Paşa Caddesi"
+  ],
+  "Kuştepe": [
+    "Kuştepe Caddesi",
+    "Kuştepe Sokak",
+    "Şişli Sokak",
+    "Türkiye Caddesi",
+    "Küptepe Sokak",
+    "Kumtepe Sokak"
+  ],
+  "Mahmut Şevket Paşa": [
+    "Kızılcık Mahmut Sokak",
+    "Bekçi Mahmut Sokak",
+    "Mahmut Şevket Paşa Caddesi",
+    "Şevketpaşa Caddesi",
+    "Şevket Paşa Sokak",
+    "Mahmut Paşa Sokak",
+    "Mahmut Paşa Caddesi",
+    "Abacı Mahmut Sokak",
+    "Hüdai Mahmut Sokak",
+    "Kaşgarlı Mahmut Sokak",
+    "Gazneli Mahmut Caddesi"
+  ],
+  "Mecidiyeköy": [
+    "Mecidiyeköy Yolu Caddesi"
+  ],
+  "Merkez": [
+    "Mezarlık Çıkmazı Sokak",
+    "Merkez Caddesi",
+    "Merkez Sokak",
+    "Şişli Sokak"
+  ],
+  "Paşa": [
+    "Kocabaş Sokak",
+    "Paşa Caddesi"
+  ],
+  "Teşvikiye": [
+    "Teşvikiye Caddesi",
+    "Teşvikiye Sokak",
+    "Türkiye Caddesi",
+    "Şişli Sokak"
+  ],
+  "Yayla": [
+    "Yayla Sokak",
+    "Yaya Yolu",
+    "Yayla Caddesi",
+    "Şişli Sokak",
+    "Yayla Bulvarı",
+    "Yayla Yolu",
+    "Yayla Çıkmazı",
+    "1. Yayla Sokak",
+    "4. Yayla Sokak",
+    "2. Yayla Sokak",
+    "3. Yayla Sokak",
+    "5. Yayla Sokak",
+    "Ayla Caddesi",
+    "1. Ayla Sokak",
+    "Ayla Sokak",
+    "Yaya Sokak",
+    "Yaylı Sokak",
+    "Yaylı Caddesi"
+  ]
+}

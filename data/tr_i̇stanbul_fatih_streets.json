@@ -1,0 +1,311 @@
+{
+  "Aksaray": [
+    "Aksaray Caddesi",
+    "İstanbul Sokak",
+    "Fatih Caddesi",
+    "Aksaray Sokak",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Akşemsettin": [
+    "Akşemsettin Caddesi",
+    "Akşemsettin Sokak",
+    "Akşemsettin Bulvarı",
+    "Fatih Sultan Sokak"
+  ],
+  "Alemdar": [
+    "Alemdar Caddesi",
+    "Alemdar Sokak",
+    "Alemdağ Caddesi",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Ali Kuşçu": [
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "Ali Kuşcu Sokak",
+    "Ali Kuşçu Sokak",
+    "Ali Kuşçu Caddesi"
+  ],
+  "Atikali": [
+    "Bab-ı Ali Caddesi",
+    "Cabi Ali Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı"
+  ],
+  "Ayvansaray": [
+    "Ayvansaray Caddesi",
+    "Ayvansaray Kavşağı",
+    "Ayvansaray Sokak"
+  ],
+  "Balat": [
+    "Yarım Balat Sokak",
+    "İstanbul Caddesi"
+  ],
+  "Beyazıt": [
+    "Beyazıt Meydanı"
+  ],
+  "Binbirdirek": [
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak"
+  ],
+  "Cankurtaran": [
+    "Cankurtaran Caddesi",
+    "Cankurtaran Meydanı",
+    "Cankurtaran Sokak",
+    "Fatih Caddesi",
+    "Kurtaran Sokak"
+  ],
+  "Cerrahpaşa": [
+    "Cerrahpaşa Caddesi"
+  ],
+  "Demirtaş": [
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi",
+    "Demirtaş Sokak",
+    "Demirbaş Sokak",
+    "Demir Sokak",
+    "Demirtaş Caddesi"
+  ],
+  "Derviş Ali": [
+    "Derviş Ali Sokak",
+    "Derviş Sokak",
+    "Derviş Caddesi",
+    "Fatih Caddesi",
+    "Fatih Bulvarı"
+  ],
+  "Emin Sinan": [
+    "İstanbul Caddesi"
+  ],
+  "Hacı Evhaddin": [
+    "Hacı Evhaddin Çeşmesi Sokağı",
+    "Hacı Evhaddin Caddesi",
+    "Hacı Kadın Caddesi"
+  ],
+  "Haseki Sultan": [
+    "Pir Sultan Sokak",
+    "Haseki Sultan Sokak",
+    "Sultan Fatih Caddesi"
+  ],
+  "Hırka-i Şerif": [
+    "Hırka-i Şerif Caddesi"
+  ],
+  "Hobyar": [
+    "Hobyar Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi",
+    "Fatih 2. Sokak"
+  ],
+  "Kalenderhane": [
+    "Kalenderhane Caddesi",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Karagümrük": [
+    "Kara Gümrük Meydanı Sokak",
+    "Gümrük Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi",
+    "Halkalı Gümrük Yolu"
+  ],
+  "Katip Kasım": [
+    "Katip Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Hatip Sokak"
+  ],
+  "Kemalpaşa": [
+    "Gazi Mustafa Kemalpaşa Caddesi",
+    "Rüstem Paşa Sokak",
+    "Salih Paşa Caddesi",
+    "İbn-i Kemal Caddesi",
+    "Namık Kemal Caddesi",
+    "İstanbul İzmir Otoyolu",
+    "Kemal Paşa Caddesi",
+    "Kemalpaşa Caddesi",
+    "Kemalpaşa Sokak",
+    "Mustafa Kemal Paşa Caddesi"
+  ],
+  "Koca Mustafapaşa": [
+    "Koca Mustafapaşa Caddesi",
+    "Mustafa Paşa Sokak"
+  ],
+  "Küçükayasofya": [
+    "Küçükayasofya Medressi Sokağı",
+    "Küçükayasofya Caddesi",
+    "Ayasofya Meydanı",
+    "Küçük Sokak"
+  ],
+  "Mahmutpaşa": [
+    "Mahmutpaşa Yokuşu"
+  ],
+  "Mimar Hayrettin": [
+    "Mimar Kemalettin Caddesi",
+    "Mimar Hayrettin Caddesi",
+    "Hayrettin Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Hayrettin Altınok Caddesi",
+    "Barbaros Hayrettin Caddesi",
+    "Barbaros Hayrettin Sokak",
+    "Hayrettin Çavuş Sokak",
+    "Hayrettin Mucuk Sokak",
+    "Hayrettin Özbek Sokak",
+    "Arpacı Hayrettin Sokak"
+  ],
+  "Mimar Kemalettin": [
+    "Mimar Kemalettin Caddesi"
+  ],
+  "Mollafenari": [
+    "Molla Fenari Sokak"
+  ],
+  "Molla Gürani": [
+    "Molla Gürani Caddesi",
+    "Molla Gürani Sokak"
+  ],
+  "Molla Hüsrev": [
+    "Molla Hüsrev Sokak"
+  ],
+  "Nişanca": [
+    "Nişanca Caddesi",
+    "Nişanca Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Rüstempaşa": [
+    "Rüstem Paşa Sokak"
+  ],
+  "Saraç İshak": [
+    "Saraç İshak Sokak"
+  ],
+  "Seyyid Ömer": [
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Silivrikapı": [
+    "Silivrikapı Caddesi",
+    "Fatih Caddesi"
+  ],
+  "Sultanahmet": [
+    "Kupacılar Sokağı",
+    "Sultan Mektebi Sokak",
+    "Pir Sultan Sokak",
+    "Selçuk Sultan Sokak",
+    "Hatice Sultan Sokak",
+    "Fatih Sultan Caddesi",
+    "Sultan Ahmet Caddesi",
+    "Sultanahmet Caddesi",
+    "Sultan Ahmet Sokak",
+    "Sultan Fatih Caddesi",
+    "Sultan Fatih Sokak",
+    "Fatih Caddesi",
+    "Fatih Sultan Mehmet Köprüsü",
+    "Fatih Sultan Mehmet Caddesi",
+    "Fatih Sultan Mehmet Bulvarı",
+    "Fatih Sultan Mehmet Sokak",
+    "Fatih Sultan Mehmet Parkı"
+  ],
+  "Süleymaniye": [
+    "Süleymaniye Caddesi"
+  ],
+  "Süruri": [
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi",
+    "Fatih 2. Sokak"
+  ],
+  "Şehremini": [
+    "Şehremini Sokak",
+    "Şehremini Caddesi",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi",
+    "Fatih 2. Sokak"
+  ],
+  "Şehsuvar Bey": [
+    "Şehsuvarbey Sokak",
+    "Şehsuvar Sokak"
+  ],
+  "Tahtakale": [
+    "Tahtakale Caddesi",
+    "İstanbul Caddesi",
+    "Tahtakale Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Topkapı": [
+    "Topkapı Caddesi",
+    "Topkapı Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Yavuz Sinan": [
+    "İstanbul Caddesi"
+  ],
+  "Yedikule": [
+    "Yedikule Caddesi",
+    "Yedikule Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak",
+    "Fatih 1. Cadde",
+    "2. Fatih Caddesi"
+  ],
+  "Zeyrek": [
+    "Zeyrek Caddesi",
+    "Zeyrek Sokak",
+    "Fatih Caddesi",
+    "Fatih Bulvarı",
+    "İstanbul Caddesi",
+    "Fatih Sokak"
+  ]
+}

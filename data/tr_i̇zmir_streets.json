@@ -1,0 +1,747 @@
+{
+  "Konak": {
+    "Alsancak": [
+      "Sevgi Yolu"
+    ],
+    "Aziziye": [
+      "1101. Sokak",
+      "1039. Sokak"
+    ],
+    "Barbaros": [
+      "2208/7. Sokak",
+      "2371. Sokak"
+    ],
+    "Basmane": [
+      "1299. Sokak",
+      "1298. Sokak  (Oteller Sokağı)"
+    ],
+    "Bayramyeri": [
+      "Bayramyeri Altgeçidi"
+    ],
+    "Çankaya": [
+      "131. Sokak",
+      "1303. Sokak",
+      "1372. Sokak"
+    ],
+    "Duatepe": [
+      "339. Sokak"
+    ],
+    "Ege": [
+      "1397. Sokak",
+      "105. Sokak",
+      "900. Sokak",
+      "1393. Sokak",
+      "849. Sokak",
+      "2822. Sokak",
+      "4/3. Sokak"
+    ],
+    "Eşrefpaşa": [
+      "384. Sokak"
+    ],
+    "Göztepe": [
+      "87. Sokak",
+      "107. Sokak",
+      "88. Sokak"
+    ],
+    "Güzelyalı": [
+      "22. Sokak",
+      "18. Sokak",
+      "18/3. Sokak",
+      "56/5. Sokak",
+      "56/3. Sokak",
+      "34. Sokak"
+    ],
+    "Hilal": [
+      "1226. Sokak",
+      "1229/1. Sokak",
+      "1217. Sokak"
+    ],
+    "İsmetpaşa": [
+      "822. Sokak"
+    ],
+    "Kadifekale": [
+      "1008. Sokak"
+    ],
+    "Kemer": [
+      "1433. Sokak",
+      "2201/1. Sokak"
+    ],
+    "Konak": [
+      "141. Sokak",
+      "859. Sokak"
+    ],
+    "Köprü": [
+      "128. Sokak"
+    ],
+    "Kültür": [
+      "1380. Sokak",
+      "269. Sokak",
+      "1344. Sokak",
+      "141. Sokak",
+      "1379. Sokak",
+      "1391. Sokak",
+      "384. Sokak"
+    ],
+    "Levent": [
+      "2822. Sokak",
+      "Can Yücel Sokak"
+    ],
+    "Liman": [
+      "853. Sokak"
+    ],
+    "Mersinli": [
+      "2806. Sokak",
+      "1579/1. Sokak",
+      "2844. Sokak",
+      "2822. Sokak"
+    ],
+    "Mimar Sinan": [
+      "1136/3. Sokak"
+    ],
+    "Namık Kemal": [
+      "141. Sokak"
+    ],
+    "Pazaryeri": [
+      "255. Sokak"
+    ],
+    "Selçuk": [
+      "846. Sokak"
+    ],
+    "Yeni": [
+      "913. Sokak",
+      "1316. Sokak",
+      "3567. Sokak",
+      "21. Sokak",
+      "131. Sokak",
+      "853. Sokak",
+      "860. Sokak",
+      "520/2. Sokak",
+      "269/1. Sokak",
+      "1364. Sokak",
+      "1119. Sokak",
+      "967. Sokak",
+      "1136. Sokak",
+      "2363. Sokak",
+      "34. Sokak",
+      "1469. Sokak"
+    ],
+    "Yıldız": [
+      "846. Sokak"
+    ]
+  },
+  "Karşıyaka": {
+    "Alaybey": [
+      "1690/1. Sokak"
+    ],
+    "Bahariye": [
+      "1837. Sokak"
+    ],
+    "Bahriye Üçok": [
+      "1837. Sokak"
+    ],
+    "Bostanlı": [
+      "2022. Sokak",
+      "2014.Sokak",
+      "1807/2. Sokak",
+      "1735. Sokak"
+    ],
+    "Cumhuriyet": [
+      "R.Lütfü Aksungur Sokak",
+      "1673. Sokak",
+      "6261. Sokak",
+      "6653. Sokak"
+    ],
+    "Demirköprü": [
+      "6323. Sokak",
+      "6200. Sokak"
+    ],
+    "Donanmacı": [
+      "1735. Sokak"
+    ],
+    "Fikri Altay": [
+      "6196/1. Sokak"
+    ],
+    "İmbatlı": [
+      "1847/5. Sokak"
+    ],
+    "Latife Hanım": [
+      "1762. Sokak"
+    ],
+    "Mavişehir": [
+      "6436/2. Sokak"
+    ],
+    "Mustafa Kemal": [
+      "6261. Sokak",
+      "6753/13. Sokak"
+    ],
+    "Nergiz": [
+      "1671. Sokak"
+    ],
+    "Onur": [
+      "6753/19. Sokak",
+      "1671. Sokak"
+    ],
+    "Örnekköy": [
+      "7532. Sokak"
+    ],
+    "Şemikler": [
+      "6496. Sokak"
+    ],
+    "Tersane": [
+      "1664. Sokak"
+    ],
+    "Yalı": [
+      "6471. Sokak"
+    ]
+  },
+  "Bornova": {
+    "Altındağ": [
+      "4396/2. Sokak"
+    ],
+    "Atatürk": [
+      "4174/8. Sokak",
+      "887. Sokak",
+      "858/4. Sokak",
+      "850. Sokak",
+      "784. Sokak",
+      "794. Sokak",
+      "1700. Sokak",
+      "36. Sokak"
+    ],
+    "Barbaros": [
+      "947. Sokak",
+      "934. Sokak"
+    ],
+    "Çamdibi": [
+      "5230. Sokak",
+      "5319. Sokak",
+      "5615/6. Sokak",
+      "5401/2. Sokak",
+      "5454. Sokak",
+      "5301/1. Sokak",
+      "5468. Sokak"
+    ],
+    "Çamkule": [
+      "4712. Sokak"
+    ],
+    "Doğanlar": [
+      "1453. Sokak",
+      "1661. Sokak",
+      "1456. Sokak",
+      "1651. Sokak",
+      "1427. Sokak",
+      "1411/4. Sokak",
+      "1776/7. Sokak",
+      "1543. Sokak",
+      "1580. Sokak",
+      "1401/1. Sokak",
+      "1454. Sokak"
+    ],
+    "Ege Mahallesi": [
+      "7856. Sokak",
+      "119/1. Sokak",
+      "372/11. Sokak",
+      "1776. Sokak",
+      "113. Sokak",
+      "173. Sokak",
+      "129/4. Sokak"
+    ],
+    "Evka 3": [
+      "127/17. Sokak"
+    ],
+    "Evka 4": [
+      "1030. Sokak",
+      "1024. Sokak",
+      "1027. Sokak",
+      "1035. Sokak"
+    ],
+    "İnönü": [
+      "735. Sokak"
+    ],
+    "Işıkkent": [
+      "6082. Sokak"
+    ],
+    "Kemalpaşa": [
+      "Kemalpaşa Caddesi"
+    ],
+    "Kibar": [
+      "Osman Kibar Tüneli"
+    ],
+    "Kızılay": [
+      "491/1. Sokak"
+    ],
+    "Mevlana": [
+      "751. Sokak",
+      "1754. Sokak",
+      "1726. Sokak",
+      "1751. Sokak",
+      "1700. Sokak",
+      "1702. Sokak",
+      "1710/5. Sokak",
+      "1776/7. Sokak",
+      "1754/1. Sokak",
+      "1727. Sokak",
+      "1728/1. Sokak"
+    ],
+    "Osmangazi": [
+      "907. Sokak",
+      "126/4. Sokak"
+    ],
+    "Pınarbaşı": [
+      "7857. Sokak",
+      "7420. Sokak"
+    ],
+    "Tuna": [
+      "996. Sokak",
+      "1013. Sokak",
+      "5460. Sokak"
+    ],
+    "Türkan Özilhan": [
+      "129/20. Sokak",
+      "129. Sokak"
+    ],
+    "Umut": [
+      "127. Sokak"
+    ],
+    "Üniversite": [
+      "1776/17. Sokak",
+      "1700. Sokak",
+      "162. Sokak"
+    ],
+    "Yeşilova": [
+      "4048. Sokak",
+      "5366. Sokak"
+    ],
+    "10.Sokak": [
+      "1469. Sokak"
+    ]
+  },
+  "Buca": {
+    "Adatepe": [
+      "207. Sokak"
+    ],
+    "Barış": [
+      "Barış Manço Kültür Sokak"
+    ],
+    "Çamlıkule": [
+      "200/17. Sokak"
+    ],
+    "Çamlıpınar": [
+      "293/62. Sokak"
+    ],
+    "Dumlupınar": [
+      "81. Sokak"
+    ],
+    "Gediz": [
+      "697/5. Sokak",
+      "682/4. Sokak"
+    ],
+    "Göksu": [
+      "205/23. Sokak",
+      "242/11. Sokak",
+      "289. Sokak"
+    ],
+    "Güven": [
+      "1403. Sokak",
+      "1406. Sokak"
+    ],
+    "İnkılap": [
+      "637/60. Sokak"
+    ],
+    "İnönü": [
+      "864. Sokak"
+    ],
+    "Kozağaç": [
+      "276/2. Sokak",
+      "254. Sokak"
+    ],
+    "Kuruçeşme": [
+      "205. Sokak"
+    ],
+    "Laleli": [
+      "351. Sokak"
+    ],
+    "Menderes": [
+      "686/24. Sokak"
+    ],
+    "Ufuk": [
+      "870/3. Sokak",
+      "910. Sokak"
+    ],
+    "Vali Rahmi Bey": [
+      "343. Sokak"
+    ],
+    "Yıldız": [
+      "199/6. Sokak",
+      "206/5. Sokak",
+      "647/1. Sokak",
+      "205/36. Sokak"
+    ],
+    "354. Sokak": [
+      "1412. Sokak",
+      "1058/14. Sokak",
+      "338. Sokak",
+      "677/19. Sokak",
+      "677/38. Sokak",
+      "573. Sokak",
+      "1410. Sokak",
+      "81. Sokak",
+      "206/5. Sokak"
+    ]
+  },
+  "Bayraklı": {
+    "Adalet": [
+      "1594/1. Sokak"
+    ],
+    "Alpaslan": [
+      "1620/14. Sokak"
+    ],
+    "Bayraklı": [
+      "1610. Sokak",
+      "7168. Sokak",
+      "286. Sokak",
+      "1645/11. Sokak",
+      "1620/39. Sokak",
+      "1925 Sokak",
+      "Şehit Asteğmen Mesut Uzlu Sokak",
+      "275/1. Sokak",
+      "1910. Sokak",
+      "2120/2. Sokak",
+      "1631. Sokak",
+      "Şehit Hakan Uysal Sokak",
+      "7233. Sokak",
+      "1643/30. Sokak",
+      "7331. Sokak",
+      "7371/2. Sokak",
+      "293. Sokak",
+      "1630. Sokak",
+      "7368/5. Sokak",
+      "284/1. Sokak",
+      "1930. Sokak",
+      "7190/4. Sokak",
+      "283/10. Sokak",
+      "1929 Sokak",
+      "7172. Sokak",
+      "275/9. Sokak",
+      "2106. Sokak"
+    ],
+    "Cengizhan": [
+      "2193. Sokak",
+      "1620/40. Sokak"
+    ],
+    "Çay": [
+      "2106. Sokak"
+    ],
+    "Doğançay": [
+      "7190. Sokak"
+    ],
+    "Emek": [
+      "7020. Sokak"
+    ],
+    "Fuat Edip Baksı": [
+      "1629. Sokak"
+    ],
+    "Gümüşpala": [
+      "7000. Sokak (Karşıyaka-Gümüşpala Yolu)"
+    ],
+    "Manavkuyu": [
+      "275/2. Sokak",
+      "275/9. Sokak"
+    ],
+    "Mustafa Kemal": [
+      "274/8. Sokak",
+      "274/2. Sokak",
+      "1645/11. Sokak",
+      "243. Sokak",
+      "274/6. Sokak"
+    ],
+    "Nafiz Gürman": [
+      "7171. Sokak"
+    ],
+    "Onur": [
+      "7364. Sokak",
+      "7371/6. Sokak",
+      "7371. Sokak"
+    ],
+    "Postacılar": [
+      "7600. Sokak"
+    ],
+    "Soğukkuyu": [
+      "6061. Sokak",
+      "7281. Sokak",
+      "1595. Sokak"
+    ],
+    "Yamanlar": [
+      "7331. Sokak",
+      "7334. Sokak",
+      "7371/2. Sokak",
+      "7349. Sokak",
+      "7355. Sokak",
+      "7301. Sokak",
+      "Şehit Asteğmen Mesut Uzlu Sokak"
+    ]
+  },
+  "Karabağlar": {
+    "Bahçelievler": [
+      "443. Sokak",
+      "502/4. Sokak",
+      "490. Sokak",
+      "444. Sokak"
+    ],
+    "Basın Sitesi": [
+      "215. Sokak"
+    ],
+    "Bozyaka": [
+      "9139/5. Sokak"
+    ],
+    "Doğanay": [
+      "52/71. Sokak"
+    ],
+    "Esentepe": [
+      "14. Sokak",
+      "46/6. Sokak"
+    ],
+    "Fahrettin Altay": [
+      "65/8. Sokak"
+    ],
+    "Gazi": [
+      "4272. Sokak"
+    ],
+    "Gülyaka": [
+      "3021. Sokak"
+    ],
+    "İhsan Alyanak": [
+      "9151. Sokak"
+    ],
+    "Karabağlar": [
+      "3946. Sokak",
+      "4152. Sokak",
+      "5648. Sokak",
+      "501. Sokak",
+      "108/38. Sokak",
+      "4058. Sokak",
+      "108/8. Sokak",
+      "371. Sokak",
+      "108/11. Sokak",
+      "3021. Sokak",
+      "502/4. Sokak",
+      "4183. Sokak",
+      "4026. Sokak",
+      "46/6. Sokak",
+      "177/15. Sokak"
+    ],
+    "Limontepe": [
+      "9754. Sokak"
+    ],
+    "Selvili": [
+      "4012. Sokak"
+    ],
+    "Sevgi": [
+      "4609. Sokak",
+      "166. Sokak"
+    ],
+    "Vatan": [
+      "9159. Sokak"
+    ],
+    "Yunus Emre": [
+      "9131/14. Sokak"
+    ],
+    "Yüzbaşı Şerafettin": [
+      "3946. Sokak",
+      "3959. Sokak"
+    ],
+    "Peker": [
+      "6100. Sokak"
+    ],
+    "Umut": [
+      "4012. Sokak"
+    ],
+    "Atatürk": [
+      "9101. Sokak",
+      "2/14. Sokak"
+    ],
+    "Yeşillik": [
+      "Yeşillik Caddesi Yanyolu",
+      "Yeşillik Caddesi"
+    ]
+  },
+  "Çiğli": {
+    "8780/1": [
+      "8780/1. Sokak"
+    ],
+    "Anadolu": [
+      "8250. Sokak",
+      "6852. Sokak",
+      "8114/1. Sokak",
+      "8927. Sokak",
+      "8064. Sokak",
+      "8271/10. Sokak",
+      "6847. Sokak",
+      "8759/3. Sokak",
+      "6840. Sokak",
+      "70. Sokak"
+    ],
+    "Ataşehir": [
+      "8291. Sokak"
+    ],
+    "Atatürk": [
+      "8809/12. Sokak",
+      "8925/1. Sokak"
+    ],
+    "Balatçık": [
+      "1671/1. Sokak"
+    ],
+    "Büyük Çiğli": [
+      "8077. Sokak",
+      "8064. Sokak",
+      "8050. Sokak"
+    ],
+    "Cumhuriyet": [
+      "8925/1. Sokak"
+    ],
+    "Çiğli Merkez": [
+      "43. Sokak",
+      "5. Sokak",
+      "70. Sokak"
+    ],
+    "Egekent": [
+      "1671. Sokak",
+      "8951. Sokak",
+      "1671/1. Sokak"
+    ],
+    "Evka 5": [
+      "8953. Sokak",
+      "8916/10. Sokak",
+      "8916. Sokak"
+    ],
+    "Harmandalı": [
+      "8986. Sokak"
+    ],
+    "İstasyonaltı": [
+      "8250. Sokak",
+      "8251. Sokak",
+      "8265. Sokak",
+      "8291. Sokak"
+    ],
+    "İzkent": [
+      "8838. Sokak"
+    ],
+    "Köyiçi": [
+      "8072. Sokak"
+    ],
+    "Küçük Çiğli": [
+      "8782. Sokak",
+      "8715 sokak"
+    ],
+    "Maltepe": [
+      "8116. Sokak",
+      "8115. Sokak",
+      "8122. Sokak"
+    ],
+    "Sasalı": [
+      "70. Sokak",
+      "6. Sokak"
+    ],
+    "Şirintepe": [
+      "8134. Sokak"
+    ]
+  },
+  "Gaziemir": {
+    "Gazi": [
+      "38. Sokak",
+      "36 sokak"
+    ],
+    "Sarnıç": [
+      "Sarnıç Yolu Sokak"
+    ]
+  },
+  "Aliağa": {},
+  "Balçova": {
+    "Balçova": [
+      "Cihangir Sokak",
+      "Kasırga Sokak",
+      "Zümrüt Sokak",
+      "Fatih Sultan Sokak",
+      "Yonca Sokak",
+      "Fulya Sokak",
+      "Cengiz Topel Sokak",
+      "Gülsa Sokak",
+      "Lalezar Sokak",
+      "Barbaros Sokak",
+      "Gülce Sokak",
+      "Amber Sokak",
+      "Ejder Sokak",
+      "Öz Sağlık Sokak"
+    ]
+  },
+  "Bayındır": {},
+  "Bergama": {},
+  "Beydağ": {},
+  "Çeşme": {
+    "Alaçatı": [
+      "1060. Sokak",
+      "1003. Sokak",
+      "3024. Sokak",
+      "3013. Sokak",
+      "18000. Sokak",
+      "2500. Sokak",
+      "2063. Sokak",
+      "2000. Sokak"
+    ],
+    "Dalyan": [
+      "4004. Sokak"
+    ],
+    "Ilıca": [
+      "5123. Sokak",
+      "5065. Sokak",
+      "5131. Sokak",
+      "5133. Sokak",
+      "3458. Sokak",
+      "5074. Sokak",
+      "5216. Sokak"
+    ],
+    "Şifne": [
+      "6435. Sokak",
+      "6000. Sokak"
+    ]
+  },
+  "Dikili": {},
+  "Foça": {},
+  "Güzelbahçe": {
+    "Güzelbahçe": [
+      "568. Sokak",
+      "286. Sokak",
+      "67. Sokak"
+    ]
+  },
+  "Karaburun": {},
+  "Kemalpaşa": {},
+  "Kınık": {},
+  "Kiraz": {},
+  "Menderes": {},
+  "Menemen": {
+    "Asarlık": [
+      "9311. Sokak"
+    ],
+    "Ulukent": [
+      "10016. Sokak"
+    ],
+    "Seyrek": [
+      "Seyrek Maltepe Yolu Sokak"
+    ],
+    "Koyundere": [
+      "7503. Sokak"
+    ]
+  },
+  "Narlıdere": {},
+  "Ödemiş": {},
+  "Seferihisar": {},
+  "Selçuk": {},
+  "Tire": {},
+  "Torbalı": {},
+  "Urla": {
+    "Zeytinalanı": [
+      "4123. Sokak"
+    ]
+  }
+}

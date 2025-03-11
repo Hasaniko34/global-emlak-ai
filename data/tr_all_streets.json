@@ -1,0 +1,4817 @@
+{
+  "İstanbul": {
+    "Kadıköy": {
+      "19 Mayıs": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "19 Mayıs Caddesi",
+        "19 Mayıs Sokak",
+        "19 Mayıs Bulvarı",
+        "19. Mayıs Sokak",
+        "Mayıs Sokak"
+      ],
+      "Acıbadem": [
+        "Acıbadem Caddesi",
+        "Acıbadem Sokak",
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Acıbadem 1. Sokak"
+      ],
+      "Bostancı": [
+        "Bostancı Yanyol"
+      ],
+      "Caddebostan": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Vardar Sokağı",
+        "Kiraz Çıkmazı"
+      ],
+      "Caferağa": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Caferağa Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Dumlupınar": [
+        "Dumlupınar Sokak",
+        "Dumlupınar Caddesi",
+        "Kadıköy Caddesi",
+        "1. Dumlupınar Sokak",
+        "Dumlupınar 2. Sokak",
+        "Dumlupınar 1. Sokak",
+        "Kadıköy Sokak"
+      ],
+      "Eğitim": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Eğitim Sokak",
+        "Eğitim Caddesi",
+        "Fahrettin Kerim Gökay Caddesi"
+      ],
+      "Erenköy": [
+        "Türkiye Caddesi",
+        "Esenköy-Kadıköy",
+        "Esenköy Sokak"
+      ],
+      "Fenerbahçe": [
+        "Fenerbahçe Sokak",
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Egemen Sokak"
+      ],
+      "Feneryolu": [
+        "Feneryolu Sokak"
+      ],
+      "Fikirtepe": [
+        "Tepe Sokak",
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Fikir Sokak"
+      ],
+      "Göztepe": [
+        "Göztepe Kavşağı",
+        "Göztepe Caddesi",
+        "Göztepe Sokak",
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Göktepe Sokak",
+        "Fahrettin Kerim Gökay Caddesi"
+      ],
+      "Hasanpaşa": [
+        "İsmail Paşa Sokak",
+        "Hasanpaşa Caddesi",
+        "Hasan Paşa Sokak",
+        "Hasanpaşa Çıkmazı Sokak",
+        "Gazi Hasan Paşa Sokak",
+        "Tiryaki Hasan Paşa Sokak",
+        "Tiryaki Hasanpaşa Caddesi",
+        "Cezayirli Hasan Paşa Sokak",
+        "Hasan Cevdet Paşa Sokak",
+        "Hasan Hüsnü Paşa Sokak"
+      ],
+      "Koşuyolu": [
+        "Koşuyolu Caddesi",
+        "Köy Yolu Sokak",
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Koşuyolu Sokak"
+      ],
+      "Kozyatağı": [
+        "Kozyatağı Sokak"
+      ],
+      "Merdivenköy": [
+        "Merdivenköy Caddesi",
+        "Esenköy-Kadıköy"
+      ],
+      "Osmanağa": [
+        "Yoğurtçu Şükrü Sokağı",
+        "Mazhar Osman Sokak",
+        "Kadıköy Caddesi",
+        "Osmanağa Sokak",
+        "Kadıköy Sokak"
+      ],
+      "Rasimpaşa": [
+        "Rasimpaşa Sokak",
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Kasımpaşa Yolu"
+      ],
+      "Sahrayıcedit": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi"
+      ],
+      "Suadiye": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi",
+        "Suadiye Caddesi",
+        "Suadiye Sokak",
+        "Sadiye Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Zühtüpaşa": [
+        "Kadıköy Sokak",
+        "Kadıköy Caddesi"
+      ]
+    },
+    "Beşiktaş": {
+      "Abbasağa": [
+        "Abbasağa Sokak"
+      ],
+      "Akat": [
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Akar Sokak",
+        "Beşiktaş 1. Cadde",
+        "Akat Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Arnavutköy": [
+        "Bebek-Arnavutköy",
+        "İstanbul Caddesi",
+        "Türkiye Caddesi",
+        "Arnavutköy Yolu Sokak",
+        "Arnavutköy-Ortaköy"
+      ],
+      "Balmumcu": [
+        "Balmumcu Sokak",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde",
+        "Balmumu Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Bebek": [
+        "Manolya Sokak",
+        "Bebek Yokuşu"
+      ],
+      "Cihannüma": [
+        "Cihannüma Sokak",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde"
+      ],
+      "Dikilitaş": [
+        "Dikilitaş Sokak",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde"
+      ],
+      "Etiler": [
+        "Etiler Sokak",
+        "Etiler Yolu",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Etiler Caddesi",
+        "İstinye-Beşiktaş",
+        "Beşiktaş 1. Cadde",
+        "Etiler 1. Sokak"
+      ],
+      "Gayrettepe": [
+        "Prof Dr Bülent Tarcan Sokak",
+        "Fahri Gizden Sokak",
+        "Gayrettepe Sokak",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde"
+      ],
+      "Konaklar": [
+        "Söğüt Sokak",
+        "Üç Konaklar Sokak",
+        "Ulus Konakları"
+      ],
+      "Kuruçeşme": [
+        "Çeşme Sokak",
+        "Çukurlu Çeşme Sokak",
+        "Kuruçeşme Caddesi",
+        "Kuruçeşme Sokak",
+        "Kuru Çeşme Caddesi",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Küçüksu-Beşiktaş",
+        "Beşiktaş 1. Cadde",
+        "Üsküdar-Beşiktaş",
+        "Gürçeşme Sokak"
+      ],
+      "Levazım": [
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde",
+        "Levazım Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Levent": [
+        "Levent Viyadüğü",
+        "Levent Caddesi",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde",
+        "1. Levent Sokak",
+        "Levent Sokak",
+        "Levent Çıkmazı"
+      ],
+      "Mecidiye": [
+        "Mecidiye Caddesi",
+        "Beşiktaş Sokak",
+        "Mecidiye Sokak",
+        "Beşiktaş Caddesi",
+        "İstinye-Beşiktaş",
+        "Kadıköy-Beşiktaş",
+        "Beşiktaş 1. Cadde"
+      ],
+      "Muradiye": [
+        "Kadıköy-Beşiktaş",
+        "1. Muradiye Sokak",
+        "Muradiye Caddesi",
+        "Muradiye Sokak",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Türkiye Caddesi",
+        "İstinye-Beşiktaş",
+        "Beşiktaş 1. Cadde",
+        "Muradiye Deresi Sokak",
+        "Muradiye Mektebi Sokak"
+      ],
+      "Nisbetiye": [
+        "Aydın Sokak",
+        "Nisbetiye Caddesi",
+        "İstinye-Beşiktaş",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde"
+      ],
+      "Ortaköy": [
+        "Ortaköy-Beşiktaş"
+      ],
+      "Sinanpaşa": [
+        "Sinanpaşa Kuyu Sokak",
+        "Sinan Paşa Sokak",
+        "Sinanpaşa Caddesi",
+        "Sinanpaşa Sokak",
+        "Gazi Sinan Paşa Sokak",
+        "Büyük Sinan Paşa Sokak",
+        "Eminönü-Beşiktaş",
+        "Sinan Paşa Yumak Sokak",
+        "Eski Beşiktaş Caddesi"
+      ],
+      "Türkali": [
+        "Sütçü Ali Sokak",
+        "Türkali Sokak",
+        "Eski Beşiktaş Caddesi",
+        "Kadıköy-Beşiktaş",
+        "Türkeli Sokak",
+        "Türkeli Caddesi",
+        "Türkeli 1. Sokak"
+      ],
+      "Ulus": [
+        "Polat Ulus Sokak",
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Küçüksu-Beşiktaş",
+        "Beşiktaş 1. Cadde",
+        "Ulus Caddesi",
+        "Ulu Sokak",
+        "Ulus Sokak",
+        "Ulusu Caddesi",
+        "Ulaş Sokak",
+        "Ulus 1. Cadde",
+        "Ulus 2. Sokak"
+      ],
+      "Vişnezade": [
+        "Beşiktaş Sokak",
+        "Beşiktaş Caddesi",
+        "Beşiktaş 1. Cadde"
+      ],
+      "Yıldız": [
+        "Seher Yıldız Sokak",
+        "Yıldız Çiçeği Sokak",
+        "Yıldız Caddesi",
+        "Yıldız Sokak"
+      ]
+    },
+    "Şişli": {
+      "19 Mayıs": [
+        "19 Mayıs Caddesi",
+        "19 Mayıs Sokak",
+        "19 Mayıs Bulvarı",
+        "19. Mayıs Sokak",
+        "İstanbul Caddesi",
+        "Mayıs Sokak",
+        "Şişli Sokak"
+      ],
+      "Bozkurt": [
+        "Bozkurt Caddesi",
+        "Bozkurt Sokak",
+        "1. Bozkurt Sokak",
+        "Bozkurt 1. Sokak",
+        "Bozkurt 1. Cadde",
+        "Şişli Sokak"
+      ],
+      "Cumhuriyet": [
+        "Cumhuriyet Caddesi",
+        "Cumhuriyet Sitesi",
+        "Cumhuriyet Meydanı",
+        "İstanbul Caddesi",
+        "Cumhuriyet Sokak",
+        "İstanbul Sokak",
+        "Cumhuriyet Caddesi Alt Geçidi",
+        "Cumhuriyet Bulvarı"
+      ],
+      "Duatepe": [
+        "Duatepe Sokak",
+        "Şişli Sokak",
+        "İstanbul Caddesi",
+        "Türkiye Caddesi",
+        "Düztepe Sokak"
+      ],
+      "Ergenekon": [
+        "Ergenekon Caddesi"
+      ],
+      "Esentepe": [
+        "Dede Korkut Sokak",
+        "Esen Sokak",
+        "Esen 1. Sokak",
+        "Esentepe Sokak",
+        "Esentepe Caddesi",
+        "İstanbul Caddesi",
+        "Şişli Sokak",
+        "Esen Caddesi",
+        "Tepe Sokak",
+        "Tepe Çıkmazı",
+        "Tepe 1. Sokak",
+        "2. Tepe Sokak"
+      ],
+      "Eskişehir": [
+        "İstanbul Sokak",
+        "Eskişehir Sokak",
+        "İstanbul Caddesi",
+        "Sisli Sokak",
+        "Şişli Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Feriköy": [
+        "Feriköy Fırın Sokak",
+        "Şişli Sokak"
+      ],
+      "Fulya": [
+        "Fulya Bayırı Sokak",
+        "Fulya Sokak",
+        "Fulya Caddesi",
+        "Şişli Sokak",
+        "Fulya Çıkmazı"
+      ],
+      "Gülbahar": [
+        "Muhtar Sokak",
+        "Gülbahar Caddesi",
+        "Gülbahar Sokak",
+        "Şişli Sokak",
+        "Gülbahçe Sokak"
+      ],
+      "Halaskargazi": [
+        "Halaskargazi Caddesi"
+      ],
+      "Halide Edip Adıvar": [
+        "Halide Edip Adıvar Caddesi",
+        "Halide Edip Adıvar Sokak"
+      ],
+      "Halil Rıfat Paşa": [
+        "Mithat Paşa Caddesi",
+        "Halil Rıfat Paşa Viyadüğü",
+        "Rıfatpaşa Sokak",
+        "Rıfat Paşa Sokak",
+        "Rıfat Sokak",
+        "Dr. Rıfatpaşa Sokak",
+        "Halit Paşa Caddesi",
+        "Halit Paşa Sokak",
+        "Halil Paşa Sokak",
+        "Halil Paşa Caddesi",
+        "Faik Paşa Caddesi"
+      ],
+      "Harbiye": [
+        "Cebel Topu Sokağı",
+        "Harbiye Caddesi",
+        "Harbiye Sokak",
+        "Şişli Sokak",
+        "Türkiye Caddesi"
+      ],
+      "İnönü": [
+        "İnönü Caddesi",
+        "Şişli Sokak"
+      ],
+      "Kaptan Paşa": [
+        "Kaptan Sokak",
+        "Kaptanpaşa Sokak",
+        "Kaptan Paşa Sokak",
+        "Paşa Caddesi"
+      ],
+      "Kuştepe": [
+        "Kuştepe Caddesi",
+        "Kuştepe Sokak",
+        "Şişli Sokak",
+        "Türkiye Caddesi",
+        "Küptepe Sokak",
+        "Kumtepe Sokak"
+      ],
+      "Mahmut Şevket Paşa": [
+        "Kızılcık Mahmut Sokak",
+        "Bekçi Mahmut Sokak",
+        "Mahmut Şevket Paşa Caddesi",
+        "Şevketpaşa Caddesi",
+        "Şevket Paşa Sokak",
+        "Mahmut Paşa Sokak",
+        "Mahmut Paşa Caddesi",
+        "Abacı Mahmut Sokak",
+        "Hüdai Mahmut Sokak",
+        "Kaşgarlı Mahmut Sokak",
+        "Gazneli Mahmut Caddesi"
+      ],
+      "Mecidiyeköy": [
+        "Mecidiyeköy Yolu Caddesi"
+      ],
+      "Merkez": [
+        "Mezarlık Çıkmazı Sokak",
+        "Merkez Caddesi",
+        "Merkez Sokak",
+        "Şişli Sokak"
+      ],
+      "Paşa": [
+        "Kocabaş Sokak",
+        "Paşa Caddesi"
+      ],
+      "Teşvikiye": [
+        "Teşvikiye Caddesi",
+        "Teşvikiye Sokak",
+        "Türkiye Caddesi",
+        "Şişli Sokak"
+      ],
+      "Yayla": [
+        "Yayla Sokak",
+        "Yaya Yolu",
+        "Yayla Caddesi",
+        "Şişli Sokak",
+        "Yayla Bulvarı",
+        "Yayla Yolu",
+        "Yayla Çıkmazı",
+        "1. Yayla Sokak",
+        "4. Yayla Sokak",
+        "2. Yayla Sokak",
+        "3. Yayla Sokak",
+        "5. Yayla Sokak",
+        "Ayla Caddesi",
+        "1. Ayla Sokak",
+        "Ayla Sokak",
+        "Yaya Sokak",
+        "Yaylı Sokak",
+        "Yaylı Caddesi"
+      ]
+    },
+    "Üsküdar": {
+      "Acıbadem": [
+        "Acıbadem Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Acıbadem Sokak",
+        "Acıbadem 1. Sokak"
+      ],
+      "Altunizade": [
+        "Altunizade Sokak",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak"
+      ],
+      "Aziz Mahmut Hüdayi": [
+        "Taşcı Mahmut Sokak",
+        "Kaşgarlı Mahmut Sokak",
+        "Nan-ı Aziz Sokak",
+        "Aziz Mahmut Hüdai Caddesi",
+        "Mahmut Dayı Sokak",
+        "Üsküdar Caddesi",
+        "Mahmut İkinci Sokak",
+        "Mahmut Efendi Sokak",
+        "Gazneli Mahmut Caddesi",
+        "Abacı Mahmut Sokak",
+        "Kaşgarlı Mahmut Caddesi",
+        "Mahmut Yesari Caddesi"
+      ],
+      "Bahçelievler": [
+        "Bahçelievler Sokak",
+        "Bahçeli Sokak",
+        "İstanbul Sokak",
+        "Bahçelievler Caddesi",
+        "İstanbul Bulvarı",
+        "Bahçeli Evler Sokak"
+      ],
+      "Barbaros": [
+        "2. Barbaros Sokak",
+        "3. Barbaros Sokak",
+        "Üsküdar Caddesi",
+        "Barbaros Bulvarı",
+        "Barbaros Caddesi",
+        "Barbaros Kavşağı",
+        "Barbaros Sokak",
+        "İstanbul Caddesi",
+        "Büyük Barbaros Sokak",
+        "4. Barbaros Caddesi",
+        "Barbaros 3. Sokak",
+        "Barbaros 2. Sokak",
+        "Barbaros 1. Sokak",
+        "Barbaros 5. Sokak",
+        "Barbaros 4. Sokak",
+        "Barbaros 1. Cadde"
+      ],
+      "Beylerbeyi": [
+        "Çengelköy-Beylerbeyi",
+        "Beylerbeyi Caddesi",
+        "Beylerbeyi Sokak",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Beşiktaş-Beylerbeyi",
+        "Eski Üsküdar Caddesi",
+        "Beşiktaş-Üsküdar"
+      ],
+      "Bulgurlu": [
+        "Etiler Sokak",
+        "Bulgurlu Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Bulgurcu Sokak",
+        "Bulgurlu Sokak"
+      ],
+      "Burhaniye": [
+        "Burhan Felek Caddesi",
+        "Üsküdar Caddesi",
+        "Burhaniye Sokak",
+        "Üsküdar Sokak",
+        "Burhan Sokak",
+        "Burhan 1. Sokak",
+        "Eski Üsküdar Caddesi",
+        "Hafız Burhan Sokak"
+      ],
+      "Cumhuriyet": [
+        "Cumhuriyet Caddesi",
+        "Cumhuriyet Meydanı",
+        "İstanbul Caddesi",
+        "Cumhuriyet Sokak",
+        "İstanbul Sokak"
+      ],
+      "Çengelköy": [
+        "Çengelköy Caddesi"
+      ],
+      "Ferah": [
+        "Necmeddin Okyay Sokağı",
+        "Ferah Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Ferah Sokak",
+        "Ferah 2. Sokak",
+        "Ferah 1. Sokak"
+      ],
+      "Güzeltepe": [
+        "Güzeltepe Caddesi",
+        "Güzeltepe Sokak",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak"
+      ],
+      "İcadiye": [
+        "İcadiye Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "İcadiye Sokak"
+      ],
+      "Kandilli": [
+        "Kandilli Caddesi"
+      ],
+      "Kirazlıtepe": [
+        "Camialtı Sayal Sokak",
+        "Eski Üsküdar Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak"
+      ],
+      "Kısıklı": [
+        "Minare sokak",
+        "Kısıklı Caddesi",
+        "Kısıklı Sokak"
+      ],
+      "Kuleli": [
+        "Kuleli Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Kuleli Sokak"
+      ],
+      "Kuzguncuk": [
+        "Çengelköy-Kuzguncuk",
+        "Beylerbeyi-Kuzguncuk",
+        "Kuzguncuk-Ortaköy",
+        "Üsküdar Caddesi",
+        "Kuzguncuk Sokak",
+        "Üsküdar Sokak"
+      ],
+      "Küçük Çamlıca": [
+        "Küçük Çamlıca Caddesi",
+        "Çamlıca Caddesi",
+        "Çamlıca Yolu",
+        "Küçük Sokak",
+        "Büyük Çamlıca Yolu"
+      ],
+      "Küçüksu": [
+        "Küçüksu Caddesi",
+        "Küçük Sokak"
+      ],
+      "Mehmet Akif Ersoy": [
+        "Mehmet Akif Ersoy Caddesi",
+        "Şair Mehmet Akif Ersoy Sokak",
+        "Ersoy Sokak"
+      ],
+      "Mimar Sinan": [
+        "Mimar Sinan Sokak",
+        "Sinan Sokak",
+        "Mimar Sinan Caddesi",
+        "Mimar Sinan Bulvarı",
+        "Mimar Sinan Köprüsü",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak"
+      ],
+      "Murat Reis": [
+        "Murat Reis Sokağı",
+        "Murat Reis Sokak",
+        "Murat Sokak",
+        "Dördüncü Murat Sokak",
+        "Reis Sokak"
+      ],
+      "Salacak": [
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Salacak Sokak",
+        "İstanbul Bulvarı",
+        "Türkiye Caddesi"
+      ],
+      "Selami Ali": [
+        "Selam Sokak"
+      ],
+      "Selimiye": [
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Selimiye Caddesi",
+        "Selimiye Sokak",
+        "Yeni Selimiye Sokak"
+      ],
+      "Sultantepe": [
+        "Sultan Sokak",
+        "Tepe Sokak"
+      ],
+      "Ünalan": [
+        "Ünalan Caddesi",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak",
+        "Ünalan Sokak"
+      ],
+      "Valide-i Atik": [
+        "Valide Çıkmazı Sokak",
+        "Üsküdar Caddesi",
+        "Üsküdar Sokak"
+      ],
+      "Yavuztürk": [
+        "Yavuz Sokak"
+      ]
+    },
+    "Beyoğlu": {
+      "Arapcami": [
+        "Cami Sokak"
+      ],
+      "Asmalımescit": [
+        "Beyoğlu Caddesi"
+      ],
+      "Bedrettin": [
+        "Bedrettin Sokak",
+        "Beyoğlu Caddesi"
+      ],
+      "Bereketzade": [
+        "Bereket Sokak",
+        "Bereketzade Sokak",
+        "Beyoğlu Caddesi",
+        "Zade Sokak"
+      ],
+      "Bostan": [
+        "Çukur Bostan Sokak",
+        "İç Bostan Sokak",
+        "Bostan Sokak",
+        "Bostan Çıkmazı",
+        "Ali Bostan Sokak",
+        "Beyoğlu Caddesi",
+        "Bostan Caddesi",
+        "Bostan Aralığı",
+        "Bostan 3. Sokak",
+        "Bostan 2. Sokak",
+        "Bostan 1. Sokak",
+        "Şah Kulu Bostan Sokak",
+        "Dere Bostanı Sokak",
+        "Sefer Bostanı Sokak",
+        "Macar Bostanı Sokak",
+        "Kalkan Bostanı Sokak",
+        "Yeni Bostan Sokak",
+        "Sakızlı Bostan Sokak",
+        "Moda Bostan Sokak",
+        "Hacı Bostan Caddesi",
+        "Çiçekçi Bostan Sokak",
+        "Sulu Bostan Sokak",
+        "Kanlı Bostan Sokak",
+        "Ağaçlı Bostan Sokak",
+        "Çiçekli Bostan Sokak",
+        "Havuzlu Bostan Sokak",
+        "Dolaplı Bostan Sokak",
+        "Çınarlı Bostan Sokak",
+        "Bostan Gül Sokak"
+      ],
+      "Bülbül": [
+        "Bülbül Sokak",
+        "Şen Bülbül Sokak",
+        "Bülbül Caddesi",
+        "4. Bülbül Sokak",
+        "8. Bülbül Sokak",
+        "5. Bülbül Sokak",
+        "1. Bülbül Sokak",
+        "3. Bülbül Sokak",
+        "6. Bülbül Sokak",
+        "9. Bülbül Sokak",
+        "7. Bülbül Sokak",
+        "2. Bülbül Sokak",
+        "10. Bülbül Sokak",
+        "Bülbül 1. Sokak",
+        "Bülbül 5. Sokak",
+        "Bülbül 4. Sokak",
+        "Bülbül 6. Sokak",
+        "Bülbül 2. Sokak",
+        "Bülbül 3. Sokak",
+        "Beyoğlu Caddesi"
+      ],
+      "Camiikebir": [
+        "Bostaniçi Camii Sokak",
+        "Pişmaniye Camii Sokak",
+        "Mahmudiye Camii Sokak",
+        "Emin Camii Sokak"
+      ],
+      "Cihangir": [
+        "Cihangir Caddesi",
+        "Cihangir Yokuşu",
+        "Cihangir Sokak",
+        "Cihangir 1. Sokak",
+        "Beyoğlu Caddesi"
+      ],
+      "Çatma Mescit": [
+        "Çatma Mescit Çeşme Sokak",
+        "Çatma Mescid Sokak",
+        "Mescit Sokak",
+        "Asmalı Mescit Caddesi",
+        "Alaca Mescit Sokak"
+      ],
+      "Çukur": [
+        "Çukur Bostan Sokak",
+        "Çukur Sokak",
+        "Beyoğlu Caddesi",
+        "Şükür Sokak"
+      ],
+      "Emekyemez": [
+        "Emek Yemez Sokak",
+        "Emek Çıkmazı",
+        "Beyoğlu Caddesi"
+      ],
+      "Evliya Çelebi": [
+        "Kuytu Sokak",
+        "Evliya Çelebi Caddesi",
+        "Çelebi Sokak",
+        "İlyas Çelebi Sokak",
+        "Evliya Çelebi Sokak"
+      ],
+      "Fetihtepe": [
+        "Fetihtepe Sokak",
+        "Fetihtepe Caddesi",
+        "Beyoğlu Caddesi"
+      ],
+      "Firuzağa": [
+        "Firuzağa Camii Sokak",
+        "Firuzağa Sokak",
+        "Firuz Ağa Sokak",
+        "Beyoğlu Caddesi",
+        "Firuz Sokak"
+      ],
+      "Gümüşsuyu": [
+        "Gümüşsuyu Caddesi"
+      ],
+      "Hacı Ahmet": [
+        "Hacı Ahmet Karakolu Sokağı",
+        "Hacı Ahmet Bostanı Sokağı",
+        "Hacı Ahmet Sokağı",
+        "Hacı Ahmet Sokak",
+        "Sıvacı Ahmet Sokak"
+      ],
+      "Hacı Mimi": [
+        "Hacı Mimi Külhanı Sokak",
+        "Hacı İmam Sokak",
+        "Hacı Hanım Sokak",
+        "Beyoğlu Caddesi"
+      ],
+      "Halıcıoğlu": [
+        "Halıcıoğlu Kavşağı"
+      ],
+      "Kalyoncu Kulluğu": [
+        "Kalyoncu Kulluğu Caddesi"
+      ],
+      "Kamerhatun": [
+        "Kamer Hatun Caddesi",
+        "Kamer Sokak",
+        "Kemerhatun Sokak"
+      ],
+      "Katip Mustafa Çelebi": [
+        "Çelebi Sokak",
+        "Beyoğlu Caddesi",
+        "Katip Çelebi Caddesi"
+      ],
+      "Keçeci Piri": [
+        "Beyoğlu Caddesi",
+        "Keçeci Sokak",
+        "Piri Sokak"
+      ],
+      "Kılıç Ali Paşa": [
+        "Kılıç Ali Paşa Caddesi",
+        "Paşa Yokuşu",
+        "Paşa Sokak",
+        "Talip Paşa Sokak",
+        "Halil Paşa Sokak"
+      ],
+      "Kocatepe": [
+        "Kocatepe Caddesi",
+        "Kocatepe Yolu",
+        "Kocatepe Sokak",
+        "İstanbul Caddesi",
+        "Orman Tepe Yolu",
+        "1. Kocatepe Sokak",
+        "Kocatepe 1. Sokak",
+        "Tepe Yolu Sokak",
+        "Beyoğlu Caddesi",
+        "Tepe Sokak"
+      ],
+      "Kulaksız": [
+        "Kulaksız Caddesi",
+        "Beyoğlu Caddesi"
+      ],
+      "Küçük Piyale": [
+        "Küçük Efem Sokak",
+        "Küçük Ulaş Sokak",
+        "Küçük Piyale Cami Sokak",
+        "Küçük Şişhane Sokak",
+        "Küçük Yalı Sokak",
+        "Beyoğlu Caddesi",
+        "Küçük Sokak",
+        "Piyade Sokak",
+        "Dr. Fazıl Küçük Caddesi",
+        "Hacı Küçük Sokak"
+      ],
+      "Ömer Avni": [
+        "Ömer Ağa Sokak",
+        "Ömür Sokak",
+        "Beyoğlu Caddesi",
+        "Avni Bey Sokak",
+        "Ömer Sokak",
+        "Ömer Bey Sokak",
+        "Ömer Naci Sokak",
+        "Ömür 1. Sokak",
+        "Avni Akyol Bulvarı",
+        "Neşet Ömer Sokak"
+      ],
+      "Piripaşa": [
+        "Paşa Yokuşu",
+        "Paşa Sokak"
+      ],
+      "Piyalepaşa": [
+        "Piyalepaşa Bulvarı",
+        "Piyalepaşa Caddesi",
+        "Paşa Yokuşu",
+        "Paşa Sokak"
+      ],
+      "Pürtelas": [
+        "Pürtelaş Sokağı",
+        "Pürtelaş Sokak",
+        "Beyoğlu Caddesi"
+      ],
+      "Sururi": [
+        "Sururi Cesme Sokağı",
+        "Sururi Parkı",
+        "Beyoğlu Caddesi",
+        "Sururi Sokak",
+        "Sürur Sokak"
+      ],
+      "Şahkulu": [
+        "Şahkulu Sokak",
+        "Şah Sokak"
+      ],
+      "Şehit Muhtar": [
+        "Şehit Muhtar Bey Caddesi",
+        "Beyoğlu Caddesi"
+      ],
+      "Tomtom": [
+        "Tom Tom Kaptan Sokak",
+        "Beyoğlu Caddesi",
+        "Türkiye Caddesi"
+      ],
+      "Yahya Kahya": [
+        "Kaya Sokak"
+      ],
+      "Yenişehir": [
+        "Yeni Asır Sokak",
+        "Yeni Sokak",
+        "Beyoğlu Caddesi",
+        "Yeni İshak Sokak",
+        "Yeni Dere Sokak",
+        "Yenişehir Sokak",
+        "Seher Sokak",
+        "Özel Bilfen Yenişehir İÖO"
+      ]
+    },
+    "Bakırköy": {
+      "Ataköy 1. Kısım": [
+        "Ataköy 1. Kısım"
+      ],
+      "Ataköy 2-5-6. Kısım": [
+        "Ataköy 1. Kısım",
+        "Ataköy Kavşağı",
+        "İstanbul Caddesi"
+      ],
+      "Ataköy 3-4-11. Kısım": [
+        "Ataköy Kavşağı",
+        "Ataköy 1. Kısım",
+        "İstanbul Caddesi",
+        "11. Sokak",
+        "Bakırköy Caddesi",
+        "Ataköy Caddesi"
+      ],
+      "Ataköy 7-8-9-10. Kısım": [
+        "Ataköy Kavşağı",
+        "Ataköy 1. Kısım",
+        "İstanbul Caddesi",
+        "Bakırköy Caddesi",
+        "Ataköy Sokak",
+        "Ataköy Caddesi"
+      ],
+      "Basınköy": [
+        "İstanbul Caddesi",
+        "Kadıköy-Bakırköy",
+        "Bakırköy Caddesi"
+      ],
+      "Cevizlik": [
+        "Cevizli Sokak",
+        "İstanbul Caddesi",
+        "İstanbul Sokak"
+      ],
+      "Kartaltepe": [
+        "Kartaltepe Caddesi",
+        "Tepe Sokak",
+        "İstanbul Caddesi"
+      ],
+      "Osmaniye": [
+        "Osmaniye Sokak",
+        "İstanbul Caddesi",
+        "Bakırköy Caddesi",
+        "Osmaniye Kavşağı",
+        "Kadıköy-Bakırköy"
+      ],
+      "Sakızağacı": [
+        "İstanbul Caddesi",
+        "Sakızağacı Caddesi",
+        "Bakırköy Caddesi"
+      ],
+      "Şenlikköy": [
+        "İstanbul Caddesi",
+        "Kadıköy-Bakırköy",
+        "Bakırköy Caddesi"
+      ],
+      "Yenimahalle": [
+        "İstanbul Yolu",
+        "İstanbul Caddesi"
+      ],
+      "Yeşilköy": [
+        "Yeşilköy Caddesi",
+        "İstanbul Caddesi",
+        "Yeşilköşk Sokak"
+      ],
+      "Yeşilyurt": [
+        "Yeşilyurt Caddesi",
+        "İstanbul Caddesi",
+        "İstanbul Sokak",
+        "Yeşilyurt Sokak",
+        "Bakırköy Caddesi"
+      ],
+      "Zeytinlik": [
+        "Zeytinli Sokak",
+        "İstanbul Caddesi",
+        "Zeytinlik Caddesi",
+        "Zeytinlik Sokak",
+        "Bakırköy Caddesi",
+        "4. Zeytinlik Sokak",
+        "3. Zeytinlik Sokak",
+        "5. Zeytinlik Sokak",
+        "Yenikapı-Bakırköy"
+      ],
+      "Zuhuratbaba": [
+        "Zuhuratbaba Caddesi"
+      ]
+    },
+    "Ataşehir": {
+      "Aşık Veysel": [
+        "Aşık Veysel Caddesi",
+        "Aşık Veysel Sokak"
+      ],
+      "Atatürk": [
+        "63. Sokak",
+        "Atatürk Caddesi"
+      ],
+      "Barbaros": [
+        "Barbaros Caddesi",
+        "İstanbul Caddesi"
+      ],
+      "Esatpaşa": [
+        "Esatpaşa Caddesi",
+        "İstanbul Caddesi"
+      ],
+      "Ferhatpaşa": [
+        "99. Sokak",
+        "İstanbul Caddesi"
+      ],
+      "Fetih": [
+        "İstanbul Caddesi",
+        "Ataşehir Sokak"
+      ],
+      "İçerenköy": [
+        "Üsküdar İçerenköy Yolu Caddesi",
+        "İçerenköy Caddesi",
+        "İstanbul Caddesi",
+        "Ataşehir Sokak"
+      ],
+      "İnönü": [
+        "İnönü Caddesi",
+        "İstanbul Caddesi",
+        "İnönü-1. Sokak"
+      ],
+      "Kayışdağı": [
+        "Kayışdağı Caddesi",
+        "İstanbul Caddesi"
+      ],
+      "Küçükbakkalköy": [
+        "Küçükbakkalköy Yolu Caddesi"
+      ],
+      "Mevlana": [
+        "Mevlana Caddesi",
+        "İstanbul Caddesi",
+        "Mevlana Sokak",
+        "Mevlana-1. Cadde",
+        "Ataşehir Sokak",
+        "2. Mevlana Sokak",
+        "Mevlana 1. Sokak"
+      ],
+      "Mimarsinan": [
+        "Mimar Sinan Caddesi",
+        "Sinan Sokak",
+        "İstanbul Caddesi",
+        "Mimar Sinan Alt Sokak",
+        "Mimar Sinan Bulvarı",
+        "Mimar Sinan Köprüsü",
+        "Mimar Sinan Sokak",
+        "1. Mimar Sinan Caddesi",
+        "Mimar Sinan 1. Sokak",
+        "Mimarsinan 1. Cadde",
+        "Ataşehir Sokak"
+      ],
+      "Mustafa Kemal": [
+        "3041. Sokak",
+        "3039. Sokak",
+        "Mustafa Kemal Caddesi"
+      ],
+      "Örnek": [
+        "Örnek Sokak",
+        "İstanbul Caddesi",
+        "Ataşehir Sokak",
+        "Örnek Çıkmazı",
+        "Örnek 1. Sokak",
+        "Dernek Caddesi",
+        "Dernek Sokak"
+      ],
+      "Yeni Çamlıca": [
+        "Çamlıca Caddesi",
+        "Çamlıca Sokak",
+        "İstanbul Caddesi"
+      ],
+      "Yenişehir": [
+        "Yenişehir Sokak",
+        "Şehir Sokak",
+        "Ataşehir Sokak",
+        "İstanbul Caddesi"
+      ],
+      "Yenisahra": [
+        "Sahra Sokak",
+        "İstanbul Caddesi"
+      ]
+    },
+    "Maltepe": {
+      "Altayçeşme": [
+        "Çeşme Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak"
+      ],
+      "Altıntepe": [
+        "Altın Sokak",
+        "Tepe Sokak",
+        "Altıntepe Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak"
+      ],
+      "Aydınevler": [
+        "Aydın Caddesi",
+        "Aydın Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak"
+      ],
+      "Bağlarbaşı": [
+        "Bağlarbaşı Caddesi",
+        "Bağlarbaşı Sokak",
+        "İstanbul Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak"
+      ],
+      "Başıbüyük": [
+        "Başıbüyük Yolu",
+        "Başıbüyük Caddesi"
+      ],
+      "Büyükbakkalköy": [
+        "Büyükbakkalköy Yolu",
+        "Büyükbakkalköy Caddesi"
+      ],
+      "Cevizli": [
+        "Cevizli Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "İstanbul Sokak"
+      ],
+      "Çınar": [
+        "Çınar Caddesi"
+      ],
+      "Esenkent": [
+        "Özmen Sokak Yanyolu",
+        "Esen Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "Kent Sokak",
+        "Esen Caddesi"
+      ],
+      "Feyzullah": [
+        "Feyzullah Caddesi",
+        "Feyzullah Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak"
+      ],
+      "Fındıklı": [
+        "Fındıklı Sokak",
+        "Fındıklık Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "Türkiye Caddesi"
+      ],
+      "Girne": [
+        "Girne Sokağı",
+        "Girne Caddesi",
+        "Girne Cd.",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "Girne Sokak",
+        "1. Girne Sokak",
+        "3. Girne Sokak"
+      ],
+      "Gülsuyu": [
+        "Gül Caddesi",
+        "Gül Sokak",
+        "Gülsuyu Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "1. Gül Sokak",
+        "Gül 2. Sokak"
+      ],
+      "Gülensu": [
+        "Gülensu Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "Türkiye Caddesi"
+      ],
+      "İdealtepe": [
+        "İdealtepe Yolu",
+        "Maltepe Caddesi"
+      ],
+      "Küçükyalı": [
+        "Küçükyalı Caddesi",
+        "Küçük Sokak",
+        "Küçük Yalı Sokak",
+        "Küçükyalı Sokak"
+      ],
+      "Yalı": [
+        "Yalı Mah.",
+        "Yali - Esenyurdum Çıkmazı",
+        "Maltepe Caddesi",
+        "Maltepe Sokak",
+        "Yalı Sokak",
+        "Yalı Caddesi",
+        "Yalı 3. Sokak",
+        "Yalı 1. Sokak",
+        "Yalı 2. Sokak"
+      ],
+      "Zümrütevler": [
+        "Zümrütler Kavşağı",
+        "Zümrüt Sokak",
+        "Zümrüt Evler Sokak",
+        "Zümrüt Caddesi",
+        "Zümrüt Çıkmazı",
+        "1. Zümrüt Sokak",
+        "2. Zümrüt Sokak",
+        "Zümrüt 2. Sokak",
+        "Zümrüt 5. Sokak",
+        "Zümrüt 4. Sokak",
+        "Zümrüt 1. Sokak",
+        "Maltepe Caddesi",
+        "Maltepe Sokak"
+      ]
+    },
+    "Sarıyer": {
+      "Bahçeköy Merkez": [
+        "Bahçeköy Caddesi",
+        "Bahçeköy Yolu"
+      ],
+      "Baltalimanı": [
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi"
+      ],
+      "Büyükdere": [
+        "Büyükdere Caddesi",
+        "Eski Büyükdere Caddesi"
+      ],
+      "Çayırbaşı": [
+        "Çayırbaşı Caddesi",
+        "Çayır Sokak",
+        "Çayır Caddesi"
+      ],
+      "Cumhuriyet": [
+        "Cumhuriyet Caddesi",
+        "Cumhuriyet Parkı",
+        "Cumhuriyet Meydanı",
+        "Cumhuriyet Bulvarı",
+        "İstanbul Caddesi",
+        "Cumhuriyet Sokak",
+        "İstanbul Sokak",
+        "Sarıyer Sokak",
+        "1. Cumhuriyet Caddesi",
+        "Cumhuriyet 5. Cadde",
+        "Cumhuriyet 4. Cadde",
+        "Cumhuriyet 3. Cadde",
+        "Cumhuriyet 1. Sokak"
+      ],
+      "Darüşşafaka": [
+        "Darüşşafaka"
+      ],
+      "Derbent": [
+        "Derbent Sokak",
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi"
+      ],
+      "Emirgan": [
+        "Emirgan Mektebi Sokak",
+        "Emirgan Caddesi",
+        "Emirgan 1. Sokak",
+        "Emirgan Sokak"
+      ],
+      "Fatih Sultan Mehmet": [
+        "Aziz Sokak",
+        "Fatih Sultan Mehmet Köprüsü",
+        "Sultan Sokak"
+      ],
+      "Ferahevler": [
+        "Ferah Sokak"
+      ],
+      "İstinye": [
+        "İstinye Caddesi",
+        "İstinye Sokak"
+      ],
+      "Kireçburnu": [
+        "Kireçburnu Sokak",
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi"
+      ],
+      "Maslak": [
+        "AOS 36. Sokak",
+        "112. Sokak",
+        "AOS 44. Sokak",
+        "AOS 27. Sokak",
+        "Maslak Sokak"
+      ],
+      "Maden": [
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi",
+        "Maden Sokak",
+        "Maden Caddesi",
+        "Maden Çıkmazı",
+        "Türkiye Caddesi"
+      ],
+      "Pınar": [
+        "Pınar Sokak",
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi",
+        "Çınar Sokak",
+        "Çınar Caddesi",
+        "Pınar Caddesi",
+        "1. Pınar Sokak",
+        "Pınar Çıkmazı",
+        "2. Pınar Sokak",
+        "5. Pınar Sokak",
+        "3. Pınar Sokak",
+        "Pınar 1. Sokak"
+      ],
+      "Poligon": [
+        "Poligon Caddesi",
+        "Sarıyer Sokak",
+        "Poligon Sokak",
+        "Sarıyer Caddesi"
+      ],
+      "Reşitpaşa": [
+        "Evren Paşa Caddesi",
+        "Reşitpaşa Caddesi",
+        "Reşit Paşa Caddesi",
+        "Reşitpaşa Sokak",
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi",
+        "Hacı Reşit Paşa Sokak",
+        "Büyük Reşitpaşa Caddesi",
+        "Mumcu Reşit Sokak"
+      ],
+      "Rumelihisarı": [
+        "Rumeli Kavağı-Sarıyer",
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi"
+      ],
+      "Tarabya": [
+        "Sardunya Sokak",
+        "Sarıyer Sokak",
+        "Tarabya Sokak",
+        "Tarabya Caddesi",
+        "Sarıyer Caddesi",
+        "Türkiye Caddesi"
+      ],
+      "Yeniköy": [
+        "İskele Sokak",
+        "Yeni Sokak"
+      ],
+      "Yenikö Merkez": [
+        "Sarıyer Sokak",
+        "Sarıyer Caddesi",
+        "Merkez Caddesi",
+        "Merkez Sokak"
+      ]
+    },
+    "Fatih": {
+      "Aksaray": [
+        "Aksaray Caddesi",
+        "İstanbul Sokak",
+        "Fatih Caddesi",
+        "Aksaray Sokak",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Akşemsettin": [
+        "Akşemsettin Caddesi",
+        "Akşemsettin Sokak",
+        "Akşemsettin Bulvarı",
+        "Fatih Sultan Sokak"
+      ],
+      "Alemdar": [
+        "Alemdar Caddesi",
+        "Alemdar Sokak",
+        "Alemdağ Caddesi",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Ali Kuşçu": [
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "Ali Kuşcu Sokak",
+        "Ali Kuşçu Sokak",
+        "Ali Kuşçu Caddesi"
+      ],
+      "Atikali": [
+        "Bab-ı Ali Caddesi",
+        "Cabi Ali Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı"
+      ],
+      "Ayvansaray": [
+        "Ayvansaray Caddesi",
+        "Ayvansaray Kavşağı",
+        "Ayvansaray Sokak"
+      ],
+      "Balat": [
+        "Yarım Balat Sokak",
+        "İstanbul Caddesi"
+      ],
+      "Beyazıt": [
+        "Beyazıt Meydanı"
+      ],
+      "Binbirdirek": [
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak"
+      ],
+      "Cankurtaran": [
+        "Cankurtaran Caddesi",
+        "Cankurtaran Meydanı",
+        "Cankurtaran Sokak",
+        "Fatih Caddesi",
+        "Kurtaran Sokak"
+      ],
+      "Cerrahpaşa": [
+        "Cerrahpaşa Caddesi"
+      ],
+      "Demirtaş": [
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi",
+        "Demirtaş Sokak",
+        "Demirbaş Sokak",
+        "Demir Sokak",
+        "Demirtaş Caddesi"
+      ],
+      "Derviş Ali": [
+        "Derviş Ali Sokak",
+        "Derviş Sokak",
+        "Derviş Caddesi",
+        "Fatih Caddesi",
+        "Fatih Bulvarı"
+      ],
+      "Emin Sinan": [
+        "İstanbul Caddesi"
+      ],
+      "Hacı Evhaddin": [
+        "Hacı Evhaddin Çeşmesi Sokağı",
+        "Hacı Evhaddin Caddesi",
+        "Hacı Kadın Caddesi"
+      ],
+      "Haseki Sultan": [
+        "Pir Sultan Sokak",
+        "Haseki Sultan Sokak",
+        "Sultan Fatih Caddesi"
+      ],
+      "Hırka-i Şerif": [
+        "Hırka-i Şerif Caddesi"
+      ],
+      "Hobyar": [
+        "Hobyar Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi",
+        "Fatih 2. Sokak"
+      ],
+      "Kalenderhane": [
+        "Kalenderhane Caddesi",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Karagümrük": [
+        "Kara Gümrük Meydanı Sokak",
+        "Gümrük Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi",
+        "Halkalı Gümrük Yolu"
+      ],
+      "Katip Kasım": [
+        "Katip Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Hatip Sokak"
+      ],
+      "Kemalpaşa": [
+        "Gazi Mustafa Kemalpaşa Caddesi",
+        "Rüstem Paşa Sokak",
+        "Salih Paşa Caddesi",
+        "İbn-i Kemal Caddesi",
+        "Namık Kemal Caddesi",
+        "İstanbul İzmir Otoyolu",
+        "Kemal Paşa Caddesi",
+        "Kemalpaşa Caddesi",
+        "Kemalpaşa Sokak",
+        "Mustafa Kemal Paşa Caddesi"
+      ],
+      "Koca Mustafapaşa": [
+        "Koca Mustafapaşa Caddesi",
+        "Mustafa Paşa Sokak"
+      ],
+      "Küçükayasofya": [
+        "Küçükayasofya Medressi Sokağı",
+        "Küçükayasofya Caddesi",
+        "Ayasofya Meydanı",
+        "Küçük Sokak"
+      ],
+      "Mahmutpaşa": [
+        "Mahmutpaşa Yokuşu"
+      ],
+      "Mimar Hayrettin": [
+        "Mimar Kemalettin Caddesi",
+        "Mimar Hayrettin Caddesi",
+        "Hayrettin Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Hayrettin Altınok Caddesi",
+        "Barbaros Hayrettin Caddesi",
+        "Barbaros Hayrettin Sokak",
+        "Hayrettin Çavuş Sokak",
+        "Hayrettin Mucuk Sokak",
+        "Hayrettin Özbek Sokak",
+        "Arpacı Hayrettin Sokak"
+      ],
+      "Mimar Kemalettin": [
+        "Mimar Kemalettin Caddesi"
+      ],
+      "Mollafenari": [
+        "Molla Fenari Sokak"
+      ],
+      "Molla Gürani": [
+        "Molla Gürani Caddesi",
+        "Molla Gürani Sokak"
+      ],
+      "Molla Hüsrev": [
+        "Molla Hüsrev Sokak"
+      ],
+      "Nişanca": [
+        "Nişanca Caddesi",
+        "Nişanca Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Rüstempaşa": [
+        "Rüstem Paşa Sokak"
+      ],
+      "Saraç İshak": [
+        "Saraç İshak Sokak"
+      ],
+      "Seyyid Ömer": [
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Silivrikapı": [
+        "Silivrikapı Caddesi",
+        "Fatih Caddesi"
+      ],
+      "Sultanahmet": [
+        "Kupacılar Sokağı",
+        "Sultan Mektebi Sokak",
+        "Pir Sultan Sokak",
+        "Selçuk Sultan Sokak",
+        "Hatice Sultan Sokak",
+        "Fatih Sultan Caddesi",
+        "Sultan Ahmet Caddesi",
+        "Sultanahmet Caddesi",
+        "Sultan Ahmet Sokak",
+        "Sultan Fatih Caddesi",
+        "Sultan Fatih Sokak",
+        "Fatih Caddesi",
+        "Fatih Sultan Mehmet Köprüsü",
+        "Fatih Sultan Mehmet Caddesi",
+        "Fatih Sultan Mehmet Bulvarı",
+        "Fatih Sultan Mehmet Sokak",
+        "Fatih Sultan Mehmet Parkı"
+      ],
+      "Süleymaniye": [
+        "Süleymaniye Caddesi"
+      ],
+      "Süruri": [
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi",
+        "Fatih 2. Sokak"
+      ],
+      "Şehremini": [
+        "Şehremini Sokak",
+        "Şehremini Caddesi",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi",
+        "Fatih 2. Sokak"
+      ],
+      "Şehsuvar Bey": [
+        "Şehsuvarbey Sokak",
+        "Şehsuvar Sokak"
+      ],
+      "Tahtakale": [
+        "Tahtakale Caddesi",
+        "İstanbul Caddesi",
+        "Tahtakale Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Topkapı": [
+        "Topkapı Caddesi",
+        "Topkapı Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Yavuz Sinan": [
+        "İstanbul Caddesi"
+      ],
+      "Yedikule": [
+        "Yedikule Caddesi",
+        "Yedikule Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak",
+        "Fatih 1. Cadde",
+        "2. Fatih Caddesi"
+      ],
+      "Zeyrek": [
+        "Zeyrek Caddesi",
+        "Zeyrek Sokak",
+        "Fatih Caddesi",
+        "Fatih Bulvarı",
+        "İstanbul Caddesi",
+        "Fatih Sokak"
+      ]
+    },
+    "Adalar": {},
+    "Arnavutköy": {},
+    "Avcılar": {},
+    "Bağcılar": {},
+    "Bahçelievler": {},
+    "Başakşehir": {},
+    "Bayrampaşa": {},
+    "Beykoz": {},
+    "Beylikdüzü": {},
+    "Büyükçekmece": {},
+    "Çatalca": {},
+    "Çekmeköy": {},
+    "Esenler": {},
+    "Esenyurt": {},
+    "Eyüpsultan": {},
+    "Gaziosmanpaşa": {},
+    "Güngören": {},
+    "Kağıthane": {},
+    "Kartal": {},
+    "Küçükçekmece": {},
+    "Pendik": {},
+    "Sancaktepe": {},
+    "Silivri": {},
+    "Sultanbeyli": {},
+    "Sultangazi": {},
+    "Şile": {},
+    "Tuzla": {},
+    "Ümraniye": {},
+    "Zeytinburnu": {}
+  },
+  "Ankara": {
+    "Çankaya": {
+      "Ahlatlıbel": [
+        "Çankaya Sokak"
+      ],
+      "Akarlar": [
+        "Akarlar Küme Evler",
+        "Çankaya Sokak",
+        "Ayaş Ankara Yolu"
+      ],
+      "Akpınar": [
+        "Akpınar Caddesi",
+        "Çankaya Sokak",
+        "Akpınar Sokak"
+      ],
+      "Arka Topraklık": [
+        "Topraklık Caddesi",
+        "Çankaya Sokak",
+        "Ark Caddesi"
+      ],
+      "Aşağı Dikmen": [
+        "578. Sokak",
+        "Dikmen Caddesi",
+        "Aşağı Küme Evler",
+        "Çankaya Sokak",
+        "Çankaya Caddesi",
+        "Dikmen Küme Evler",
+        "Dikmen Sokak"
+      ],
+      "Aşağı Öveçler": [
+        "Çankaya Sokak"
+      ],
+      "Ayrancı": [
+        "Yeşilyurt Sokak",
+        "Ankara Caddesi",
+        "Çankaya Sokak",
+        "Ayrancı Sokak"
+      ],
+      "Aziziye": [
+        "Kırkpınar Sokak",
+        "Çankaya Sokak",
+        "Aziziye Caddesi",
+        "Aziziye Sokak",
+        "Ankara Caddesi"
+      ],
+      "Bademlidere": [
+        "Çankaya Sokak",
+        "Bademli Sokak",
+        "Bademli Küme Evler",
+        "Bademli Caddesi",
+        "Dere Sokak",
+        "Dere Caddesi"
+      ],
+      "Bağcılar": [
+        "Folklor Sokak",
+        "Bağcılar Sokak",
+        "Bağcılar Caddesi",
+        "Bağcılar Küme Evler",
+        "Çankaya Sokak",
+        "Balcılar Sokak"
+      ],
+      "Bahçelievler": [
+        "19. Sokak",
+        "14. Sokak",
+        "36. Sokak",
+        "66. Sokak",
+        "11. Sokak",
+        "69. Sokak",
+        "50. Sokak",
+        "Ankara Sokak",
+        "Ankara Caddesi",
+        "Bahçelievler Caddesi",
+        "Bahçelievler Küme Evler",
+        "Ankara 7. Sokak",
+        "Ankara 5. Sokak",
+        "Bahçelievler Sokak"
+      ],
+      "Barbaros": [
+        "Çankaya Sokak",
+        "Barbaros Caddesi",
+        "Barbaros Sokak",
+        "Barbaros Bulvarı",
+        "Barbaros Küme Evler",
+        "Barbaros Ha Caddesi"
+      ],
+      "Büyükesat": [
+        "Fıskiye Sokak",
+        "Esat Caddesi",
+        "Çankaya Sokak",
+        "Ankara Sokak",
+        "Büyük Kışla Sokak",
+        "Ankara 1. Sokak"
+      ],
+      "Cebeci": [
+        "Soysal Sokak",
+        "Kırıkhan Sokak",
+        "Çankaya Sokak",
+        "Cebeci Caddesi"
+      ],
+      "Çamlıtepe": [
+        "Çamlıtepe Caddesi",
+        "Çankaya Sokak",
+        "Ankara Caddesi"
+      ],
+      "Çavuşlu": [
+        "Çavuşlu Küme Evler",
+        "Çankaya Sokak"
+      ],
+      "Çay Yolu": [
+        "Çayyolu Küme Evler"
+      ],
+      "Çukurambar": [
+        "1484. Sokak",
+        "Çankaya Sokak",
+        "Ankara Caddesi"
+      ],
+      "Devlet": [
+        "Misket Sokak",
+        "Çankaya Sokak",
+        "Devlet Caddesi"
+      ],
+      "Dilekler": [
+        "Çankaya Sokak",
+        "Ankara Caddesi"
+      ],
+      "Emek": [
+        "1565. Sokak",
+        "12. Sokak",
+        "4. Sokak",
+        "Karanfil Sokak",
+        "Çankaya Sokak",
+        "Emek Caddesi",
+        "Emek Sokak",
+        "Ankara Caddesi"
+      ],
+      "Ertuğrul Gazi": [
+        "Ertuğrul Gazi Bulvarı",
+        "Ertuğrul Gazi Caddesi",
+        "Ertuğrul Gazi Sokak",
+        "Ertuğrulgazi Sokak"
+      ],
+      "Esat": [
+        "Horasan Sokak",
+        "Esat Caddesi",
+        "Çankaya Sokak"
+      ],
+      "Esatoğlu": [
+        "Çankaya Sokak",
+        "Ankara Caddesi"
+      ],
+      "Eti": [
+        "Çankaya Sokak",
+        "Eti Caddesi"
+      ],
+      "Fakülteler": [
+        "Çankaya Sokak"
+      ],
+      "Fidanlık": [
+        "Fidanlık Sokak",
+        "Çankaya Sokak",
+        "Ankara Caddesi"
+      ],
+      "Gaziosmanpaşa": [
+        "Gökçek Sokak",
+        "Gaziosmanpaşa Caddesi",
+        "Gazi Osmanpaşa Caddesi",
+        "Gaziosmanpaşa Sokak"
+      ],
+      "Güven": [
+        "Çankaya Sokak",
+        "Güvenç Küme Evler",
+        "Güvenç Sokak",
+        "Güven Sokak"
+      ],
+      "Güvenevler": [
+        "Çankaya Sokak"
+      ],
+      "Harbiye": [
+        "Zarif Sokak",
+        "Çankaya Sokak",
+        "Harbiye Sokak",
+        "Harbiye Caddesi",
+        "Ankara Bulvarı"
+      ],
+      "Hilal": [
+        "Sema Yazar Sokak",
+        "474. Sokak",
+        "Hilal Caddesi",
+        "Çankaya Sokak",
+        "Hilal Sokak",
+        "Hilal 1. Sokak"
+      ],
+      "Huzur": [
+        "Gökçen Sokak",
+        "1283. Sokak",
+        "Çankaya Sokak",
+        "Huzur Sokak",
+        "Huzur Caddesi",
+        "1. Huzur Sokak",
+        "Ankara Caddesi",
+        "Hüzün Caddesi",
+        "Hüzün Sokak"
+      ],
+      "İleri": [
+        "İleri Sokak",
+        "Çankaya Sokak"
+      ],
+      "İlkadım": [
+        "İlkadım Sokak",
+        "Adım Sokak",
+        "Çankaya Sokak",
+        "Ankara Bulvarı",
+        "Ankara Caddesi",
+        "İlkadım Caddesi"
+      ],
+      "İlker": [
+        "763. Sokak",
+        "1037. Sokak",
+        "970. Sokak",
+        "1030. Sokak",
+        "İlker Caddesi",
+        "İlke Caddesi",
+        "Çankaya Sokak",
+        "Çankaya Küme Evler",
+        "İlker Sokak"
+      ],
+      "İncesu": [
+        "İncesu Caddesi",
+        "Ankara Yolu",
+        "Çankaya Sokak",
+        "Ankara Sokak",
+        "İncesu Sokak"
+      ],
+      "İşçi Blokları": [
+        "1931. Mak İş Blokları Sokak",
+        "Çankaya Sokak"
+      ],
+      "Karakusunlar": [
+        "Çankaya Sokak"
+      ],
+      "Kavaklıdere": [
+        "Kavaklıdere Caddesi"
+      ],
+      "Keklikpınarı": [
+        "Çankaya Sokak",
+        "Keklik Sokak",
+        "Keklik Caddesi"
+      ],
+      "Kırkkonaklar": [
+        "360. Sokak",
+        "Çankaya Sokak",
+        "Ankara Caddesi"
+      ],
+      "Kızılay": [
+        "Ataç-2 Sokak",
+        "İnkilap Sokak",
+        "Karanfil Sokak",
+        "Fevzi Çakmak 1. Sokak",
+        "Çankaya Sokak",
+        "Kızılay Caddesi",
+        "Kızılay Bulvarı"
+      ],
+      "Kızılırmak": [
+        "Kızılırmak Caddesi",
+        "Çankaya Sokak",
+        "Kızılırmak Sokak",
+        "Kızılırmak Küme Evler"
+      ],
+      "Konutkent": [
+        "Bozova Sokak",
+        "Çankaya Sokak",
+        "Konut Sokak",
+        "Konut Caddesi"
+      ],
+      "Küçükesat": [
+        "Esat Caddesi",
+        "Küçük Çankaya Caddesi",
+        "Küçük Çankaya 3. Sokak",
+        "Küçük Çankaya 1. Sokak",
+        "Küçük Çankaya 5. Sokak",
+        "Küçük Çankaya 6. Sokak",
+        "Küçük Çankaya 7. Sokak",
+        "Küçük Çankaya 4. Sokak",
+        "Çankaya Sokak",
+        "Küçük Sokak"
+      ],
+      "Maltepe": [
+        "Bitiştiren Sokak",
+        "Gülseren Sokak",
+        "Çankaya Sokak",
+        "Maltepe Caddesi"
+      ],
+      "Metin Akkuş": [
+        "772. Sokak",
+        "Çankaya Sokak",
+        "Metin Sokak",
+        "Akkuş Sokak",
+        "Metin Şanal Bulvarı",
+        "Çetin Sokak"
+      ],
+      "Milli Müdafaa": [
+        "Milli Müdafaa Caddesi",
+        "Milli Müdafa Caddesi"
+      ],
+      "Muhsin Ertuğrul": [
+        "Ertuğrul Gazi Bulvarı",
+        "Ertuğrul Sokak",
+        "Şehit Ertuğrul Kaya Caddesi",
+        "Sudi Ertuğrul Sokak",
+        "Ertuğrul Gazi Caddesi",
+        "Ertuğrul Gazi Sokak",
+        "Ertuğrul Bey Sokak"
+      ],
+      "Mustafa Kemal": [
+        "2146. Sokak",
+        "2124. Sokak",
+        "5077. Sokak",
+        "Çankaya Sokak",
+        "Gazi Mustafa Kemal Bulvarı",
+        "Mustafa Kemal Caddesi",
+        "Mustafa Kemal Sokak",
+        "Mustafa Kemal Bulvarı",
+        "Kemah Caddesi",
+        "Gazi Mustafa Kemal Caddesi",
+        "Gazi Mustafa Kemal 1. Cadde"
+      ],
+      "Mutlukent": [
+        "Çankaya Sokak",
+        "Mutlu Caddesi",
+        "Mutlu Sokak"
+      ],
+      "Mürsel Uluç": [
+        "945. Sokak",
+        "Çankaya Sokak",
+        "Gürsel Caddesi"
+      ],
+      "Namık Kemal": [
+        "Menekşe 2 Sokak",
+        "Sümer 2. Sokak",
+        "Namık Kemal Caddesi",
+        "Namık Kemal Sokak",
+        "Çankaya Sokak",
+        "Namık Kemal Bulvarı",
+        "Kemah Caddesi",
+        "Namık Kemal 2. Sokak",
+        "Namık Kemal 1. Sokak"
+      ],
+      "Oğuzlar": [
+        "Oğuzlar Sokak",
+        "Çankaya Sokak",
+        "Oğuzlar Caddesi",
+        "Ankara Caddesi"
+      ],
+      "Oran": [
+        "578. Sokak",
+        "620. Sokak",
+        "Çankaya Sokak",
+        "Orhan Sokak"
+      ],
+      "Öveçler": [
+        "1083. Sokak",
+        "Çankaya Sokak"
+      ],
+      "Remzi Oğuz Arık": [
+        "Çığır Sokak",
+        "Yazanlar Sokağı",
+        "Çankaya Sokak",
+        "Oğuz Caddesi"
+      ],
+      "Sağlık": [
+        "Sağlık 1 Sokak",
+        "Sağlık-2 Sokak",
+        "Ziya Gökalp Caddesi",
+        "Sağlık 2. Sokak",
+        "Sağlık Sokak",
+        "Çankaya Sokak",
+        "Sağlık Caddesi",
+        "1. Sağlık Sokak",
+        "Sağlık 4. Sokak",
+        "Sağlık 3. Sokak",
+        "Ankara Caddesi"
+      ],
+      "Sancak": [
+        "Sancak Sokak",
+        "Çankaya Sokak",
+        "Sancak Caddesi",
+        "Ankara Caddesi",
+        "Sancak 3. Sokak",
+        "Sancak 2. Sokak",
+        "Sancak 8. Sokak",
+        "Sancak 4. Sokak",
+        "Sancak 5. Sokak",
+        "Sancak 1. Sokak",
+        "Sancak 6. Sokak",
+        "Saçak Sokak",
+        "Saçak Küme Evler",
+        "Saçak Caddesi",
+        "Sancar Küme Evler"
+      ],
+      "Seyranbağları": [
+        "Gökçen Sokak",
+        "Seyran Caddesi",
+        "Çankaya Sokak",
+        "Seyran Sokak",
+        "Ova Bağları Küme Evler",
+        "Ankara Caddesi"
+      ],
+      "Şehit Cengiz Topel": [
+        "Cengiz Topel Caddesi"
+      ],
+      "Şehit Cevdet Özdemir": [
+        "Şehit Celaleddin Özdemir Sokak",
+        "Şehit Soner Çankaya Caddesi",
+        "Şehit Cevdet Cansev Sokak",
+        "Şehit Cevdet Özdemir Sokak"
+      ],
+      "Sokullu": [
+        "Anne Sokak",
+        "Çankaya Sokak",
+        "Sokullu Sokak",
+        "Sokullu Caddesi"
+      ],
+      "Sok Mehmet Paşa": [
+        "Sokullu Mehmetpaşa Caddesi"
+      ],
+      "Tandoğan": [
+        "Tandoğan Meydanı",
+        "Candoğan Sokak"
+      ],
+      "Umut": [
+        "Umut Sokak",
+        "Çankaya Sokak",
+        "Umut Caddesi",
+        "Umut 2. Sokak",
+        "Umut 1. Sokak",
+        "Umut 3. Sokak"
+      ],
+      "Üniversiteler": [
+        "Üniversiteler Sokak"
+      ],
+      "Yıldız": [
+        "548. Sokak",
+        "635. Sokak",
+        "Şht. Aytekin Yavuz Sokak",
+        "1527. Sokak",
+        "1526. Sokak",
+        "1524. Sokak",
+        "Yıldız 4. Sokak",
+        "Yıldız 3. Cadde",
+        "Yıldız 1. Sokak",
+        "Yıldız 2. Sokak",
+        "Çift Yıldız Sokak"
+      ],
+      "Yukarı Bahçelievler": [
+        "Ankara Sokak",
+        "Ankara Caddesi",
+        "Bahçelievler Caddesi",
+        "Bahçelievler Küme Evler",
+        "Bahçelievler Mahallesi Caddesi",
+        "Bahçeli Küme Evler",
+        "Ankara 7. Sokak",
+        "Ankara 5. Sokak",
+        "Yukarı Küme Evler"
+      ],
+      "Yukarı Öveçler": [
+        "1083. Sokak",
+        "Çankaya Sokak",
+        "Yukarı Sokak",
+        "Yukarı Küme Evler",
+        "Ankara Caddesi"
+      ],
+      "Yüzüncüyıl": [
+        "Yüzüncü Yıl Hastanesi",
+        "Yüzüncü Yıl Sokak",
+        "Yüzüncü Yıl Bulvarı",
+        "Çankaya Sokak",
+        "Küçük Çankaya Caddesi"
+      ]
+    },
+    "Keçiören": {
+      "Adnan Menderes": [
+        "Menderes Caddesi",
+        "Adnan Menderes Caddesi",
+        "Adnan Menderes Bulvarı",
+        "Menderes Bulvarı"
+      ],
+      "Aktepe": [
+        "1040. Sokak",
+        "1045. Sokak",
+        "1047. Sokak",
+        "Aytepe Sokak",
+        "Ankara Caddesi",
+        "Aktepe Küme Evler",
+        "Aktepe Sokak"
+      ],
+      "Aşağı Eğlence": [
+        "Aşağı Eğlence Kavşağı"
+      ],
+      "Atapark": [
+        "Dinar Sokak",
+        "1304. Sokak",
+        "Görkemli Sokak",
+        "Yankılar Sokak",
+        "Atapark Caddesi",
+        "Park Sokak",
+        "Atapark Sokak"
+      ],
+      "Ayvalı": [
+        "Selvi Sokak",
+        "Seda Sokak",
+        "Çampürü Sokak",
+        "1586/1. Sokak",
+        "1453. Sokak",
+        "Ayvalı Caddesi",
+        "Ayvalık Sokak"
+      ],
+      "Bademlik": [
+        "1147. Sokak",
+        "1171. Sokak",
+        "Elvanter Sokak",
+        "Bademlik Sokak",
+        "Bademlik Caddesi"
+      ],
+      "Bahçelievler": [
+        "Ankara Caddesi",
+        "Bahçelievler Caddesi",
+        "Bahçelievler Küme Evler",
+        "Ankara Sokak",
+        "Ankara 7. Sokak",
+        "Ankara 5. Sokak"
+      ],
+      "Basınevleri": [
+        "Dergi Sokak",
+        "Şükrü Gülesin Sokak",
+        "Ankara Caddesi"
+      ],
+      "Çaldıran": [
+        "520. Sokak",
+        "Çaldıran Caddesi",
+        "Baldıran Sokak",
+        "Çaldıran Sokak",
+        "Çaldıran 1. Cadde"
+      ],
+      "Çalışkanlar": [
+        "Çalışkanlar Sokak",
+        "Çalışkanlar Küme Evler"
+      ],
+      "Çankaya": [
+        "Çankaya Sokak",
+        "Yeni Ankara Caddesi"
+      ],
+      "Esertepe": [
+        "279. Sokak",
+        "271. Sokak",
+        "Esentepe Sokak",
+        "Esertepe Sokak",
+        "Esertepe Caddesi",
+        "Esertepe 5. Sokak",
+        "Ankara Caddesi",
+        "Sağlık (Esertepe) Sokak",
+        "Esentepe Caddesi",
+        "Esentepe 3. Sokak",
+        "Esentepe 2. Sokak",
+        "Esentepe 7. Sokak",
+        "Esentepe 5. Sokak",
+        "Esentepe 4. Sokak",
+        "Esentepe 6. Sokak",
+        "Esentepe 1. Sokak",
+        "Esentepe 9. Sokak",
+        "Esentepe 8. Sokak"
+      ],
+      "Etlik": [
+        "Bağ Evi Sokak",
+        "Kiraz Sokak",
+        "Karlıova Sokak",
+        "80. Sokak",
+        "Ali Semerkand Sokak",
+        "Mimarlar Sokak",
+        "Meyveli Sokak",
+        "Etlik Caddesi"
+      ],
+      "Güçlükaya": [
+        "Güçlü Sokak",
+        "Kaya Caddesi",
+        "Kaya Sokak",
+        "Kaya Küme Evler"
+      ],
+      "Güzelyurt": [
+        "Güzelyurt Caddesi",
+        "Güzelyurt Sokak"
+      ],
+      "Hasköy": [
+        "41. Sokak",
+        "49. Sokak"
+      ],
+      "Hisar": [
+        "Keçiören Sokak",
+        "Hisar Sokak",
+        "Hisar Caddesi",
+        "Hisar Küme Evler",
+        "Hisar 1. Sokak",
+        "Hisar 2. Sokak"
+      ],
+      "İncirli": [
+        "Gökkuşağı Sokak",
+        "Sümbüllü Sokak",
+        "İncirli Sokak",
+        "İncili Sokak",
+        "İncirlik Caddesi",
+        "İncirlik Küme Evler",
+        "İncirli Küme Evler"
+      ],
+      "Kalaba": [
+        "30. Sokak",
+        "Ganimet Sokak",
+        "Lütuf Sokak",
+        "Fedakar Sokak",
+        "Kalaba Sokak",
+        "Ankara Caddesi",
+        "Ankara Bulvarı"
+      ],
+      "Kamil Ocak": [
+        "Kamil Ocak Sokak",
+        "Kamil Ocak Caddesi"
+      ],
+      "Kanuni": [
+        "Kanuni Caddesi"
+      ],
+      "Karargahtepe": [
+        "Komut Sokak",
+        "Ankara Caddesi"
+      ],
+      "Kavacık": [
+        "Kavacık Sokak",
+        "Kavacık Küme Evler"
+      ],
+      "Kuşcağız": [
+        "Nurcan Sokak",
+        "357. Sokak",
+        "387. Sokak"
+      ],
+      "Ovacık": [
+        "Ankara Caddesi",
+        "Ovacık Küme Evler"
+      ],
+      "Pınarbaşı": [
+        "Asma Sokak",
+        "Pınarbaşı Sokak",
+        "Pınar Caddesi"
+      ],
+      "Şenlik": [
+        "Gürkan Sokak",
+        "Şenlik Sokak",
+        "Şenlik Caddesi",
+        "Esenlik Sokak",
+        "Ankara Caddesi"
+      ],
+      "Şevkat": [
+        "Erdek Sokak",
+        "Şefkat Sokak"
+      ],
+      "Şenyuva": [
+        "Yuva Küme Evler",
+        "Yuva Sokak"
+      ],
+      "Tepebaşı": [
+        "Çağla Sokak",
+        "Foça Sokak",
+        "Tepebaşı Kavşağı",
+        "Tepebaşı Caddesi",
+        "Tepebaşı Sokak"
+      ],
+      "Uyanış": [
+        "1082. Sokak",
+        "1118. Sokak",
+        "Uyanış Sokak"
+      ],
+      "Yakacık": [
+        "İvedik Yakacık Yolu",
+        "Yakacık Sokak",
+        "Yakacık Bulvarı"
+      ],
+      "Yayla": [
+        "1494. Sokak",
+        "Porsuk Sokak",
+        "1440. Sokak",
+        "1493. Sokak",
+        "Ayla Sokak",
+        "Ayla 1. Sokak",
+        "Yayla Sokak",
+        "Yayla Caddesi",
+        "Yayla Küme Evler",
+        "Yayla Yediören Küme Evler",
+        "Göl Yayla",
+        "Yayla 3. Sokak",
+        "Yayla 6. Cadde",
+        "Yayla 9. Sokak",
+        "Yayla 1. Sokak",
+        "Yayla 7. Sokak",
+        "Yayla 2. Sokak",
+        "Yayla 5. Sokak",
+        "Yayla 8. Sokak"
+      ],
+      "Yeni Şenyuva": [
+        "Yeni Sokak",
+        "Yeni Küme Evler",
+        "Ankara Caddesi"
+      ],
+      "Yeşilöz": [
+        "Yeşilöz Sokak",
+        "Yeşilöz Küme Evler"
+      ],
+      "Yeşiltepe": [
+        "1993. Sokak",
+        "1996. Sokak",
+        "1118. Sokak",
+        "1990. Sokak",
+        "Yeşiltepe Caddesi",
+        "Yeşiltepe Evleri"
+      ],
+      "Yirmiüç Nisan": [
+        "Nişane Sokak",
+        "Nisan Sokak",
+        "23 Nisan Caddesi",
+        "23 Nisan Sokak",
+        "23 Nisan 1. Sokak"
+      ],
+      "Yonca": [
+        "Yonca Sokak"
+      ],
+      "Yukarı Eğlence": [
+        "Aşağı Eğlence Kavşağı",
+        "Yukarı Sokak",
+        "Yukarı Küme Evler",
+        "Ankara Caddesi",
+        "Yukarı Gençali Küme Evler",
+        "Yukarı Çukurören Küme Evler"
+      ],
+      "Yunus Emre": [
+        "Şener Sokak",
+        "Akten Sokak",
+        "Yunus Emre Caddesi",
+        "Yunus Caddesi",
+        "Emre Sokak",
+        "Yunus Emre Sokak",
+        "Yunus Emre Bulvarı"
+      ]
+    },
+    "Mamak": {
+      "Abidin Paşa": [
+        "Abidinpaşa Meydanı"
+      ],
+      "Akdere": [
+        "454. Sokak",
+        "97 Sokak",
+        "Ankara Caddesi",
+        "Akdere Küme Evler",
+        "Akdere Sokak",
+        "Akdere Caddesi"
+      ],
+      "Akpınar": [
+        "Akpınar Sokak",
+        "Akpınar Caddesi"
+      ],
+      "Araplar": [
+        "Araplar Caddesi",
+        "Araplar Sokak",
+        "Azaplar Yolu"
+      ],
+      "Aslanköy": [
+        "Aslanbey Caddesi"
+      ],
+      "Aşağı İmrahor": [
+        "İmrahor Caddesi",
+        "Aşağı İmrahor Küme Evler",
+        "Aşağı Mahalle Küme Evler",
+        "Aşağı Küme Evler"
+      ],
+      "Aşık Veysel": [
+        "Aşık Veysel Caddesi",
+        "Aşık Veysel Sokak"
+      ],
+      "Bahçelerüstü": [
+        "34. Sokak",
+        "32. Sokak",
+        "Ankara Caddesi",
+        "Bahçeler Sokak",
+        "Bahçeler Küme Evler",
+        "Bahçeler Caddesi"
+      ],
+      "Balkiraz": [
+        "Bal Sokak",
+        "Kiraz Caddesi",
+        "Kiraz Sokak",
+        "Kiraz Küme Evler"
+      ],
+      "Bayındır": [
+        "107. Sokak",
+        "119. Sokak",
+        "122. Sokak",
+        "Bayındır Küme Evler",
+        "Bayındır Sokak",
+        "Bayındır 2. Sokak",
+        "Bayındır Caddesi"
+      ],
+      "Boğaziçi": [
+        "Boğaziçi Caddesi",
+        "Boğaziçi Sokak",
+        "Boğaz Sokak"
+      ],
+      "Cengizhan": [
+        "850. Sokak",
+        "851. Sokak",
+        "Cengizhan Caddesi",
+        "Cengizhan Sokak",
+        "Cengizhan 3. Sokak",
+        "Cengizhan 2. Sokak",
+        "Cengizhan 1. Sokak"
+      ],
+      "Çağlayan": [
+        "Çağlayan Caddesi",
+        "Çağlayan Sokak"
+      ],
+      "Çamlıca": [
+        "Çamlıca Sokak",
+        "Çamlıca Caddesi"
+      ],
+      "Çiçektepe": [
+        "Çiçektepe Küme Evler"
+      ],
+      "Derbent": [
+        "Derbent Sokak"
+      ],
+      "Dostlar": [
+        "Dostlar Caddesi",
+        "Dostlar Sokak",
+        "Ankara Caddesi"
+      ],
+      "Dutluk": [
+        "294. Sokak",
+        "Dutluk Caddesi",
+        "Dutluk Kavşağı",
+        "Dutluk Sokak",
+        "Dutlu Sokak"
+      ],
+      "Ege": [
+        "686. Sokak",
+        "978. Sokak",
+        "955. Sokak",
+        "Ege Sokak",
+        "Ege Caddesi"
+      ],
+      "Ekin": [
+        "Ekin Sokak",
+        "Akın Sokak",
+        "Ekim Sokak",
+        "Akın Caddesi",
+        "Akın"
+      ],
+      "Fahri Korutürk": [
+        "851. Sokak",
+        "Fahri Korutürk Caddesi",
+        "Korutürk Caddesi",
+        "Fahri Koru Caddesi",
+        "Fahri Sokak",
+        "Fahri Korutürk Bulvarı",
+        "Fahri Korutürk Sokak",
+        "Fahri Korutürk 3. Sokak",
+        "Fahri Korutürk 2. Sokak",
+        "Fahri Korutürk 1. Sokak"
+      ],
+      "General Zeki Doğan": [
+        "539. Sokak",
+        "Doğan Sokak",
+        "Doğan Caddesi",
+        "Doğan 5. Sokak",
+        "Doğan 3. Sokak",
+        "Doğan 4. Cadde",
+        "Doğan 2. Sokak",
+        "Doğan 1. Sokak",
+        "Doğa Caddesi",
+        "Doğa Sokak",
+        "Zekai Sokak"
+      ],
+      "Gülseren": [
+        "Gülser Sokak",
+        "Gülseren Sokak",
+        "Ankara Caddesi",
+        "Gülveren Sokak",
+        "Gülveren Caddesi",
+        "Gülveren 2. Sokak",
+        "Gülveren 4. Sokak"
+      ],
+      "Gülveren": [
+        "69. Sokak",
+        "Orhaneli Sokak",
+        "Gülveren Sokak",
+        "Gülveren Caddesi",
+        "Ankara Caddesi"
+      ],
+      "Harman": [
+        "Harman Sokak",
+        "Harman 1. Sokak",
+        "Harman 2. Sokak"
+      ],
+      "Hürel": [
+        "Hürel Sokak"
+      ],
+      "Hüseyin Gazi": [
+        "Hüseyin Gazi Caddesi",
+        "Gazi Sokak"
+      ],
+      "İnönü": [
+        "İnönü Sokak",
+        "İnönü Bulvarı",
+        "İnönü Caddesi",
+        "2. İnönü Caddesi",
+        "1. İnönü Caddesi",
+        "İnönü-2. Cadde",
+        "İnönü-1. Cadde",
+        "İşönü Küme Evler"
+      ],
+      "Karaağaç": [
+        "Karaağaç Caddesi",
+        "Karaağaç Küme Evler",
+        "Karaağaç Sokak",
+        "Ankara 1. Sokak",
+        "Ankara Caddesi"
+      ],
+      "Kartaltepe": [
+        "302. Sokak",
+        "Karatepe Sokak",
+        "Kartaltepe Caddesi",
+        "Ankara Caddesi",
+        "Kartaltepe/8. Sokak",
+        "Kartaltepe/1. Sokak",
+        "Karatepe Caddesi"
+      ],
+      "Kayaş": [
+        "122. Sokak",
+        "Kayaş Caddesi",
+        "Kayaş Sokak",
+        "Kaya Sokak",
+        "Kaya Caddesi",
+        "Kaya Küme Evler"
+      ],
+      "Kazım Orbay": [
+        "Kazım Orbay Sokak"
+      ],
+      "Kibrit Fabrikası": [
+        "Fabrika Caddesi",
+        "Fabrika Sokak",
+        "Fabrika Küme Evler",
+        "Kibrit Sokak",
+        "Kıbrıs Caddesi",
+        "Kıbrıs Sokak",
+        "Kibris Caddesi"
+      ],
+      "Köstence": [
+        "3100 sokak",
+        "Ankara Caddesi"
+      ],
+      "Kutlu": [
+        "Ankara Caddesi",
+        "Ankara Yolu",
+        "Kutlu Sokak",
+        "Kutlu Caddesi",
+        "Mutlu Caddesi",
+        "Kulu Küme Evler",
+        "Mutlu Sokak"
+      ],
+      "Misket": [
+        "Misket Caddesi",
+        "Misket Sokak"
+      ],
+      "Mutlu": [
+        "535. Sokak",
+        "Mutlu Caddesi",
+        "Mutlu Sokak",
+        "Mutlu Küme Evler",
+        "Kutlu Sokak",
+        "Kutlu Caddesi"
+      ],
+      "Ortaköy": [
+        "Ortaköy Küme Evler",
+        "Ankara Caddesi"
+      ],
+      "Peyami Safa": [
+        "Peyami Safa Sokak",
+        "Safa Sokak"
+      ],
+      "Saimekadın": [
+        "1 Sokak",
+        "Kahraman Kadın Sokak"
+      ],
+      "Şahap Gürler": [
+        "1209. Sokak",
+        "Gürler Sokak",
+        "Güler Sokak",
+        "1. Güler Sokak",
+        "Saha Sokak",
+        "Şahan Sokak"
+      ],
+      "Şahintepe": [
+        "Şahintepe Sokak",
+        "Şahintepe Küme Evler"
+      ],
+      "Şirintepe": [
+        "Şirintepe Sokak"
+      ],
+      "Tuzluçayır": [
+        "Kınalıel Sokak",
+        "297. Sokak",
+        "Çayır Sokak",
+        "Çayır Caddesi"
+      ],
+      "Üreğil": [
+        "Üreğil Küme Evler"
+      ],
+      "Yatıkmusluk": [
+        "Yatıkmusluk Caddesi"
+      ],
+      "Yeşilbayır": [
+        "1789. Sokak",
+        "122. Sokak",
+        "Yeşil Sokak",
+        "Bayır Sokak",
+        "Mamak Sokak",
+        "Bayır Caddesi",
+        "Bayır Küme Evler"
+      ],
+      "Yeni Bayındır": [
+        "119. Sokak",
+        "Bayındır Küme Evler",
+        "Yeni Sokak",
+        "Bayındır Sokak",
+        "Yeni Küme Evler"
+      ],
+      "Yukarı İmrahor": [
+        "Yukarı İmrahor Mahallesi Küme Evler"
+      ],
+      "Zirvekent": [
+        "Zirvekent Zambak",
+        "Zirve Caddesi",
+        "Zirve Sokak",
+        "Kent Sokak",
+        "Zirvekent Manolya"
+      ]
+    },
+    "Etimesgut": {
+      "30 Ağustos": [
+        "30. Sokak",
+        "Ankara Bulvarı"
+      ],
+      "Ahimesut": [
+        "Ahimesut Bulvarı",
+        "Ahi Mesut Bulvarı",
+        "Ahi Mesud Bulvarı",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Alsancak": [
+        "Alsancak Caddesi",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Alsancak Sokak"
+      ],
+      "Aşağıyurtçu": [
+        "Aşağı Yurtçu Küme Evler"
+      ],
+      "Bağlıca": [
+        "Bağlıca Sokak",
+        "Bağlıca Bulvarı",
+        "Bağlıca Caddesi",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Bağlıca Küme Evler"
+      ],
+      "Bahçekapı": [
+        "Ankara Bulvarı",
+        "Bahçekapı Küme Evler",
+        "Etimesgut Yolu"
+      ],
+      "Balıkhisar": [
+        "Ankara Caddesi",
+        "Ankara Bulvarı",
+        "Balçıkhisar Küme Evler",
+        "Etimesgut Yolu"
+      ],
+      "Eryaman 1": [
+        "1. Cadde",
+        "1. Sokak",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Eryaman 2": [
+        "2. Cadde",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Eryaman 3": [
+        "3. Cadde",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Eryaman 4": [
+        "208. Sokak",
+        "4. Cadde",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Eryaman 5": [
+        "284. Sokak",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Etimesgut Sokak",
+        "Ankara 5. Sokak"
+      ],
+      "Etiler": [
+        "Etiler Caddesi",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Elvan": [
+        "1960. Sokak",
+        "Bağlıca Sokak",
+        "1948/1. Sokak",
+        "Elvan Caddesi",
+        "Ankara Bulvarı"
+      ],
+      "Ertuğrulgazi": [
+        "Gazi Caddesi",
+        "Ankara Bulvarı"
+      ],
+      "Fatih Sultan": [
+        "2704. Sokak",
+        "2364. Sokak",
+        "Fatih Caddesi",
+        "Sultan Sokak",
+        "Ankara Bulvarı"
+      ],
+      "Fevziye": [
+        "Fevziye Küme Evler",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Güzelkent": [
+        "Gülkent Caddesi",
+        "Ankara Bulvarı",
+        "Güzelkent Sokak",
+        "Etimesgut Yolu"
+      ],
+      "İstasyon": [
+        "2324. Sokak",
+        "İstasyon Caddesi",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Ankara Caddesi",
+        "İstasyon Sokak",
+        "İstasyon Küme Evler"
+      ],
+      "Oğuzlar": [
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Oğuzlar Sokak",
+        "Oğuzlar Caddesi"
+      ],
+      "Piyade": [
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Piyade Sokak"
+      ],
+      "Şehit Osman Avcı": [
+        "2635. Sokak",
+        "Osman Bey Caddesi",
+        "Şehit Ali"
+      ],
+      "Süvari": [
+        "Süvari Sokak",
+        "Süvari Caddesi",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Topçu": [
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Tunahan": [
+        "Ankara Bulvarı",
+        "Etimesgut Yolu",
+        "Tunahan Sokak",
+        "Tunahan Caddesi"
+      ],
+      "Türkuşağı": [
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Yapracık": [
+        "4471. Sokak",
+        "Yapracık Küme Evler",
+        "Yapracık Mahallesi Küme Evler",
+        "Ankara Bulvarı",
+        "Etimesgut Yolu"
+      ],
+      "Yukarıyurtçu": [
+        "Yukarı Yurtçu Küme Evler"
+      ]
+    },
+    "Yenimahalle": {
+      "Anadolu": [
+        "1922. Sokak",
+        "1439. Sokak",
+        "Aşan Sokak",
+        "2370. Sokak",
+        "Bayburt Sokak",
+        "1606. Sokak",
+        "525. sokak",
+        "3761. Sokak",
+        "33. Sokak",
+        "Anadolu Bulvarı",
+        "Anadolu Meydanı",
+        "Anadolu Caddesi",
+        "Anadolu Sokak",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Barıştepe": [
+        "Barış Caddesi",
+        "Barış Sokak",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Tepe Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Batıkent": [
+        "1721. Sokak",
+        "1725. Sokak",
+        "1606. Sokak",
+        "1792. Sokak",
+        "1994.Sokak",
+        "1789. Sokak",
+        "2360. Sokak",
+        "1879. Sokak",
+        "1851. Sokak",
+        "1868. Sokak",
+        "2372 Sokak",
+        "5601 Sokak",
+        "2385 Sokak",
+        "2171 Sokak",
+        "2381 Sokak"
+      ],
+      "Beştepe": [
+        "Misket Sokak",
+        "33. Sokak",
+        "17. Sokak",
+        "Beştepe Caddesi",
+        "Ankara Bulvarı",
+        "Beytepe Mahallesi Küme Evler",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Çamlıca": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Çamlıca Sokak",
+        "Çamlıca Caddesi"
+      ],
+      "Çarşı": [
+        "Çarşı Caddesi",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Demetevler": [
+        "381. Sokak",
+        "Yenimahalle Caddesi",
+        "Ankara Bulvarı",
+        "Ankara Sokak"
+      ],
+      "Demet": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Emniyet": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Emniyet Sokak",
+        "Emniyet Caddesi"
+      ],
+      "Ergazi": [
+        "1832/1. Sokak",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Ergazi Sokak",
+        "Ergazi Caddesi"
+      ],
+      "Gayret": [
+        "Ahududu Sokak",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Gayret Sokak",
+        "Gayret Caddesi"
+      ],
+      "Gazi": [
+        "158 Sokak",
+        "Korkmaz Sokak",
+        "31. Sokak",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Gersan": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Güventepe": [
+        "Güventepe Caddesi",
+        "Ankara Bulvarı",
+        "Ankara Sokak"
+      ],
+      "İlkyerleşim": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "İnönü": [
+        "İnönü Bulvarı",
+        "İnönü Caddesi",
+        "2. İnönü Caddesi",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "İvedik": [
+        "1439. Sokak",
+        "İvedik Caddesi",
+        "İvedik Yolu",
+        "İvedik Küme Evler",
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Kaletepe": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Beytepe Mahallesi Küme Evler",
+        "Tepe Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Kale Sokak",
+        "Kaletepe 1. Sokak",
+        "Tepe Mahallesi 5. Sokak",
+        "Tepe Mahallesi 3. Sokak"
+      ],
+      "Kalecik": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Ankara Caddesi",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Kalecik Sokak"
+      ],
+      "Karşıyaka": [
+        "1502/1. Sokak"
+      ],
+      "Kayalar": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak",
+        "Kayalar Caddesi"
+      ],
+      "Osman Gazi": [
+        "Gazi Osman Paşa Caddesi"
+      ],
+      "Ömek": [
+        "Ankara Bulvarı",
+        "Ankara Sokak",
+        "Emek Sokak",
+        "Yenimahalle Caddesi",
+        "Yeni Mahalle Küme Evler",
+        "Yenimahalle Sokak",
+        "Yeni Mahalle Sokak"
+      ],
+      "Pamuklar": [
+        "662. Sokak"
+      ],
+      "Ragıp Tüzün": [
+        "Cengiz Sokak"
+      ],
+      "Varlık": [
+        "Yayın Sokak"
+      ],
+      "Yenimahalle": [
+        "102 Sokak",
+        "Bergama Sokak",
+        "Piri Reis Sokak",
+        "Yıldızeli Sokak",
+        "428 Sokak",
+        "662. Sokak",
+        "Damladol Sokak",
+        "1495. Sokak",
+        "758. Sokak",
+        "33. Sokak"
+      ],
+      "Yunus Emre": [
+        "Aşan Sokak",
+        "Güney Sokak",
+        "1788. Sokak"
+      ]
+    },
+    "Altındağ": {
+      "Ali Ersoy": [
+        "45. Sokak",
+        "49. Sokak"
+      ],
+      "Anafartalar": [
+        "Çam Sokak"
+      ],
+      "Baraj": [
+        "715 Sokak"
+      ],
+      "Battalgazi": [
+        "947. Sokak"
+      ],
+      "Beşikkaya": [
+        "1953 Sokak",
+        "1955 Sokak",
+        "1979 Sokak"
+      ],
+      "Doğu": [
+        "Doğu Caddesi",
+        "Yaşar Doğu Caddesi"
+      ],
+      "Gülpınar": [
+        "Gülpınar Caddesi"
+      ],
+      "Güneşevler": [
+        "Ecebey Sokak",
+        "116. Sokak",
+        "Şht. Pilot Fatih Korçam Sokak",
+        "128. Sokak",
+        "126. Sokak"
+      ],
+      "Karapürçek": [
+        "303. Sokak",
+        "290. Sokak",
+        "478. Sokak",
+        "519. Sokak",
+        "356. Sokak",
+        "302. Sokak",
+        "349. Sokak",
+        "459. Sokak",
+        "486. Sokak",
+        "346. Sokak",
+        "465. Sokak"
+      ],
+      "Yıldırım Beyazıt": [
+        "Çankırı Kapı Sokak",
+        "Açıkel Sokak"
+      ],
+      "Yildiztepe": [
+        "818. Sokak"
+      ],
+      "Yunus Emre": [
+        "Açıkel Sokak",
+        "49. Sokak",
+        "Asalet Sokak"
+      ],
+      "Ziraat": [
+        "Şehit Mustafa Baş Sokak",
+        "Şht. Pilot Fatih Korçam Sokak"
+      ]
+    },
+    "Sincan": {
+      "Akşemsettin": [
+        "Figen Sokak",
+        "Güven Sokak"
+      ],
+      "Atatürk": [
+        "Meltem Sokak"
+      ],
+      "Cumhuriyet": [
+        "Sis Sokak"
+      ],
+      "Fatih": [
+        "Şehit Fatih Tezel Sokak"
+      ],
+      "Gazi": [
+        "Sonbahar Sokak",
+        "Sibel Sokak"
+      ],
+      "Osmanli": [
+        "Sis Sokak",
+        "Sevda Sokak",
+        "İbni Sina Sokak"
+      ],
+      "Plevne": [
+        "Plevne Sokak"
+      ]
+    },
+    "Akyurt": {},
+    "Ayaş": {},
+    "Bala": {},
+    "Beypazarı": {},
+    "Çamlıdere": {},
+    "Çubuk": {},
+    "Elmadağ": {},
+    "Evren": {},
+    "Gölbaşı": {},
+    "Güdül": {},
+    "Haymana": {},
+    "Kalecik": {},
+    "Kahramankazan": {},
+    "Kızılcahamam": {},
+    "Nallıhan": {},
+    "Polatlı": {},
+    "Pursaklar": {},
+    "Şereflikoçhisar": {}
+  },
+  "İzmir": {
+    "Konak": {
+      "Alsancak": [
+        "Sevgi Yolu"
+      ],
+      "Aziziye": [
+        "1101. Sokak",
+        "1039. Sokak"
+      ],
+      "Barbaros": [
+        "2208/7. Sokak",
+        "2371. Sokak"
+      ],
+      "Basmane": [
+        "1299. Sokak",
+        "1298. Sokak  (Oteller Sokağı)"
+      ],
+      "Bayramyeri": [
+        "Bayramyeri Altgeçidi"
+      ],
+      "Çankaya": [
+        "131. Sokak",
+        "1303. Sokak",
+        "1372. Sokak"
+      ],
+      "Duatepe": [
+        "339. Sokak"
+      ],
+      "Ege": [
+        "1397. Sokak",
+        "105. Sokak",
+        "900. Sokak",
+        "1393. Sokak",
+        "849. Sokak",
+        "2822. Sokak",
+        "4/3. Sokak"
+      ],
+      "Eşrefpaşa": [
+        "384. Sokak"
+      ],
+      "Göztepe": [
+        "87. Sokak",
+        "107. Sokak",
+        "88. Sokak"
+      ],
+      "Güzelyalı": [
+        "22. Sokak",
+        "18. Sokak",
+        "18/3. Sokak",
+        "56/5. Sokak",
+        "56/3. Sokak",
+        "34. Sokak"
+      ],
+      "Hilal": [
+        "1226. Sokak",
+        "1229/1. Sokak",
+        "1217. Sokak"
+      ],
+      "İsmetpaşa": [
+        "822. Sokak"
+      ],
+      "Kadifekale": [
+        "1008. Sokak"
+      ],
+      "Kemer": [
+        "1433. Sokak",
+        "2201/1. Sokak"
+      ],
+      "Konak": [
+        "141. Sokak",
+        "859. Sokak"
+      ],
+      "Köprü": [
+        "128. Sokak"
+      ],
+      "Kültür": [
+        "1380. Sokak",
+        "269. Sokak",
+        "1344. Sokak",
+        "141. Sokak",
+        "1379. Sokak",
+        "1391. Sokak",
+        "384. Sokak"
+      ],
+      "Levent": [
+        "2822. Sokak",
+        "Can Yücel Sokak"
+      ],
+      "Liman": [
+        "853. Sokak"
+      ],
+      "Mersinli": [
+        "2806. Sokak",
+        "1579/1. Sokak",
+        "2844. Sokak",
+        "2822. Sokak"
+      ],
+      "Mimar Sinan": [
+        "1136/3. Sokak"
+      ],
+      "Namık Kemal": [
+        "141. Sokak"
+      ],
+      "Pazaryeri": [
+        "255. Sokak"
+      ],
+      "Selçuk": [
+        "846. Sokak"
+      ],
+      "Yeni": [
+        "913. Sokak",
+        "1316. Sokak",
+        "3567. Sokak",
+        "21. Sokak",
+        "131. Sokak",
+        "853. Sokak",
+        "860. Sokak",
+        "520/2. Sokak",
+        "269/1. Sokak",
+        "1364. Sokak",
+        "1119. Sokak",
+        "967. Sokak",
+        "1136. Sokak",
+        "2363. Sokak",
+        "34. Sokak",
+        "1469. Sokak"
+      ],
+      "Yıldız": [
+        "846. Sokak"
+      ]
+    },
+    "Karşıyaka": {
+      "Alaybey": [
+        "1690/1. Sokak"
+      ],
+      "Bahariye": [
+        "1837. Sokak"
+      ],
+      "Bahriye Üçok": [
+        "1837. Sokak"
+      ],
+      "Bostanlı": [
+        "2022. Sokak",
+        "2014.Sokak",
+        "1807/2. Sokak",
+        "1735. Sokak"
+      ],
+      "Cumhuriyet": [
+        "R.Lütfü Aksungur Sokak",
+        "1673. Sokak",
+        "6261. Sokak",
+        "6653. Sokak"
+      ],
+      "Demirköprü": [
+        "6323. Sokak",
+        "6200. Sokak"
+      ],
+      "Donanmacı": [
+        "1735. Sokak"
+      ],
+      "Fikri Altay": [
+        "6196/1. Sokak"
+      ],
+      "İmbatlı": [
+        "1847/5. Sokak"
+      ],
+      "Latife Hanım": [
+        "1762. Sokak"
+      ],
+      "Mavişehir": [
+        "6436/2. Sokak"
+      ],
+      "Mustafa Kemal": [
+        "6261. Sokak",
+        "6753/13. Sokak"
+      ],
+      "Nergiz": [
+        "1671. Sokak"
+      ],
+      "Onur": [
+        "6753/19. Sokak",
+        "1671. Sokak"
+      ],
+      "Örnekköy": [
+        "7532. Sokak"
+      ],
+      "Şemikler": [
+        "6496. Sokak"
+      ],
+      "Tersane": [
+        "1664. Sokak"
+      ],
+      "Yalı": [
+        "6471. Sokak"
+      ]
+    },
+    "Bornova": {
+      "Altındağ": [
+        "4396/2. Sokak"
+      ],
+      "Atatürk": [
+        "4174/8. Sokak",
+        "887. Sokak",
+        "858/4. Sokak",
+        "850. Sokak",
+        "784. Sokak",
+        "794. Sokak",
+        "1700. Sokak",
+        "36. Sokak"
+      ],
+      "Barbaros": [
+        "947. Sokak",
+        "934. Sokak"
+      ],
+      "Çamdibi": [
+        "5230. Sokak",
+        "5319. Sokak",
+        "5615/6. Sokak",
+        "5401/2. Sokak",
+        "5454. Sokak",
+        "5301/1. Sokak",
+        "5468. Sokak"
+      ],
+      "Çamkule": [
+        "4712. Sokak"
+      ],
+      "Doğanlar": [
+        "1453. Sokak",
+        "1661. Sokak",
+        "1456. Sokak",
+        "1651. Sokak",
+        "1427. Sokak",
+        "1411/4. Sokak",
+        "1776/7. Sokak",
+        "1543. Sokak",
+        "1580. Sokak",
+        "1401/1. Sokak",
+        "1454. Sokak"
+      ],
+      "Ege Mahallesi": [
+        "7856. Sokak",
+        "119/1. Sokak",
+        "372/11. Sokak",
+        "1776. Sokak",
+        "113. Sokak",
+        "173. Sokak",
+        "129/4. Sokak"
+      ],
+      "Evka 3": [
+        "127/17. Sokak"
+      ],
+      "Evka 4": [
+        "1030. Sokak",
+        "1024. Sokak",
+        "1027. Sokak",
+        "1035. Sokak"
+      ],
+      "İnönü": [
+        "735. Sokak"
+      ],
+      "Işıkkent": [
+        "6082. Sokak"
+      ],
+      "Kemalpaşa": [
+        "Kemalpaşa Caddesi"
+      ],
+      "Kibar": [
+        "Osman Kibar Tüneli"
+      ],
+      "Kızılay": [
+        "491/1. Sokak"
+      ],
+      "Mevlana": [
+        "751. Sokak",
+        "1754. Sokak",
+        "1726. Sokak",
+        "1751. Sokak",
+        "1700. Sokak",
+        "1702. Sokak",
+        "1710/5. Sokak",
+        "1776/7. Sokak",
+        "1754/1. Sokak",
+        "1727. Sokak",
+        "1728/1. Sokak"
+      ],
+      "Osmangazi": [
+        "907. Sokak",
+        "126/4. Sokak"
+      ],
+      "Pınarbaşı": [
+        "7857. Sokak",
+        "7420. Sokak"
+      ],
+      "Tuna": [
+        "996. Sokak",
+        "1013. Sokak",
+        "5460. Sokak"
+      ],
+      "Türkan Özilhan": [
+        "129/20. Sokak",
+        "129. Sokak"
+      ],
+      "Umut": [
+        "127. Sokak"
+      ],
+      "Üniversite": [
+        "1776/17. Sokak",
+        "1700. Sokak",
+        "162. Sokak"
+      ],
+      "Yeşilova": [
+        "4048. Sokak",
+        "5366. Sokak"
+      ],
+      "10.Sokak": [
+        "1469. Sokak"
+      ]
+    },
+    "Buca": {
+      "Adatepe": [
+        "207. Sokak"
+      ],
+      "Barış": [
+        "Barış Manço Kültür Sokak"
+      ],
+      "Çamlıkule": [
+        "200/17. Sokak"
+      ],
+      "Çamlıpınar": [
+        "293/62. Sokak"
+      ],
+      "Dumlupınar": [
+        "81. Sokak"
+      ],
+      "Gediz": [
+        "697/5. Sokak",
+        "682/4. Sokak"
+      ],
+      "Göksu": [
+        "205/23. Sokak",
+        "242/11. Sokak",
+        "289. Sokak"
+      ],
+      "Güven": [
+        "1403. Sokak",
+        "1406. Sokak"
+      ],
+      "İnkılap": [
+        "637/60. Sokak"
+      ],
+      "İnönü": [
+        "864. Sokak"
+      ],
+      "Kozağaç": [
+        "276/2. Sokak",
+        "254. Sokak"
+      ],
+      "Kuruçeşme": [
+        "205. Sokak"
+      ],
+      "Laleli": [
+        "351. Sokak"
+      ],
+      "Menderes": [
+        "686/24. Sokak"
+      ],
+      "Ufuk": [
+        "870/3. Sokak",
+        "910. Sokak"
+      ],
+      "Vali Rahmi Bey": [
+        "343. Sokak"
+      ],
+      "Yıldız": [
+        "199/6. Sokak",
+        "206/5. Sokak",
+        "647/1. Sokak",
+        "205/36. Sokak"
+      ],
+      "354. Sokak": [
+        "1412. Sokak",
+        "1058/14. Sokak",
+        "338. Sokak",
+        "677/19. Sokak",
+        "677/38. Sokak",
+        "573. Sokak",
+        "1410. Sokak",
+        "81. Sokak",
+        "206/5. Sokak"
+      ]
+    },
+    "Bayraklı": {
+      "Adalet": [
+        "1594/1. Sokak"
+      ],
+      "Alpaslan": [
+        "1620/14. Sokak"
+      ],
+      "Bayraklı": [
+        "1610. Sokak",
+        "7168. Sokak",
+        "286. Sokak",
+        "1645/11. Sokak",
+        "1620/39. Sokak",
+        "1925 Sokak",
+        "Şehit Asteğmen Mesut Uzlu Sokak",
+        "275/1. Sokak",
+        "1910. Sokak",
+        "2120/2. Sokak",
+        "1631. Sokak",
+        "Şehit Hakan Uysal Sokak",
+        "7233. Sokak",
+        "1643/30. Sokak",
+        "7331. Sokak",
+        "7371/2. Sokak",
+        "293. Sokak",
+        "1630. Sokak",
+        "7368/5. Sokak",
+        "284/1. Sokak",
+        "1930. Sokak",
+        "7190/4. Sokak",
+        "283/10. Sokak",
+        "1929 Sokak",
+        "7172. Sokak",
+        "275/9. Sokak",
+        "2106. Sokak"
+      ],
+      "Cengizhan": [
+        "2193. Sokak",
+        "1620/40. Sokak"
+      ],
+      "Çay": [
+        "2106. Sokak"
+      ],
+      "Doğançay": [
+        "7190. Sokak"
+      ],
+      "Emek": [
+        "7020. Sokak"
+      ],
+      "Fuat Edip Baksı": [
+        "1629. Sokak"
+      ],
+      "Gümüşpala": [
+        "7000. Sokak (Karşıyaka-Gümüşpala Yolu)"
+      ],
+      "Manavkuyu": [
+        "275/2. Sokak",
+        "275/9. Sokak"
+      ],
+      "Mustafa Kemal": [
+        "274/8. Sokak",
+        "274/2. Sokak",
+        "1645/11. Sokak",
+        "243. Sokak",
+        "274/6. Sokak"
+      ],
+      "Nafiz Gürman": [
+        "7171. Sokak"
+      ],
+      "Onur": [
+        "7364. Sokak",
+        "7371/6. Sokak",
+        "7371. Sokak"
+      ],
+      "Postacılar": [
+        "7600. Sokak"
+      ],
+      "Soğukkuyu": [
+        "6061. Sokak",
+        "7281. Sokak",
+        "1595. Sokak"
+      ],
+      "Yamanlar": [
+        "7331. Sokak",
+        "7334. Sokak",
+        "7371/2. Sokak",
+        "7349. Sokak",
+        "7355. Sokak",
+        "7301. Sokak",
+        "Şehit Asteğmen Mesut Uzlu Sokak"
+      ]
+    },
+    "Karabağlar": {
+      "Bahçelievler": [
+        "443. Sokak",
+        "502/4. Sokak",
+        "490. Sokak",
+        "444. Sokak"
+      ],
+      "Basın Sitesi": [
+        "215. Sokak"
+      ],
+      "Bozyaka": [
+        "9139/5. Sokak"
+      ],
+      "Doğanay": [
+        "52/71. Sokak"
+      ],
+      "Esentepe": [
+        "14. Sokak",
+        "46/6. Sokak"
+      ],
+      "Fahrettin Altay": [
+        "65/8. Sokak"
+      ],
+      "Gazi": [
+        "4272. Sokak"
+      ],
+      "Gülyaka": [
+        "3021. Sokak"
+      ],
+      "İhsan Alyanak": [
+        "9151. Sokak"
+      ],
+      "Karabağlar": [
+        "3946. Sokak",
+        "4152. Sokak",
+        "5648. Sokak",
+        "501. Sokak",
+        "108/38. Sokak",
+        "4058. Sokak",
+        "108/8. Sokak",
+        "371. Sokak",
+        "108/11. Sokak",
+        "3021. Sokak",
+        "502/4. Sokak",
+        "4183. Sokak",
+        "4026. Sokak",
+        "46/6. Sokak",
+        "177/15. Sokak"
+      ],
+      "Limontepe": [
+        "9754. Sokak"
+      ],
+      "Selvili": [
+        "4012. Sokak"
+      ],
+      "Sevgi": [
+        "4609. Sokak",
+        "166. Sokak"
+      ],
+      "Vatan": [
+        "9159. Sokak"
+      ],
+      "Yunus Emre": [
+        "9131/14. Sokak"
+      ],
+      "Yüzbaşı Şerafettin": [
+        "3946. Sokak",
+        "3959. Sokak"
+      ],
+      "Peker": [
+        "6100. Sokak"
+      ],
+      "Umut": [
+        "4012. Sokak"
+      ],
+      "Atatürk": [
+        "9101. Sokak",
+        "2/14. Sokak"
+      ],
+      "Yeşillik": [
+        "Yeşillik Caddesi Yanyolu",
+        "Yeşillik Caddesi"
+      ]
+    },
+    "Çiğli": {
+      "8780/1": [
+        "8780/1. Sokak"
+      ],
+      "Anadolu": [
+        "8250. Sokak",
+        "6852. Sokak",
+        "8114/1. Sokak",
+        "8927. Sokak",
+        "8064. Sokak",
+        "8271/10. Sokak",
+        "6847. Sokak",
+        "8759/3. Sokak",
+        "6840. Sokak",
+        "70. Sokak"
+      ],
+      "Ataşehir": [
+        "8291. Sokak"
+      ],
+      "Atatürk": [
+        "8809/12. Sokak",
+        "8925/1. Sokak"
+      ],
+      "Balatçık": [
+        "1671/1. Sokak"
+      ],
+      "Büyük Çiğli": [
+        "8077. Sokak",
+        "8064. Sokak",
+        "8050. Sokak"
+      ],
+      "Cumhuriyet": [
+        "8925/1. Sokak"
+      ],
+      "Çiğli Merkez": [
+        "43. Sokak",
+        "5. Sokak",
+        "70. Sokak"
+      ],
+      "Egekent": [
+        "1671. Sokak",
+        "8951. Sokak",
+        "1671/1. Sokak"
+      ],
+      "Evka 5": [
+        "8953. Sokak",
+        "8916/10. Sokak",
+        "8916. Sokak"
+      ],
+      "Harmandalı": [
+        "8986. Sokak"
+      ],
+      "İstasyonaltı": [
+        "8250. Sokak",
+        "8251. Sokak",
+        "8265. Sokak",
+        "8291. Sokak"
+      ],
+      "İzkent": [
+        "8838. Sokak"
+      ],
+      "Köyiçi": [
+        "8072. Sokak"
+      ],
+      "Küçük Çiğli": [
+        "8782. Sokak",
+        "8715 sokak"
+      ],
+      "Maltepe": [
+        "8116. Sokak",
+        "8115. Sokak",
+        "8122. Sokak"
+      ],
+      "Sasalı": [
+        "70. Sokak",
+        "6. Sokak"
+      ],
+      "Şirintepe": [
+        "8134. Sokak"
+      ]
+    },
+    "Gaziemir": {
+      "Gazi": [
+        "38. Sokak",
+        "36 sokak"
+      ],
+      "Sarnıç": [
+        "Sarnıç Yolu Sokak"
+      ]
+    },
+    "Aliağa": {},
+    "Balçova": {
+      "Balçova": [
+        "Cihangir Sokak",
+        "Kasırga Sokak",
+        "Zümrüt Sokak",
+        "Fatih Sultan Sokak",
+        "Yonca Sokak",
+        "Fulya Sokak",
+        "Cengiz Topel Sokak",
+        "Gülsa Sokak",
+        "Lalezar Sokak",
+        "Barbaros Sokak",
+        "Gülce Sokak",
+        "Amber Sokak",
+        "Ejder Sokak",
+        "Öz Sağlık Sokak"
+      ]
+    },
+    "Bayındır": {},
+    "Bergama": {},
+    "Beydağ": {},
+    "Çeşme": {
+      "Alaçatı": [
+        "1060. Sokak",
+        "1003. Sokak",
+        "3024. Sokak",
+        "3013. Sokak",
+        "18000. Sokak",
+        "2500. Sokak",
+        "2063. Sokak",
+        "2000. Sokak"
+      ],
+      "Dalyan": [
+        "4004. Sokak"
+      ],
+      "Ilıca": [
+        "5123. Sokak",
+        "5065. Sokak",
+        "5131. Sokak",
+        "5133. Sokak",
+        "3458. Sokak",
+        "5074. Sokak",
+        "5216. Sokak"
+      ],
+      "Şifne": [
+        "6435. Sokak",
+        "6000. Sokak"
+      ]
+    },
+    "Dikili": {},
+    "Foça": {},
+    "Güzelbahçe": {
+      "Güzelbahçe": [
+        "568. Sokak",
+        "286. Sokak",
+        "67. Sokak"
+      ]
+    },
+    "Karaburun": {},
+    "Kemalpaşa": {},
+    "Kınık": {},
+    "Kiraz": {},
+    "Menderes": {},
+    "Menemen": {
+      "Asarlık": [
+        "9311. Sokak"
+      ],
+      "Ulukent": [
+        "10016. Sokak"
+      ],
+      "Seyrek": [
+        "Seyrek Maltepe Yolu Sokak"
+      ],
+      "Koyundere": [
+        "7503. Sokak"
+      ]
+    },
+    "Narlıdere": {},
+    "Ödemiş": {},
+    "Seferihisar": {},
+    "Selçuk": {},
+    "Tire": {},
+    "Torbalı": {},
+    "Urla": {
+      "Zeytinalanı": [
+        "4123. Sokak"
+      ]
+    }
+  },
+  "Antalya": {
+    "Muratpaşa": {
+      "Bahçelievler": [
+        "1487 Sokak"
+      ],
+      "Barbaros": [
+        "Tuz Kapısı Sokak"
+      ],
+      "Çağlayan": [
+        "2030 Sokak",
+        "2019 Sokak",
+        "2018 Sokak",
+        "2041 Sokak",
+        "2020 Sokak"
+      ],
+      "Deniz": [
+        "1941 Sokak",
+        "1940 Sokak",
+        "2316 Sokak",
+        "1986 Sokak",
+        "151. Sokak",
+        "Tuz Kapısı Sokak",
+        "1488 Sokak",
+        "1506. Sokak"
+      ],
+      "Etiler": [
+        "855. Sokak"
+      ],
+      "Fener": [
+        "1976 Sokak"
+      ],
+      "Güllük": [
+        "Güllük Caddesi"
+      ],
+      "Güvenlik": [
+        "274. Sokak"
+      ],
+      "Kızılarık": [
+        "2785. Sokak"
+      ],
+      "Kızıltoprak": [
+        "2277 Sokak"
+      ],
+      "Konuksever": [
+        "790. Sokak",
+        "802. Sokak",
+        "820. Sokak",
+        "819. Sokak"
+      ],
+      "Memurevleri": [
+        "251. Sokak"
+      ],
+      "Muratpaşa": [
+        "308. Sokak",
+        "1455. Sokak",
+        "975 Sokak",
+        "752. Sokak",
+        "1067 Sokak",
+        "2041 Sokak",
+        "151. Sokak",
+        "14 Sokak",
+        "345. Sokak",
+        "Aydoğdu Sokak",
+        "912 Sokak"
+      ],
+      "Sinan": [
+        "1261. Sokak"
+      ],
+      "Yeşilbahçe": [
+        "1479 Sokak"
+      ],
+      "Yıldız": [
+        "220. Sokak",
+        "231. Sokak"
+      ]
+    },
+    "Konyaaltı": {
+      "Altınkum": [
+        "442. Sokak",
+        "437. Sokak",
+        "338. Sokak",
+        "423. Sokak"
+      ],
+      "Arapsuyu": [
+        "662. Sokak",
+        "635. Sokak"
+      ],
+      "Gürsu": [
+        "310. Sokak",
+        "349. Sokak",
+        "357. Sokak",
+        "436. Sokak"
+      ],
+      "Hurma": [
+        "252. Sokak"
+      ],
+      "Kuşkavağı": [
+        "564. Sokak"
+      ],
+      "Liman": [
+        "33 Sokak"
+      ],
+      "Pınarbaşı": [
+        "725 Sokak"
+      ],
+      "Uncalı": [
+        "1355. Sokak",
+        "1425. Sokak",
+        "1251. Sokak",
+        "1287. Sokak"
+      ]
+    },
+    "Kepez": {
+      "Altınova": [
+        "18. Sokak",
+        "Yüce Sokak"
+      ],
+      "Baraj": [
+        "5811. Sokak"
+      ],
+      "Çamlıbel": [
+        "4899. Sokak",
+        "4901. Sokak"
+      ],
+      "Erenköy": [
+        "4828. Sokak"
+      ],
+      "Fabrikalar": [
+        "3003. Sokak"
+      ],
+      "Fevzi Çakmak": [
+        "2205. Sokak"
+      ],
+      "Habibler": [
+        "3560. Sokak"
+      ],
+      "Karşıyaka": [
+        "3929. Sokak",
+        "2900. Sokak"
+      ],
+      "Kültür": [
+        "3842. Sokak",
+        "2431. Sokak"
+      ],
+      "Mehmet Akif": [
+        "6420. Sokak"
+      ],
+      "Sütçüler": [
+        "3500. Sokak",
+        "6550. Sokak"
+      ],
+      "Teomanpaşa": [
+        "2215. Sokak",
+        "2205. Sokak"
+      ],
+      "Varsak": [
+        "1926 sokak",
+        "1162. Sokak"
+      ]
+    },
+    "Akseki": {},
+    "Aksu": {},
+    "Alanya": {
+      "Oba": [
+        "4. Sokak"
+      ],
+      "Mahmutlar": [
+        "125 Nolu Sokak",
+        "230 Sokak",
+        "207 NOLU SOKAK"
+      ],
+      "Avsallar": [
+        "Avsallar Sokak"
+      ],
+      "Konaklı": [
+        "Sahil Sokak",
+        "1116. Sokak"
+      ],
+      "Demirtaş": [
+        "1116. Sokak"
+      ]
+    },
+    "Demre": {},
+    "Döşemealtı": {},
+    "Elmalı": {},
+    "Finike": {},
+    "Gazipaşa": {},
+    "Gündoğmuş": {},
+    "İbradı": {},
+    "Kaş": {},
+    "Kemer": {},
+    "Korkuteli": {},
+    "Kumluca": {},
+    "Manavgat": {
+      "Çolaklı": [
+        "1055. Sokak"
+      ],
+      "Side": [
+        "Çağlayan Sokak",
+        "Nilüfer Sokak"
+      ],
+      "Kumköy": [
+        "1055. Sokak",
+        "1601. Sokak"
+      ]
+    },
+    "Serik": {
+      "Belek": [
+        "89. Sokak",
+        "86. Sokak",
+        "60. Sokak"
+      ],
+      "Boğazkent": [
+        "60. Sokak"
+      ],
+      "Kadriye": [
+        "Fairways Villas, 134 Sokak, Kadriye, Serik"
+      ]
+    }
+  },
+  "Muğla": {
+    "Muğla": {},
+    "Bodrum": {
+      "Gümbet": [
+        "Erguvan Sokak",
+        "Cihan Sokak"
+      ],
+      "Bitez": [
+        "Bitez Sokak"
+      ],
+      "Turgutreis": [
+        "4018. Sokak",
+        "7041. Sokak",
+        "Inci Sokak"
+      ],
+      "Konacık": [
+        "Cihan Sokak"
+      ]
+    },
+    "Dalaman": {},
+    "Datça": {},
+    "Fethiye": {
+      "Çalış": [
+        "982. Sokak",
+        "1332. Sokak",
+        "Kumsal Sokak",
+        "974. Sokak"
+      ],
+      "Foça": [
+        "1332. Sokak"
+      ],
+      "Kayaköy": [
+        "Eski Çeşme Sokak",
+        "Keçiler sokak",
+        "Dolaplı Sokak"
+      ],
+      "Ölüdeniz": [
+        "88. Sokak",
+        "227 . Sokak",
+        "231. Sokak",
+        "233. Sokak",
+        "202. Sokak",
+        "240. Sokak"
+      ],
+      "Göcek": [
+        "Palamar Sokak",
+        "İpek Sokak",
+        "Doğu Sokak",
+        "Gençlik Sokak",
+        "Papatya Sokak",
+        "Süreyya Sarı Sokak",
+        "Kırlangıç Sokak",
+        "Sahil Sokak",
+        "Defne Sokak"
+      ]
+    },
+    "Kavaklıdere": {},
+    "Köyceğiz": {},
+    "Marmaris": {
+      "İçmeler": [
+        "109 Sokak",
+        "120 Sokak",
+        "169 Sokak"
+      ],
+      "Armutalan": [
+        "426 Sokak",
+        "511 Sokak"
+      ],
+      "Siteler": [
+        "143 Sokak"
+      ],
+      "Turunç": [
+        "79 Sokak",
+        "50 Sokak",
+        "18. Sokak",
+        "29 Sokak",
+        "92 Sokak",
+        "Water front - 8 Sokak"
+      ]
+    },
+    "Menteşe": {},
+    "Milas": {},
+    "Ortaca": {},
+    "Seydikemer": {},
+    "Ula": {},
+    "Yatağan": {}
+  },
+  "Bursa": {
+    "Nilüfer": {
+      "29 Ekim": [
+        "Ekim Sokak"
+      ],
+      "Altınşehir": [
+        "233. Sokak"
+      ],
+      "Balat": [
+        "Balat Sokak"
+      ],
+      "Barış": [
+        "Barış Sokak"
+      ],
+      "Beşevler": [
+        "Başarı Sokak",
+        "Güven Sokak",
+        "Beyaz Sokak",
+        "Büyük Sokak",
+        "Basın Sokak",
+        "Bahçıvan Sokak",
+        "Okul Sokak"
+      ],
+      "Çalı": [
+        "197. Sokak"
+      ],
+      "Çamlıca": [
+        "Çamlıca Sokak"
+      ],
+      "Ertuğrul": [
+        "Ertuğrul Sokak"
+      ],
+      "Fethiye": [
+        "Sakin Sokak"
+      ],
+      "Görükle": [
+        "Kumru Sokak",
+        "Taşkent Sokak",
+        "Ardıç Sokak",
+        "Menekşe Sokak"
+      ],
+      "Gümüştepe": [
+        "Gümüştepe Sokak"
+      ],
+      "İhsaniye": [
+        "İhsaniye Sokak"
+      ],
+      "Karaman": [
+        "Akasya Sokak",
+        "Karşı Sokak"
+      ],
+      "Konak": [
+        "Konak Sokak"
+      ],
+      "Kültür": [
+        "Kültür Sokak"
+      ],
+      "Cumhuriyet": [
+        "Mavi Sokak"
+      ],
+      "Osmangazi": [
+        "N317. Sokak",
+        "225. Sokak",
+        "122. Sokak"
+      ],
+      "Özlüce": [
+        "Özlüce Sokak"
+      ],
+      "Üçevler": [
+        "Üçevler Caddesi"
+      ]
+    },
+    "Osmangazi": {
+      "Adalet": [
+        "4. Adalet Sokak",
+        "6. Adalet Sokak",
+        "2. Adalet Sokak",
+        "5. Adalet Sokak"
+      ],
+      "Alacahırka": [
+        "1. Alacahırka Sokak"
+      ],
+      "Alipaşa": [
+        "1. Alipaşa Sokak",
+        "3. Alipaşa Sokak"
+      ],
+      "Altıparmak": [
+        "Altıparmak Sokak"
+      ],
+      "Bağlarbaşı": [
+        "Bozcaada Sokak",
+        "2. Fırın Sokak",
+        "2. Boncuk Sokak",
+        "1. Çamlı Sokak"
+      ],
+      "Bahar": [
+        "Bahar Sokak"
+      ],
+      "Çekirge": [
+        "2. Çekirge Sokak",
+        "1. Çekirge Sokak"
+      ],
+      "Çırpan": [
+        "1. Kara Osman Sokak"
+      ],
+      "Dikkaldırım": [
+        "3. Nergiz Sokak",
+        "Herkül Sokak",
+        "4. Sakin Sokak",
+        "1. Meltem Sokak"
+      ],
+      "Doğanevler": [
+        "2. Derya Sokak"
+      ],
+      "Doğanbey": [
+        "2. Doğanbey Sokak",
+        "1. Doğanbey Sokak"
+      ],
+      "Fatih": [
+        "Fatih Sokak"
+      ],
+      "Hamitler": [
+        "Hamitler Sokak"
+      ],
+      "Hisar": [
+        "2. Hisar Sokak",
+        "1. Hisar Sokak"
+      ],
+      "Hüdavendigar": [
+        "Hüdavendigar Sokak"
+      ],
+      "İnönü": [
+        "İnönü 1. Sokak",
+        "İnönü 2. Sokak"
+      ],
+      "Karaağaç": [
+        "2. Karaağaç Sokak",
+        "1. Karaağaç Sokak"
+      ],
+      "Kuruçeşme": [
+        "Kuruçeşme Sokak"
+      ],
+      "Kükürtlü": [
+        "3. Buğday Sokak",
+        "6.Başaran Sokak"
+      ],
+      "Maksem": [
+        "8. Murat Sokak"
+      ],
+      "Mehmet Akif": [
+        "2. Tezgenler Sokak",
+        "1. Piliç Sokak"
+      ],
+      "Muradiye": [
+        "Prof. Dr. Halil İnalcık Sokak"
+      ],
+      "Namık Kemal": [
+        "1. Namık Kemal Sokak",
+        "3. Namık Kemal Sokak",
+        "2. Namık Kemal Sokak"
+      ],
+      "Osmangazi": [
+        "Osmangazi Çıkmazı Sokak"
+      ],
+      "Panayır": [
+        "Panayır Sokak"
+      ],
+      "Reyhan": [
+        "Şht. Teğmen Reyhan Gürkan Sokak",
+        "Şehit Reyhan Sokak",
+        "2. Reyhan Sokak",
+        "1. Reyhan Sokak"
+      ],
+      "Sakarya": [
+        "8. Sakarya Sokak",
+        "5. Sakarya Sokak",
+        "2. Sakarya Sokak",
+        "10. Sakarya Sokak",
+        "6. Sakarya Sokak",
+        "3. Sakarya Sokak",
+        "4. Sakarya Sokak",
+        "1. Sakarya Sokak",
+        "7. Sakarya Sokak"
+      ],
+      "Soğanlı": [
+        "6. Taner Sokak",
+        "1. Yeşilova Sokak",
+        "1. Sevgili Sokak",
+        "3. Meltem Sokak"
+      ],
+      "Şehreküstü": [
+        "1. Yurdakul Sokak"
+      ],
+      "Tayakadın": [
+        "11. Fırın Sokak"
+      ],
+      "Tophane": [
+        "Osmangazi Çıkmazı Sokak"
+      ],
+      "Tuna": [
+        "Tuna Sokak"
+      ],
+      "Vatan": [
+        "11. Vatan Sokak",
+        "4. Vatan Sokak",
+        "12. Vatan Sokak",
+        "9. Vatan Sokak",
+        "6. Vatan Sokak",
+        "8. Vatan Sokak",
+        "2. Vatan Sokak",
+        "10. Vatan Sokak",
+        "13. Vatan Sokak",
+        "5. Vatan Sokak",
+        "1. Vatan Sokak",
+        "3. Vatan Sokak"
+      ],
+      "Yeşil": [
+        "Yeşil Sokak"
+      ],
+      "Yıldırım": [
+        "Yıldırım Sokak"
+      ]
+    },
+    "Yıldırım": {
+      "152 Evler": [
+        "1. Esen Sokak"
+      ],
+      "Akçağlayan": [
+        "Akçağlayan Sokak"
+      ],
+      "Arabayatağı": [
+        "Beydere Sokak",
+        "6. Çimen Sokak"
+      ],
+      "Beyazıt": [
+        "4. Beyazıt Sokak",
+        "1. Beyazıt Sokak",
+        "2. Beyazıt Sokak"
+      ],
+      "Cumalıkızık": [
+        "Pınar Sokak"
+      ],
+      "Davutkadı": [
+        "Karadavut Sokak",
+        "2. Orman Sokak",
+        "1. Dutlu Sokak"
+      ],
+      "Değirmenlikızık": [
+        "3. Düz Sokak",
+        "1. Sağlık Sokak"
+      ],
+      "Eğitim": [
+        "4. Eğitim Sokak",
+        "2. Eğitim Sokak",
+        "Eğitim Çıkmazı Sokak",
+        "3. Eğitim Sokak",
+        "8. Eğitim Sokak"
+      ],
+      "Erikli": [
+        "2. Erikli Sokak",
+        "1. Erikli Sokak",
+        "3. Erikli Sokak"
+      ],
+      "Fatih": [
+        "6. Fatih Sokak",
+        "8. Fatih Sokak",
+        "15. Fatih Sokak",
+        "1. Fatih Sokak",
+        "7. Fatih Sokak",
+        "14. Fatih Sokak",
+        "4. Fatih Sokak",
+        "10. Fatih Sokak",
+        "12. Fatih Sokak",
+        "9. Fatih Sokak",
+        "11. Fatih Sokak",
+        "13. Fatih Sokak",
+        "2. Fatih Sokak"
+      ],
+      "Hacivat": [
+        "C304. Sokak"
+      ],
+      "İsabey": [
+        "İmren Sokak",
+        "B200. Sokak"
+      ],
+      "Karapınar": [
+        "Karapınar Sokak"
+      ],
+      "Kızık": [
+        "2. Kızık Sokak"
+      ],
+      "Meydancık": [
+        "Meydancık Sokak"
+      ],
+      "Ortabağlar": [
+        "7. Özen Sokak",
+        "Çelik Sokak"
+      ],
+      "Sinandede": [
+        "2. Açık Sokak",
+        "5. Dilek Sokak"
+      ],
+      "Şirinevler": [
+        "97. Sokak",
+        "9/1. Sokak",
+        "79. Sokak",
+        "30. Sokak"
+      ],
+      "Ulus": [
+        "Ulus Çıkmazı Sokak",
+        "2. Ulus Sokak",
+        "1. Ulus Sokak"
+      ],
+      "Vatan": [
+        "2. Vatan Sokak",
+        "6. Vatan Sokak",
+        "3. Vatan Sokak",
+        "8. Vatan Sokak",
+        "7. Vatan Sokak",
+        "9. Vatan Sokak",
+        "5. Vatan Sokak",
+        "10. Vatan Sokak"
+      ],
+      "Yeşil": [
+        "Yeşil Sokak"
+      ],
+      "Yiğitler": [
+        "Yiğitler Sokak"
+      ]
+    },
+    "Büyükorhan": {},
+    "Gemlik": {},
+    "Gürsu": {},
+    "Harmancık": {},
+    "İnegöl": {},
+    "İznik": {},
+    "Karacabey": {},
+    "Keles": {},
+    "Kestel": {},
+    "Mudanya": {},
+    "Mustafakemalpaşa": {},
+    "Orhaneli": {},
+    "Orhangazi": {
+      "Orhan Gazi": [
+        "Orhangazi Çıkmazı Sokak"
+      ]
+    },
+    "Yenişehir": {}
+  },
+  "Kocaeli": {
+    "Başiskele": {},
+    "Çayırova": {},
+    "Darıca": {},
+    "Derince": {
+      "Derince": [
+        "Mektep Sokak",
+        "Koruma Klor Sokak",
+        "İsmet Paşa Caddesi"
+      ],
+      "Kocaeli": [
+        "Koruma Klor Sokak",
+        "Konak Sokak",
+        "Cahide Sokak"
+      ]
+    },
+    "Dilovası": {
+      "Kocaeli": [
+        "746/4. Sokak"
+      ]
+    },
+    "Gebze": {
+      "Kocaeli": [
+        "953. Sokak",
+        "1112. Sokak",
+        "2253. Sokak",
+        "1180/2. Sokak"
+      ],
+      "Koçali": [
+        "2253. Sokak",
+        "1180/2. Sokak"
+      ]
+    },
+    "Gölcük": {},
+    "İzmit": {
+      "İzmit": [
+        "Saray Yokuşu Sokak",
+        "Seyhan Sokak",
+        "Ova Sokak",
+        "Metin Sokak",
+        "Belinay Sokak",
+        "Cem Aydın İlkin Sokak",
+        "Acısu Sokak",
+        "Kahraman Sokak",
+        "Yeni Turgut Reis Sokak",
+        "Karayolu Sokak",
+        "Furkan Sokak",
+        "Serdengeçti Sokak",
+        "Armutlu Sokak",
+        "Sarı Leylak Sokak",
+        "Mehmet Akif Ersoy Sokak",
+        "Köknar Sokak",
+        "Belde Sokak",
+        "Kumluk Sokak",
+        "Baycan Sokak",
+        "Şehit Selçuk Gökdağ Sokak",
+        "Petrol Sokak",
+        "Doğacan Sokak",
+        "Burç Sokak",
+        "Övül Tezişler Sokak",
+        "Muammer Dereli Sokak"
+      ],
+      "Kocaeli": [
+        "Saray Yokuşu Sokak",
+        "Mesire Sokak",
+        "Cem Aydın İlkin Sokak",
+        "Rüya Sokak",
+        "Cahide Sokak",
+        "Zencefil Sokak",
+        "Belde Sokak",
+        "Araç Sokak",
+        "Karayolu Sokak",
+        "Gençler Sokak",
+        "Kocaer Sokak",
+        "Veli Baba Sokak",
+        "Ova Sokak",
+        "Tahsin Marmara Sokak",
+        "Edalı Sokak",
+        "Altınlı Sokak",
+        "Çancı Sokak",
+        "Tepecik Sokak",
+        "Doğacan Sokak",
+        "Övül Tezişler Sokak",
+        "Muammer Dereli Sokak"
+      ],
+      "Koçali": [
+        "Saray Yokuşu Sokak"
+      ]
+    },
+    "Kandıra": {
+      "Kocaeli": [
+        "Sahil Sokak"
+      ]
+    },
+    "Karamürsel": {},
+    "Kartepe": {
+      "Beşevler": [
+        "Beşevler Caddesi"
+      ]
+    },
+    "Körfez": {
+      "Kocaeli": [
+        "D130-1 KOCAELİ YOLU",
+        "KOCAELİ YOLU"
+      ]
+    }
+  }
+}

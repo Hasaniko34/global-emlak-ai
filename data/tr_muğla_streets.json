@@ -1,0 +1,87 @@
+{
+  "Muğla": {},
+  "Bodrum": {
+    "Gümbet": [
+      "Erguvan Sokak",
+      "Cihan Sokak"
+    ],
+    "Bitez": [
+      "Bitez Sokak"
+    ],
+    "Turgutreis": [
+      "4018. Sokak",
+      "7041. Sokak",
+      "Inci Sokak"
+    ],
+    "Konacık": [
+      "Cihan Sokak"
+    ]
+  },
+  "Dalaman": {},
+  "Datça": {},
+  "Fethiye": {
+    "Çalış": [
+      "982. Sokak",
+      "1332. Sokak",
+      "Kumsal Sokak",
+      "974. Sokak"
+    ],
+    "Foça": [
+      "1332. Sokak"
+    ],
+    "Kayaköy": [
+      "Eski Çeşme Sokak",
+      "Keçiler sokak",
+      "Dolaplı Sokak"
+    ],
+    "Ölüdeniz": [
+      "88. Sokak",
+      "227 . Sokak",
+      "231. Sokak",
+      "233. Sokak",
+      "202. Sokak",
+      "240. Sokak"
+    ],
+    "Göcek": [
+      "Palamar Sokak",
+      "İpek Sokak",
+      "Doğu Sokak",
+      "Gençlik Sokak",
+      "Papatya Sokak",
+      "Süreyya Sarı Sokak",
+      "Kırlangıç Sokak",
+      "Sahil Sokak",
+      "Defne Sokak"
+    ]
+  },
+  "Kavaklıdere": {},
+  "Köyceğiz": {},
+  "Marmaris": {
+    "İçmeler": [
+      "109 Sokak",
+      "120 Sokak",
+      "169 Sokak"
+    ],
+    "Armutalan": [
+      "426 Sokak",
+      "511 Sokak"
+    ],
+    "Siteler": [
+      "143 Sokak"
+    ],
+    "Turunç": [
+      "79 Sokak",
+      "50 Sokak",
+      "18. Sokak",
+      "29 Sokak",
+      "92 Sokak",
+      "Water front - 8 Sokak"
+    ]
+  },
+  "Menteşe": {},
+  "Milas": {},
+  "Ortaca": {},
+  "Seydikemer": {},
+  "Ula": {},
+  "Yatağan": {}
+}

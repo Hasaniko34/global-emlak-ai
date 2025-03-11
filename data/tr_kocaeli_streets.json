@@ -1,0 +1,107 @@
+{
+  "Başiskele": {},
+  "Çayırova": {},
+  "Darıca": {},
+  "Derince": {
+    "Derince": [
+      "Mektep Sokak",
+      "Koruma Klor Sokak",
+      "İsmet Paşa Caddesi"
+    ],
+    "Kocaeli": [
+      "Koruma Klor Sokak",
+      "Konak Sokak",
+      "Cahide Sokak"
+    ]
+  },
+  "Dilovası": {
+    "Kocaeli": [
+      "746/4. Sokak"
+    ]
+  },
+  "Gebze": {
+    "Kocaeli": [
+      "953. Sokak",
+      "1112. Sokak",
+      "2253. Sokak",
+      "1180/2. Sokak"
+    ],
+    "Koçali": [
+      "2253. Sokak",
+      "1180/2. Sokak"
+    ]
+  },
+  "Gölcük": {},
+  "İzmit": {
+    "İzmit": [
+      "Saray Yokuşu Sokak",
+      "Seyhan Sokak",
+      "Ova Sokak",
+      "Metin Sokak",
+      "Belinay Sokak",
+      "Cem Aydın İlkin Sokak",
+      "Acısu Sokak",
+      "Kahraman Sokak",
+      "Yeni Turgut Reis Sokak",
+      "Karayolu Sokak",
+      "Furkan Sokak",
+      "Serdengeçti Sokak",
+      "Armutlu Sokak",
+      "Sarı Leylak Sokak",
+      "Mehmet Akif Ersoy Sokak",
+      "Köknar Sokak",
+      "Belde Sokak",
+      "Kumluk Sokak",
+      "Baycan Sokak",
+      "Şehit Selçuk Gökdağ Sokak",
+      "Petrol Sokak",
+      "Doğacan Sokak",
+      "Burç Sokak",
+      "Övül Tezişler Sokak",
+      "Muammer Dereli Sokak"
+    ],
+    "Kocaeli": [
+      "Saray Yokuşu Sokak",
+      "Mesire Sokak",
+      "Cem Aydın İlkin Sokak",
+      "Rüya Sokak",
+      "Cahide Sokak",
+      "Zencefil Sokak",
+      "Belde Sokak",
+      "Araç Sokak",
+      "Karayolu Sokak",
+      "Gençler Sokak",
+      "Kocaer Sokak",
+      "Veli Baba Sokak",
+      "Ova Sokak",
+      "Tahsin Marmara Sokak",
+      "Edalı Sokak",
+      "Altınlı Sokak",
+      "Çancı Sokak",
+      "Tepecik Sokak",
+      "Doğacan Sokak",
+      "Övül Tezişler Sokak",
+      "Muammer Dereli Sokak"
+    ],
+    "Koçali": [
+      "Saray Yokuşu Sokak"
+    ]
+  },
+  "Kandıra": {
+    "Kocaeli": [
+      "Sahil Sokak"
+    ]
+  },
+  "Karamürsel": {},
+  "Kartepe": {
+    "Beşevler": [
+      "Beşevler Caddesi"
+    ]
+  },
+  "Körfez": {
+    "Kocaeli": [
+      "D130-1 KOCAELİ YOLU",
+      "KOCAELİ YOLU"
+    ]
+  }
+}
