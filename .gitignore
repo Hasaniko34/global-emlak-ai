@@ -40,8 +40,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# data files (large files)
-/data/tr_*_neighborhoods.json
-/data/tr_*_streets.json
-/data/tr_all_neighborhoods.json
-/data/tr_all_streets.json
